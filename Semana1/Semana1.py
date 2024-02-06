@@ -30,7 +30,7 @@ def forward(g,b):
     solutions = odeint(damping, y0, t, args=(g,b))
     return solutions[:,0]
 
-def logposterior(g, b, t, y_obs, t_obs, sigma = 1):
+def logposterior(g, b, sigma = 1):
     
     # Parametros solución x
     n = len(y_obs)
@@ -56,7 +56,7 @@ def logposterior(g, b, t, y_obs, t_obs, sigma = 1):
 def MetropolisHastingsRW(tamañoMuestra = 20000, propuesta = 'Normal'):
 
     # Punto inicial (parametros)
-    x = np.array([30,9])
+    x = np.array([15,4])
 
     Muestra1 = np.zeros(tamañoMuestra)  # g
     Muestra2 = np.zeros(tamañoMuestra)  # b
@@ -92,7 +92,7 @@ def MetropolisHastingsRW(tamañoMuestra = 20000, propuesta = 'Normal'):
 
 
         # Cadena de Markov
-        cociente = np.exp(logposterior(y[0],y[1],t,y_obs,t_obs)- logposterior(x[0],x[1],t,y_obs,t_obs))
+        cociente = np.exp(logposterior(y[0],y[1])- logposterior(x[0],x[1]))
 
         # Transición de la cadena
         if uniform.rvs(0,1) < cociente :    #Ensayo Bernoulli
@@ -132,8 +132,9 @@ Posterior_g, Posterior_b = MetropolisHastingsRW()
 # %%
 
 plt.title('Cadena')
-plt.plot(Posterior_g[:5000])
-plt.plot(Posterior_b[:5000])
+plt.plot(Posterior_g[:5000],label = 'g')
+plt.plot(Posterior_b[:5000],label = 'b')
+plt.legend()
 plt.show()
 
 plt.title('Trayectoria de caminata aleatoria')
@@ -150,7 +151,7 @@ for g,b,k in zip(Posterior_g,Posterior_b,enteros):
 
     # for k in range(size):
 
-    z[k] = -logposterior(g,b,t,y_obs,t_obs)
+    z[k] = -logposterior(g,b)
 
 plt.plot(z)
 plt.show()
