@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
 
+# %%
+
 def libre(y,t,g,b):
     x, v = y
     dxdt = v
@@ -27,11 +29,67 @@ def forward(g,b):
     solutions = odeint(damping, y0, t, args=(g,b))
     return solutions[:,0]
 
+def logposterior(g, b, t, y_obs, t_obs, sigma = 1):
+    
+    # Parametros solución x
+    n = len(y_obs)
+    h = derecha/pasos    
 
-y0 = [0, 0.0]  
+    # Solución posición
+    solucion = odeint(damping, y0, t, args=(g,b))
+    x = solucion[:,0]
+
+    # Parametro Priori 
+    alpha = 1000
+
+    # Log verosimilitud
+    cuadrados = np.zeros(n)
+    for j in range(n):
+
+        cuadrados[j] = (y_obs[j]- x[int(t_obs[j]/h)])**2
+
+        Logf_post = -n*np.log(sigma) - sum(cuadrados)/(2*sigma**2) + (alpha -1)*np.log(g) + 9*np.log(b) - alpha*g/10 - 10 * b
+
+    return Logf_post
+
+
+# Parametetros
 g = 10
 b = .7
-t = np.linspace(0, .5, 1000)  
+
+# Condiciones iniciales
+y0 = [0, 0.0]  
+
+#Dominio solución
+derecha = 1
+pasos = 100
+t = np.linspace(0, derecha, pasos)  
+
+# Observaciones
+y_obs = np.array([0, 0.06 ,0.16, 0.26, 0.36, 0.46, 0.56])
+t_obs = np.array([0, 0.071, 0.158, 0.220, 0.267, 0.306, 0.340])
+
+
+
+
+
+
+
+
+
+print(logposterior(g,b,t,y_obs, t_obs,))
+
+
+
+
+
+
+
+
+# %%
+
+# /////////// Visualización ////////
+
 
 # Soluciones de la ecuación dínamica
 solutions = odeint(damping, y0, t, args=(g,b))
@@ -40,6 +98,8 @@ solutions0 = odeint(libre, y0, t, args=(g,b))
 k = 1
 solutions1 = odeint(resorte,y0, t, args=(k,b))
 
+
+# coordenadas de caída amortiguada
 x = solutions[:, 0]
 v = solutions[:, 1]
 
@@ -57,14 +117,8 @@ plt.legend()
 # z = lambda x: 9.7*x**2/2
 # plt.plot(t,z(t))
  
-
-
-y_o = np.array([0, 0.06 ,0.16, 0.26, 0.36, 0.46, 0.56])
-t_o = np.array([0, 0.071, 0.158, 0.220, 0.267, 0.306, 0.340])
-
 plt.plot( t_o, y_o, 'o')
 plt.show()
-
 
 plt.plot(x,v)
 plt.title('Diagrama de fase')
@@ -75,64 +129,17 @@ plt.show()
 
 
 
-# %%
-# def posterior0(g,b,sigma,y,t):
 
-#     n = len(y)
-#     h = 0.5/1000
-#     solucion = odeint(damping, y0, t, args=(g,b))
-#     x = solucion[:,0]
 
-#     cuadrados = np.zeros(n)
-#     for j in range(n):
-#         cuadrados[j] = (y[j] - x[int(t[j]/h)])**2
 
-#     f_post = (1/sigma)**(n/2) * np.exp(- sum( cuadrados)/(2*sigma**2))* np.exp(-(g-10)**2/(0.18))* b**9* np.exp(-10*b)
-
-#     return f_post
+ 
 
 
 
 
 
-def posterior(g,b,y,t,sigma = 1):
-    
-    n = len(y)
-    h = 0.5/1000    
-    solucion = odeint(damping, y0, t, args=(g,b))
-    x = solucion[:,0]
-
-    cuadrados = np.zeros(n)
-    for j in range(n):
-        print(j)    
-        print(t_o[j],'   ',int(t[j]/h))
-        cuadrados[j] = (y[j]- x[int(t[j]/h)])**2
-
-        Logf_post = n*np.log(sigma) - sum(cuadrados)/(2*sigma**2) + (alpha -1)*np.log(g) + 9*np.log(b) - alpha*g/10 - 10 * b
 
 
-alpha = 1000
-
-print(posterior(10,1,y_o,t_o))
-
-
-# %%
-
-
-
-
-
-# def posteriorlibre(g,sigma,y):
-
-#     n = len(y) 
-
-#     y
-#     f_post = (1/sigma)**(n/2) * np.exp(- )
-
-
-# %%
-    
-print(x[int()])
 
 
 
