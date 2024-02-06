@@ -114,8 +114,11 @@ t = np.linspace(0, derecha, pasos)
 y_obs = np.array([0, 0.06 ,0.16, 0.26, 0.36, 0.46, 0.56])
 t_obs = np.array([0, 0.071, 0.158, 0.220, 0.267, 0.306, 0.340])
 
+t_obs2 = np.array([0, 0.072, 0.158, 0.219, 0.265, 0.304, 0.338])
+t_obs3 = np.array([0, 0.078, 0.163, 0.224, 0.270, 0.309, 0.343])
 
-# print(logposterior(g,b,t,y_obs, t_obs,))
+
+
 
 Posterior_g, Posterior_b = MetropolisHastingsRW()
 
