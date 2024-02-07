@@ -134,7 +134,7 @@ def MetropolisHastingsRW(varianza,tamañoMuestra = 20000):
 
 # %%
 
-# Condiciones iniciales
+# Condiciones iniciales (posición, velocidad)
 y0 = [0, 0.0]  
 
 #Dominio solución
@@ -236,7 +236,7 @@ def inferencia(varianza):
         plt.hist(Posterior_b[burn_in:], bins = 10)
         plt.show()
 
-        plt.title('Distribución posterior de b')
+        plt.title(r'Distribución posterior de $\sigma$')
         plt.hist(Posterior_sigma[burn_in:], bins = 10)
         plt.show()
 
@@ -254,11 +254,8 @@ def inferencia(varianza):
 # %%
 # /////////// Visualización //////////
 
+# Parametetros
 g,b = inferencia('desconocida')
-
-# # Parametetros
-# g = estimador_g
-# b = estimador_b
 
 # Soluciones de la ecuación dínamica
 solutions = odeint(damping, y0, t, args=(g,b))
