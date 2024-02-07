@@ -41,7 +41,7 @@ def logposterior(g, b, sigma = 1):
     x = solucion[:,0]
 
     # Parametro Priori 
-    alpha = 1000
+    alpha = 100
 
     # Log verosimilitud
     cuadrados = np.zeros(n)
@@ -53,24 +53,22 @@ def logposterior(g, b, sigma = 1):
 
     return Logf_post
 
-def MetropolisHastingsRW(tamañoMuestra = 20000, propuesta = 'Normal'):
+def MetropolisHastingsRW(varianza,tamañoMuestra = 20000):
 
-    # Punto inicial (parametros)
-    x = np.array([15,4])
+    if varianza == 'conocida':
 
-    Muestra1 = np.zeros(tamañoMuestra)  # g
-    Muestra2 = np.zeros(tamañoMuestra)  # b
-    # Muestra3 = np.zeros(tamañoMuestra)  # sigma
-    Muestra1[0] = x[0]
-    Muestra2[0] = x[1] 
-    # Muestra3[0] = x[2]
+        # Punto inicial (parametros)
+        x = np.array([15,4])
 
+        Muestra1 = np.zeros(tamañoMuestra)  # g
+        Muestra2 = np.zeros(tamañoMuestra)  # b
 
-    for k in range(tamañoMuestra-1):
+        Muestra1[0] = x[0]
+        Muestra2[0] = x[1] 
 
-        # Simulación de propuesta
-        if propuesta == 'Normal':
+        for k in range(tamañoMuestra-1):
 
+            # Simulación de propuesta
             sigma1 = 0.5
             sigma2 = 0.5
             e1 = norm.rvs(0,sigma1)
@@ -78,33 +76,60 @@ def MetropolisHastingsRW(tamañoMuestra = 20000, propuesta = 'Normal'):
             e = np.array([e1,e2])
             y = x + e 
 
-        # if propuesta == 'SigmaDesconocido':
-        #     sigma1 = 0.5
-        #     sigma2 = 0.05
-        #     sigma3 = 0.5
+            # Cadena de Markov
+            cociente = np.exp(logposterior(y[0],y[1])- logposterior(x[0],x[1]))
 
-        #     e1 = norm.rvs(0,sigma1)
-        #     e2 = norm.rvs(0,sigma2)
-        #     e3 = norm.rvs(0,sigma3)
+            # Transición de la cadena
+            if uniform.rvs(0,1) < cociente :    #Ensayo Bernoulli
+                Muestra1[k+1] = y[0]
+                Muestra2[k+1] = y[1]
+                x = y
+            else:
+                Muestra1[k+1] = x[0]
+                Muestra2[k+1] = x[1]
+            
+        return Muestra1,Muestra2
 
-        #     e = np.array([e1,e2,e3])
-        #     y = x + e 
+    if varianza == 'desconocida':
 
+        # Punto inicial (parametros)
+        x = np.array([15,4,1])
 
-        # Cadena de Markov
-        cociente = np.exp(logposterior(y[0],y[1])- logposterior(x[0],x[1]))
+        Muestra1 = np.zeros(tamañoMuestra)  # g
+        Muestra2 = np.zeros(tamañoMuestra)  # b
+        Muestra3 = np.zeros(tamañoMuestra)  # sigma
 
-        # Transición de la cadena
-        if uniform.rvs(0,1) < cociente :    #Ensayo Bernoulli
-            Muestra1[k+1] = y[0]
-            Muestra2[k+1] = y[1]
-            x = y
-        else:
-            Muestra1[k+1] = x[0]
-            Muestra2[k+1] = x[1]
-        
-    return Muestra1,Muestra2
+        Muestra1[0] = x[0]
+        Muestra2[0] = x[1] 
+        Muestra3[0] = x[2]
 
+        for k in range(tamañoMuestra-1):
+
+            # Simulación de propuesta
+            sigma1 = 0.5
+            sigma2 = 0.5
+            sigma3 = 0.5
+            e1 = norm.rvs(0,sigma1)
+            e2 = norm.rvs(0,sigma2)
+            e3 = norm.rvs(0,sigma3)
+            e = np.array([e1,e2,e3])
+            y = x + e 
+
+            # Cadena de Markov
+            cociente = np.exp(logposterior(y[0],y[1],y[2])- logposterior(x[0],x[1],x[2]))
+
+            # Transición de la cadena
+            if uniform.rvs(0,1) < cociente :    #Ensayo Bernoulli
+                Muestra1[k+1] = y[0]
+                Muestra2[k+1] = y[1]
+                Muestra3[k+1] = y[2]
+                x = y
+            else:
+                Muestra1[k+1] = x[0]
+                Muestra2[k+1] = x[1]
+                Muestra3[k+1] = x[2]
+            
+        return Muestra1,Muestra2,Muestra3
 
 
 # %%
@@ -125,58 +150,115 @@ t_obs = np.array([0, 0.071, 0.158, 0.220, 0.267, 0.306, 0.340])
 # t_obs3 = np.array([0, 0.078, 0.163, 0.224, 0.270, 0.309, 0.343])
 
 
+def inferencia(varianza):
+
+    if varianza == 'conocida':
+    
+        Posterior_g, Posterior_b = MetropolisHastingsRW(varianza)
+
+        plt.title('Cadena')
+        plt.plot(Posterior_g[:5000],label = 'g')
+        plt.plot(Posterior_b[:5000],label = 'b')
+        plt.legend()
+        plt.show()
+
+        plt.title('Trayectoria de caminata aleatoria')
+        plt.plot(Posterior_g,Posterior_b,linewidth = .5, color = 'gray')
+        plt.xlabel('g')
+        plt.ylabel('b')
+        plt.show()  
+
+        plt.title('LogPosterior de la cadena')
+        size = len(Posterior_g)
+        z = np.zeros(size)
+        enteros = np.arange(size)
+        for g,b,k in zip(Posterior_g,Posterior_b,enteros):
+
+            # for k in range(size):
+
+            z[k] = -logposterior(g,b)
+
+        plt.plot(z)
+        plt.show()
+
+        burn_in = 1000
+
+        plt.title('Distribución posterior de g')
+        plt.hist(Posterior_g[burn_in:], bins = 30)
+        plt.show()
+
+        plt.title('Distribución posterior de b')
+        plt.hist(Posterior_b[burn_in:], bins = 30)
+        plt.show()
+
+        estimador_g = np.mean(Posterior_g[burn_in:])    
+        estimador_b = np.mean(Posterior_b[burn_in:])
+        print('Estimador de g: ', estimador_g)  
+        print('Estimador de b: ', estimador_b)
+
+    if varianza == 'desconocida':
+    
+        Posterior_g, Posterior_b, Posterior_sigma = MetropolisHastingsRW(varianza)
+
+        plt.title('Cadena')
+        plt.plot(Posterior_g[:5000],label = 'g')
+        plt.plot(Posterior_b[:5000],label = 'b')
+        plt.plot(Posterior_sigma[:5000],label = 'sigma')
+        plt.legend()
+        plt.show()
+
+        plt.title('Trayectoria de caminata aleatoria')
+        plt.plot(Posterior_g,Posterior_b,linewidth = .5, color = 'gray')
+        plt.xlabel('g')
+        plt.ylabel('b')
+        plt.show()  
+
+        plt.title('LogPosterior de la cadena')
+        size = len(Posterior_g)
+        z = np.zeros(size)
+        enteros = np.arange(size)
+        for g,b,k in zip(Posterior_g,Posterior_b,enteros):
+
+            # for k in range(size):
+
+            z[k] = -logposterior(g,b)
+
+        plt.plot(z)
+        plt.show()
+
+        burn_in = 1000
+
+        plt.title('Distribución posterior de g')
+        plt.hist(Posterior_g[burn_in:], bins = 10)
+        plt.show()
+
+        plt.title('Distribución posterior de b')
+        plt.hist(Posterior_b[burn_in:], bins = 10)
+        plt.show()
+
+        plt.title('Distribución posterior de b')
+        plt.hist(Posterior_sigma[burn_in:], bins = 10)
+        plt.show()
+
+        estimador_g = np.mean(Posterior_g[burn_in:])    
+        estimador_b = np.mean(Posterior_b[burn_in:])
+        estimador_sigma = np.mean(Posterior_sigma[burn_in:])
+        print('Estimador de g: ', estimador_g)  
+        print('Estimador de b: ', estimador_b)
+        print('Estimador de sigma: ', estimador_sigma)
+
+    return estimador_g, estimador_b
 
 
-Posterior_g, Posterior_b = MetropolisHastingsRW()
-
-# %%
-
-plt.title('Cadena')
-plt.plot(Posterior_g[:5000],label = 'g')
-plt.plot(Posterior_b[:5000],label = 'b')
-plt.legend()
-plt.show()
-
-plt.title('Trayectoria de caminata aleatoria')
-plt.plot(Posterior_g,Posterior_b,linewidth = .5, color = 'gray')
-plt.xlabel('g')
-plt.ylabel('b')
-plt.show()  
-
-plt.title('LogPosterior de la cadena')
-size = len(Posterior_g)
-z = np.zeros(size)
-enteros = np.arange(size)
-for g,b,k in zip(Posterior_g,Posterior_b,enteros):
-
-    # for k in range(size):
-
-    z[k] = -logposterior(g,b)
-
-plt.plot(z)
-plt.show()
-
-burn_in = 1000
-
-plt.title('Distribución posterior de g')
-plt.hist(Posterior_g[burn_in:], bins = 30)
-plt.show()
-
-plt.title('Distribución posterior de b')
-plt.hist(Posterior_b[burn_in:], bins = 30)
-plt.show()
-
-estimador_g = np.mean(Posterior_g[burn_in:])    
-estimador_b = np.mean(Posterior_b[burn_in:])
-print('Estimador de g: ', estimador_g)  
-print('Estimador de b: ', estimador_b)
 
 # %%
 # /////////// Visualización //////////
 
-# Parametetros
-g = estimador_g
-b = estimador_b
+g,b = inferencia('desconocida')
+
+# # Parametetros
+# g = estimador_g
+# b = estimador_b
 
 # Soluciones de la ecuación dínamica
 solutions = odeint(damping, y0, t, args=(g,b))
@@ -215,7 +297,7 @@ plt.show()
 dom_g = np.linspace(0,15,500)
 dom_b = np.linspace(0,4,500)
 
-alpha = 1000
+alpha = 100
 plt.plot(dom_g, gamma.pdf(dom_g, a = alpha , scale = 10/alpha))
 plt.title('Distribución a priori de g')
 plt.ylabel(r'$f(g)$')
