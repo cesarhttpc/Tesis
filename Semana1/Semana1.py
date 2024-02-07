@@ -49,7 +49,7 @@ def logposterior(g, b, sigma = 1):
 
         cuadrados[j] = (y_obs[j]- x[int(t_obs[j]/h)])**2
 
-        Logf_post = -n*np.log(sigma) - sum(cuadrados)/(2*sigma**2) + (alpha -1)*np.log(g) + 9*np.log(b) - alpha*g/10 - 10 * b
+    Logf_post = -n*np.log(sigma) - sum(cuadrados)/(2*sigma**2) + (alpha -1)*np.log(g) + 9*np.log(b) - alpha*g/10 - 10 * b
 
     return Logf_post
 
