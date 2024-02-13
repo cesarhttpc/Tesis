@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
+np.random.seed(24)
+
 def dinamica(y,t,g,b):
     x, v = y
     dxdt = v
@@ -45,23 +47,17 @@ v = solutions[:,1]
 from scipy.stats import norm
 x = x + norm.rvs(0,0.2,n)
 
-# # Grafica
-# plt.title('Datos simulados con g = %u , b = %u ' % (g, b))
-# plt.xlabel('Tiempo')
-# plt.ylabel('Posición')
-# plt.scatter(t,x, color= 'orange')
+# Grafica
+plt.title('Datos simulados con g = %u , b = %u ' % (g, b))
+plt.xlabel('Tiempo')
+plt.ylabel('Posición')
+plt.scatter(t,x, color= 'orange')
 
-# %%
+# # %%
 
 '''
 Parte 2: (Establecimiento de la log-posterior)
 '''
-# def logverosimilitud(t, x, sigma = 1):
-
-#     solution = odeint(dinamica, y0, t, args=(g,b))
-#     x_theta = solution[:,0]
-
-#     l = -n*np.log(sigma) - np.sum(x-x_theta)**2 /(2*sigma**2)
 
 def logposterior(g, b, t, x, sigma = 1, gamma = 100, beta = 10, g_0 = 10, b_0 = 1):
    
@@ -73,28 +69,27 @@ def logposterior(g, b, t, x, sigma = 1, gamma = 100, beta = 10, g_0 = 10, b_0 = 
     return Logf_post
 
 
-# logposterior(7,3, t, x)
 
-# %%
+# # %%
 '''
 Parte 3: ()
 
 '''
 
-def MetropolisHastingsRW(t_datos,x_datos):
+def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 10000 ):
 
     # Punto inicial (parametros)
-    x = np.array([14,3])
+    x = inicio
 
-    sigma1, sigma2 = 0.5, 0.5
+    sigma1, sigma2 = 1, 1
 
     # 
-    sample = np.zeros([10,3])
+    sample = np.zeros([size,3])
     sample[0,0] = x[0]  
     sample[0,1] = x[1]
     sample[0,2] = logposterior(x[0], x[1], t_datos, x_datos)
 
-    for k in range(9):
+    for k in range(size-1):
 
         # Simulacion de propuesta
         e1 = norm.rvs(0,sigma1)
@@ -104,6 +99,7 @@ def MetropolisHastingsRW(t_datos,x_datos):
 
         # Cadena de Markov
         log_y = logposterior(y[0], y[1], t_datos, x_datos)
+        # log_x = logposterior(x[0], x[1], t_datos, x_datos)
         log_x = sample[k,2] # Recicla logverosimilitud
         cociente = np.exp( log_y - log_x )
 
@@ -125,21 +121,29 @@ def MetropolisHastingsRW(t_datos,x_datos):
 
         
 
+inicio = np.array([14,5])
+
+# MetropolisHastingsRW(t,x, inicio)
+
+sample = MetropolisHastingsRW(t,x, inicio)
+
+# %%
+g_sample = sample[:,0]
+b_sample = sample[:,1]
+log_post = sample[:,2]
 
 
-print(MetropolisHastingsRW(t,x))
+plt.plot(g_sample)
+plt.show()
 
-# g_sample, b_sample, log_algo = MetropolisHastingsRW(t,x)
+plt.plot(b_sample)
+plt.show()
 
+plt.plot(g_sample,b_sample)
+plt.show()
 
-# plt.plot(g_sample)
-# plt.show()
+plt.plot(log_post)
 
-# plt.plot(b_sample)
-# plt.show()
-
-# plt.plot(g_sample,b_sample)
-# plt.show()
-
-# plt.plot(sample[:,2])
-
+plt.hist(g_sample, density= True, bins = 20)
+plt.show()
+plt.hist(b_sample, density= True, bins = 20)
