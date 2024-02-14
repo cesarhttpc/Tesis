@@ -23,13 +23,13 @@ Parte 1: (Establecer la dinamica y simulacion de datos)
 '''
 
 # Parametros principales
-g = 9.81    
-b = 3.9
+g = 15.2   
+b = 0.29
 
 # Simular los tiempos de observación
 from scipy.stats import uniform
-n = 50      # Tamaño de muestra
-t = uniform.rvs(0, 1, n)       
+n = 100      # Tamaño de muestra
+t = uniform.rvs(0, 2, n)       
 t = np.sort(t)
 
 # ECUACIÓN DIFERENCIAL:
@@ -45,7 +45,7 @@ v = solutions[:,1]
 
 # Añadir ruido a los datos
 from scipy.stats import norm
-x = x + norm.rvs(0,0.05,n)
+x = x + norm.rvs(0,0.01,n)
 
 # Grafica
 plt.title('Datos simulados con g = %u , b = %u ' % (g, b))
@@ -59,13 +59,13 @@ plt.scatter(t,x, color= 'green')
 Parte 2: (Establecimiento de la log-posterior)
 '''
 
-def logposterior(g, b, t, x, sigma = 1, gamma = 100, beta = 10, g_0 = 10, b_0 = 1):
+def logposterior(g, b, t, x, sigma = 1, alpha = 100, beta = 10, g_0 = 10, b_0 = 1):
    
     if g>0 and b>0:
         solution = odeint(dinamica, y0, t, args=(g,b))
         x_theta = solution[:,0]
 
-        Logf_post = -n*np.log(sigma) - np.sum(x-x_theta)**2 /(2*sigma**2) + (gamma -1)*np.log(g) - gamma*g/g_0 + (beta - 1)*np.log(b) - beta*b/b_0
+        Logf_post = -n*np.log(sigma) - np.sum(x-x_theta)**2 /(2*sigma**2) + (alpha -1)*np.log(g) - alpha*g/g_0 + (beta - 1)*np.log(b) - beta*b/b_0
 
         return Logf_post
     else:
@@ -78,7 +78,7 @@ Parte 3: (Realizacion de la cadena por MCMC)
 
 '''
 
-def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 50000 ):
+def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 30000 ,alpha =100, beta = 10, g_0 = 10, b_0 = 1 ):
 
     # Punto inicial (parametros)
     x = inicio
@@ -122,7 +122,8 @@ def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 50000 ):
 
 inicio = np.array([8,3])
 
-sample = MetropolisHastingsRW(t, x, inicio)
+sample = MetropolisHastingsRW(t, x, inicio)#, g_0= 15.2, b_0 = 0.5)#, b_0= 1.25 , beta= 10, alpha= 100)
+
 
 # %%
 
@@ -130,22 +131,22 @@ sample = MetropolisHastingsRW(t, x, inicio)
 Parte 4: (visualizacion)
 
 '''
+# Parametros de a prioi y cadena
+alpha = 100
+beta = 10
+g_0 = 10
+b_0 = 1
+burn_in = 5000
+
 g_sample = sample[:,0]
 b_sample = sample[:,1]
 log_post = sample[:,2]
 
-burn_in = 5000
 plt.title('Cadena')
 plt.plot(g_sample[:10000],label = 'g')
 plt.plot(b_sample[:10000],label = 'b')
 plt.legend()
 plt.show()
-
-# plt.plot(g_sample)
-# plt.show()
-
-# plt.plot(b_sample)
-# plt.show()
 
 plt.title('Trayectoria de caminata aleatoria')
 plt.plot(g_sample,b_sample,linewidth = .5, color = 'gray')
@@ -160,19 +161,17 @@ plt.show()
 from scipy.stats import gamma
 
 plt.title('Distribuciones a priori y posterior para g')
-plt.hist(g_sample[burn_in:], density= True, bins = 30)
-alpha = 100
+plt.hist(g_sample[burn_in:], density= True, bins = 20)
 dom_g = np.linspace(7,17,500)
-plt.plot(dom_g, gamma.pdf(dom_g, a = alpha , scale = 10/alpha))
+plt.plot(dom_g, gamma.pdf(dom_g, a = alpha , scale = g_0/alpha))
 plt.ylabel(r'$f(g)$')
 plt.xlabel(r'$g$')
 plt.show()
 
 plt.title('Distribuciones a priori y posterior para b')
-plt.hist(b_sample[burn_in:], density= True, bins = 30)
-beta = 10
+plt.hist(b_sample[burn_in:], density= True, bins = 20)
 dom_b = np.linspace(0,4,500)
-plt.plot(dom_b, gamma.pdf(dom_b, a = beta, scale = 1/beta))
+plt.plot(dom_b, gamma.pdf(dom_b, a = beta, scale = b_0/beta))
 plt.ylabel(r'$f(b)$')
 plt.xlabel(r'$b$')
 plt.show()
@@ -182,16 +181,20 @@ estimador_b = np.mean(b_sample[burn_in:])
 print('Estimador de g: ', estimador_g)  
 print('Estimador de b: ', estimador_b)
 
-t_grafica = np.linspace(0,1, 100)
+# Grafica de la curva estimada
+t_grafica = np.linspace(0,2, 100)
 solucion_estimada = odeint(dinamica, y0, t_grafica ,args=(estimador_g,estimador_b))
 
 x_estimado = solucion_estimada[:,0]
 v_estimado = solucion_estimada[:,1]
 
-plt.plot(t_grafica, x_estimado, label='Solucion Estimada')
-plt.scatter(t,x, color= 'green')
-
-
+plt.title('Curva estimada')
+plt.scatter(t,x, color= 'green', label = 'Datos sim. g = %2.2f, b = %2.2f' %(g,b))
+plt.plot(t_grafica, x_estimado, label='Estimacion g = %2.2f, b = %2.2f' %(estimador_g, estimador_b), color = 'purple')
+plt.xlabel('t')
+plt.ylabel('Posición')
+plt.legend()
+plt.show()
 
 
 
