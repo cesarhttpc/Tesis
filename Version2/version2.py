@@ -23,8 +23,8 @@ Parte 1: (Establecer la dinamica y simulacion de datos)
 '''
 
 # Parametros principales
-g = 15.2   
-b = 0.29
+g = 9.81  
+b = 0.55
 
 # Simular los tiempos de observación
 from scipy.stats import uniform
@@ -78,7 +78,7 @@ Parte 3: (Realizacion de la cadena por MCMC)
 
 '''
 
-def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 30000 ,alpha =100, beta = 10, g_0 = 10, b_0 = 1 ):
+def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 50000 ,alpha =100, beta = 10, g_0 = 10, b_0 = 1 ):
 
     # Punto inicial (parametros)
     x = inicio
@@ -89,7 +89,7 @@ def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 30000 ,alpha =100, beta 
     sample = np.zeros([size,3])
     sample[0,0] = x[0]  
     sample[0,1] = x[1]
-    sample[0,2] = logposterior(x[0], x[1], t_datos, x_datos)
+    sample[0,2] = logposterior(x[0], x[1], t_datos, x_datos, alpha=alpha, beta = beta, g_0 = g_0, b_0 = b_0)
 
     for k in range(size-1):
 
@@ -100,7 +100,7 @@ def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 30000 ,alpha =100, beta 
         y = x + e 
 
         # Cadena de Markov
-        log_y = logposterior(y[0], y[1], t_datos, x_datos)
+        log_y = logposterior(y[0], y[1], t_datos, x_datos, alpha = alpha, beta = beta, g_0 = g_0, b_0 = b_0)
         log_x = sample[k,2] # Recicla logverosimilitud
         cociente = np.exp( log_y - log_x )
 
@@ -122,8 +122,13 @@ def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 30000 ,alpha =100, beta 
 
 inicio = np.array([8,3])
 
-sample = MetropolisHastingsRW(t, x, inicio)#, g_0= 15.2, b_0 = 0.5)#, b_0= 1.25 , beta= 10, alpha= 100)
+sample = MetropolisHastingsRW(t, x, inicio)#, g_0= 15.2, b_0 = 0.5, beta = 10, alpha= 100)
 
+# Parametros de a prioi y cadena
+alpha = 100
+beta = 10
+g_0 = 10
+b_0 = 1
 
 # %%
 
@@ -131,16 +136,13 @@ sample = MetropolisHastingsRW(t, x, inicio)#, g_0= 15.2, b_0 = 0.5)#, b_0= 1.25 
 Parte 4: (visualizacion)
 
 '''
-# Parametros de a prioi y cadena
-alpha = 100
-beta = 10
-g_0 = 10
-b_0 = 1
-burn_in = 5000
+
 
 g_sample = sample[:,0]
 b_sample = sample[:,1]
 log_post = sample[:,2]
+
+burn_in = 5000
 
 plt.title('Cadena')
 plt.plot(g_sample[:10000],label = 'g')
