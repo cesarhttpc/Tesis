@@ -1,0 +1,117 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[spanish]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+% Keywords command
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Palabras clave---}} #1
+}
+
+\title{Protocolo de Tesis}
+\author{César Isaí García Cornejo \\
+Asesor: Dr. José Andrés Christen Gracia}
+
+\begin{document}
+\maketitle
+
+\keywords{problema inverso, inferencia bayesiana, ecuaciones diferenciales, MCMC}
+
+\section*{Introducción}
+
+Los fenómenos de la naturaleza son intrínsecamente causales. Las causas; que son las condiciones, cambios o variables; afligen una reacción a la cual llamamos efecto. El efecto es producto enteramente de la causa. Dicho de otra forma, sin una causa no existe el efecto, por lo que estas se encuentran en un orden tanto lógico como cronológico. Asimismo, los modelos que pretendan describir los fenómenos naturales deben ser causales, respetando orden entre causa y efecto, haciendo viable la posibilidad de generar predicciones elocuentes. 
+
+Típicamente los modelos matemáticos precisan de condiciones iniciales, parámetros u otras formas de variables para determinar unívocamente el problema cuya resolución propicia a la predicción de una o más cualidades del fenómeno modelado. Decimos que aquellas variables previas son las causas, mientras que el efecto son las predicciones dadas por la resolución del problema matemático.
+El proceso anteriormente descrito se llama problema directo o `forward problem' ya que sigue la dirección de causalidad. Sin embargo, es interesante también el problema inverso, dada ciertas observaciones de las cualidades de un fenómeno (efectos), ¿es posible calcular las causas del modelo que rige el fenómeno?
+
+El problema inverso es uno de los problemas matemáticos más importantes para la ciencia, debido a que ayuda a dilucidar valores de parámetros que no se pueden medir directamente. Además de que tiene un amplio campo de aplicación, entre ellos: óptica, acústica, procesamiento de señales, imágenes medicas, geofísica, oceanografía, astronomía, aprendizaje máquina y un largo etc. A pesar de la gran variabilidad de aplicaciones del problema inverso, las vicisitudes de este lo hacen un problema complejo. Mientras que el forward problem tiene solución única (en caso determinista) el problema inverso no necesariamente. Aunado al hecho de que las observaciones conllevan incertidumbre por errores de medición. Por lo anterior, es que es necesario hacer explícito toda la información a priori de los parámetros del modelo al igual que la aceptable representación de las incertidumbres en los datos.
+
+La teoría más general se obtiene tras representar la información a priori del modelo por una distribución de probabilidad sobre el espacio de modelos, llamada distribución a priori. Dicha formulación se engloba en la estadística bayesiana, que muestra como se transforma la distribución a priori tras la consideración de las observaciones relacionadas al modelo de interés, dando la denominada distribución posterior. La metodología usual para obtener estimaciones de los parámetros se da tras la simulación de realizaciones de la distribución a posterior por métodos monte carlo, siendo el más famoso MCMC Metropolis-Hastings. 
+
+
+
+
+
+
+
+% Se pretende centrarse en el problema inverso para modelos descritos por ecuaciones diferenciales ordinarias, donde 
+
+
+% La complejidad del problema inverso radica en el hecho de que 
+
+
+
+
+\section*{Antecedentes}
+
+
+
+
+
+
+\newpage
+
+% \vspace*{0.5}
+
+\section*{borrador}
+\subsection*{Introducción}
+
+Los fenómenos de la naturaleza manifiestan una dualidad entre causa y efecto. Entendemos por causa a las condiciones, cambios o variables que de algún modo dicha afectación conlleva a un efecto. El efecto es entonces producto enteramente de la causa. Sin una causa no existe el efecto. Nos restringimos solamente a fenómenos causales, que significa que la causa precede al efecto en un orden tanto lógico como cronológico.
+
+Los modelos físicos causales nos permiten hacer predicciones de un fenómeno. Dadas las causas, es posible conocer los efectos. Por fines pedagógicos, pensemos particularmente en el modelo de caída de la dinámica clásica newtoniana. Al tirar un objeto desde una altura, la gravedad actuará sobre este acelerandolo a la vez que la fuerza de fricción impide su movimiento. Por la segunda ley de Newton, la trayectoria del objeto de masa $m$ es:
+\begin{align*}
+    m\ddot{x} = g - b \dot{x}
+\end{align*}
+Las causas son la interacción de la gravedad $g$, como el coeficiente de fricción $b$. Las causas aquí son el par de parámetros $(g,b)$, y junto al modelo se pueden obtener los efectos, que es la trayectoria $x(t)$ solución de la ecuación diferencial. 
+
+El proceso descrito se dice que es el problema directo o `forward problem'. Sin embargo, suele ser interesante el problema inverso, es decir dado los efectos, que causas conllevo a dicho efecto. Las vicisitudes del problema inverso adolece de 
+
+
+
+
+
+
+
+Las vicisitudes del problema inverso radican según el modelo. Cabe la posibilidad de que para un mismo efecto existan causas diferentes que generen dicho efecto. Por ejemplo, para el modelo de gravitación newtoniano, el problema forward nos pide una distribución de masa (causa) lo que genera una fuerza a cierta partícula en el espacio (efecto). En contraste, en el problema inverso dada la fuerza ejercida en una partícula se busca encontrar la distribución de masa que generan dicha fuerza. Indudablemente, hay infinidad de soluciones al problema inverso, lo que imposibilita una clara definición del problema.
+
+
+existen infinidad de distribuciones de masa que generan la misma fuerza a dicha partícula; teniendo un problema con infinitas soluciones. Sin embargo, existen modelos en los que es posible discernir las causas de forma estimada, lo que abre la posibilidad a la inferencia estadística para abordar el problema.
+
+La propuesta de tesis se centra en el estudio del problema inverso para modelos descritos por ecuaciones diferenciales ordinarias bajo estadística bayesiana para estimación de parámetros dada la trayectoria observada. 
+
+% \newpage
+
+
+
+\section*{Antecedentes}
+
+
+
+
+
+% \begin{figure}
+% \centering
+% \includegraphics[width=0.25\linewidth]{frog.jpg}
+% \caption{\label{fig:frog}This frog was uploaded via the file-tree menu.}
+% \end{figure}
+
+
+
+
+
+
+
+
+\end{document}
