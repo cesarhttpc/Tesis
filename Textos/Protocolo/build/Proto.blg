@@ -1,50 +1,48 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Proto.aux
+Reallocating 'name_of_file' (item size: 1) to 4 items.
 Reallocating 'name_of_file' (item size: 1) to 6 items.
-The style file: alpha.bst
-Reallocating 'name_of_file' (item size: 1) to 7 items.
-Database file #1: sample.bib
-Warning--I didn't find a database entry for "greenwade93"
-You've used 0 entries,
-            2543 wiz_defined-function locations,
-            559 strings with 4446 characters,
-and the built_in function-call counts, 24 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 10
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+The style file: plain.bst
+Database file #1: bib.bib
+You've used 3 entries,
+            2118 wiz_defined-function locations,
+            512 strings with 4343 characters,
+and the built_in function-call counts, 743 in all, are:
+= -- 63
+> -- 32
+< -- 1
++ -- 13
+- -- 10
+* -- 38
+:= -- 136
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 11
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 2
-int.to.chr$ -- 1
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+cite$ -- 3
+duplicate$ -- 36
+empty$ -- 67
+format.name$ -- 10
+if$ -- 153
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 6
+newline$ -- 18
+num.names$ -- 6
+pop$ -- 25
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 11
 quote$ -- 0
-skip$ -- 2
+skip$ -- 19
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 15
+swap$ -- 4
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 6
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There was 1 warning)
+while$ -- 6
+width$ -- 4
+write$ -- 33

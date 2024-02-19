@@ -1,3 +1,19 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{robert1999monte}
+Christian~P Robert, George Casella, and George Casella.
+\newblock {\em Monte Carlo statistical methods}, volume~2.
+\newblock Springer, 1999.
+
+\bibitem{tarantola2005inverse}
+Albert Tarantola.
+\newblock {\em Inverse problem theory and methods for model parameter
+  estimation}.
+\newblock SIAM, 2005.
+
+\bibitem{wasserman2004all}
+Larry Wasserman.
+\newblock {\em All of statistics: a concise course in statistical inference}.
+\newblock Springer Science \& Business Media, 2004.
 
 \end{thebibliography}

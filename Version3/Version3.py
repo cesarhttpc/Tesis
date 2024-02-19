@@ -154,8 +154,14 @@ plt.show()
 
 plt.title('Trayectoria de caminata aleatoria')
 plt.plot(g_sample,b_sample,linewidth = .5, color = 'gray')
+# Grid
+g_dom = np.linspace(6,14, num = 9)
+b_dom = np.linspace(1,4,7)
+Z = np.meshgrid(g_dom,b_dom)
+plt.scatter(Z[0],Z[1])
 plt.xlabel('g')
 plt.ylabel('b')
+plt.scatter(8.3,2.7)
 plt.show() 
 
 plt.title('LogPosterior de la cadena')
@@ -207,4 +213,9 @@ plt.legend()
 plt.show()
 
 
-
+# %%
+# Grid
+g_dom = np.linspace(6,14, num = 9)
+b_dom = np.linspace(1,4,4)
+Z = np.meshgrid(g_dom,b_dom)
+plt.scatter(Z[0],Z[1])

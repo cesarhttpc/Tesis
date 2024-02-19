@@ -28,9 +28,10 @@ b = 0.5
 
 # Simular los tiempos de observación
 from scipy.stats import uniform
-n = 250     # Tamaño de muestra
-t = uniform.rvs(0, 10, n)       
-t = np.sort(t)
+n = 25     # Tamaño de muestra
+t = np.linspace(0,10,n)
+# t = uniform.rvs(0, 10, n)       
+# t = np.sort(t)
 
 # ECUACIÓN DIFERENCIAL:
 # Condiciones iniciales (posición, velocidad)
@@ -66,7 +67,7 @@ def logposterior(g, b, t, x, sigma = 1, alpha = 100, beta = 10, g_0 = 10, b_0 = 
         solution = odeint(dinamica, y0, t, args=(g,b))
         x_theta = solution[:,0]
 
-        Logf_post = -n*np.log(sigma) - np.sum(x-x_theta)**2 /(2*sigma**2) + (alpha -1)*np.log(g) - alpha*g/g_0 + (beta - 1)*np.log(b) - beta*b/b_0
+        Logf_post = -n*np.log(sigma) - np.sum((x-x_theta)**2) /(2*sigma**2) + (alpha -1)*np.log(g) - alpha*g/g_0 + (beta - 1)*np.log(b) - beta*b/b_0
 
         return Logf_post
     else:
@@ -79,7 +80,7 @@ Parte 3: (Realizacion de la cadena por MCMC)
 
 '''
 
-def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 50000 ,alpha =100, beta = 10, g_0 = 10, b_0 = 1 ):
+def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 10000 ,alpha =100, beta = 10, g_0 = 10, b_0 = 1 ):
 
     # Punto inicial (parametros)
     x = inicio
@@ -121,7 +122,7 @@ def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 50000 ,alpha =100, beta 
 
     return sample
 
-inicio = np.array([8,3])
+inicio = np.array([5,0.5])
 
 sample = MetropolisHastingsRW(t, x, inicio, alpha= 10,  beta = 1, g_0= 7, b_0 = 1)
 
@@ -137,7 +138,7 @@ b_0 = 1
 Parte 4: (visualizacion)
 
 '''
-# %%
+
 
 g_sample = sample[:,0]
 b_sample = sample[:,1]
@@ -198,4 +199,6 @@ plt.xlabel('t')
 plt.ylabel('Posición')
 plt.legend()
 plt.show()
+
+
 
