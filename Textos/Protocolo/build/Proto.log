@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.29)  19 FEB 2024 01:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.29)  19 FEB 2024 01:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -384,32 +384,38 @@ LaTeX Font Info:    Trying to load font information for U+eus on input line 66.
  (C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) [2] [3]
-<Figures/datos.png, id=93, 400.3758pt x 328.8285pt>
+<Figures/datos.png, id=97, 400.3758pt x 328.8285pt>
 File: Figures/datos.png Graphic file (type png)
 <use Figures/datos.png>
 Package pdftex.def Info: Figures/datos.png  used on input line 164.
 (pdftex.def)             Requested size: 227.62204pt x 186.95251pt.
-<Figures/trayectoria.png, id=96, 409.7709pt x 328.8285pt>
+<Figures/trayectoria.png, id=100, 409.7709pt x 328.8285pt>
 File: Figures/trayectoria.png Graphic file (type png)
 <use Figures/trayectoria.png>
 Package pdftex.def Info: Figures/trayectoria.png  used on input line 173.
 (pdftex.def)             Requested size: 227.62204pt x 182.65752pt.
-<Figures/g.png, id=99, 412.6617pt x 329.5512pt>
+<Figures/g.png, id=103, 412.6617pt x 329.5512pt>
 File: Figures/g.png Graphic file (type png)
 <use Figures/g.png>
 Package pdftex.def Info: Figures/g.png  used on input line 182.
 (pdftex.def)             Requested size: 227.62204pt x 181.77667pt.
-<Figures/b.png, id=100, 411.2163pt x 329.5512pt>
+<Figures/b.png, id=104, 411.2163pt x 329.5512pt>
 File: Figures/b.png Graphic file (type png)
 <use Figures/b.png>
 Package pdftex.def Info: Figures/b.png  used on input line 190.
 (pdftex.def)             Requested size: 227.62204pt x 182.42032pt.
-<Figures/estimacion.png, id=102, 400.3758pt x 328.8285pt>
+<Figures/estimacion.png, id=106, 400.3758pt x 328.8285pt>
 File: Figures/estimacion.png Graphic file (type png)
 <use Figures/estimacion.png>
 Package pdftex.def Info: Figures/estimacion.png  used on input line 199.
 (pdftex.def)             Requested size: 227.62204pt x 186.95251pt.
- [4 <./Figures/datos.png> <./Figures/trayectoria.png>] [5 <./Figures/g.png> <./Figures/b.png>] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.bbl) [6 <./Figures/estimacion.png>] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.aux
+ [4 <./Figures/datos.png> <./Figures/trayectoria.png>] [5 <./Figures/g.png> <./Figures/b.png>]
+<Figures/interpolacion.png, id=125, 409.7709pt x 328.8285pt>
+File: Figures/interpolacion.png Graphic file (type png)
+<use Figures/interpolacion.png>
+Package pdftex.def Info: Figures/interpolacion.png  used on input line 211.
+(pdftex.def)             Requested size: 227.62204pt x 182.65752pt.
+ [6 <./Figures/estimacion.png> <./Figures/interpolacion.png>] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.bbl) [7] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
@@ -418,20 +424,20 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
  ***********
 Package rerunfilecheck Info: File `Proto.out' has not changed.
-(rerunfilecheck)             Checksum: 3F42321E7912C63BB7566C3B055DA8FB;1519.
+(rerunfilecheck)             Checksum: 6CA2E82E592FF07C1B56E4B60908AF61;1644.
  ) 
 Here is how much of TeX's memory you used:
- 11731 strings out of 475503
- 184183 string characters out of 5761834
+ 11743 strings out of 475503
+ 184451 string characters out of 5761834
  1937248 words of memory out of 5000000
- 32795 multiletter control sequences out of 15000+600000
+ 32804 multiletter control sequences out of 15000+600000
  569056 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,79p,1019b,484s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.pdf (6 pages, 346698 bytes).
+Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.pdf (7 pages, 388577 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 235 PDF objects out of 1000 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

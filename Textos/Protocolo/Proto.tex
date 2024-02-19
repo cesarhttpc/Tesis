@@ -204,12 +204,21 @@ Finalmente, se coteja la calidad de la estimación con los parámetros con los q
 
 \section{Objetivo}
 
-A pesar de que el análisis previo nos permite obtener estimaciones bastante precisas para el problema inverso, son computacionalmente pesadas, esto debido a que a cada paso en la cadena requiere que se solucione el problema forward, es decir, se resuelven ecuaciones diferenciales tantas veces como se deje correr la cadena. Es así, que se desea encontrar una especie de \textit{interpolación} para solo solucionar una cantidad fija de veces el problema forward y para cada punto en el espacio de parámetros se pueda estimar la solución en función de las soluciones con parámetros cercanos. 
+A pesar de que el análisis previo nos permite obtener estimaciones bastante precisas para el problema inverso, son computacionalmente pesadas, esto debido a que a cada paso en la cadena requiere que se solucione el problema forward, es decir, se resuelven ecuaciones diferenciales tantas veces como se deje correr la cadena. Es así, que se desea encontrar una especie de \textit{interpolación} para solo solucionar una cantidad fija de veces el problema forward y para cada punto en el espacio de parámetros se pueda estimar la solución en función de las soluciones con parámetros cercanos. (Fig. \ref{Fig. 3.06})
+
+\begin{figure}
+    \centering 
+    \includegraphics[width = 8 cm]{Figures/interpolacion.png} 
+    \caption{Enmallado para el espacio de parámetros donde se resuelve unicamente el forward problem, cualquier punto fuera de estos se estima el forward map por medio de sus vecinos.}
+    \label{Fig. 3.06}
+\end{figure} 
+
+
+\section{Plan de trabajo}
 
 
 
-
-
+\newpage
 
 
 

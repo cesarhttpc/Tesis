@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex build/Proto"] 1708327020 "build/Proto.aux" "build/Proto.bbl" "build/Proto" 1708327023 0
+["bibtex build/Proto"] 1708328489 "build/Proto.aux" "build/Proto.bbl" "build/Proto" 1708328492 0
   "./bib.bib" 1708317938 640 75e3b71c71175599b5a5d0f5994d2e38 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "build/Proto.aux" 1708327022 3756 a4a9637f9e574ce08b22f857c386d093 "pdflatex"
+  "build/Proto.aux" 1708328491 4363 ece13a32378facb48e0c0372b99443c9 "pdflatex"
   (generated)
   "build/Proto.bbl"
   "build/Proto.blg"
   (rewritten before read)
-["pdflatex"] 1708327021 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Protocolo/Proto.tex" "build/Proto.pdf" "Proto" 1708327023 0
+["pdflatex"] 1708328490 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Protocolo/Proto.tex" "build/Proto.pdf" "Proto" 1708328492 0
   "C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1708034302 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/ce_ra/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1693352273 24120579 85898b25958cf632ec7946174c56943b ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -134,12 +134,13 @@
   "Figures/datos.png" 1708325117 19085 6014c72551548d35d4282a25efdb7c39 ""
   "Figures/estimacion.png" 1708325189 31367 29e59d788972d839dc7a4ccf36b2cfc4 ""
   "Figures/g.png" 1708325150 21665 da7b869511b4c35f5b5d084b4b558f09 ""
+  "Figures/interpolacion.png" 1708327866 58694 3d74a5132b456ad3851b4065d480d5ba ""
   "Figures/trayectoria.png" 1708325130 58160 67715d7e99836363c6c412be6065e651 ""
-  "Proto.tex" 1708327016 20776 f0c7838e88bcb7e3af4258ec318ac091 ""
-  "build/Proto.aux" 1708327022 3756 a4a9637f9e574ce08b22f857c386d093 "pdflatex"
-  "build/Proto.bbl" 1708327021 569 0b6795a1c7f86fce63b36a6e2de398cd "bibtex build/Proto"
-  "build/Proto.out" 1708327022 1519 3f42321e7912c63bb7566c3b055da8fb "pdflatex"
-  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Protocolo/Proto.tex" 1708327016 20776 f0c7838e88bcb7e3af4258ec318ac091 ""
+  "Proto.tex" 1708328485 21159 5f8939480ae32bbfc6a827531890240a ""
+  "build/Proto.aux" 1708328491 4363 ece13a32378facb48e0c0372b99443c9 "pdflatex"
+  "build/Proto.bbl" 1708328489 569 0b6795a1c7f86fce63b36a6e2de398cd "bibtex build/Proto"
+  "build/Proto.out" 1708328491 1644 6ca2e82e592ff07c1b56e4b60908af61 "pdflatex"
+  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Protocolo/Proto.tex" 1708328485 21159 5f8939480ae32bbfc6a827531890240a ""
   (generated)
   "build/Proto.aux"
   "build/Proto.log"
