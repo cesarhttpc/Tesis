@@ -116,6 +116,8 @@ INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\reru
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.aux
@@ -147,6 +149,7 @@ INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\bui
 INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.out
 OUTPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.out
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
@@ -190,8 +193,8 @@ INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\ueuf.fd
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm10.tfm
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm7.tfm
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eufm5.tfm
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\ueus.fd
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\ueus.fd
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\ueus.fd
@@ -200,6 +203,12 @@ INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\eul
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\euler\eusm5.tfm
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmmib9.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmmib6.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmmib5.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy9.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy6.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy5.tfm
 INPUT .\Figures\datos.png
 INPUT .\Figures\datos.png
 INPUT .\Figures\datos.png
@@ -243,6 +252,13 @@ INPUT .\Figures\interpolacion.png
 INPUT .\Figures\interpolacion.png
 INPUT .\Figures\interpolacion.png
 INPUT .\Figures\interpolacion.png
+INPUT .\Figures\cronograma.png
+INPUT .\Figures\cronograma.png
+INPUT .\Figures\cronograma.png
+INPUT .\Figures\cronograma.png
+INPUT .\Figures\cronograma.png
+INPUT .\Figures\cronograma.png
+INPUT .\Figures\cronograma.png
 INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.bbl
 INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.bbl
 INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.bbl
@@ -265,6 +281,8 @@ INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi9.pfb
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi9.pfb
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmmib9.pfb
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmmib9.pfb
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb

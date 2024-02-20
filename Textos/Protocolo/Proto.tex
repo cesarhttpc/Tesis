@@ -15,6 +15,7 @@
 \usepackage{graphicx}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
+\usepackage{float}
 % Keywords command
 \providecommand{\keywords}[1]
 {
@@ -25,14 +26,14 @@
 % //////////////////////////////////////////////////////////////
 % //////////////////////////////////////////////////////////////
 
-\title{Protocolo de Tesis}
+\title{\textbf{Protocolo de Tesis}\\Cuantificación de incertidumbre bayesiana aproxima en problemas inversos de ODE}
 \author{César Isaí García Cornejo \\
 Asesor: Dr. José Andrés Christen Gracia}
 
 \begin{document}
 \maketitle
 
-\keywords{problema inverso, inferencia bayesiana, ecuaciones diferenciales, MCMC}
+\keywords{Cuantificación de incertidumbre, problema inverso, inferencia bayesiana, ecuaciones diferenciales, MCMC}
 
 \section{Introducción}
 
@@ -71,13 +72,13 @@ Para obtener información en los parámetros del modelo, es necesario obtener ob
 
 \subsection{Problema directo (forward problem)}
 
-Los experimentos sugieren teorías físicas, y las teorías físicas predicen los resultados de los experimentos. La comparación entre la predicción y las observaciones permiten mejorar la teoría.
+Los experimentos sugieren teorías físicas, y las teorías físicas predicen los resultados de los experimentos. La comparación entre la predicción y las observaciones son evidencia de la factibilidad de la teoría.
 
-Tomando una perspectiva simplista, resolver el problema directo significa predecir los valores de las observables físicos sin error $\mathbf{d}$ que corresponde a un modelo $\mathbf{m}$. Esta predicción se denota por 
+Tomando una perspectiva simplista, resolver el problema directo significa predecir los valores de las observables físicos sin error $\mathbf{d}$ que corresponde a un modelo $\boldsymbol{\theta}$. Esta predicción se denota por 
 \begin{align*}
-    \mathbf{m} \:\:\:\:\: \mapsto \:\:\:\:\: \mathbf{d} = \mathbf{F(m)}
+    \boldsymbol{\theta} \:\:\:\:\: \mapsto \:\:\:\:\: \mathbf{d} = \mathbf{F(\boldsymbol{\theta})}
 \end{align*}
-donde $\mathbf{d} = \mathbf{F(m)} $ es la notación reducida para $ d ^i = F^i(m^1,m^2,...)$ (i = 1,2,...) con $m_i$ y $d_i$ coordenadas en su respectivo espacio. El operador $F(\dot) $ se llama operador forward y expresa el modelo matemático del sistema físico estudiado.
+donde $\mathbf{d} = \mathbf{F(\boldsymbol{\theta})} $ es la notación reducida para $ d ^i = F^i(\theta^1,\theta^2,...)$ (i = 1,2,...) con $\theta_i$ y $d_i$ coordenadas en su respectivo espacio. El operador $F(\cdot) $ se llama operador forward y expresa el modelo matemático del sistema físico estudiado.
 
 Los valores predichos no serán, en general, idénticos a los valores observados por las ya mencionas complicaciones: incertidumbre de las mediciones e imperfecciones del modelo. Estas dos diferentes fuentes de error producen incertidumbre del mismo orden de magnitud, debido a que tan pronto como la investigación científica progresa, los métodos experimentales decrecen la incertidumbre en sus mediciones \cite{tarantola2005inverse}.
 
@@ -148,7 +149,7 @@ Obteniendo así, la distribución posterior
 \end{align*}
 de donde una vez dada las distribuciones a priori, es posible simular variables aleatorias con dicha distribución y así obtener estimaciones de los parámetros del modelo. Dicha simulación se plantea obtener por medio de MCMC Metropolis-Hastings. Finalmente, de la simulación de la distribución posterior, se dan estimaciones puntuales de los parámetros.
 
-\subsection{Consideraciones particulares}
+\subsection{Ejemplo}
 
 Se plantea dar una par de modelos dados por ODE's con parámetros del modelo. Uno de los modelos propuestos para resolver el problema inverso es el dado por la caída de una partícula en un campo gravitatorio constante sujeto a una fuerza de fricción dada por la dinámica clásica. La trayectoria de la partícula $x(t)$ satisface la segunda ley de Newton
 \begin{align}
@@ -159,7 +160,7 @@ donde $g$ es la constante de gravitación y $b$ es la constante de fricción. Es
 
 Los datos los obtenemos de simulación, tomaremos dos valores de parámetros $g,b$ y aplicaremos el forward map para obtener puntos en la trayectoria a la cual se procede a agregar ruido gaussiano (Fig. \ref{Fig. 01}).
 
-\begin{figure}
+\begin{figure}[H]
     \centering 
     \includegraphics[width = 8 cm]{Figures/datos.png} 
     \caption{Datos simulados para caída sujeto a fricción.}
@@ -168,7 +169,7 @@ Los datos los obtenemos de simulación, tomaremos dos valores de parámetros $g,
 
 Las distribuciones a priori tienen que tener soporte en los positivos, por ello es que se proponen a ambos parámetros del modelo con distribuciones gama. Posteriormente, usando Metropolis-Hastings se se genera una caminata aleatoria en el espacio de parámetros del modelo, donde a cada paso resuelve el problema forward para los parámetros donde se encuentra la camina y así evaluar lo distribución posterior (Fig. \ref{Fig. 02})
 
-\begin{figure}
+\begin{figure}[H]
     \centering 
     \includegraphics[width = 8 cm]{Figures/trayectoria.png} 
     \caption{Trayectoria de la caminata aleatoria del MCMC en el espacio de parámetros.}
@@ -177,7 +178,7 @@ Las distribuciones a priori tienen que tener soporte en los positivos, por ello 
 
 Con la simulación de la distribución posterior, mostrada en las Fig. \ref{Fig. 3.03} y \ref{Fig. 3.04} podemos tomar el estimador de Bayes como la media de la distribución, siendo está la estimación para los parámetros.
 
-\begin{figure}
+\begin{figure}[H]
     \centering 
     \includegraphics[width = 8cm ]{Figures/g.png}    
     \caption{Distribución a priori y distribución posterior para el parámetro g}
@@ -185,7 +186,7 @@ Con la simulación de la distribución posterior, mostrada en las Fig. \ref{Fig.
 \end{figure} 
 
 
-\begin{figure}
+\begin{figure}[H]
     \centering 
     \includegraphics[width = 8cm ]{Figures/b.png}    
     \caption{Distribución a priori y distribución posterior para el parámetro b}
@@ -194,7 +195,7 @@ Con la simulación de la distribución posterior, mostrada en las Fig. \ref{Fig.
 
 Finalmente, se coteja la calidad de la estimación con los parámetros con los que desde un principio se simularon los datos. En la Fig. \ref{Fig. 3.05} se contrastan los datos y la curva estimada dada por el problema inverso.
 
-\begin{figure}
+\begin{figure}[H]
     \centering 
     \includegraphics[width = 8 cm]{Figures/estimacion.png} 
     \caption{Estimación al problema inverso para el modelo de caída sujeto a fricción.}
@@ -204,18 +205,30 @@ Finalmente, se coteja la calidad de la estimación con los parámetros con los q
 
 \section{Objetivo}
 
-A pesar de que el análisis previo nos permite obtener estimaciones bastante precisas para el problema inverso, son computacionalmente pesadas, esto debido a que a cada paso en la cadena requiere que se solucione el problema forward, es decir, se resuelven ecuaciones diferenciales tantas veces como se deje correr la cadena. Es así, que se desea encontrar una especie de \textit{interpolación} para solo solucionar una cantidad fija de veces el problema forward y para cada punto en el espacio de parámetros se pueda estimar la solución en función de las soluciones con parámetros cercanos. (Fig. \ref{Fig. 3.06})
+A pesar de que el análisis previo nos permite obtener estimaciones bastante precisas para el problema inverso, son computacionalmente pesadas, esto debido a que a cada paso en la cadena requiere que se solucione el problema forward, es decir, se resuelven ecuaciones diferenciales tantas veces como se deje correr la cadena. 
+Es así que 
 
-\begin{figure}
+
+Es así, que se desea encontrar una especie de \textit{interpolación} para solo solucionar una cantidad pequeña de veces el problema forward y para cada punto en el espacio de parámetros se pueda aproximar la solución en función de las soluciones con parámetros cercanos. (Fig. \ref{Fig. 3.06})
+
+\begin{figure}[H]
     \centering 
     \includegraphics[width = 8 cm]{Figures/interpolacion.png} 
-    \caption{Enmallado para el espacio de parámetros donde se resuelve unicamente el forward problem, cualquier punto fuera de estos se estima el forward map por medio de sus vecinos.}
+    \caption{Enmallado para el espacio de parámetros donde se resuelve unicamente el forward problem, cualquier punto fuera de estos se aproxima el forward map por medio de las soluciones en los puntos azules.}
     \label{Fig. 3.06}
 \end{figure} 
 
 
 \section{Plan de trabajo}
 
+El plan de trabajo se subdivide en cuatro categorías: Estudio bibliográfico, implementación código, Optimización, Escritura de tesis. En el cual se subdivide el tiempo del semestre de enero a junio en las mencionadas categorías.
+
+\begin{figure}
+    \centering 
+    \includegraphics[width = 15 cm]{Figures/cronograma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
 
 
 \newpage
