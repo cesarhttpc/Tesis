@@ -1,0 +1,9 @@
+\frametitle{Inferencia}
+
+  La distribución posterior
+  \begin{align*}
+      \pi(\theta|x^n) &\propto \mathcal{L}(\theta|x^n) \pi_{\Theta}(\theta)\\
+      & \propto \left(\frac{1}{2\pi\sigma^2}\right)^{n/2} e^{\frac{1}{2\sigma^2} \sum_{i =1}^{n}\left(x_i - F_{\theta}(t_i)\right) ^2} \pi_{\Theta_1}(\theta_1) \cdot ... \cdot \pi_{\Theta_m}(\theta_m)
+  \end{align*}
+
+ Es posible simular variables aleatorias con dicha distribución y así obtener estimaciones de los parámetros del modelo.

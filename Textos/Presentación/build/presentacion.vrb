@@ -1,0 +1,20 @@
+\frametitle{Inferencia}
+
+  Distribución posterior
+  \begin{align*}
+      \pi(\theta|x^n) &\propto \mathcal{L}(\theta|x^n) \pi_{\Theta}(\theta)\\
+      & \left[\propto \prod_{i=1}^n \frac{1}{\sqrt{2\pi \sigma^2}} exp \left({-\frac{1}{2\sigma^2}\left(x_i - F_{\theta}(t_i)\right)^2 }\right)\right] \pi_{\Theta}(\theta) \\
+      & \propto \left(\frac{1}{2\pi\sigma^2}\right)^{n/2} exp {\left(\frac{1}{2\sigma^2} \sum_{i =1}^{n}\left(x_i - F_{\theta}(t_i)\right) ^2\right) } \pi_{\Theta}(\theta)
+  \end{align*}
+  donde $\theta = (\theta_1, ..., \theta_m)$.
+
+  \vspace{1 cm}
+
+  \textbf{Simular por métodos Monte Carlo}
+  \begin{itemize}
+    \item
+    Se simula por MCMC Metropolis-Hastings \cite{robert1999monte}.
+  \end{itemize}
+
+
+  % Es posible simular variables aleatorias con dicha distribución y así obtener estimaciones de los parámetros del modelo.

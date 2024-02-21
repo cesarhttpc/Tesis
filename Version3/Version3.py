@@ -5,10 +5,16 @@ from scipy.integrate import odeint
 
 np.random.seed(24)
 
-def dinamica(y,t,g,b):
+# def dinamica(y,t,g,b):
+#     x, v = y
+#     dxdt = v
+#     dvdt = g - b*v
+#     return [dxdt, dvdt]
+
+def dinamica(y,t,k,b):
     x, v = y
     dxdt = v
-    dvdt = g - b*v
+    dvdt = -k*x - b*v
     return [dxdt, dvdt]
 
 '''
@@ -23,17 +29,18 @@ Parte 1: (Establecer la dinamica y simulacion de datos)
 '''
 
 # Parametros principales
-g = 9.81
-b = 2.3
+g = 4.34
+b = 1.15
 
 # Simular los tiempos de observación
 from scipy.stats import uniform
 n = 31      # Tamaño de muestra
-t = np.linspace(0,2,num = n)
+cota = 8
+t = np.linspace(0,cota,num = n)
 
 # ECUACIÓN DIFERENCIAL:
 # Condiciones iniciales (posición, velocidad)
-y0 = [0, 0.0]  
+y0 = [1, 0.0]  
 
 # Soluciones de la ecuación dínamica
 solutions = odeint(dinamica, y0 ,t, args=(g,b))
@@ -44,12 +51,12 @@ v = solutions[:,1]
 
 # Añadir ruido a los datos
 from scipy.stats import norm
-error = norm.rvs(0,0.05,n)
+error = norm.rvs(0,0.01,n)
 error[0] = 0
 x = x + error
 
 # Grafica
-plt.title('Datos simulados con g = %2.2f , b = %2.2f ' % (g, b))
+plt.title('Datos simulados con k = %2.2f , b = %2.2f ' % (g, b))
 plt.xlabel('Tiempo')
 plt.ylabel('Posición')
 plt.scatter(t,x, color= 'green')
@@ -127,8 +134,8 @@ def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 50000 ,alpha =100, beta 
 inicio = np.array([8,3])
 
 # Parametros de distribucion a prioi
-g_0 = 10
-alpha = 100
+g_0 = 5
+alpha = 1
 b_0 = 2
 beta = 1.5
 
@@ -147,21 +154,15 @@ log_post = sample[:,2]
 burn_in = 5000
 
 plt.title('Cadena')
-plt.plot(g_sample[:10000],label = 'g')
+plt.plot(g_sample[:10000],label = 'k')
 plt.plot(b_sample[:10000],label = 'b')
 plt.legend()
 plt.show()
 
 plt.title('Trayectoria de caminata aleatoria')
 plt.plot(g_sample,b_sample,linewidth = .5, color = 'gray')
-# Grid
-g_dom = np.linspace(6,14, num = 9)
-b_dom = np.linspace(1,4,7)
-Z = np.meshgrid(g_dom,b_dom)
-plt.scatter(Z[0],Z[1])
-plt.xlabel('g')
+plt.xlabel('k')
 plt.ylabel('b')
-plt.scatter(8.3,2.7)
 plt.show() 
 
 plt.title('LogPosterior de la cadena')
@@ -170,12 +171,12 @@ plt.show()
 
 from scipy.stats import gamma
 
-plt.title('Distribuciones a priori y posterior para g')
+plt.title('Distribuciones a priori y posterior para k')
 plt.hist(g_sample[burn_in:], density= True, bins = 40)
 dom_g = np.linspace(0,15,500)
 plt.plot(dom_g, gamma.pdf(dom_g, a = alpha , scale = g_0/alpha))
-plt.ylabel(r'$f(g)$')
-plt.xlabel(r'$g$')
+plt.ylabel(r'$f(k)$')
+plt.xlabel(r'$k$')
 linea = np.linspace(0,0.5, 100)
 linea_x = np.ones(100)
 plt.plot(linea_x*g, linea, color = 'black', linewidth = 0.5)
@@ -194,19 +195,19 @@ plt.show()
 
 estimador_g = np.mean(g_sample[burn_in:])    
 estimador_b = np.mean(b_sample[burn_in:])
-print('Estimador de g: ', estimador_g)  
+print('Estimador de k: ', estimador_g)  
 print('Estimador de b: ', estimador_b)
 
 # Grafica de la curva estimada
-t_grafica = np.linspace(0,2, 100)
+t_grafica = np.linspace(0,cota, 100)
 solucion_estimada = odeint(dinamica, y0, t_grafica ,args=(estimador_g,estimador_b))
 
 x_estimado = solucion_estimada[:,0]
 v_estimado = solucion_estimada[:,1]
 
 plt.title('Curva estimada (n = %u)'%(n-1))
-plt.scatter(t,x, color= 'green', label = 'Datos sim. g = %2.2f, b = %2.2f' %(g,b))
-plt.plot(t_grafica, x_estimado, label='Estimacion g = %2.2f, b = %2.2f' %(estimador_g, estimador_b), color = 'purple')
+plt.scatter(t,x, color= 'green', label = 'Datos sim. k = %2.2f, b = %2.2f' %(g,b))
+plt.plot(t_grafica, x_estimado, label='Estimacion k = %2.2f, b = %2.2f' %(estimador_g, estimador_b), color = 'purple')
 plt.xlabel('t')
 plt.ylabel('Posición')
 plt.legend()
@@ -215,7 +216,12 @@ plt.show()
 
 # %%
 # Grid
-g_dom = np.linspace(6,14, num = 9)
-b_dom = np.linspace(1,4,4)
+g_dom = np.linspace(0,20, num = 21)
+b_dom = np.linspace(0,6,13)
 Z = np.meshgrid(g_dom,b_dom)
 plt.scatter(Z[0],Z[1])
+plt.scatter(4.3, 3.3)
+plt.ylabel(r'$b$')
+plt.xlabel(r'$k$')
+
+
