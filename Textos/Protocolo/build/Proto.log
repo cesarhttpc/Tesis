@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.29)  21 FEB 2024 01:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.29)  21 FEB 2024 01:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -422,10 +422,10 @@ File: Figures/b.png Graphic file (type png)
 <use Figures/b.png>
 Package pdftex.def Info: Figures/b.png  used on input line 191.
 (pdftex.def)             Requested size: 227.62204pt x 182.42032pt.
-<Figures/estimacion.png, id=122, 400.3758pt x 328.8285pt>
-File: Figures/estimacion.png Graphic file (type png)
-<use Figures/estimacion.png>
-Package pdftex.def Info: Figures/estimacion.png  used on input line 200.
+<Figures/curvas.png, id=122, 400.3758pt x 328.8285pt>
+File: Figures/curvas.png Graphic file (type png)
+<use Figures/curvas.png>
+Package pdftex.def Info: Figures/curvas.png  used on input line 200.
 (pdftex.def)             Requested size: 227.62204pt x 186.95251pt.
  [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
@@ -438,27 +438,27 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has
                                                   \__shipout_drop_firstpage_...
 l.204 
        <./Figures/g.png> <./Figures/b.png>]
-<Figures/interpolacion.png, id=131, 409.7709pt x 328.8285pt>
+<Figures/interpolacion.png, id=131, 410.4936pt x 312.9291pt>
 File: Figures/interpolacion.png Graphic file (type png)
 <use Figures/interpolacion.png>
 Package pdftex.def Info: Figures/interpolacion.png  used on input line 214.
-(pdftex.def)             Requested size: 227.62204pt x 182.65752pt.
+(pdftex.def)             Requested size: 227.62204pt x 173.52489pt.
 <Figures/cronograma.png, id=132, 986.9372pt x 298.86656pt>
 File: Figures/cronograma.png Graphic file (type png)
 <use Figures/cronograma.png>
 Package pdftex.def Info: Figures/cronograma.png  used on input line 226.
 (pdftex.def)             Requested size: 426.79134pt x 129.24432pt.
- [6
+ (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.bbl [6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.236 D
-       r. Emilien Antoine Marie Joly (Por confirmar)
+l.1 \begin{thebibliography}{1}
+                              
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.236 D
-       r. Emilien Antoine Marie Joly (Por confirmar) <./Figures/estimacion.png> <./Figures/interpolacion.png>] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.bbl) [7 <./Figures/cronograma.png>] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.aux
+l.1 \begin{thebibliography}{1}
+                               <./Figures/curvas.png> <./Figures/interpolacion.png>]) [7 <./Figures/cronograma.png>] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
@@ -471,14 +471,14 @@ Package rerunfilecheck Info: File `Proto.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  11834 strings out of 475503
- 185905 string characters out of 5761834
+ 185877 string characters out of 5761834
  1935248 words of memory out of 5000000
  32884 multiletter control sequences out of 15000+600000
  571196 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,1019b,537s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.pdf (7 pages, 420676 bytes).
+Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Protocolo\build\Proto.pdf (7 pages, 430980 bytes).
 PDF statistics:
  246 PDF objects out of 1000 (max. 8388607)
  38 named destinations out of 1000 (max. 500000)

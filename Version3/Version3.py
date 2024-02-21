@@ -5,17 +5,17 @@ from scipy.integrate import odeint
 
 np.random.seed(24)
 
-# def dinamica(y,t,g,b):
-#     x, v = y
-#     dxdt = v
-#     dvdt = g - b*v
-#     return [dxdt, dvdt]
-
-def dinamica(y,t,k,b):
+def dinamica(y,t,g,b):
     x, v = y
     dxdt = v
-    dvdt = -k*x - b*v
+    dvdt = g - b*v
     return [dxdt, dvdt]
+
+# def dinamica(y,t,k,b):
+#     x, v = y
+#     dxdt = v
+#     dvdt = -k*x - b*v
+#     return [dxdt, dvdt]
 
 '''
 Parte 1: (Establecer la dinamica y simulacion de datos)
@@ -35,12 +35,12 @@ b = 1.15
 # Simular los tiempos de observación
 from scipy.stats import uniform
 n = 31      # Tamaño de muestra
-cota = 8
+cota = 2
 t = np.linspace(0,cota,num = n)
 
 # ECUACIÓN DIFERENCIAL:
 # Condiciones iniciales (posición, velocidad)
-y0 = [1, 0.0]  
+y0 = [0, 0.0]  
 
 # Soluciones de la ecuación dínamica
 solutions = odeint(dinamica, y0 ,t, args=(g,b))
@@ -159,7 +159,7 @@ plt.plot(b_sample[:10000],label = 'b')
 plt.legend()
 plt.show()
 
-plt.title('Trayectoria de caminata aleatoria')
+plt.title('Trayectoria de MCMC')
 plt.plot(g_sample,b_sample,linewidth = .5, color = 'gray')
 plt.xlabel('k')
 plt.ylabel('b')
@@ -216,12 +216,42 @@ plt.show()
 
 # %%
 # Grid
-g_dom = np.linspace(0,20, num = 21)
-b_dom = np.linspace(0,6,13)
+g_dom = np.linspace(0,15, num = 16)
+b_dom = np.linspace(0,4,7)
 Z = np.meshgrid(g_dom,b_dom)
 plt.scatter(Z[0],Z[1])
 plt.scatter(4.3, 3.3)
 plt.ylabel(r'$b$')
-plt.xlabel(r'$k$')
+plt.xlabel(r'$g$')
+
+
+# %%
+space = 1000
+# curr = 0
+for i in range(0,600000,space):
+
+    submuestreo_g =  g_sample[i-1: i]
+    media_g = np.mean(submuestreo_g)
+
+    submuestreo_b =  b_sample[i-1: i]
+    media_b = np.mean(submuestreo_b)
+
+    solucion_estimada = odeint(dinamica, y0, t_grafica ,args=(media_g ,media_b))
+
+    x_estimado = solucion_estimada[:,0]
+
+    plt.plot(t_grafica, x_estimado, color = 'purple', alpha = 0.4)
+
+
+
+
+plt.scatter(t,x, color= 'green', label = 'Datos sim. k = %2.2f, b = %2.2f' %(g,b))
+
+plt.title('Curva estimada (n = %u)'%(n-1))
+plt.xlabel('t')
+plt.ylabel('Posición')
+plt.legend()
+plt.show()
+
 
 

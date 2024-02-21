@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.29)  21 FEB 2024 00:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.29)  21 FEB 2024 01:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1119,7 +1119,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  128i,14n,123p,1978b,914s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Bold.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-BoldItalic.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Italic.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Regular.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.pdf (23 pages, 566772 bytes).
+Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.pdf (23 pages, 566328 bytes).
 PDF statistics:
  282 PDF objects out of 1000 (max. 8388607)
  55 named destinations out of 1000 (max. 500000)
