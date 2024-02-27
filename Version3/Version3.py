@@ -5,17 +5,17 @@ from scipy.integrate import odeint
 
 np.random.seed(24)
 
-def dinamica(y,t,g,b):
-    x, v = y
-    dxdt = v
-    dvdt = g - b*v
-    return [dxdt, dvdt]
-
-# def dinamica(y,t,k,b):
+# def dinamica(y,t,g,b):
 #     x, v = y
 #     dxdt = v
-#     dvdt = -k*x - b*v
+#     dvdt = g - b*v
 #     return [dxdt, dvdt]
+
+def dinamica(y,t,k,b):
+    x, v = y
+    dxdt = v
+    dvdt = -k*x - b*v
+    return [dxdt, dvdt]
 
 '''
 Parte 1: (Establecer la dinamica y simulacion de datos)
@@ -29,18 +29,18 @@ Parte 1: (Establecer la dinamica y simulacion de datos)
 '''
 
 # Parametros principales
-g = 4.34
+g = 5.34
 b = 1.15
 
 # Simular los tiempos de observación
 from scipy.stats import uniform
 n = 31      # Tamaño de muestra
-cota = 2
+cota = 8
 t = np.linspace(0,cota,num = n)
 
 # ECUACIÓN DIFERENCIAL:
 # Condiciones iniciales (posición, velocidad)
-y0 = [0, 0.0]  
+y0 = [1, 0.0]  
 
 # Soluciones de la ecuación dínamica
 solutions = odeint(dinamica, y0 ,t, args=(g,b))
@@ -86,7 +86,7 @@ Parte 3: (Realizacion de la cadena por MCMC)
 
 '''
 
-def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 50000 ,alpha =100, beta = 10, g_0 = 10, b_0 = 1 ):
+def MetropolisHastingsRW(t_datos,x_datos,inicio, size = 100000 ,alpha =100, beta = 10, g_0 = 10, b_0 = 1 ):
 
     # Punto inicial (parametros)
     x = inicio
@@ -226,9 +226,9 @@ plt.xlabel(r'$g$')
 
 
 # %%
-space = 1000
+space = 8000
 # curr = 0
-for i in range(0,600000,space):
+for i in range(0,100000,space):
 
     submuestreo_g =  g_sample[i-1: i]
     media_g = np.mean(submuestreo_g)
@@ -240,7 +240,7 @@ for i in range(0,600000,space):
 
     x_estimado = solucion_estimada[:,0]
 
-    plt.plot(t_grafica, x_estimado, color = 'purple', alpha = 0.4)
+    plt.plot(t_grafica, x_estimado, color = 'purple', alpha = 0.2)
 
 
 
