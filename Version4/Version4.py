@@ -35,21 +35,17 @@ def interpolador(punto, puntos_malla ,t):
     # Encuentra los vecinos más cercanos al punto arbitrario
     distancias, indices = buscador_de_vecinos.encontrar_vecinos_cercanos(punto, numero_de_vecinos=5)
 
-    pesos = np.array([0.6, 0.1, 0.1, 0.1, 0.1]) ##Falta implementar
+    pesos = np.array([0.6, 0.1, 0.1, 0.1, 0.1]) 
 
     n = len(t)
-    forwards = np.zeros((n,5))
     interpolacion = np.zeros(len(t))
     for k in range(5):
          
-        solution = odeint(dinamica, y0, t, args=(puntos_malla[indices[k][0]],puntos_malla[indices[k][1]] ))
+        solution = odeint(dinamica, y0, t, args=(puntos_malla[indices[k]][0],puntos_malla[indices[k]][1] ))
+        x = solution[:,0]
 
-        forwards[:][k] = solution[:,0]
+        interpolacion = interpolacion + x*pesos[k]
 
-    for i in range(n):
-
-        interpolacion[i] = np.mean(forwards[i,:])
-    
     return interpolacion
 
 
@@ -58,10 +54,10 @@ def interpolador(punto, puntos_malla ,t):
 def logposterior(g, b, t, x, sigma = 1, alpha = 100, beta = 10, g_0 = 10, b_0 = 1):
     
         if g>0 and b>0:
-            solution = odeint(dinamica, y0, t, args=(g,b))
-            x_theta = solution[:,0]
-            # punto = (g,b)
-            # x_theta = interpolador(punto,puntos_malla, t)
+            # solution = odeint(dinamica, y0, t, args=(g,b))
+            # x_theta = solution[:,0]
+            punto = np.array([g,b])
+            x_theta = interpolador(punto,puntos_malla, t)
             Logf_post = -n*np.log(sigma) - np.sum((x-x_theta)**2) /(2*sigma**2) + (alpha -1)*np.log(g) - alpha*g/g_0 + (beta - 1)*np.log(b) - beta*b/b_0
 
             return Logf_post
@@ -142,7 +138,7 @@ if __name__ == "__main__":
    
 
     # Definir el dominio de los puntos
-    g_dom = np.linspace(0, 5, num=6)
+    g_dom = np.linspace(0, 14, num=15)
     b_dom = np.linspace(0, 5, num=6)
 
     # Crear la malla utilizando meshgrid
@@ -291,20 +287,19 @@ solution = odeint(dinamica, y0, t, args=(8,1))
 x_theta = solution[:,0]
 
 print(x_theta)
-print(t)
 
 
 
 print(len(t))
 
-# %%
-n = 5
-z = np.zeros((n,4))
-for j in range(5):
-    for k in range(4):
-        z[j,k] = 3*k-2 + j*(1-j)
-print(z)
+# # %%
+# n = 5
+# z = np.zeros((n,4))
+# for j in range(5):
+#     for k in range(4):
+#         z[j,k] = 3*k-2 + j*(1-j)
+# print(z)
 
-for i in range(n):
-    print(np.mean(z[i,:]))
+# for i in range(n):
+#     print(np.mean(z[i,:]))
     
