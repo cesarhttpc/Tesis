@@ -37,7 +37,7 @@ def interpolador(punto, puntos_malla ,t, num_vecinos = 5):
     Vecinos_interpolador = VecinosCercanos(puntos_malla)
 
     # Encuentra los vecinos más cercanos al punto arbitrario
-    distancias, indices = Vecinos_interpolador.encontrar_vecinos_cercanos(punto, numero_de_vecinos=5)
+    distancias, indices = Vecinos_interpolador.encontrar_vecinos_cercanos(punto, numero_de_vecinos=num_vecinos)
 
     # Pesos
     epsilon = 10**(-6)
@@ -125,7 +125,7 @@ def MetropolisHastingsRW(t_datos,x_datos,inicio,size= 100000,alpha= 100, beta= 1
 
 
 # Parametros principales (verdaderos)
-g = 5.34
+g = 9.81
 b = 1.15
 
 # Simular las observaciones
@@ -158,13 +158,14 @@ x = x + error
 
 ################# Preproceso #################
 'Buscador de vecinos cercanos y preproceso para calcular la solucion en de la ecuacion diferencial en cada punto'
-inicio = time.time()
+
+inicio_tiempo = time.time()
 # Cantidad de vecinos
-num_vecinos = 5
+num_vecinos = 9
 
 # Definir el dominio de los parametros
-g_dom = np.linspace(0, 16, num=10)
-b_dom = np.linspace(0, 6, num=10)
+g_dom = np.linspace(0, 22, num=30)
+b_dom = np.linspace(0, 8, num=30)
 
 # Crear la malla utilizando meshgrid
 g_mesh, b_mesh = np.meshgrid(g_dom, b_dom)
@@ -200,52 +201,37 @@ for k in range(num_vecinos):
 plt.show()
 
 preproceso = time.time()
-print(preproceso - inicio)
+
 
 
 #### MCMC propio ########
 
-inicio = np.array([8,3])
+# inicio = np.array([8,3])
+inicio = np.array([uniform.rvs(0,10),uniform.rvs(0,7)])
 
 # Parametros de distribucion a prioi
-g_0 = 5
-alpha = 1
+g_0 = 10
+alpha = 10
 b_0 = 2
-beta = 1.5
-size = 60000
+beta = 1.1
+size = 50000
 
 
 sample = MetropolisHastingsRW(t, x, inicio, size = size, g_0 = g_0, b_0 = b_0, beta = beta, alpha= alpha)
 # sample = MetropolisHastingsRW(t, x, inicio, size=size, g_0=g_0, b_0=b_0, beta=beta, alpha=alpha, puntos_malla=puntos_malla)
 
 fin = time.time()
-print('Tiempo total: ', fin-inicio)
+print('Tiempo preproceso: ', preproceso - inicio_tiempo)
+print('Tiempo total: ', fin-inicio_tiempo)
 
 
 
-# # %%
-# vecinos = VecinosCercanos(puntos_malla)
-# vecinos.compute_solutions(t,puntos_malla)
-# solucion = vecinos.solutions
-# print(solucion[55])
-
-
-# print(type(solucion))
-
-
-
-
-
-
-
-
-# %%
 #Visualización
 g_sample = sample[:,0]
 b_sample = sample[:,1]
 log_post = sample[:,2]
 
-burn_in = 5000
+burn_in = 10000
 
 plt.title('Cadena')
 plt.plot(g_sample[:10000],label = 'g')
@@ -307,10 +293,16 @@ for i in range(0,size ,space):
 
 
     
-plt.scatter(t,x, color= 'green', label = 'Datos sim. k = %2.2f, b = %2.2f' %(g,b))
+plt.scatter(t,x, color= 'green', label = 'Datos sim. g = %2.2f, b = %2.2f' %(g,b))
 
 plt.title('Curva estimada (n = %u)'%(n-1))
 plt.xlabel('t')
 plt.ylabel('Posición')
 plt.legend()
 plt.show()
+
+
+estimador_g = np.mean(g_sample[burn_in:])    
+estimador_b = np.mean(b_sample[burn_in:])
+print('Estimador de g: ', estimador_g)  
+print('Estimador de b: ', estimador_b)
