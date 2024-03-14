@@ -34,10 +34,10 @@ def dinamica(y,t,g,b):
 def interpolador(punto, puntos_malla ,t, num_vecinos = 5):
 
     # Crear una instancia de la clase VecinosCercanos
-    buscador_de_vecinos = VecinosCercanos(puntos_malla)
+    Vecinos_interpolador = VecinosCercanos(puntos_malla)
 
     # Encuentra los vecinos más cercanos al punto arbitrario
-    distancias, indices = buscador_de_vecinos.encontrar_vecinos_cercanos(punto, numero_de_vecinos=5)
+    distancias, indices = Vecinos_interpolador.encontrar_vecinos_cercanos(punto, numero_de_vecinos=5)
 
     # Pesos
     epsilon = 10**(-6)
@@ -56,11 +56,8 @@ def interpolador(punto, puntos_malla ,t, num_vecinos = 5):
         # x = solution[:,0]
         # interpolacion = interpolacion + x * pesos[k]
 
-        print("Aqui estoy aaaah",k)
-        
-        print(buscador_de_vecinos.solutions[3])
-        # solucion = buscador_de_vecinos.solutions[indices[k]]
-        # interpolacion = interpolacion + solucion*pesos[k]
+        solucion = buscador_de_vecinos.solutions[indices[k]]
+        interpolacion = interpolacion + solucion*pesos[k]
 
 
     return interpolacion
@@ -226,11 +223,11 @@ print('Tiempo total: ', fin-inicio)
 
 
 
-# %%
-vecinos = VecinosCercanos(puntos_malla)
-vecinos.compute_solutions(t,puntos_malla)
-solucion = vecinos.solutions
-print(solucion[55])
+# # %%
+# vecinos = VecinosCercanos(puntos_malla)
+# vecinos.compute_solutions(t,puntos_malla)
+# solucion = vecinos.solutions
+# print(solucion[55])
 
 
 # print(type(solucion))
