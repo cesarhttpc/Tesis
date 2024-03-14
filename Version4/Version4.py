@@ -35,7 +35,14 @@ def interpolador(punto, puntos_malla ,t):
     # Encuentra los vecinos más cercanos al punto arbitrario
     distancias, indices = buscador_de_vecinos.encontrar_vecinos_cercanos(punto, numero_de_vecinos=5)
 
-    pesos = np.array([0.6, 0.1, 0.1, 0.1, 0.1]) 
+    # pesos = np.array([0.6, 0.1, 0.1, 0.1, 0.1])
+    epsilon = 10**(-6)
+    pesos = np.zeros(5)
+    for i in range(5):
+         pesos[i] = 1/(distancias[i] + epsilon) 
+    
+    norma = sum(pesos)
+    pesos = pesos/norma
 
     n = len(t)
     interpolacion = np.zeros(len(t))
@@ -138,8 +145,8 @@ if __name__ == "__main__":
    
 
     # Definir el dominio de los puntos
-    g_dom = np.linspace(0, 14, num=15)
-    b_dom = np.linspace(0, 5, num=6)
+    g_dom = np.linspace(0, 16, num=43)
+    b_dom = np.linspace(0, 6, num=41)
 
     # Crear la malla utilizando meshgrid
     g_mesh, b_mesh = np.meshgrid(g_dom, b_dom)
@@ -223,7 +230,7 @@ if __name__ == "__main__":
     b_0 = 2
     beta = 1.5
 
-    sample = MetropolisHastingsRW(t, x, inicio, size = 60000, g_0 = g_0, b_0 = b_0, beta = beta, alpha= alpha)
+    sample = MetropolisHastingsRW(t, x, inicio, size = 100000, g_0 = g_0, b_0 = b_0, beta = beta, alpha= alpha)
 
     #Visualización
     g_sample = sample[:,0]
@@ -269,37 +276,3 @@ if __name__ == "__main__":
     linea_x = np.ones(100)
     plt.plot(linea_x*b, linea, color = 'black', linewidth = 0.5)
     plt.show()
-
-
-
-
-
-
-
-
-
-
-
-# %%
-    
-solution = odeint(dinamica, y0, t, args=(8,1))
-
-x_theta = solution[:,0]
-
-print(x_theta)
-
-
-
-print(len(t))
-
-# # %%
-# n = 5
-# z = np.zeros((n,4))
-# for j in range(5):
-#     for k in range(4):
-#         z[j,k] = 3*k-2 + j*(1-j)
-# print(z)
-
-# for i in range(n):
-#     print(np.mean(z[i,:]))
-    
