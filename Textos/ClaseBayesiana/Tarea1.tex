@@ -155,10 +155,29 @@
     \end{align*}
     Por tanto, la marginal tiene la siguiente forma funcional
     \begin{align*}
-        \pi(k|x^n) \propto 
+        \pi(k|x^n) &\propto \left(\prod_{i= 1}^{n} \binom{k}{x_i}\right)\frac{\Gamma(\sum{x_i})\Gamma(kn - \sum{x_i}+\beta)}{\Gamma(kn + \alpha + \beta)}\\
+        &\propto \frac{\left(k!\right) ^n}{\prod_{i=1}^{n}(\left(x_i!(k-x_i)!\right) )} \frac{\left(kn-\sum{x_i}+\beta-1 \right)!}{(kn + \alpha + \beta-1)!}\\
+        &\propto \frac{\left(k!\right) ^n}{\prod_{i=1}^{n}(k-x_i)!}\frac{\left(kn-\sum{x_i}+\beta-1 \right)!}{(kn + \alpha + \beta-1)!}
     \end{align*}
 
+    Podemos calcular la distribución posterior para varios valores
+    de $k$, 
 
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width = 12 cm]{Figures/dist_especies1.png} 
+        \caption{Distribución posterior de $k$ para $k$ entre 6 y 14.}
+        \label{Fig. 01}
+    \end{figure} 
+    
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width = 12 cm]{Figures/dist_especies.png} 
+        \caption{Distribución posterior de $k$ para $k$ entre 6 y 200.}
+        \label{Fig. 02}
+    \end{figure} 
+
+    Vemos que un buen estimador para $k$ es la moda de la distribución, que es el máximo de la posterior. Dicho valor es $k=9$ lo que nos da cierto grado de conocimiento acerca de la cantidad de población total.
 
 
 
@@ -240,8 +259,8 @@
 
         La esperanza predictiva es entonces una suma ponderada por las probabilidades posteriores. De esta forma
         \begin{align}
-            \mathbb{E}\left [Y|X\right ] &= 50  \pi(S|X) + 52  \pi(NS|X)\\
-            &= 50\cdot \text{0.4508} + 52 \cdot \text{0.5491}\\
+            \mathbb{E}\left [Y|X\right ] &= 50  \pi(S|X) + 52  \pi(NS|X) \nonumber\\
+            &= 50\cdot \text{0.4508} + 52 \cdot \text{0.5491}\nonumber \\
             &= \text{51.0982}.
         \end{align}
         lo que concluye la cuenta.

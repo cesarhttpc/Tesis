@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1712351492 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/ClaseBayesiana/Tarea1.tex" "build/Tarea1.pdf" "Tarea1" 1712351495 0
+["pdflatex"] 1712425193 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/ClaseBayesiana/Tarea1.tex" "build/Tarea1.pdf" "Tarea1" 1712425199 0
   "C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1710538707 156971 6ebb55617c569712b0127c4e548473b3 ""
   "C:/Users/ce_ra/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1693352273 24120579 85898b25958cf632ec7946174c56943b ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -220,10 +220,12 @@
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650051284 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650051284 20785 71a3d72ab517959a6979c27e6176bec1 ""
   "Figures/EscudoCimat.png" 1697603232 23978 afd125464800623154e6cd8f9742e14b ""
-  "Tarea1.tex" 1712351492 16642 5ef3d601526d461b4a73d41378b2b0a4 ""
-  "build/Tarea1.aux" 1712351495 963 fa401e8898624796f115699a17cc38b0 "pdflatex"
-  "build/Tarea1.out" 1712351494 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/ClaseBayesiana/Tarea1.tex" 1712351492 16642 5ef3d601526d461b4a73d41378b2b0a4 ""
+  "Figures/dist_especies.png" 1712352476 21241 f38988fd7dff4ec7e887b3e0fe1fd36d ""
+  "Figures/dist_especies1.png" 1712352753 14212 7e1e19cee7aeb495d0a4dab7f3996c12 ""
+  "Tarea1.tex" 1712425191 17858 c15f54e5147dcc6e88f6caa70f899df6 ""
+  "build/Tarea1.aux" 1712425199 1479 e0d077f0be5fb448d7a4dbb345917a68 "pdflatex"
+  "build/Tarea1.out" 1712425198 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/ClaseBayesiana/Tarea1.tex" 1712425191 17858 c15f54e5147dcc6e88f6caa70f899df6 ""
   (generated)
   "build/Tarea1.aux"
   "build/Tarea1.log"
