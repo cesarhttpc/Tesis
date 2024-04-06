@@ -101,9 +101,9 @@
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	\begin{minipage}[b][1.2cm][t]{0.8\textwidth}
-		\large\textbf{César Isaí García Cornejo} \hfill \textbf{Tarea 9}  \\
+		\large\textbf{César Isaí García Cornejo} \hfill \textbf{Tarea 1}  \\
 		cesar.cornejo@cimat.mx \hfill \\
-		\normalsize Computo Científico \hfill Semestre 3\\
+		\normalsize Estadística Bayesiana \hfill Semestre 4\\
 	\end{minipage}
 	
 	\hspace{14.4cm}
@@ -188,9 +188,9 @@
 
 
 
-\begin{problem}{2}
-    Partiendo del problema 1 suponga que ahora se plantea decidir el tamaño de muestra $n$, siendo que cada muestra nos cuesta $w $ pesos.
-\end{problem}
+% \begin{problem}{2}
+%     Partiendo del problema 1 suponga que ahora se plantea decidir el tamaño de muestra $n$, siendo que cada muestra nos cuesta $w $ pesos.
+% \end{problem}
 
 \begin{problem}{3}       
     Supón que con una probabilidad de 1/10  una señal está presente en cierto sistema en un momento dado y que con una probabilidad 9/10 la señal no está presente. Una medición hecha en el sistema cuando la señal está presente tiene una distribución Normal con media 50 y varianza 1 y una medición cuando la señal no stá presente tiene una distribución Normal con media 52 y varianza 1.
@@ -285,23 +285,30 @@
 \end{problem}
 
 \begin{solution} 
-    Observemos previamente que las proporciones de artículos asociados a $\theta_0$ mas las proporciones de artículos asociados a $\theta_1$ es uno, es decir, $\pi_0 + \pi_1 = 1$. Luego, del teorema de Bayes y la cantidad de interés se sigue
-    \begin{align*}
-        \mathbb{P}\left (\theta = \theta_1 |\text{test } H_1 \right ) = \frac{\mathbb{P}\left (\text{test } H_1| \theta = \theta_1 \right ) \mathbb{P}\left (\theta = \theta_1 \right )}{\mathbb{P}\left (\text{test } H_1 \right )}
-    \end{align*} 
-    De la ley de probabilidad total tenemos
-    \begin{align*}
-        \mathbb{P}\left (\theta = \theta_1 |\text{test } H_1 \right ) = \frac{\mathbb{P}\left (\text{test } H_1| \theta = \theta_1 \right ) \mathbb{P}\left (\theta = \theta_1 \right )}{\mathbb{P}\left (\text{test } H_1|\theta = \theta_1 \right )\mathbb{P}\left (\theta = \theta_1 \right ) + \mathbb{P}\left (\text{test } H_1|\theta = \theta_0 \right )\mathbb{P}\left (\theta = \theta_0 \right )}
-    \end{align*}
-    Recordemos que la probabilidad de rechazar $H_0$ dado que el parámetro es $\theta_1$ es la potencia. Entonces $\mathbb{P}\left (\text{test } H_1| \theta = \theta_1 \right ) = \beta$. Así, con la notación establecida
-    \begin{align*}
-        \mathbb{P}\left (\theta = \theta_1 |\text{test } H_1 \right ) &= \frac{\beta \pi_1}{ \beta \pi_1 + \alpha \pi_0}\\
-        &= \frac{\beta \pi_1}{\beta\pi_1 + \alpha (1-\pi_1)}\\
-        &= \frac{\beta \pi_1}{(\beta - \alpha)\pi_1 + \alpha}
-    \end{align*}
-    obteniendo la expresión esperada.
-
-
+    \begin{enumerate}
+        \item Observemos previamente que las proporciones de artículos asociados a $\theta_0$ mas las proporciones de artículos asociados a $\theta_1$ es uno, es decir, $\pi_0 + \pi_1 = 1$. Luego, del teorema de Bayes y la cantidad de interés se sigue
+        \begin{align*}
+            \mathbb{P}\left (\theta = \theta_1 |\text{test } H_1 \right ) = \frac{\mathbb{P}\left (\text{test } H_1| \theta = \theta_1 \right ) \mathbb{P}\left (\theta = \theta_1 \right )}{\mathbb{P}\left (\text{test } H_1 \right )}
+        \end{align*} 
+        De la ley de probabilidad total tenemos
+        \begin{align*}
+            \mathbb{P}\left (\theta = \theta_1 |\text{test } H_1 \right ) = \frac{\mathbb{P}\left (\text{test } H_1| \theta = \theta_1 \right ) \mathbb{P}\left (\theta = \theta_1 \right )}{\mathbb{P}\left (\text{test } H_1|\theta = \theta_1 \right )\mathbb{P}\left (\theta = \theta_1 \right ) + \mathbb{P}\left (\text{test } H_1|\theta = \theta_0 \right )\mathbb{P}\left (\theta = \theta_0 \right )}
+        \end{align*}
+        Recordemos que la probabilidad de rechazar $H_0$ dado que el parámetro es $\theta_1$ es la potencia. Entonces $\mathbb{P}\left (\text{test } H_1| \theta = \theta_1 \right ) = \beta$. Así, con la notación establecida
+        \begin{align*}
+            \mathbb{P}\left (\theta = \theta_1 |\text{test } H_1 \right ) &= \frac{\beta \pi_1}{ \beta \pi_1 + \alpha \pi_0}\\
+            &= \frac{\beta \pi_1}{\beta\pi_1 + \alpha (1-\pi_1)}\\
+            &= \frac{\beta \pi_1}{(\beta - \alpha)\pi_1 + \alpha}
+        \end{align*}
+        obteniendo la expresión esperada.
+        
+        \item Tomemos primero el caso $\alpha = \beta$. Entonces la probabilidad de interés es
+        \begin{align*}
+            \mathbb{P}\left (\theta = \theta_1 |\text{test } H_1 \right ) = \frac{\beta \pi_1}{0\pi_1 + \alpha} = \pi_1
+        \end{align*}
+        Para el caso $\beta > \alpha$ el denominador tenemos que $\beta > \beta - \alpha  $ con $\alpha$ positivo, luego como $\pi_1 \leq 1$ se sigue que $(\beta -\alpha)\pi_1 + \alpha <\beta \pi_1$ lo que concluye que el cociente tiene que ser mayor que $\pi_1$.
+    \end{enumerate}
+        
 
 
 
@@ -345,52 +352,15 @@
 
 \end{solution}
 
+% \begin{thebibliography}{9}
 
+%     \bibitem{Casella}
+%     Robert, C. P., Casella, G., and Casella, G. (1999). Monte Carlo statistical methods (Vol. 2). New York: Springer.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\newpage
-
-
-
-\begin{thebibliography}{9}
-
-    \bibitem{Casella}
-    Robert, C. P., Casella, G., and Casella, G. (1999). Monte Carlo statistical methods (Vol. 2). New York: Springer.
-
-    \bibitem{Wasserman}
-    Wasserman, L. (2004). All of statistics: a concise course in statistical inference (p. 413). New York: Springer.
+%     \bibitem{Wasserman}
+%     Wasserman, L. (2004). All of statistics: a concise course in statistical inference (p. 413). New York: Springer.
     
-\end{thebibliography}
+% \end{thebibliography}
       
-
-
-
 
 \end{document}

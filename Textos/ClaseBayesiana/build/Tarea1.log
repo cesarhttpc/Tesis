@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.29)  6 APR 2024 11:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.29)  6 APR 2024 12:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -857,12 +857,9 @@ Package pdftex.def Info: Figures/dist_especies.png  used on input line 175.
 (pdftex.def)             Requested size: 341.43306pt x 277.92001pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 191.
- [2 <./Figures/dist_especies1.png> <./Figures/dist_especies.png>]
-Package mdframed Info: Not enough space on this page on input line 193.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
 (mdframed)              on input line 195.
+ [2 <./Figures/dist_especies1.png> <./Figures/dist_especies.png>]
+Package mdframed Info: Not enough space on this page on input line 201.
  [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -878,8 +875,8 @@ Package mdframed Warning: You got a bad break
 [4]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 313.
- [5] [6] [7] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\ClaseBayesiana\build\Tarea1.aux
+(mdframed)              on input line 320.
+ [5] [6] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\ClaseBayesiana\build\Tarea1.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
@@ -891,17 +888,17 @@ Package rerunfilecheck Info: File `Tarea1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28219 strings out of 475503
- 545685 string characters out of 5761834
+ 28213 strings out of 475503
+ 545583 string characters out of 5761834
  1943248 words of memory out of 5000000
- 48926 multiletter control sequences out of 15000+600000
- 590840 words of font info for 116 fonts, out of 8000000 for 9000
+ 48923 multiletter control sequences out of 15000+600000
+ 588460 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,93p,1260b,629s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\ClaseBayesiana\build\Tarea1.pdf (7 pages, 192079 bytes).
+Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\ClaseBayesiana\build\Tarea1.pdf (6 pages, 189207 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
+ 125 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
