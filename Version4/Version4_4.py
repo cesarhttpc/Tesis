@@ -52,12 +52,12 @@ def interpolador(punto, puntos_malla ,t, num_vecinos = 5):
     interpolacion = np.zeros(n)
     for k in range(num_vecinos):
 
-        # solution = odeint(dinamica, y0, t, args=(puntos_malla[indices[k]][0],puntos_malla[indices[k]][1] ))
-        # x = solution[:,0]
-        # interpolacion = interpolacion + x * pesos[k]
+        solution = odeint(dinamica, y0, t, args=(puntos_malla[indices[k]][0],puntos_malla[indices[k]][1] ))
+        x = solution[:,0]
+        interpolacion = interpolacion + x * pesos[k]
 
-        solucion = buscador_de_vecinos.solutions[indices[k]]
-        interpolacion = interpolacion + solucion*pesos[k]
+        # solucion = buscador_de_vecinos.solutions[indices[k]]
+        # interpolacion = interpolacion + solucion*pesos[k]
 
 
     return interpolacion
@@ -133,8 +133,8 @@ b = 1.15
 
 # Simular las observaciones
 n = 31      # Tamaño de muestra (n-1)
-cota = 1.5
-t = np.linspace(0,cota,num = n)
+cota_dominio = 1.5
+t = np.linspace(0,cota_dominio,num = n)
 
 # ECUACIÓN DIFERENCIAL:
 # Condiciones iniciales (posición, velocidad)
@@ -280,7 +280,7 @@ def visualizacion(sample):
 
 
     # Grafica de la distribución de la curva estimada
-    t_grafica = np.linspace(0,cota, 100)
+    t_grafica = np.linspace(0,cota_dominio, 100)
 
     space = 4000
     # curr = 0
@@ -315,6 +315,6 @@ def visualizacion(sample):
     print('Estimador de b: ', estimador_b)
 
 # %%
-visualizacion(monte_carlo0)
+# visualizacion(monte_carlo0)
 
 visualizacion(monte_carlo1)

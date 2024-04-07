@@ -78,8 +78,7 @@ if __name__ == "__main__":
     par_prior=[ gamma( 3, scale=1), gamma(1.1, scale=1)]   # , norm(loc=0,scale=1)]
     par_supp  = [ lambda k: k>0.0, lambda b: b>0.0]   # , lambda t0: True]
     #data = array([3.80951951, 3.94018984, 3.98167993, 3.93859411, 4.10960395])
-    buq = BUQ( q=3, data=None, logdensity=logdensity, simdata=simdata, sigma=sigma,\
-                F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
+    buq = BUQ( q=3, data=None, logdensity=logdensity, simdata=simdata, sigma=sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
     buq.SimData(x = np.array([ 4, 2]))#, 0])) #True parameters alpha=3 lambda=0.1
     ### The two initial values are simulated from the prior
     ### redifine buq.SimInit eg.
