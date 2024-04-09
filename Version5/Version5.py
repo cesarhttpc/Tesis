@@ -75,43 +75,47 @@ def interpolador(punto, puntos_malla ,t, num_vecinos = 5):
 
     return interpolacion
 
-def logNormalAprox(g, b, t, x, loc = 0, scale = 1, alpha = 100, beta = 10, g_0 = 10, b_0 = 1):
+def logNormalAprox(g, b, t, x_data, loc = 0, scale = 1, alpha = 100, beta = 10, g_0 = 10, b_0 = 1):
     
+        # Forward map aproximado
         # if g>0 and b>0:
-            # Forward map aproximado
         punto = np.array([g,b])
         x_theta = interpolador(punto,puntos_malla, t, num_vecinos= num_vecinos)
-        Logf_post = -n*np.log(scale) - np.sum((x-x_theta - loc)**2) /(2*scale**2) 
+        Logf_post = -n*np.log(scale) - np.sum((x_data-x_theta - loc)**2) /(2*scale**2) 
 
         return Logf_post
         # else:
         #     Logf_post = -10**100
         #     return Logf_post 
 
-def Metropolis(F, t, g_0 , alpha, b_0 , beta, size, ForwardAprox = False, plot = True):
+def Metropolis(F, t,x_data, g_0 , alpha, b_0 , beta, size, ForwardAprox = False, plot = True):
 
     sigma = 0.1 #Stardard dev. for data
     if ForwardAprox == True:
-        logdensity= logNormalAprox
+        ############### REPARAR ##############
+        # logdensity= logNormalAprox()
+        pass
+
     else:
         logdensity= norm.logpdf
 
     simdata = lambda n, loc, scale: norm.rvs( size=n, loc=loc, scale=scale)
     par_names=[  r"$g$", r"$b$" ] 
 
-    par_prior=[ gamma( alpha, g_0/alpha), gamma(beta, scale=b_0/beta)]
+    par_prior=[ gamma( alpha, scale = g_0/alpha), gamma(beta, scale=b_0/beta)]
     par_supp  = [ lambda g: g>0.0, lambda b: b>0.0]
 
-    buq = BUQ( q=3, data=None, logdensity=logdensity, simdata=simdata, sigma=sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
+    buq = BUQ( q=3, data=x_data, logdensity=logdensity, simdata=simdata, sigma=sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
     buq.SimData(x = np.array([ g, b])) #True parameters 
 
 
-    buq.RunMCMC( T=60000, burn_in=10000, fnam="cadena_posterior.csv")
+    buq.RunMCMC( T=size, burn_in=10000, fnam="cadena_posterior.csv")
 
     if plot == True:
         buq.PlotPost(par=0, burn_in=10000)
         buq.PlotPost(par=1, burn_in=10000) 
         buq.PlotCorner(burn_in=10000)
+        plt.show()
 
     return buq.Output   
 
@@ -179,7 +183,7 @@ def visualizacion(sample, burn_in = 10000):
 
         plt.plot(t_grafica, x_estimado, color = 'purple', alpha = 0.2)
     
-    # plt.scatter(t,x, color= 'green', label = 'Datos sim. g = %2.2f, b = %2.2f' %(g,b))
+    plt.scatter(t,x_data, color= 'blue', label = 'Datos sim. g = %2.2f, b = %2.2f' %(g,b))
 
     plt.title('Curva estimada (n = %u)'%(n-1))
     plt.xlabel('t')
@@ -195,7 +199,7 @@ def visualizacion(sample, burn_in = 10000):
 
 
 
-
+### APROXIMACIÓN 
 
 
 #######################################
@@ -264,13 +268,16 @@ burn_in = 10000
 
 ####### t-walk ########
 
-MonteCarlo = Metropolis(F= F, t=t, g_0 = g_0, alpha= alpha, b_0 = b_0, beta = beta, size = size, ForwardAprox= False, plot = True)
+MonteCarlo = Metropolis(F= F, t=t, x_data=x_data, g_0 = g_0, alpha= alpha, b_0 = b_0, beta = beta, size = size, ForwardAprox= False, plot = True)
 fin = time.time()
 
-
-
+visualizacion(MonteCarlo, burn_in = burn_in)
 
 print('Tiempo preproceso: ', preproceso - inicio_tiempo)
 print('Tiempo total: ', fin-inicio_tiempo)
 
-visualizacion(MonteCarlo, burn_in = burn_in)
+
+
+# %%
+
+type(gamma(3,1))
