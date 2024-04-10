@@ -91,13 +91,8 @@ def logNormalAprox(g, b, t, x_data, loc = 0, scale = 1, alpha = 100, beta = 10, 
 def Metropolis(F, t,x_data, g_0 , alpha, b_0 , beta, size, ForwardAprox = False, plot = True):
 
     sigma = 0.1 #Stardard dev. for data
-    if ForwardAprox == True:
-        ############### REPARAR ##############
-        # logdensity= logNormalAprox()
-        pass
 
-    else:
-        logdensity= norm.logpdf
+    logdensity= norm.logpdf
 
     simdata = lambda n, loc, scale: norm.rvs( size=n, loc=loc, scale=scale)
     par_names=[  r"$g$", r"$b$" ] 
@@ -199,7 +194,6 @@ def visualizacion(sample, burn_in = 10000):
 
 
 
-### APROXIMACIÓN 
 
 
 #######################################

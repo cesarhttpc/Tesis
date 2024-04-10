@@ -62,7 +62,7 @@ def interpolador(punto, puntos_malla ,t, num_vecinos = 5):
 
     return interpolacion
 
-def logposterior(g, b, t, x, sigma = 1, alpha = 100, beta = 10, g_0 = 10, b_0 = 1, Forward_aprox = True):
+def logposterior(g, b, t, x,Forward_aprox, sigma = 1, alpha = 100, beta = 10, g_0 = 10, b_0 = 1):
     
         if g>0 and b>0:
             if Forward_aprox == True:
@@ -83,7 +83,7 @@ def logposterior(g, b, t, x, sigma = 1, alpha = 100, beta = 10, g_0 = 10, b_0 = 
             Logf_post = -10**100
             return Logf_post 
         
-def MetropolisHastingsRW(t_datos,x_datos,inicio,size= 100000,alpha= 100, beta= 10, g_0= 10, b_0= 1, Forward_aprox = True):
+def MetropolisHastingsRW(t_datos,x_datos,inicio,Forward_aprox,size= 100000,alpha= 100, beta= 10, g_0= 10, b_0= 1):
 
         # Punto inicial (parametros)
         x = inicio
@@ -105,7 +105,7 @@ def MetropolisHastingsRW(t_datos,x_datos,inicio,size= 100000,alpha= 100, beta= 1
             y = x + e   
 
             # Cadena de Markov
-            log_y = logposterior(y[0], y[1], t_datos, x_datos, alpha = alpha, beta = beta, g_0 = g_0, b_0 = b_0)
+            log_y = logposterior(y[0], y[1], t_datos, x_datos, alpha = alpha, beta = beta, g_0 = g_0, b_0 = b_0, Forward_aprox= Forward_aprox)
             log_x = sample[k,2] # Recicla logverosimilitud
             cociente = np.exp( log_y - log_x )
 
@@ -238,10 +238,9 @@ x = x + error
 # plt.scatter(t,x, color= 'orange')
 # plt.show()
 
-################# Preproceso #################
-'Buscador de vecinos cercanos y preproceso para calcular la solucion en de la ecuacion diferencial en cada punto'
 
 def preproceso():
+    'Buscador de vecinos cercanos y preproceso para calcular la solucion en de la ecuacion diferencial en cada punto'
     # Cantidad de vecinos
     # num_vecinos = num_vecinos
 
@@ -284,7 +283,6 @@ def preproceso():
     return puntos_malla
 
 
-# inicio_tiempo = time.time()
 
 #### MCMC propio ########
 inicio = np.array([uniform.rvs(0,10),uniform.rvs(0,7)])
@@ -297,10 +295,8 @@ b_0 = 2
 beta = 1.1
 size = 50000
 
-# num_vecinos_varios = np.array([5,8,16])
-# num_puntos_malla = np.array([10, 40, 100, 500])
-num_vecinos_varios = np.array([5])
-num_puntos_malla = np.array([30])
+num_vecinos_varios = np.array([5,8,16])
+num_puntos_malla = np.array([10, 40, 100])
 
 Condicion_grafica_malla = 0
 
@@ -313,8 +309,8 @@ for j in range(len(num_puntos_malla)):
         Forward_aprox = True
 
         num_vecinos = num_vecinos_varios[k]
-        g_dom = np.linspace(3, 13, num= num_puntos_malla[j])
-        b_dom = np.linspace(0, 4, num= num_puntos_malla[j])
+        g_dom = np.linspace(0, 13, num= num_puntos_malla[j])
+        b_dom = np.linspace(0, 6, num= num_puntos_malla[j])
 
         # Crear la malla utilizando meshgrid
         g_mesh, b_mesh = np.meshgrid(g_dom, b_dom)
@@ -390,19 +386,3 @@ for j in range(len(num_puntos_malla)):
         plt.show()
 
     Condicion_grafica_malla = 0
-
-
-
-
-
-
-
-# %%
-# plt.hist(monte_carlo[0:])
-
-
-# %%
-a = 4
-b = 8
-
-print('aqui que cosa %r %r '%(a,b) )
