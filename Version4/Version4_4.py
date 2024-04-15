@@ -52,13 +52,8 @@ def interpolador(punto, puntos_malla ,t, num_vecinos = 5):
     interpolacion = np.zeros(n)
     for k in range(num_vecinos):
 
-        solution = odeint(dinamica, y0, t, args=(puntos_malla[indices[k]][0],puntos_malla[indices[k]][1] ))
-        x = solution[:,0]
-        interpolacion = interpolacion + x * pesos[k]
-
-        # solucion = buscador_de_vecinos.solutions[indices[k]]
-        # interpolacion = interpolacion + solucion*pesos[k]
-
+        solucion = buscador_de_vecinos.solutions[indices[k]]
+        interpolacion = interpolacion + solucion*pesos[k]
 
     return interpolacion
 
@@ -280,7 +275,7 @@ def preproceso():
         #     plt.scatter(puntos_malla[indices[k]][0],puntos_malla[indices[k]][1], color = 'red')
         plt.show()
 
-    return puntos_malla
+    return puntos_malla, buscador_de_vecinos
 
 
 
@@ -328,7 +323,7 @@ for j in range(len(num_puntos_malla)):
 
 
         # if Forward_aprox == True:
-        puntos_malla = preproceso()
+        puntos_malla, buscador_de_vecinos = preproceso()
         preproceso_tiempo = time.time()
 
         sample = MetropolisHastingsRW(t, x, inicio, size = size, g_0 = g_0, b_0 = b_0, beta = beta, alpha= alpha, Forward_aprox= Forward_aprox)
@@ -362,7 +357,7 @@ for j in range(len(num_puntos_malla)):
         plt.title('Priori y posterior para g (%r vecinos y %r malla) '%(num_vecinos_varios[k],num_puntos_malla[j]))
         plt.hist(g_sample_aprox[burn_in:], density=True, bins = 40,label='Aproximado',alpha = 0.8)
         plt.hist(g_sample[burn_in:], density= True, bins = 40,label = 'Exacto',alpha = 0.8)
-        dom_g = np.linspace(0,15,500)
+        dom_g = np.linspace(0,20,500)
         plt.plot(dom_g, gamma.pdf(dom_g, a = alpha , scale = g_0/alpha),color = 'green')
         plt.ylabel(r'$f(g)$')
         plt.xlabel(r'$g$')

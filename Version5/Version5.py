@@ -36,7 +36,7 @@ def dinamica(y,t,g,b):
     dvdt = g - b*v
     return [dxdt, dvdt]
 
-def F( theta, t):
+def Forward( theta, t):
 
     g,b = theta
 
@@ -44,6 +44,36 @@ def F( theta, t):
     solutions = odeint(dinamica, y0 ,t, args=(g,b))
     x = solutions[:,0]
     return x
+
+def Forward_aprox(theta, t):
+
+    # Crear una instancia de la clase VecinosCercanos
+    vecinos_interpolador = VecinosCercanos(puntos_malla)
+    
+    # Encuentra los vecinos más cercanos al punto (g,b)
+    distancias, indices = vecinos_interpolador.encontrar_vecinos_cercanos(theta, numero_de_vecinos=num_vecinos)
+
+    # Pesos
+    epsilon = 10**(-6)
+    pesos = np.zeros(num_vecinos)
+    for i in range(num_vecinos):
+         pesos[i] = 1/(distancias[i] + epsilon) 
+    norma = sum(pesos)
+    pesos = pesos/norma
+    
+    # Combinacion de soluciones cercanas
+    n = len(t)
+    interpolacion = np.zeros(n)
+    for k in range(num_vecinos):
+
+        # solution = odeint(dinamica, y0, t, args=(puntos_malla[indices[k]][0],puntos_malla[indices[k]][1] ))
+        # x = solution[:,0]
+        # interpolacion = interpolacion + x * pesos[k]
+
+        solucion = buscador_de_vecinos.solutions[indices[k]]
+        interpolacion = interpolacion + solucion*pesos[k]
+
+    return interpolacion 
 
 def interpolador(punto, puntos_malla ,t, num_vecinos = 5):
 
@@ -75,20 +105,7 @@ def interpolador(punto, puntos_malla ,t, num_vecinos = 5):
 
     return interpolacion
 
-def logNormalAprox(g, b, t, x_data, loc = 0, scale = 1, alpha = 100, beta = 10, g_0 = 10, b_0 = 1):
-    
-        # Forward map aproximado
-        # if g>0 and b>0:
-        punto = np.array([g,b])
-        x_theta = interpolador(punto,puntos_malla, t, num_vecinos= num_vecinos)
-        Logf_post = -n*np.log(scale) - np.sum((x_data-x_theta - loc)**2) /(2*scale**2) 
-
-        return Logf_post
-        # else:
-        #     Logf_post = -10**100
-        #     return Logf_post 
-
-def Metropolis(F, t,x_data, g_0 , alpha, b_0 , beta, size, ForwardAprox = False, plot = True):
+def Metropolis(F, t,x_data, g_0 , alpha, b_0 , beta, size, plot = True):
 
     sigma = 0.1 #Stardard dev. for data
 
@@ -100,8 +117,8 @@ def Metropolis(F, t,x_data, g_0 , alpha, b_0 , beta, size, ForwardAprox = False,
     par_prior=[ gamma( alpha, scale = g_0/alpha), gamma(beta, scale=b_0/beta)]
     par_supp  = [ lambda g: g>0.0, lambda b: b>0.0]
 
-    buq = BUQ( q=3, data=x_data, logdensity=logdensity, simdata=simdata, sigma=sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
-    buq.SimData(x = np.array([ g, b])) #True parameters 
+    buq = BUQ( q=3, data=x_data, logdensity=logdensity, sigma=sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
+    # buq.SimData(x = np.array([ g, b])) #True parameters 
 
 
     buq.RunMCMC( T=size, burn_in=10000, fnam="cadena_posterior.csv")
@@ -113,6 +130,37 @@ def Metropolis(F, t,x_data, g_0 , alpha, b_0 , beta, size, ForwardAprox = False,
         plt.show()
 
     return buq.Output   
+
+def preproceso():
+    'Buscador de vecinos cercanos y preproceso para calcular la solucion en de la ecuacion diferencial en cada punto'
+
+    # Crear una instancia de la clase VecinosCercanos
+    buscador_de_vecinos = VecinosCercanos(puntos_malla)
+
+    # Preproceso, calcula solucion en cada punto de la malla
+    buscador_de_vecinos.compute_solutions(t, puntos_malla)
+
+    ##### Visualizacion #####
+    Grafica = False
+    if Grafica == True:
+        # Punto arbitrario para encontrar vecinos cercanos
+        punto_arbitrario = np.array([2.05, 2.88])  
+
+        # Encuentra los vecinos más cercanos al punto arbitrario
+        distancias, indices = buscador_de_vecinos.encontrar_vecinos_cercanos(punto_arbitrario, numero_de_vecinos=num_vecinos)
+
+        # Gráfica puntos en malla
+        plt.title('Enmallado')
+        plt.xlabel('g')
+        plt.ylabel('b')
+        plt.scatter(g_mesh,b_mesh)
+        # plt.scatter(punto_arbitrario[0],punto_arbitrario[1])
+        # for k in range(num_vecinos):
+        #     print(puntos_malla[indices[k]])
+        #     plt.scatter(puntos_malla[indices[k]][0],puntos_malla[indices[k]][1], color = 'red')
+        plt.show()
+
+    return puntos_malla, buscador_de_vecinos
 
 def visualizacion(sample, burn_in = 10000):
      
@@ -226,31 +274,8 @@ error[0] = 0
 x_data = x_data + error
 
 
-################# Preproceso #################
-'Buscador de vecinos cercanos y preproceso para calcular la solucion en de la ecuacion diferencial en cada punto'
 
-inicio_tiempo = time.time()
 
-# Cantidad de vecinos
-num_vecinos = 5
-
-# Definir el dominio de los parametros (malla)
-g_dom = np.linspace(0, 22, num=30)
-b_dom = np.linspace(0, 8, num=30)
-
-# Crear la malla utilizando meshgrid
-g_mesh, b_mesh = np.meshgrid(g_dom, b_dom)
-
-# Obtener los puntos de la malla y combinarlos en una matriz
-puntos_malla = np.column_stack((g_mesh.ravel(), b_mesh.ravel()))
-
-# Crear una instancia de la clase VecinosCercanos
-buscador_de_vecinos = VecinosCercanos(puntos_malla)
-
-# Preproceso, calcula solucion en cada punto de la malla
-buscador_de_vecinos.compute_solutions(t, puntos_malla)
-
-preproceso = time.time()
 
 # Parametros de distribucion a prioi
 g_0 = 10
@@ -260,18 +285,101 @@ beta = 1.1
 size = 60000
 burn_in = 10000
 
-####### t-walk ########
-
-MonteCarlo = Metropolis(F= F, t=t, x_data=x_data, g_0 = g_0, alpha= alpha, b_0 = b_0, beta = beta, size = size, ForwardAprox= False, plot = True)
-fin = time.time()
-
-visualizacion(MonteCarlo, burn_in = burn_in)
-
-print('Tiempo preproceso: ', preproceso - inicio_tiempo)
-print('Tiempo total: ', fin-inicio_tiempo)
+############# Experimentos #########
 
 
+num_vecinos_varios = np.array([5,8,16])
+num_puntos_malla = np.array([10, 40, 100, 400])
+# num_vecinos_varios = np.array([5])
+# num_puntos_malla = np.array([15])
 
-# %%
+Condicion_grafica_malla = 0
 
-type(gamma(3,1))
+for j in range(len(num_puntos_malla)):
+
+    for k in range(len(num_vecinos_varios)):
+        
+        # Monte Carlo con Forward map aproximado
+        inicio_tiempo = time.time()
+        # Forward_aprox = True
+
+        num_vecinos = num_vecinos_varios[k]
+        g_dom = np.linspace(0, 13, num= num_puntos_malla[j])
+        b_dom = np.linspace(0, 6, num= num_puntos_malla[j])
+
+        # Crear la malla utilizando meshgrid
+        g_mesh, b_mesh = np.meshgrid(g_dom, b_dom)
+        # Obtener los puntos de la malla y combinarlos en una matriz
+        puntos_malla = np.column_stack((g_mesh.ravel(), b_mesh.ravel()))
+
+        # Visualizar la malla
+        if Condicion_grafica_malla == 0:
+            plt.title('Enmallado (%r,%r)'%(num_puntos_malla[j],num_puntos_malla[j]))
+            plt.scatter(g_mesh,b_mesh) 
+            plt.xlabel('g')
+            plt.ylabel('b')
+            plt.show()
+            Condicion_grafica_malla = 1
+
+        puntos_malla, buscador_de_vecinos = preproceso()
+        preproceso_tiempo = time.time()
+        
+        monte_carlo_aprox = Metropolis(F= Forward_aprox, t=t, x_data=x_data, g_0 = g_0, alpha= alpha, b_0 = b_0, beta = beta, size = size, plot = False)
+
+        fin = time.time()
+        print('Tiempo Aproximado (vecinos %r):' %num_vecinos_varios[k])
+        print('Tiempo preproceso: ', preproceso_tiempo - inicio_tiempo)
+        print('Tiempo total: ', fin-inicio_tiempo, '\n')
+
+        # visualizacion(monte_carlo_aprox)
+
+        # Forward Exacto
+        inicio_tiempo = time.time()
+        # Forward_aprox = False
+        
+        monte_carlo = Metropolis(F= Forward, t=t, x_data=x_data, g_0 = g_0, alpha= alpha, b_0 = b_0, beta = beta, size = size, plot = False)
+        fin = time.time()
+        print('Tiempo NO Aproximado:')
+        print('Tiempo total: ', fin-inicio_tiempo)
+
+        plt.show()
+
+        # Graficas
+        g_sample_aprox = monte_carlo_aprox[:,0]
+        b_sample_aprox = monte_carlo_aprox[:,1]
+        g_sample = monte_carlo[:,0]
+        b_sample = monte_carlo[:,1]
+
+        plt.title('Priori y posterior para g (%r vecinos y %r malla) '%(num_vecinos_varios[k],num_puntos_malla[j]))
+        plt.hist(g_sample_aprox[burn_in:], density=True, bins = 30,label='Aproximado',alpha = 0.8)
+        plt.hist(g_sample[burn_in:], density= True, bins = 30,label = 'Exacto',alpha = 0.8)
+        dom_g = np.linspace(0,20,500)
+        plt.plot(dom_g, gamma.pdf(dom_g, a = alpha , scale = g_0/alpha),color = 'green')
+        plt.ylabel(r'$f(g)$')
+        plt.xlabel(r'$g$')
+        linea = np.linspace(0,0.3, 100)
+        linea_x = np.ones(100)
+        plt.plot(linea_x*g, linea, color = 'black', linewidth = 0.5)
+        plt.legend()
+        plt.show()
+
+        plt.title('Priori y posterior para b (%r vecinos y %r malla) '%(num_vecinos_varios[k],num_puntos_malla[j]))
+        plt.hist(b_sample_aprox[burn_in:], density=True, bins = 40, label = 'Aproximado',alpha = 0.8)
+        plt.hist(b_sample[burn_in:], density= True, bins = 40,label = 'Exacto',alpha = 0.8)
+        dom_b = np.linspace(0,3,500)
+        plt.plot(dom_b, gamma.pdf(dom_b, a = beta, scale = b_0/beta),color = 'green')
+        plt.ylabel(r'$f(b)$')
+        plt.xlabel(r'$b$')
+        linea = np.linspace(0,1, 100)
+        linea_x = np.ones(100)
+        plt.plot(linea_x*b, linea, color = 'black', linewidth = 0.5)
+        plt.legend()
+        plt.show()
+
+
+    Condicion_grafica_malla = 0
+
+
+
+
+
