@@ -66,10 +66,6 @@ def Forward_aprox(theta, t):
     interpolacion = np.zeros(n)
     for k in range(num_vecinos):
 
-        # solution = odeint(dinamica, y0, t, args=(puntos_malla[indices[k]][0],puntos_malla[indices[k]][1] ))
-        # x = solution[:,0]
-        # interpolacion = interpolacion + x * pesos[k]
-
         solucion = buscador_de_vecinos.solutions[indices[k]]
         interpolacion = interpolacion + solucion*pesos[k]
 
@@ -301,7 +297,6 @@ for j in range(len(num_puntos_malla)):
         
         # Monte Carlo con Forward map aproximado
         inicio_tiempo = time.time()
-        # Forward_aprox = True
 
         num_vecinos = num_vecinos_varios[k]
         g_dom = np.linspace(0, 13, num= num_puntos_malla[j])
@@ -335,7 +330,6 @@ for j in range(len(num_puntos_malla)):
 
         # Forward Exacto
         inicio_tiempo = time.time()
-        # Forward_aprox = False
         
         monte_carlo = Metropolis(F= Forward, t=t, x_data=x_data, g_0 = g_0, alpha= alpha, b_0 = b_0, beta = beta, size = size, plot = False)
         fin = time.time()
@@ -351,8 +345,8 @@ for j in range(len(num_puntos_malla)):
         b_sample = monte_carlo[:,1]
 
         plt.title('Priori y posterior para g (%r vecinos y %r malla) '%(num_vecinos_varios[k],num_puntos_malla[j]))
-        plt.hist(g_sample_aprox[burn_in:], density=True, bins = 30,label='Aproximado',alpha = 0.8)
-        plt.hist(g_sample[burn_in:], density= True, bins = 30,label = 'Exacto',alpha = 0.8)
+        plt.hist(g_sample_aprox[burn_in:], density=True, bins = 20,label='Aproximado',alpha = 0.8)
+        plt.hist(g_sample[burn_in:], density= True, bins = 20,label = 'Exacto',alpha = 0.8)
         dom_g = np.linspace(0,20,500)
         plt.plot(dom_g, gamma.pdf(dom_g, a = alpha , scale = g_0/alpha),color = 'green')
         plt.ylabel(r'$f(g)$')
