@@ -4,11 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 from scipy.stats import norm, gamma
 
-from pytwalk import pytwalk, pyPstwalk, Ind1Dsampl, BUQ
-
-
-
-
+from pytwalk import BUQ
 
 ### Example using derived class BUQ
 ### Define the Forward map with signature F( theta, t)
@@ -59,6 +55,7 @@ x_data = solutions[:,0]
 v_data = solutions[:,1]
 
 # Añadir ruido a los datos
+sigma = 0.1 #Stardard dev. for data
 error = norm.rvs(0,0.01,n)
 error[0] = 0
 x_data = x_data + error
@@ -67,7 +64,6 @@ x_data = x_data + error
 
 
 
-sigma = 0.1 #Stardard dev. for data
 ### logdensity: log of the density of G, with signature logdensity( data, loc, scale)
 ### see docstring of BUQ
 logdensity=norm.logpdf
@@ -87,9 +83,7 @@ buq = BUQ( q=3, data=x_data, logdensity=logdensity, sigma=sigma, F=F, t=t, par_n
 ### redifine buq.SimInit eg.
 ### buq.SimInit = lambda: array([ 0.001, 1000])+norm.rvs(size=3)*0.001
 
-buq.RunMCMC( T=100_000, burn_in=10000, fnam="buq_output.csv")
+buq.RunMCMC( T=30_000, burn_in=10000)
 buq.PlotPost(par=0, burn_in=10000)
 buq.PlotPost(par=1, burn_in=10000) #we may acces the parameters by name also
-buq.PlotCorner(burn_in=10000)
-print("The twalk sample is available in buq.Ouput: ", buq.Output.shape)
-
+# print("The twalk sample is available in buq.Ouput: ", buq.Output.shape)
