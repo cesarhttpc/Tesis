@@ -1,0 +1,2 @@
+Implementación con Forward map en función con el MCMC t-walk del Dr. Andrés.
+(los tiempos de ejecución del método aproximado son superiores que el exacto)
