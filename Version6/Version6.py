@@ -3,10 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 from scipy.spatial import cKDTree
-from scipy.stats import gamma, norm
+from scipy.stats import gamma, norm, uniform
 import time
 
 from pytwalk import BUQ
+
 
 #######################################
 ###### Funciones ######################
@@ -45,13 +46,39 @@ def Forward( theta, t):
     x = solutions[:,0]
     return x
 
-def Forward_aprox(theta, t):
+'''def Forward_aprox(theta, t):
+    pass
+    # # Crear una instancia de la clase VecinosCercanos
+    # vecinos_interpolador = VecinosCercanos(puntos_malla)
+    
+    # # Encuentra los vecinos más cercanos al punto (g,b)
+    # distancias, indices = vecinos_interpolador.encontrar_vecinos_cercanos(theta, numero_de_vecinos=num_vecinos)
+
+    # # Pesos
+    # epsilon = 10**(-6)
+    # pesos = np.zeros(num_vecinos)
+    # for i in range(num_vecinos):
+    #      pesos[i] = 1/(distancias[i] + epsilon) 
+    # norma = sum(pesos)
+    # pesos = pesos/norma
+    
+    # # Combinacion de soluciones cercanas
+    # n = len(t)
+    # interpolacion = np.zeros(n)
+    # for k in range(num_vecinos):
+
+    #     solucion = buscador_de_vecinos.solutions[indices[k]]
+    #     interpolacion = interpolacion + solucion*pesos[k]
+
+    # return interpolacion '''
+
+def interpolador(punto, puntos_malla ,t, num_vecinos = 5):
 
     # Crear una instancia de la clase VecinosCercanos
-    vecinos_interpolador = VecinosCercanos(puntos_malla)
-    
-    # Encuentra los vecinos más cercanos al punto (g,b)
-    distancias, indices = vecinos_interpolador.encontrar_vecinos_cercanos(theta, numero_de_vecinos=num_vecinos)
+    Vecinos_interpolador = VecinosCercanos(puntos_malla)
+
+    # Encuentra los vecinos más cercanos al punto arbitrario
+    distancias, indices = Vecinos_interpolador.encontrar_vecinos_cercanos(punto, numero_de_vecinos=num_vecinos)
 
     # Pesos
     epsilon = 10**(-6)
@@ -60,16 +87,20 @@ def Forward_aprox(theta, t):
          pesos[i] = 1/(distancias[i] + epsilon) 
     norma = sum(pesos)
     pesos = pesos/norma
-    
+
     # Combinacion de soluciones cercanas
     n = len(t)
     interpolacion = np.zeros(n)
     for k in range(num_vecinos):
 
-        solucion = buscador_de_vecinos.solutions[indices[k]]
-        interpolacion = interpolacion + solucion*pesos[k]
+        solution = odeint(dinamica, y0, t, args=(puntos_malla[indices[k]][0],puntos_malla[indices[k]][1] ))
+        x = solution[:,0]
+        interpolacion = interpolacion + x * pesos[k]
 
-    return interpolacion 
+        # solucion = buscador_de_vecinos.solutions[indices[k]]
+        # interpolacion = interpolacion + solucion*pesos[k]
+
+    return interpolacion
 
 def Metropolis(F, t,x_data, g_0 , alpha, b_0 , beta, size, plot = True):
 
@@ -127,6 +158,69 @@ def preproceso():
         plt.show()
 
     return puntos_malla, buscador_de_vecinos
+
+def logposterior(g, b, t, x,Forward_aprox_bool = True, sigma = 1, alpha = 100, beta = 10, g_0 = 10, b_0 = 1):
+    
+        if g>0 and b>0:
+            if Forward_aprox_bool == True:
+
+                # Forward map teorico:
+                solution = odeint(dinamica, y0, t, args=(g,b))
+                x_theta = solution[:,0]
+
+            else:
+                # Forward map aproximado:
+                punto = np.array([g,b])
+                x_theta = interpolador(punto,puntos_malla, t, num_vecinos= num_vecinos)
+
+            Logf_post = -n*np.log(sigma) - np.sum((x-x_theta)**2) /(2*sigma**2) + (alpha -1)*np.log(g) - alpha*g/g_0 + (beta - 1)*np.log(b) - beta*b/b_0
+
+            return Logf_post
+        else:
+            Logf_post = -10**100
+            return Logf_post 
+        
+def MetropolisHastingsRW(t_datos,x_datos,inicio,Forward_aprox_bool =True,size= 100000,alpha= 100, beta= 10, g_0= 10, b_0= 1):
+
+        # Punto inicial (parametros)
+        x = inicio
+
+        sigma1, sigma2 = 0.3, 0.1
+
+        # 
+        sample = np.zeros([size,3])
+        sample[0,0] = x[0]  
+        sample[0,1] = x[1]
+        sample[0,2] = logposterior(x[0], x[1], t_datos, x_datos, alpha=alpha, beta = beta, g_0 = g_0, b_0 = b_0, Forward_aprox_bool=Forward_aprox_bool)
+
+        for k in range(size-1):
+
+            # Simulacion de propuesta
+            e1 = norm.rvs(0,sigma1)
+            e2 = norm.rvs(0,sigma2)
+            e = np.array([e1,e2])
+            y = x + e   
+
+            # Cadena de Markov
+            log_y = logposterior(y[0], y[1], t_datos, x_datos, alpha = alpha, beta = beta, g_0 = g_0, b_0 = b_0, Forward_aprox_bool= Forward_aprox_bool)
+            log_x = sample[k,2] # Recicla logverosimilitud
+            cociente = np.exp( log_y - log_x )
+
+            # Transicion de la cadena
+            if uniform.rvs(0,1) <= cociente:
+
+                sample[k+1,0] = y[0]
+                sample[k+1,1] = y[1] 
+                sample[k+1,2] = log_y
+
+                x = y
+            else:
+                
+                sample[k+1,0] = x[0]
+                sample[k+1,1] = x[1] 
+                sample[k+1,2] = log_x
+
+        return sample
 
 def visualizacion(sample, burn_in = 10000):
      
@@ -291,7 +385,9 @@ for j in range(len(num_puntos_malla)):
         puntos_malla, buscador_de_vecinos = preproceso()
         preproceso_tiempo = time.time()
         
-        monte_carlo_aprox = Metropolis(F= Forward_aprox, t=t, x_data=x_data, g_0 = g_0, alpha= alpha, b_0 = b_0, beta = beta, size = size, plot = False)
+        inicio = np.array([uniform.rvs(0,10),uniform.rvs(0,7)])
+        monte_carlo_aprox = MetropolisHastingsRW(t, x_data, inicio, size = size, g_0 = g_0, b_0 = b_0, beta = beta, alpha= alpha)
+        # monte_carlo_aprox = Metropolis(F= Forward_aprox, t=t, x_data=x_data, g_0 = g_0, alpha= alpha, b_0 = b_0, beta = beta, size = size, plot = False)
 
         #Reporte
         fin = time.time()
@@ -367,6 +463,4 @@ for j in range(len(num_puntos_malla)):
 
 
     Condicion_grafica_malla = 0
-
-
 
