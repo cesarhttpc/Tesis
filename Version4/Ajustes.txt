@@ -1,0 +1,1 @@
+Experimentos con Forward map en logposterior (separado) creado por mí con mi implementación de MCMC.
