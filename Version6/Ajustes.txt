@@ -1,0 +1,2 @@
+Implementación mixta con ambos MCMC (propio y del Dr. Andrés) 
+(No hay convergencia entre histogramas)
