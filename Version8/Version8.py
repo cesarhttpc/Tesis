@@ -87,7 +87,7 @@ def Metropolis(F, t,x_data, g_0 , alpha, b_0 , beta, size, plot = True):
     # buq.SimData(x = np.array([ g, b])) #True parameters 
 
 
-    buq.RunMCMC( T=size, burn_in=10000, fnam="cadena_posterior.csv")
+    buq.RunMCMC( T=size, burn_in=10000)
 
     if plot == True:
         buq.PlotPost(par=0, burn_in=10000)
@@ -154,7 +154,7 @@ def visualizacion(sample, burn_in = 10000):
 
 
     # Grafica de la distribución de la curva estimada
-    t_grafica = np.linspace(0,cota_dominio, 100)
+    t_grafica = np.linspace(0,cota_tiempo, 100)
 
     space = 4000
     ##### ARREGLAR BURN_IN ###
@@ -196,8 +196,8 @@ b = 1.15
 
 # Simular las observaciones
 n = 31      # Tamaño de muestra (n-1)
-cota_dominio = 1.5
-t = np.linspace(0,cota_dominio,num = n)
+cota_tiempo = 1.5
+t = np.linspace(0,cota_tiempo,num = n)
 
 '''Aqui cambiar la solución usando la función de la dinamica'''
 # ECUACIÓN DIFERENCIAL:
@@ -225,9 +225,9 @@ g_0 = 10
 alpha = 10
 b_0 = 2
 beta = 1.1
-size = 60000
-burn_in = 5000
-hacer_reporte = True
+size = 50000
+burn_in = 10000
+hacer_reporte = False
 
 ############# Experimentos #########
 
@@ -236,13 +236,21 @@ num_puntos_malla = np.array([10, 15, 30, 50])
 
 Monte_carlo_aprox_compilador_g = np.zeros( (size,len(num_vecinos_varios)*len(num_puntos_malla)) )
 Monte_carlo_aprox_compilador_b = np.zeros( (size,len(num_vecinos_varios)*len(num_puntos_malla)) )
-# Tiempo_compilador = {}
+# Tiempo_compilador = []
 
 
 if hacer_reporte == True:
     reporte = open('reporte.txt','w')
     reporte.write('REPORTE DE PROCEDIMIENTO \n\n')
     reporte.write('Se hacen experimentos en inferencia bayesiana de problema inverso con forward map aproximado por vecinos cercanos con distintos vecinos y tamano de malla \n\n')
+    reporte.write('Parametros de a priori: \n')
+    reporte.write('g_0 = %r \n' %g_0)
+    reporte.write('alpha = %r \n' %alpha)
+    reporte.write('b_0 = %r \n' %b_0)
+    reporte.write('beta = %r \n' %beta)
+    reporte.write('Parametros de MCMC: \n')
+    reporte.write('T = %r \n' %size)
+    reporte.write('burn in = %r \n\n' %burn_in)
     reporte.write('Para los vecinos %r \n' %num_vecinos_varios)
     reporte.write('Con las mallas cuadradas %r \n\n' %num_puntos_malla)
     reporte.close()
@@ -261,7 +269,7 @@ print('Tiempo total: ', fin-inicio_tiempo)
 if hacer_reporte == True:
 
     reporte = open('reporte.txt','a')
-    reporte.write('  Forward Ordinario \n')
+    reporte.write('Forward Ordinario \n')
     reporte.write('  Tiempo %.2f \n\n' %(fin-inicio_tiempo))
     reporte.close()
 
@@ -321,7 +329,7 @@ for k in range(len(num_vecinos_varios)):
         b_sample_aprox = monte_carlo_aprox[:,1]
 
 
-        plt.title('Priori y posterior para g (%r vecinos y %r malla) '%(num_vecinos_varios[k],num_puntos_malla[j]))
+        plt.title('A priori y posterior para g (%r vecinos y %r malla) '%(num_vecinos_varios[k],num_puntos_malla[j]))
         plt.hist(g_sample[burn_in:], density= True, bins = 20,label = 'Ordinario',alpha = 0.9)
         plt.hist(g_sample_aprox[burn_in:], density=True, bins = 20,label='Aproximado',alpha = 0.8,histtype='step')
         dom_g = np.linspace(8,12,500)
@@ -332,11 +340,11 @@ for k in range(len(num_vecinos_varios)):
         linea_x = np.ones(100)
         plt.plot(linea_x*g, linea, color = 'black', linewidth = 0.5)
         plt.legend()
-        # if hacer_reporte == True:
-        #     plt.savefig('posterior_g_%r.png'%contador)
-        # plt.show()
+        if hacer_reporte == True:
+            plt.savefig('Figuras/Individual/posterior_g_%r.png'%contador)
+        plt.show()
 
-        plt.title('Priori y posterior para b (%r vecinos y %r malla) '%(num_vecinos_varios[k],num_puntos_malla[j]))
+        plt.title('A priori y posterior para b (%r vecinos y %r malla) '%(num_vecinos_varios[k],num_puntos_malla[j]))
         plt.hist(b_sample[burn_in:], density= True, bins = 40,label = 'Ordinario',alpha = 0.9)
         plt.hist(b_sample_aprox[burn_in:], density=True, bins = 40, label = 'Aproximado',alpha = 0.8,histtype='step')
         dom_b = np.linspace(0.8,1.6,500)
@@ -347,16 +355,16 @@ for k in range(len(num_vecinos_varios)):
         linea_x = np.ones(100)
         plt.plot(linea_x*b, linea, color = 'black', linewidth = 0.5)
         plt.legend()
-        # if hacer_reporte == True:
-        #     plt.savefig('posterior_b_%r.png'%contador)
-        # plt.show()
+        if hacer_reporte == True:
+            plt.savefig('Figuras/Individual/posterior_b_%r.png'%contador)
+        plt.show()
 
 
 
 
         contador += 1
 
-
+# # %%
 
 # Grafica convergencia por malla
 
@@ -372,10 +380,13 @@ for k in range(len(num_vecinos_varios)):
         g_sample_aprox = Monte_carlo_aprox_compilador_g[:,3*k + l]
         axs[l].hist(g_sample_aprox[burn_in:], density = True, bins = 40, histtype  = 'step')
         axs[l].plot(dom_g, gamma.pdf(dom_g, a = alpha , scale = g_0/alpha),color = 'green')
+        linea = np.linspace(0,0.3, 100)
+        linea_x = np.ones(100)
+        axs[l].plot(linea_x*g, linea, color = 'black', linewidth = 0.5)
         # if l != 0 :
         #     axs[l].label_outer()
     if hacer_reporte == True:
-        plt.savefig('convergencia_g_%r.png'%k)
+        plt.savefig('Figuras/Generales/convergencia_g_%r.png'%k)
     plt.show()
 
 
@@ -386,18 +397,21 @@ for k in range(len(num_vecinos_varios)):
         b_sample_aprox = Monte_carlo_aprox_compilador_b[:,3*k + l]
         axs2[l].hist(b_sample_aprox[burn_in:], density = True, bins = 40, histtype  = 'step')
         axs2[l].plot(dom_b, gamma.pdf(dom_b, a = beta, scale = b_0/beta),color = 'green')
+        linea = np.linspace(0,1, 100)
+        linea_x = np.ones(100)
+        axs2[l].plot(linea_x*b, linea, color = 'black', linewidth = 0.5)
         # if l != 0 :
         #     axs[l].label_outer()
     if hacer_reporte == True:
-        plt.savefig('convergencia_b_%r.png'%k)
+        plt.savefig('Figuras/Generales/convergencia_b_%r.png'%k)
     plt.show()
 
 
 
-## %%
+# # %%
 
 # Grafica de la distribución de la curva estimada
-t_grafica = np.linspace(0,cota_dominio, 100)
+t_grafica = np.linspace(0,cota_tiempo, 100)
 
 
 sol_graf = odeint(dinamica, y0 ,t_grafica, args=(g,b))
@@ -435,10 +449,10 @@ for k in range(len(num_vecinos_varios)):
         axs3[j].plot(t_grafica,x_graf, color = 'blue', linewidth = 0.75)
         num_experimento += 1
 
-    # if j != 0 :
-    #     axs3[j].label_outer()
+        if j != 0 :
+            axs3[j].label_outer()
     if hacer_reporte == True:
-        plt.savefig('trayectoria_dist_%r.png'%k)
+        plt.savefig('Figuras/Generales/trayectoria_dist_%r.png'%k)
     plt.show()
 
 
@@ -449,4 +463,3 @@ for k in range(len(num_vecinos_varios)):
     # plt.ylabel('Posición')
     # plt.legend()
     # plt.show()
-
