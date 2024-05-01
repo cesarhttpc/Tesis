@@ -6,41 +6,26 @@ Para los vecinos array([ 5,  8, 16])
 Con las mallas cuadradas array([10, 15, 30, 50]) 
 
 Forward Ordinario 
-  Tiempo 40.29 
+  Tiempo 54.19 
 
 Experimento 1 
   Forward Aproximado (5 vecinos, 10 malla) 
-  Tiempo: 37.69 
+  Tiempo: 31.27 
 Experimento 2 
   Forward Aproximado (5 vecinos, 15 malla) 
-  Tiempo: 49.41 
+  Tiempo: 31.94 
 Experimento 3 
   Forward Aproximado (5 vecinos, 30 malla) 
-  Tiempo: 55.77 
+  Tiempo: 31.53 
 Experimento 4 
   Forward Aproximado (5 vecinos, 50 malla) 
-  Tiempo: 42.42 
+  Tiempo: 32.41 
 Experimento 5 
   Forward Aproximado (8 vecinos, 10 malla) 
-  Tiempo: 33.49 
+  Tiempo: 31.49 
 Experimento 6 
   Forward Aproximado (8 vecinos, 15 malla) 
-  Tiempo: 38.38 
+  Tiempo: 36.38 
 Experimento 7 
   Forward Aproximado (8 vecinos, 30 malla) 
-  Tiempo: 54.74 
-Experimento 8 
-  Forward Aproximado (8 vecinos, 50 malla) 
-  Tiempo: 56.11 
-Experimento 9 
-  Forward Aproximado (16 vecinos, 10 malla) 
-  Tiempo: 56.77 
-Experimento 10 
-  Forward Aproximado (16 vecinos, 15 malla) 
-  Tiempo: 57.86 
-Experimento 11 
-  Forward Aproximado (16 vecinos, 30 malla) 
-  Tiempo: 60.85 
-Experimento 12 
-  Forward Aproximado (16 vecinos, 50 malla) 
-  Tiempo: 47.43 
+  Tiempo: 35.24 
