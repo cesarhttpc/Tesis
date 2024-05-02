@@ -5,8 +5,11 @@ from scipy.integrate import odeint
 from scipy.spatial import cKDTree
 from scipy.stats import gamma, norm
 import time
-
+import os
 from pytwalk import BUQ
+
+'''Reviar errores t-student'''
+from scipy.stats import t as t_dist
 
 #######################################
 ###### Funciones ######################
@@ -195,7 +198,7 @@ g = 9.81
 b = 1.15
 
 # Simular las observaciones
-n = 31      # Tamaño de muestra (n-1)
+n = 11      # Tamaño de muestra (n-1)
 cota_tiempo = 1.5
 t = np.linspace(0,cota_tiempo,num = n)
 
@@ -213,6 +216,7 @@ v_data = solutions[:,1]
 
 # Añadir ruido a los datos
 error = norm.rvs(0,0.01,n)
+# error = t_dist.rvs(3,size = n)
 error[0] = 0
 x_data = x_data + error
 
@@ -227,10 +231,19 @@ b_0 = 2
 beta = 1.1
 size = 50000
 burn_in = 10000
-hacer_reporte = False
+
+hacer_reporte = True
+path = 'Exp_3/'  # Trayectoria relativa para archivar
+
+directory = path + 'Figuras/Generales'
+os.makedirs(directory, mode=0o777, exist_ok= True)
+directory = path + 'Figuras/Individual'
+os.makedirs(directory, mode=0o777, exist_ok= True)
+
+
+
 
 ############# Experimentos #########
-
 num_vecinos_varios = np.array([5, 8, 16])
 num_puntos_malla = np.array([10, 15, 30, 50])
 
@@ -240,14 +253,19 @@ Monte_carlo_aprox_compilador_b = np.zeros( (size,len(num_vecinos_varios)*len(num
 
 
 if hacer_reporte == True:
-    reporte = open('reporte.txt','w')
+    reporte = open(path + 'reporte.txt','w')
     reporte.write('REPORTE DE PROCEDIMIENTO \n\n')
     reporte.write('Se hacen experimentos en inferencia bayesiana de problema inverso con forward map aproximado por vecinos cercanos con distintos vecinos y tamano de malla \n\n')
+    reporte.write('Observaciones (muestra): \n')
+    reporte.write('g = %r \n' %g)
+    reporte.write('b = %r \n' %b)
+    reporte.write('n = %r \n' %n)
+    reporte.write('tiempo [0,%r] \n\n' %cota_tiempo)
     reporte.write('Parametros de a priori: \n')
     reporte.write('g_0 = %r \n' %g_0)
     reporte.write('alpha = %r \n' %alpha)
     reporte.write('b_0 = %r \n' %b_0)
-    reporte.write('beta = %r \n' %beta)
+    reporte.write('beta = %r \n\n' %beta)
     reporte.write('Parametros de MCMC: \n')
     reporte.write('T = %r \n' %size)
     reporte.write('burn in = %r \n\n' %burn_in)
@@ -268,7 +286,7 @@ print('Tiempo Forward Ordinario:')
 print('Tiempo total: ', fin-inicio_tiempo)
 if hacer_reporte == True:
 
-    reporte = open('reporte.txt','a')
+    reporte = open(path + 'reporte.txt','a')
     reporte.write('Forward Ordinario \n')
     reporte.write('  Tiempo %.2f \n\n' %(fin-inicio_tiempo))
     reporte.close()
@@ -315,7 +333,7 @@ for k in range(len(num_vecinos_varios)):
         print('Tiempo total: ', fin-inicio_tiempo, '\n')
 
         if hacer_reporte == True:   
-            reporte = open('reporte.txt','a')
+            reporte = open(path + 'reporte.txt','a')
             reporte.write('Experimento %r \n'%contador)
             reporte.write('  Forward Aproximado (%r vecinos, %r malla) \n'%(num_vecinos_varios[k],num_puntos_malla[j]))
             reporte.write('  Tiempo: %.2f \n' %(fin-inicio_tiempo))
@@ -341,7 +359,7 @@ for k in range(len(num_vecinos_varios)):
         plt.plot(linea_x*g, linea, color = 'black', linewidth = 0.5)
         plt.legend()
         if hacer_reporte == True:
-            plt.savefig('Figuras/Individual/posterior_g_%r.png'%contador)
+            plt.savefig(path + 'Figuras/Individual/posterior_g_%r.png'%contador)
         plt.show()
 
         plt.title('A priori y posterior para b (%r vecinos y %r malla) '%(num_vecinos_varios[k],num_puntos_malla[j]))
@@ -356,10 +374,8 @@ for k in range(len(num_vecinos_varios)):
         plt.plot(linea_x*b, linea, color = 'black', linewidth = 0.5)
         plt.legend()
         if hacer_reporte == True:
-            plt.savefig('Figuras/Individual/posterior_b_%r.png'%contador)
+            plt.savefig(path + 'Figuras/Individual/posterior_b_%r.png'%contador)
         plt.show()
-
-
 
 
         contador += 1
@@ -386,7 +402,7 @@ for k in range(len(num_vecinos_varios)):
         # if l != 0 :
         #     axs[l].label_outer()
     if hacer_reporte == True:
-        plt.savefig('Figuras/Generales/convergencia_g_%r.png'%k)
+        plt.savefig(path + 'Figuras/Generales/convergencia_g_%r.png'%(k+1))
     plt.show()
 
 
@@ -403,7 +419,7 @@ for k in range(len(num_vecinos_varios)):
         # if l != 0 :
         #     axs[l].label_outer()
     if hacer_reporte == True:
-        plt.savefig('Figuras/Generales/convergencia_b_%r.png'%k)
+        plt.savefig(path + 'Figuras/Generales/convergencia_b_%r.png'%(k+1))
     plt.show()
 
 
@@ -452,7 +468,7 @@ for k in range(len(num_vecinos_varios)):
         if j != 0 :
             axs3[j].label_outer()
     if hacer_reporte == True:
-        plt.savefig('Figuras/Generales/trayectoria_dist_%r.png'%k)
+        plt.savefig(path + 'Figuras/Generales/trayectoria_dist_%r.png'%(k+1))
     plt.show()
 
 
