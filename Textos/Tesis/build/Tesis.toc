@@ -1,0 +1,16 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{Resumen}{\es@scroman {iii}}{}%
+\contentsline {paragraph}{Palabras clave:}{\es@scroman {iii}}{}%
+\contentsline {chapter}{Agradecimientos}{\es@scroman {v}}{}%
+\contentsline {chapter}{\numberline {1}Introducción}{1}{}%
+\contentsline {section}{\numberline {1.1}Problema}{1}{}%
+\contentsline {section}{\numberline {1.2}Contribución}{1}{}%
+\contentsline {section}{\numberline {1.3}Organización de la tesis}{1}{}%
+\contentsline {chapter}{\numberline {2}Marco teórico}{3}{}%
+\contentsline {chapter}{\numberline {3}Análisis Exploratorio}{5}{}%
+\contentsline {section}{\numberline {3.1}Bases de datos}{5}{}%
+\contentsline {chapter}{\numberline {4}Modelación espacio-temporal}{7}{}%
+\contentsline {section}{\numberline {4.1}Modelos espaciales}{7}{}%
+\contentsline {subsubsection}{Modelo Poisson-Gamma}{7}{}%
+\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{9}{}%
+\contentsline {chapter}{\numberline {A}Anexo}{13}{}%

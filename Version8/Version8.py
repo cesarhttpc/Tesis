@@ -33,26 +33,34 @@ class VecinosCercanos:
         # Devolver las distancias y los índices de los vecinos más cercanos
         return distancias, indices
 
-def dinamica(y,t,g,b):
+def gravedad(y,t,g,b):
     x, v = y
     dxdt = v
     dvdt = g - b*v
+    return [dxdt, dvdt]
+
+def logistico(P,t,K,r):
+
+    dPdt = r*P*(1-P/K)
+    return dPdt
+
+def resorte(y,t,k,b):
+    x, v = y
+    dxdt = v
+    dvdt = -k*x - b*v
     return [dxdt, dvdt]
 
 def Forward( theta, t):
 
     g,b = theta
 
-    y0 = [0.0, 0.0]  
+    # y0 = [0.0, 0.0]  
     solutions = odeint(dinamica, y0 ,t, args=(g,b))
     x = solutions[:,0]
     return x
 
 def Forward_aprox(theta, t):
 
-    # Crear una instancia de la clase VecinosCercanos
-    # vecinos_interpolador = VecinosCercanos(puntos_malla)
-    ''' Instanciar la clase una vez '''    
     # Encuentra los vecinos más cercanos al punto (g,b)
     distancias, indices = buscador_de_vecinos.encontrar_vecinos_cercanos(theta, numero_de_vecinos=num_vecinos)
 
@@ -86,7 +94,7 @@ def Metropolis(F, t,x_data, g_0 , alpha, b_0 , beta, size, plot = True):
     par_prior=[ gamma( alpha, scale = g_0/alpha), gamma(beta, scale=b_0/beta)]
     par_supp  = [ lambda g: g>0.0, lambda b: b>0.0]
 
-    buq = BUQ( q=2, data=x_data, logdensity=logdensity, sigma=sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
+    buq = BUQ( q=2, data=x_data, logdensity=logdensity, sigma = sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
     # buq.SimData(x = np.array([ g, b])) #True parameters 
 
 
@@ -193,26 +201,29 @@ def visualizacion(sample, burn_in = 10000):
 #######################################
 ####### Inferencia ####################
 
+# modelo = ['gravedad', 'logístico', 'resorte']
+dinamica = gravedad
+modelo = 'gravedad'
+
+if modelo == 'gravedad':
+    y0 = [0.0, 0.0]
+if modelo == 'logistico':
+    y0 = [10.0]
+if modelo == 'resorte':
+    y0 = [1.0, 0.0]
+
+
 # Parametros principales (verdaderos)
 g = 9.81
 b = 1.15
 
 # Simular las observaciones
-n = 11      # Tamaño de muestra (n-1)
+n = 21      # Tamaño de muestra (n-1)
 cota_tiempo = 1.5
 t = np.linspace(0,cota_tiempo,num = n)
 
-'''Aqui cambiar la solución usando la función de la dinamica'''
-# ECUACIÓN DIFERENCIAL:
-# Condiciones iniciales (posición, velocidad)
-y0 = [0.0, 0.0]  
-
-# Soluciones de la ecuación dínamica
-solutions = odeint(dinamica, y0 ,t, args=(g,b))
-
-# Coordenadas de caída amortiguada
-x_data = solutions[:,0]
-v_data = solutions[:,1]
+# Muestra (simulacion)
+x_data = Forward(np.array([g,b]), t)
 
 # Añadir ruido a los datos
 error = norm.rvs(0,0.01,n)
@@ -229,11 +240,11 @@ g_0 = 10
 alpha = 10
 b_0 = 2
 beta = 1.1
-size = 50000
-burn_in = 10000
+size = 100000
+burn_in = 15000
 
 hacer_reporte = True
-path = 'Exp_3/'  # Trayectoria relativa para archivar
+path = 'Exp_2/'  # Trayectoria relativa para archivar
 
 directory = path + 'Figuras/Generales'
 os.makedirs(directory, mode=0o777, exist_ok= True)
@@ -256,6 +267,7 @@ if hacer_reporte == True:
     reporte = open(path + 'reporte.txt','w')
     reporte.write('REPORTE DE PROCEDIMIENTO \n\n')
     reporte.write('Se hacen experimentos en inferencia bayesiana de problema inverso con forward map aproximado por vecinos cercanos con distintos vecinos y tamano de malla \n\n')
+    reporte.write('MODELO: %r \n\n' %modelo)
     reporte.write('Observaciones (muestra): \n')
     reporte.write('g = %r \n' %g)
     reporte.write('b = %r \n' %b)

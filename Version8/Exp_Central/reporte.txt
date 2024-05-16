@@ -1,0 +1,62 @@
+REPORTE DE PROCEDIMIENTO 
+
+Se hacen experimentos en inferencia bayesiana de problema inverso con forward map aproximado por vecinos cercanos con distintos vecinos y tamano de malla 
+
+Observaciones (muestra): 
+g = 9.81 
+b = 1.15 
+n = 31 
+tiempo [0,1.5] 
+
+Parametros de a priori: 
+g_0 = 10 
+alpha = 10 
+b_0 = 2 
+beta = 1.1 
+
+Parametros de MCMC: 
+T = 500000 
+burn in = 10000 
+
+Para los vecinos array([ 5,  8, 16]) 
+Con las mallas cuadradas array([10, 15, 30, 50]) 
+
+Forward Ordinario 
+  Tiempo 344.44 
+
+Experimento 1 
+  Forward Aproximado (5 vecinos, 10 malla) 
+  Tiempo: 467.77 
+Experimento 2 
+  Forward Aproximado (5 vecinos, 15 malla) 
+  Tiempo: 307.01 
+Experimento 3 
+  Forward Aproximado (5 vecinos, 30 malla) 
+  Tiempo: 295.37 
+Experimento 4 
+  Forward Aproximado (5 vecinos, 50 malla) 
+  Tiempo: 295.65 
+Experimento 5 
+  Forward Aproximado (8 vecinos, 10 malla) 
+  Tiempo: 320.57 
+Experimento 6 
+  Forward Aproximado (8 vecinos, 15 malla) 
+  Tiempo: 293.35 
+Experimento 7 
+  Forward Aproximado (8 vecinos, 30 malla) 
+  Tiempo: 290.77 
+Experimento 8 
+  Forward Aproximado (8 vecinos, 50 malla) 
+  Tiempo: 1120.44 
+Experimento 9 
+  Forward Aproximado (16 vecinos, 10 malla) 
+  Tiempo: 324.19 
+Experimento 10 
+  Forward Aproximado (16 vecinos, 15 malla) 
+  Tiempo: 362.99 
+Experimento 11 
+  Forward Aproximado (16 vecinos, 30 malla) 
+  Tiempo: 341.56 
+Experimento 12 
+  Forward Aproximado (16 vecinos, 50 malla) 
+  Tiempo: 458.51 
