@@ -187,10 +187,149 @@
 \end{problem}
 
 \begin{solution} 
+    Recordemos que la densidad de una variable $\mathbf{X} \sim N_n(\mu, \Sigma)$  (distribución normal n-variada) es 
+    \begin{align}
+        f(\mathbf{X}|\theta) = (2\pi)^{-n/2}|\Sigma|^{-1/2} \exp  \left \{-\frac{1}{2}\left(\mathbf{X} - \mu\right) ' \Sigma^{-1} \left(\mathbf{X}-\mu\right)  \right \},
+    \end{align}
+    con $\mathbf{X}, \mu \in \mathbb{R}^{n}$.
     
+    Empecemos por encontrar la distribución posterior para $\theta$. Tenemos un modelo normal $n-$variado y se propone una distribución a priori normal $p-$variada. Así la distribución posterior se sigue de 
+    \begin{align}
+        \pi(\theta|\mathbf{Y}) \propto f(\mathbf{Y}|\theta) \pi (\theta).
+    \end{align}
+    con $\theta \in \mathbb{R}^{p}$. Luego, el modelo de $\mathbf{Y}$ tiene la siguiente verosimilitud
+    \begin{align}
+        f(\mathbf{Y}|\theta) = (2\pi)^{-n/2} |\Sigma|^{-1/2} \exp \left \{ -\frac{1}{2}\left(\mathbf{Y}- X\theta\right) ' \Sigma^{-1} \left(\mathbf{Y} - X \theta \right)  \right \}.
+        \label{2.03} 
+    \end{align}
+
+    Juntando la distribución a priori con (\ref{2.03}) tenemos
+    \begin{align*}
+        \pi(\theta|\mathbf{Y}) &\propto (2\pi)^{-n/2} |\Sigma|^{-1/2} \exp \left \{ -\frac{1}{2}\left(\mathbf{Y}- X\theta\right) ' \Sigma^{-1} \left(\mathbf{Y} - X \theta \right)  \right \} \cdot \\
+        & \:\:\:\:\:\:\:\: (2\pi)^{-p/2}|\Sigma_0| \exp \left \{ -\frac{1}{2} \left(\theta - \mu_0 \right)' \Sigma^{-1}_0 \left(\theta - \mu_0 \right)   \right \} 
+    \end{align*}
+    prescindiendo de las constantes
+    \begin{align}
+        \pi(\theta|\mathbf{Y}) \propto \exp \left \{ -\frac{1}{2} \left[\left(\mathbf{Y} - X\theta \right) ' \Sigma^{-1} \left(\mathbf{Y} - X\theta \right) + \left(\theta - \mu_0\right)' \Sigma^{-1}_0 \left(\theta -\mu_0 \right)    \right]  \right \} .
+    \end{align}
+    y observamos que es parecido al núcleo de una distribución normal $p-$variada. Para ello buscamos completar la forma cuadrática tal que tengamos un núcleo de la forma
+    \begin{align}
+        \exp \left \{ -\frac{1}{2} \left(\theta - \mu_n\right)' \Sigma^{-1}_n    \left(\theta  - \mu_n \right)   \right \}.
+        \label{2.05} 
+    \end{align}
+    Consideremos 
+    \begin{align*}
+        Q = \left(\mathbf{Y} - X\theta \right) ' \Sigma^{-1} \left(\mathbf{Y} - X\theta \right) + \left(\theta - \mu_0\right)' \Sigma^{-1}_0 \left(\theta -\mu_0 \right).
+    \end{align*}
+    Desarrollando
+    \begin{align*}
+        Q &= \mathbf{Y}'\Sigma^{-1} \mathbf{Y} - \mathbf{Y}'\Sigma^{-1} X\theta -\theta' X' \Sigma^{-1} \mathbf{Y} + \theta' X' \Sigma^{-1} X\theta + \\
+        & \:\:\:\:\:\: +\theta' \Sigma^{-1}_0 \theta - \theta' \Sigma^{-1}_0 \mu_0 - \mu_0' \Sigma^{-1}_0 \theta + \mu_0 '\Sigma^{-1}_0 \mu_0.
+    \end{align*}
+    Simplificando
+    \begin{align}
+        Q &= \mathbf{Y}'\Sigma^{-1} \mathbf{Y} - 2\mathbf{Y}'\Sigma^{-1} X\theta + \theta' X' \Sigma^{-1} X\theta + \nonumber\\
+        & \:\:\:\:\:\: +\theta' \Sigma^{-1}_0 \theta - 2\theta' \Sigma^{-1}_0 \mu_0 + \mu_0 '\Sigma^{-1}_0 \mu_0.
+        \label{2.06}
+    \end{align}
+    De igual forma para el argumento de (\ref{2.05}) 
+    \begin{align}
+        \left(\theta - \mu_n\right)'  \Sigma^{-1}_n    \left(\theta  - \mu_n \right) &= \theta' \Sigma_n^{-1}\theta - \theta'\Sigma^{-1}_n\mu_n - \mu_n' \Sigma^{-1}_n  \theta + \mu_n' \Sigma_n^{-1} \mu_n \nonumber \\ 
+        & = \theta' \Sigma_n^{-1}\theta - 2\mu_n' \Sigma^{-1}_n  \theta + \mu_n' \Sigma_n^{-1} \mu_n 
+        \label{2.07}
+    \end{align}
+    Comparando los términos 3 y 4 de (\ref{2.06}) con el primero de (\ref{2.07})
+    \begin{align*}
+        \theta' \Sigma_n^{-1} \theta = \theta' X' \Sigma^{-1}X\theta + \theta ' \Sigma_0^{-1} \theta = \theta' \left(X'\Sigma^{-1}X + \Sigma_0^{-1}\right) \theta ,
+    \end{align*}
+    obtenemos la relación
+    \begin{align}
+        \Sigma_n^{-1} = \Sigma_0^{-1} + X'\Sigma^{-1}X.
+        \label{2.08}
+    \end{align}
+    Luego, comparando los términos 2 y 5 de (\ref{2.06}) con el segundo de (\ref{2.07})
+    \begin{align*}
+        -2\mu_n' \Sigma_n^{-1} \theta &= -2 \mathbf{Y} \Sigma^{-1}X\theta -2\mu_0\Sigma_0^{-1} \theta, \\
+        \mu_n' \Sigma_n^{-1} \theta &=  \left(  \mathbf{Y} \Sigma^{-1}X + \mu_0\Sigma_0^{-1} \right) \theta,
+    \end{align*}
+    transponiendo se sigue
+    \begin{align*}
+        \Sigma_n^{-1} \mu_n = X' \Sigma \mathbf{Y} + \Sigma_0^{-1}\mu_0,
+    \end{align*}
+    lo que concluye que
+    \begin{align}
+        \mu_n = \Sigma_n \left(X' \Sigma \mathbf{Y} + \Sigma_0^{-1}\mu_0\right),
+        \label{2.09}
+    \end{align}
+    los términos restantes son constantes respecto a $\theta$ por lo que no requiere análisis.
+
+    Así es claro que la distribución posterior es
+    \begin{align}
+        \theta|\mathbf{Y} \sim N_p (\mu_n, \Sigma_n),
+    \end{align}
+    con $\mu_n, \Sigma_n$ definidos en (\ref{2.09}) y (\ref{2.08}), respectivamente.
+
+    Por otro lado, para obtener la distribución predictiva para una nueva observación $\mathbf{Y}_{n+1}$ dada las observaciones previas es necesario calcular
+    \begin{align*}
+        f(\mathbf{Y}_{n+1}| \mathbf{Y}) = \int f(\mathbf{Y}_{n+1}|\theta,\mathbf{Y}) \pi(\theta|\mathbf{Y}) d\theta,
+    \end{align*}
+    y por independencia de las observaciones 
+    \begin{align}
+        f(\mathbf{Y}_{n+1}| \mathbf{Y}) = \int f(\mathbf{Y}_{n+1}|\theta) \pi(\theta|\mathbf{Y}) d\theta.
+        \label{2.10}
+    \end{align}
+
+    Sustituyendo las respectivas densidades en (\ref{2.10})
+    \begin{align*}
+        f(\mathbf{Y_{n+1}}|\mathbf{Y}) &= \int (2\pi)^{-n/2}|\Sigma|^{-1/2} \exp \left \{ -\frac{1}{2}\left(\mathbf{Y}_{n+1}  - X\theta \right)' \Sigma^{-1} \left(\mathbf{Y}_{n+1}-X\theta  \right) \right \}  \cdot \\
+        &\:\:\:\:\:\:\: \cdot (2\pi)^{-p/2}|\Sigma_n|^{-1/2} \exp \left \{ -\frac{1}{2}\left(\theta - \mu_n\right) '\Sigma_n^{-1} \left(\theta - \mu_n  \right)  \right \} d\theta.
+    \end{align*}
+    Sacando las constante de la integral
+    \begin{align*}
+        f(\mathbf{Y_{n+1}}|\mathbf{Y}) &= (2\pi)^{-n/2}(2\pi)^{-p/2} |\Sigma|^{-1/2}|\Sigma_n|^{-1/2} \int \exp \left \{ -\frac{1}{2} Q(\theta) \right \} d\theta, 
+    \end{align*}
+    donde 
+    \begin{align}
+        Q(\theta) &= \left(\mathbf{Y}_{n+1} - X\theta\right) '\Sigma^{-1}\left(\mathbf{Y}_{n+1} - X\theta \right) + \left(\theta - \mu_n\right) ' \Sigma_n^{-1} \left(\theta - \mu_n\right) \nonumber \\
+        &= \mathbf{Y}_{n+1}'\Sigma^{-1}\mathbf{Y}_{n+1} - 2\mathbf{Y}_{n+1} \Sigma^{-1}X\theta + \theta'X'\Sigma^{-1}X\theta + \nonumber\\
+        &\:\:\:\:\: + \theta'\Sigma_n^{-1}\theta - 2 \mu_n' \Sigma_n^{-1}\theta + \mu_n'\Sigma_n^{-1} \mu_n. 
+        \label{2.11}
+    \end{align}
+    De manera análoga al calculo de la distribución posterior de $\theta$, ahora buscamos tener la forma cuadrática
+    \begin{align}
+        \left(\theta - \mu_p\right) ' &\Sigma_p^{-1}\left(\theta - \mu_p\right) = \nonumber\\
+        &= \theta'\Sigma_p^{-1}\theta -2\mu_p'\Sigma_p^{-1} \theta + \mu_p'\Sigma_p^{-1} \mu_p.
+        \label{2.12}
+    \end{align}
+
+    Buscamos relaciones de $\mu_p$ y $\Sigma_p$ con los parámetros conocidos. Así, comparando el primer término de (\ref{2.12}) con los términos 3 y 4 de (\ref{2.11}) y además comparando los términos 2 y 5 de (\ref{2.11}) con el segundo término de (\ref{2.12}) obtenemos las relaciones
+    \begin{align}
+        \Sigma_p^{-1} &= X'\Sigma^{-1}X + \Sigma_n^{-1},
+        \label{2.13}
+        \\
+        \mu_p &= \Sigma_p \left(X'\Sigma^{-1}\mathbf{Y}_{n+1} + \Sigma_n^{-1} \mu_n\right),
+        \label{2.14}
+    \end{align}
+    análogas a las relaciones (\ref{2.08}) y (\ref{2.09}) de la distribución posterior.
+
+    Por tanto, podemos escribir la distribución predictiva como
+    \begin{align*}
+        f(\mathbf{Y}_{n+1}|\mathbf{Y}) &= (2\pi)^{-n/2}(2\pi)^{-p/2}|\Sigma|^{-1/2}|\Sigma_n |^{-1/2} \cdot \\ & \:\:\:\:\:\: \cdot \int \exp \left \{-\frac{1}{2} \left[ \left(\theta - \mu_p\right) '\Sigma_p^{-1} \left(\theta - \mu_p\right) + \mathbf{Y}_{n+1}'\Sigma^{-1}\mathbf{Y}_{n+1} + \mu_n'\Sigma_n^{-1}\mu_n \right] \right  \} d\theta 
+    \end{align*}
+    reordenando 
+    \begin{align*}
+        f(\mathbf{Y}_{n+1}|\mathbf{Y}) &= (2\pi)^{-n/2}|\Sigma|^{-1/2}|\Sigma_n |^{-1/2}|\Sigma_p|^{1/2}\exp \left \{  -\frac{1}{2} \left(\mathbf{Y}_{n+1}' \Sigma^{-1} \mathbf{Y}_{n+1}+ \mu_n' \Sigma_n^{-1}\mu_n \right)   \right \}  \cdot \\
+        &\:\:\:\:\:\:\: \cdot \int (2\pi)^{-p/2} |\Sigma_p|^{-p/2}\exp \left \{ -\frac{1}{2}\left(\theta - \mu_p\right) ' \Sigma_p^{-1}\left(\theta - \mu_p\right) \right \}d\theta .
+    \end{align*}
+    Vemos que la integral corresponde a la integral de una distribución normal $p-$variada con media $\mu_p$ y matriz de covarianzas $\Sigma_p$, por tanto integra uno. Finalmente
+    \begin{align}
+        f(\mathbf{Y}_{n+1}|\mathbf{Y}) &= (2\pi)^{-n/2}|\Sigma|^{-1/2}|\Sigma_n |^{-1/2}|\Sigma_p|^{1/2}\exp \left \{  -\frac{1}{2} \left(\mathbf{Y}_{n+1}' \Sigma^{-1} \mathbf{Y}_{n+1}+ \mu_n' \Sigma_n^{-1}\mu_n \right)   \right \}
+        \label{2.15}
+    \end{align}
+    que es la función de densidad de la distribución predictiva.
 \end{solution}
 
-\newpage
+
 
 \begin{problem}{3} 
     Sea el modelo de crecimiento logístico $\frac{dX}{dt} = \theta_1 X \left( \theta_2 - X  \right)$ con $X(0) = X_0$. Suponga que tenemos observaciones $y_i$ para $X(t_i), t_1 < t_2 < \cdots < t_n$, con ruido gaussiano aditivo independiente, esto es

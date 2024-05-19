@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.29)  16 MAY 2024 17:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.29)  18 MAY 2024 18:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -852,12 +852,13 @@ Package pdftex.def Info: Figures/distribuciones.png  used on input line 177.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 185.
- [2 <./Figures/distribuciones.png>]
+ [2 <./Figures/distribuciones.png>] [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 195.
-Package mdframed Info: Not enough space on this page on input line 201.
- [3] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\ClaseBayesiana\Tarea2\build\Tarea2.aux
+(mdframed)              on input line 334.
+ [4]
+Package mdframed Info: Not enough space on this page on input line 340.
+ [5] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\ClaseBayesiana\Tarea2\build\Tarea2.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
@@ -869,17 +870,17 @@ Package rerunfilecheck Info: File `Tarea2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28164 strings out of 475503
- 544982 string characters out of 5761834
+ 28197 strings out of 475503
+ 545287 string characters out of 5761834
  1939248 words of memory out of 5000000
- 48892 multiletter control sequences out of 15000+600000
- 584167 words of font info for 100 fonts, out of 8000000 for 9000
+ 48904 multiletter control sequences out of 15000+600000
+ 585313 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,93p,811b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\ClaseBayesiana\Tarea2\build\Tarea2.pdf (3 pages, 163838 bytes).
+ 84i,11n,93p,811b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\ClaseBayesiana\Tarea2\build\Tarea2.pdf (5 pages, 189928 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
+ 135 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

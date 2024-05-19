@@ -254,36 +254,6 @@ INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\tools\enumerate.sty
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\tools\enumerate.sty
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\listing\listing.sty
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\listing\listing.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\minted\minted.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\minted\minted.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\fvextra\fvextra.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\fvextra\fvextra.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\fancyvrb\fancyvrb.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\fancyvrb\fancyvrb.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\upquote\upquote.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\upquote\upquote.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\base\textcomp.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\base\textcomp.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\lineno\lineno.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\lineno\lineno.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\tools\shellesc.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\tools\shellesc.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\tools\shellesc.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\ifplatform\ifplatform.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\ifplatform\ifplatform.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\generic\catchfile\catchfile.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\generic\catchfile\catchfile.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\generic\etexcmds\etexcmds.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\generic\etexcmds\etexcmds.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifluatex.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifluatex.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\xstring\xstring.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\xstring\xstring.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\generic\xstring\xstring.tex
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\framed\framed.sty
-INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\framed\framed.sty
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\apacite\apacite.sty
@@ -294,3 +264,212 @@ INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\tocbibind\tocbibind
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\tocbibind\tocbibind.sty
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
 INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_01.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_01.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_01.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_02.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_02.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_02.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_03.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_03.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_03.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_04.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_04.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_04.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\conclusions.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\conclusions.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\conclusions.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\appendix.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\appendix.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\appendix.aux
+OUTPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.aux
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.out
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.out
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.out
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.out
+OUTPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.pdf
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.out
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.out
+OUTPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.out
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\apacite\spanish.apc
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\apacite\spanish.apc
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\apacite\spanish.apc
+INPUT .\logo\LOGOTIPO_SIN_FONDO-02.png
+INPUT .\logo\LOGOTIPO_SIN_FONDO-02.png
+INPUT .\logo\LOGOTIPO_SIN_FONDO-02.png
+INPUT .\logo\LOGOTIPO_SIN_FONDO-02.png
+INPUT .\logo\LOGOTIPO_SIN_FONDO-02.png
+INPUT .\logo\LOGOTIPO_SIN_FONDO-02.png
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1728.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1728.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1200.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx2074.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecxc2074.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1440.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1095.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1095.tfm
+INPUT .\logo\banner_cimat_20200126_05.png
+INPUT .\logo\banner_cimat_20200126_05.png
+INPUT .\logo\banner_cimat_20200126_05.png
+INPUT .\logo\banner_cimat_20200126_05.png
+INPUT .\logo\banner_cimat_20200126_05.png
+INPUT .\logo\banner_cimat_20200126_05.png
+INPUT .\logo\banner_cimat_20200126_05.png
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm2488.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx2488.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\eccc1200.tfm
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.toc
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.toc
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.toc
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecxc1200.tfm
+OUTPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.toc
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.lof
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.lof
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.lof
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1200.tfm
+OUTPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.lof
+INPUT .\chapters\chap_01.tex
+INPUT .\chapters\chap_01.tex
+OUTPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_01.aux
+INPUT .\chapters\chap_01.tex
+INPUT .\chapters\chap_01.tex
+INPUT chapters\chap_01.tex
+INPUT .\chapters\chap_02.tex
+INPUT .\chapters\chap_02.tex
+OUTPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_02.aux
+INPUT .\chapters\chap_02.tex
+INPUT .\chapters\chap_02.tex
+INPUT chapters\chap_02.tex
+INPUT .\chapters\chap_03.tex
+INPUT .\chapters\chap_03.tex
+OUTPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_03.aux
+INPUT .\chapters\chap_03.tex
+INPUT .\chapters\chap_03.tex
+INPUT chapters\chap_03.tex
+INPUT .\img\ggmap_7_entidades_sample_02.png
+INPUT .\img\ggmap_7_entidades_sample_02.png
+INPUT .\img\ggmap_7_entidades_sample_02.png
+INPUT .\img\ggmap_7_entidades_sample_02.png
+INPUT .\img\ggmap_7_entidades_sample_02.png
+INPUT .\img\ggmap_7_entidades_sample_02.png
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1095.tfm
+INPUT .\chapters\chap_04.tex
+INPUT .\chapters\chap_04.tex
+OUTPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_04.aux
+INPUT .\chapters\chap_04.tex
+INPUT .\chapters\chap_04.tex
+INPUT chapters\chap_04.tex
+INPUT .\img\example_hbm_lawson_01.png
+INPUT .\img\example_hbm_lawson_01.png
+INPUT .\img\example_hbm_lawson_01.png
+INPUT .\img\example_hbm_lawson_01.png
+INPUT .\img\example_hbm_lawson_01.png
+INPUT .\img\example_hbm_lawson_01.png
+INPUT .\chapters\conclusions.tex
+INPUT .\chapters\conclusions.tex
+OUTPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\conclusions.aux
+INPUT .\chapters\conclusions.tex
+INPUT .\chapters\conclusions.tex
+INPUT chapters\conclusions.tex
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.bbl
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.bbl
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.bbl
+INPUT .\chapters\appendix.tex
+INPUT .\chapters\appendix.tex
+OUTPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\appendix.aux
+INPUT .\chapters\appendix.tex
+INPUT .\chapters\appendix.tex
+INPUT chapters\appendix.tex
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_01.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_01.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_01.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_02.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_02.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_02.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_03.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_03.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_03.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_04.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_04.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\chap_04.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\conclusions.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\conclusions.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\conclusions.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\appendix.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\appendix.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\chapters\appendix.aux
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.out
+INPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\CIMAT Plantilla\build\masterthesisCIMATtemplate.out
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc2074.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc2074.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
+INPUT C:\Users\ce_ra\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
