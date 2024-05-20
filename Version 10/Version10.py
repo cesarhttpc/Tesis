@@ -242,10 +242,10 @@ def visualizacion(monte_carlo,t, burn_in):
 ####### Inferencia ####################
 
 # modelo = ['gravedad', 'logistico', 'SIR', 'resorte']
-dinamica = gravedad
-modelo = 'gravedad'
-# dinamica = logistico
-# modelo = 'logistico'
+# dinamica = gravedad
+# modelo = 'gravedad'
+dinamica = logistico
+modelo = 'logistico'
 
 # Simular las observaciones
 n = 26      # Tamaño de muestra (n-1)
@@ -313,14 +313,14 @@ if modelo == 'logistico':
     alpha = 1000
     theta2_priori = 1000
     beta = 1000
-    size = 100000
+    size = 500000
     burn_in = 20000
 if modelo == 'SIR':
     pass
 
 
 exper_aprox = True
-hacer_reporte = True
+hacer_reporte = False
 path = 'Exp_Central_'+ modelo +'/'  # Trayectoria relativa para archivar
 
 if hacer_reporte == True:

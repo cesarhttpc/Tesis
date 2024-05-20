@@ -17,48 +17,48 @@ $theta_2 $= 1000
 beta = 1000 
 
 Parametros de MCMC: 
-T = 100000 
+T = 500000 
 burn in = 20000 
 
 Para los vecinos array([ 5,  8, 16]) 
 Con las mallas cuadradas array([10, 15, 30, 50]) 
 
 Forward Ordinario 
-  Tiempo 133.09 
+  Tiempo 638.56 
 
 Experimento 1 
   Forward Aproximado (5 vecinos, 10 malla) 
-  Tiempo: 59.04 
+  Tiempo: 410.11 
 Experimento 2 
   Forward Aproximado (5 vecinos, 15 malla) 
-  Tiempo: 58.47 
+  Tiempo: 472.82 
 Experimento 3 
   Forward Aproximado (5 vecinos, 30 malla) 
-  Tiempo: 62.35 
+  Tiempo: 476.40 
 Experimento 4 
   Forward Aproximado (5 vecinos, 50 malla) 
-  Tiempo: 59.38 
+  Tiempo: 476.00 
 Experimento 5 
   Forward Aproximado (8 vecinos, 10 malla) 
-  Tiempo: 51.01 
+  Tiempo: 488.94 
 Experimento 6 
   Forward Aproximado (8 vecinos, 15 malla) 
-  Tiempo: 50.67 
+  Tiempo: 492.39 
 Experimento 7 
   Forward Aproximado (8 vecinos, 30 malla) 
-  Tiempo: 53.73 
+  Tiempo: 494.33 
 Experimento 8 
   Forward Aproximado (8 vecinos, 50 malla) 
-  Tiempo: 62.39 
+  Tiempo: 499.03 
 Experimento 9 
   Forward Aproximado (16 vecinos, 10 malla) 
-  Tiempo: 58.45 
+  Tiempo: 506.02 
 Experimento 10 
   Forward Aproximado (16 vecinos, 15 malla) 
-  Tiempo: 95.25 
+  Tiempo: 501.15 
 Experimento 11 
   Forward Aproximado (16 vecinos, 30 malla) 
-  Tiempo: 60.43 
+  Tiempo: 507.75 
 Experimento 12 
   Forward Aproximado (16 vecinos, 50 malla) 
-  Tiempo: 77.84 
+  Tiempo: 513.48 
