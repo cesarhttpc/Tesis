@@ -91,8 +91,8 @@ def Metropolis(F, t,y_data, theta1_priori , alpha, theta2_priori , beta, size, p
     par_prior=[ gamma( alpha, scale = theta1_priori/alpha), gamma(beta, scale=theta2_priori/beta)]
     par_supp  = [ lambda g: g>0.0, lambda b: b>0.0]
 
-    '''Revizar q = 3 y data = None'''
-    buq = BUQ( q=2, data=y_data, logdensity=logdensity, sigma = sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
+    buq = BUQ( q=3, data=None, logdensity=logdensity, sigma = sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
+    # buq = BUQ( q=2, data=y_data, logdensity=logdensity, sigma = sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
     # buq.SimData(x = np.array([ g, b])) #True parameters 
 
 
@@ -313,15 +313,15 @@ if modelo == 'logistico':
     alpha = 1000
     theta2_priori = 1000
     beta = 1000
-    size = 500000
+    size = 100000
     burn_in = 20000
 if modelo == 'SIR':
     pass
 
 
 exper_aprox = True
-hacer_reporte = False
-path = 'Exp_Central_'+ modelo +'/'  # Trayectoria relativa para archivar
+hacer_reporte = True
+path = 'Exp_Central_sigma_'+ modelo +'/'  # Trayectoria relativa para archivar
 
 if hacer_reporte == True:
     directory = path + 'Figuras/Generales'
