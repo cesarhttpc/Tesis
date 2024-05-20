@@ -1,10 +1,10 @@
-\documentclass[letterpaper,twoside]{book}  % book class
+\documentclass[letterpaper,12pt,twoside]{book}  % book class
 \usepackage[spanish,es-nodecimaldot,es-tabla]{babel} % language/hyphenation
 \usepackage[utf8]{inputenc}  % input encoding
 \usepackage{graphicx} % graphics library (REQUIRED by CIMATpreamble)
 \usepackage[svgnames,table]{xcolor}  % color library (REQUIRED by CIMATpreamble)
 \usepackage{CIMATpreamble}  % definition of the CIMAT cover page
-% \usepackage{mypreamble} % custom preamble
+\usepackage{mypreamble} % custom preamble
 \graphicspath{{img/}}  % set path for images folder
 
 %-----------------------------------------------------------------------------%
@@ -36,13 +36,13 @@
 %-----------------------------------------------------------------------------%
 % Cover/Title page: fill out with your personal information
 
-\author{Kenny M. R.}
+\author{César Isaí García Cornejo}
 \documentType{T E S I S}  % change to "T E S I N A" if it is the case
-\title{El efecto de los cultivos ilícitos y la migración en \ldots}
-\degree{Maestro en Cómputo Estadístico}
-\supervisor{Dr. V. M.}
-\supervisorSecond{Dra. M. F.}  % optional command
-\cityandyear{Monterrey, Nuevo León, Noviembre de 2019}
+\title{Cuantificación de incertidumbre bayesiana aproximada en problemas inversos de ODE}
+\degree{Maestro en Probabilidad y Estadística}
+\supervisor{Dr. José Andrés Christen Gracia}
+% \supervisorSecond{Dra. M. F.}  % optional command
+\cityandyear{Guanajuato, Guanajuato, Verano 2024}
 
 %-----------------------------------------------------------------------------%
 % Document body
@@ -88,7 +88,7 @@ A mis padres \ldots
 % Chapters
 \mainmatter
 
-% \spacing{1.5}  % interline  (double) space
+\spacing{1.5}  % interline  (double) space
 
 % put the content of your chapters in the .tex files located in the 'chapters/' folder; 
 % the use of '\include' instead of '\input' command could enhance the  compilation process, see the reference below
@@ -104,7 +104,7 @@ A mis padres \ldots
 \include{chapters/conclusions}
 
 % Bibliography
-\bibliographystyle{amsplain}  % APA style according to apacite package: see mypreamble.sty line 21
+\bibliographystyle{apacite}  % APA style according to apacite package: see mypreamble.sty line 21
 \bibliography{references}
 
 % Appendix

@@ -2,6 +2,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Varias trayectorias con la dinámica gravitación sujeta a fricción para varias valores de los parámetros g,b.}}{9}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Varias trayectorias con la dinámica de crecimiento logístico para varias valores de los parámetros K,r.}}{11}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Trayectoria de cada grupo del modelo SIR con $\beta = 0.009$ y $\gamma = 0.5$.}}{12}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{16}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 8 vecinos cercanos.}}{17}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 16 vecinos cercanos.}}{18}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{19}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 8 vecinos cercanos.}}{20}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 16 vecinos cercanos.}}{21}{figure.caption.18}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

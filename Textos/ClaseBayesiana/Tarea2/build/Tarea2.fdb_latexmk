@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1716078210 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/ClaseBayesiana/Tarea2/Tarea2.tex" "build/Tarea2.pdf" "Tarea2" 1716078212 0
+["pdflatex"] 1716192235 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/ClaseBayesiana/Tarea2/Tarea2.tex" "build/Tarea2.pdf" "Tarea2" 1716192239 0
   "C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1710538707 156971 6ebb55617c569712b0127c4e548473b3 ""
   "C:/Users/ce_ra/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1693352273 24120579 85898b25958cf632ec7946174c56943b ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -221,12 +221,18 @@
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650051284 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650051284 20785 71a3d72ab517959a6979c27e6176bec1 ""
+  "Figures/Apriori.png" 1716189596 40046 af3edf03b3a167d45af1ca5577ddea60 ""
   "Figures/EscudoCimat.png" 1697603232 23978 afd125464800623154e6cd8f9742e14b ""
+  "Figures/Lambda.png" 1716190886 10691 511abce4d01989bbcdc8660fb74e38da ""
+  "Figures/Muestra.png" 1716190884 13065 73d2a6eb0906fc7b0420422c6f7213ea ""
+  "Figures/Post_theta_1.png" 1716190885 25171 2577adbcd4c4e009324c222631bb52ec ""
+  "Figures/Post_theta_2.png" 1716190885 19029 1a28ab9d57cb56dabc5fd5d43b217b22 ""
+  "Figures/Predictiva.png" 1716190886 29406 955805a3d0cf3942d54113a60f7c8ab4 ""
   "Figures/distribuciones.png" 1715899138 32750 dc7cc823606b6b47496981c87188a771 ""
-  "Tarea2.tex" 1716078209 18748 8aee444b13693a5f85040cda1fa8c78e ""
-  "build/Tarea2.aux" 1716078212 1643 ddb203a25c6b61ff13ee49d67f9ed820 "pdflatex"
-  "build/Tarea2.out" 1716078211 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/ClaseBayesiana/Tarea2/Tarea2.tex" 1716078209 18748 8aee444b13693a5f85040cda1fa8c78e ""
+  "Tarea2.tex" 1716192235 23098 bd776d10444ea8d041d2b316819811fb ""
+  "build/Tarea2.aux" 1716192238 3705 9272a7d396bbada4c2aee0fae61fee4d "pdflatex"
+  "build/Tarea2.out" 1716192238 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/ClaseBayesiana/Tarea2/Tarea2.tex" 1716192235 23098 bd776d10444ea8d041d2b316819811fb ""
   (generated)
   "build/Tarea2.aux"
   "build/Tarea2.log"

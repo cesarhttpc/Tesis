@@ -137,7 +137,7 @@
 
     Por otro lado, la distribución posterior del parámetro $\theta$ es
     \begin{align}
-        f(\theta|X^n) \propto f(\theta) \mathcal{L}(\theta)
+        f(\theta|X^n) \propto f(\theta) \mathcal{L}(\theta),
     \end{align}
     con la distribución a priori $\theta \sim Pareto(\alpha_0,\beta_0)$ se sigue que
     \begin{align*}
@@ -145,30 +145,30 @@
     \end{align*}
     Observemos que la verosimilitud se anula si existe un $i$ tal que $X_i > \theta$. Entonces, para tener verosimilitud no nula se requiere que para todo $i$ se cumpla $\theta \geq X_i$. Dicho de otra forma, basta con que se cumpla que $\theta \geq X_{(n)}$ donde $X_{(n)} = max_{i}\{X_i\}$ también conocida como la estadística de orden superior. Por tanto,
     \begin{align*}
-        f(\theta|X^n) \propto \theta^{-(\alpha_0 + n +1)} \mathbb{1}_{[\beta_0,\infty)}(\theta) \mathbb{1}_{[X_{(n)}, \infty)}(\theta)
+        f(\theta|X^n) \propto \theta^{-(\alpha_0 + n +1)} \mathbb{1}_{[\beta_0,\infty)}(\theta) \mathbb{1}_{[X_{(n)}, \infty)}(\theta).
     \end{align*}
     Recordemos que el producto de dos funciones indicadores sobre dos conjuntos es la función indicadora de la intersección. Así
     \begin{align}
-        f(\theta|X^n) \propto \theta^{-(\alpha_0 + n +1 )} \mathbb{1}_{[\max\{X_{(n)}, \beta_0\}, \infty)} (\theta)
+        f(\theta|X^n) \propto \theta^{-(\alpha_0 + n +1 )} \mathbb{1}_{[\max\{X_{(n)}, \beta_0\}, \infty)} (\theta).
         \label{1.03}
     \end{align}
     Contrastando (\ref{1.03}) con (\ref{Pareto}) que es el kernel de una distribución Pareto, lo que muestra que en efecto son familias conjugadas. 
     
     Por tanto, la distribución posterior es también una distribución Pareto
     \begin{align}
-        \theta|X^n \sim Pareto(\alpha_p, \beta_p)
+        \theta|X^n \sim Pareto(\alpha_p, \beta_p),
     \end{align}
-    donde $\alpha_p = \alpha_0 + n$ y $\beta_p = \max \{\beta_0, X_{(n)}\}$ 
+    donde $\alpha_p = \alpha_0 + n$ y $\beta_p = \max \{\beta_0, X_{(n)}\}$ .
 
     Previo a ver los datos, no tenemos conocimiento sobre $\theta$. Como se propondrá un distribución a priori Pareto, y el parámetro $\beta$ controla el soporte de forma que $\theta \in [\beta,\infty)$. Conviene proponer una distribución cuyo soporte sean los reales no negativos, esto pasaría con la distribución Pareto solo si $\beta$ es cercano a cero. Por tanto elegimos $\beta = 1$. Para el parámetro $\alpha$, tenemos distribuciones más \textit{delgadas} para mayores valores de $\alpha$. Luego, elegimos un valor pequeño, sin embargo, para $\alpha \leq 1$ no tiene media y para $\alpha \leq 2$ no tiene varianza. Por ello seleccionamos para la distribución a prior $\alpha = 5$.
 
     Así, la distribución a priori es 
     \begin{align*}
-        \theta \sim Pareto(\alpha_0 = 5, \beta_0 = 1)
+        \theta \sim Pareto(\alpha_0 = 5, \beta_0 = 1).
     \end{align*}
     Como $\alpha_p = \alpha_0 + n = 35$ y $\beta_p = \max\{\beta_0,X_{(n)}\}=\max\{1,19\} = 19$, la distribución posterior es
     \begin{align}
-        \theta|X^n \sim Pareto(\alpha_p = 35, \beta_p = 19)
+        \theta|X^n \sim Pareto(\alpha_p = 35, \beta_p = 19).
     \end{align}
     Notemos que el soporte de la distribución posterior decreció y ademas se tiene una distribución más \textit{concentrada}.
 
@@ -206,9 +206,9 @@
     Juntando la distribución a priori con (\ref{2.03}) tenemos
     \begin{align*}
         \pi(\theta|\mathbf{Y}) &\propto (2\pi)^{-n/2} |\Sigma|^{-1/2} \exp \left \{ -\frac{1}{2}\left(\mathbf{Y}- X\theta\right) ' \Sigma^{-1} \left(\mathbf{Y} - X \theta \right)  \right \} \cdot \\
-        & \:\:\:\:\:\:\:\: (2\pi)^{-p/2}|\Sigma_0| \exp \left \{ -\frac{1}{2} \left(\theta - \mu_0 \right)' \Sigma^{-1}_0 \left(\theta - \mu_0 \right)   \right \} 
+        & \:\:\:\:\:\:\:\: (2\pi)^{-p/2}|\Sigma_0| \exp \left \{ -\frac{1}{2} \left(\theta - \mu_0 \right)' \Sigma^{-1}_0 \left(\theta - \mu_0 \right)   \right \} .
     \end{align*}
-    prescindiendo de las constantes
+    Prescindiendo de las constantes
     \begin{align}
         \pi(\theta|\mathbf{Y}) \propto \exp \left \{ -\frac{1}{2} \left[\left(\mathbf{Y} - X\theta \right) ' \Sigma^{-1} \left(\mathbf{Y} - X\theta \right) + \left(\theta - \mu_0\right)' \Sigma^{-1}_0 \left(\theta -\mu_0 \right)    \right]  \right \} .
     \end{align}
@@ -234,8 +234,8 @@
     \end{align}
     De igual forma para el argumento de (\ref{2.05}) 
     \begin{align}
-        \left(\theta - \mu_n\right)'  \Sigma^{-1}_n    \left(\theta  - \mu_n \right) &= \theta' \Sigma_n^{-1}\theta - \theta'\Sigma^{-1}_n\mu_n - \mu_n' \Sigma^{-1}_n  \theta + \mu_n' \Sigma_n^{-1} \mu_n \nonumber \\ 
-        & = \theta' \Sigma_n^{-1}\theta - 2\mu_n' \Sigma^{-1}_n  \theta + \mu_n' \Sigma_n^{-1} \mu_n 
+        \left(\theta - \mu_n\right)'  \Sigma^{-1}_n    \left(\theta  - \mu_n \right) &= \theta' \Sigma_n^{-1}\theta - \theta'\Sigma^{-1}_n\mu_n - \mu_n' \Sigma^{-1}_n  \theta + \mu_n' \Sigma_n^{-1} \mu_n, \nonumber \\ 
+        & = \theta' \Sigma_n^{-1}\theta - 2\mu_n' \Sigma^{-1}_n  \theta + \mu_n' \Sigma_n^{-1} \mu_n .
         \label{2.07}
     \end{align}
     Comparando los términos 3 y 4 de (\ref{2.06}) con el primero de (\ref{2.07})
@@ -290,7 +290,7 @@
     \end{align*}
     donde 
     \begin{align}
-        Q(\theta) &= \left(\mathbf{Y}_{n+1} - X\theta\right) '\Sigma^{-1}\left(\mathbf{Y}_{n+1} - X\theta \right) + \left(\theta - \mu_n\right) ' \Sigma_n^{-1} \left(\theta - \mu_n\right) \nonumber \\
+        Q(\theta) &= \left(\mathbf{Y}_{n+1} - X\theta\right) '\Sigma^{-1}\left(\mathbf{Y}_{n+1} - X\theta \right) + \left(\theta - \mu_n\right) ' \Sigma_n^{-1} \left(\theta - \mu_n\right) ,\nonumber \\
         &= \mathbf{Y}_{n+1}'\Sigma^{-1}\mathbf{Y}_{n+1} - 2\mathbf{Y}_{n+1} \Sigma^{-1}X\theta + \theta'X'\Sigma^{-1}X\theta + \nonumber\\
         &\:\:\:\:\: + \theta'\Sigma_n^{-1}\theta - 2 \mu_n' \Sigma_n^{-1}\theta + \mu_n'\Sigma_n^{-1} \mu_n. 
         \label{2.11}
@@ -314,16 +314,16 @@
 
     Por tanto, podemos escribir la distribución predictiva como
     \begin{align*}
-        f(\mathbf{Y}_{n+1}|\mathbf{Y}) &= (2\pi)^{-n/2}(2\pi)^{-p/2}|\Sigma|^{-1/2}|\Sigma_n |^{-1/2} \cdot \\ & \:\:\:\:\:\: \cdot \int \exp \left \{-\frac{1}{2} \left[ \left(\theta - \mu_p\right) '\Sigma_p^{-1} \left(\theta - \mu_p\right) + \mathbf{Y}_{n+1}'\Sigma^{-1}\mathbf{Y}_{n+1} + \mu_n'\Sigma_n^{-1}\mu_n \right] \right  \} d\theta 
+        f(\mathbf{Y}_{n+1}|\mathbf{Y}) &= (2\pi)^{-n/2}(2\pi)^{-p/2}|\Sigma|^{-1/2}|\Sigma_n |^{-1/2} \cdot \\ & \:\:\:\:\:\: \cdot \int \exp \left \{-\frac{1}{2} \left[ \left(\theta - \mu_p\right) '\Sigma_p^{-1} \left(\theta - \mu_p\right) + \mathbf{Y}_{n+1}'\Sigma^{-1}\mathbf{Y}_{n+1} + \mu_n'\Sigma_n^{-1}\mu_n \right] \right  \} d\theta .
     \end{align*}
-    reordenando 
+    Reordenando 
     \begin{align*}
         f(\mathbf{Y}_{n+1}|\mathbf{Y}) &= (2\pi)^{-n/2}|\Sigma|^{-1/2}|\Sigma_n |^{-1/2}|\Sigma_p|^{1/2}\exp \left \{  -\frac{1}{2} \left(\mathbf{Y}_{n+1}' \Sigma^{-1} \mathbf{Y}_{n+1}+ \mu_n' \Sigma_n^{-1}\mu_n \right)   \right \}  \cdot \\
         &\:\:\:\:\:\:\: \cdot \int (2\pi)^{-p/2} |\Sigma_p|^{-p/2}\exp \left \{ -\frac{1}{2}\left(\theta - \mu_p\right) ' \Sigma_p^{-1}\left(\theta - \mu_p\right) \right \}d\theta .
     \end{align*}
     Vemos que la integral corresponde a la integral de una distribución normal $p-$variada con media $\mu_p$ y matriz de covarianzas $\Sigma_p$, por tanto integra uno. Finalmente
     \begin{align}
-        f(\mathbf{Y}_{n+1}|\mathbf{Y}) &= (2\pi)^{-n/2}|\Sigma|^{-1/2}|\Sigma_n |^{-1/2}|\Sigma_p|^{1/2}\exp \left \{  -\frac{1}{2} \left(\mathbf{Y}_{n+1}' \Sigma^{-1} \mathbf{Y}_{n+1}+ \mu_n' \Sigma_n^{-1}\mu_n \right)   \right \}
+        f(\mathbf{Y}_{n+1}|\mathbf{Y}) &= (2\pi)^{-n/2}|\Sigma|^{-1/2}|\Sigma_n |^{-1/2}|\Sigma_p|^{1/2}\exp \left \{  -\frac{1}{2} \left(\mathbf{Y}_{n+1}' \Sigma^{-1} \mathbf{Y}_{n+1}+ \mu_n' \Sigma_n^{-1}\mu_n \right)   \right \},
         \label{2.15}
     \end{align}
     que es la función de densidad de la distribución predictiva.
@@ -339,17 +339,83 @@
     Simule datos con $X(0) = 100$, $\theta_1 =$ 0.001, $\theta_2 = $ 1000, $\sigma = 30$ , $n= 26$ equiespaciados en $t \in [0,10]$. Haga inferencia bayesiana para los parámetro $\theta_1, \theta_2$. Utilice a priories Gamma, centradas en los valores verdaderos. ¿Qué puede decir de la tasa de crecimiento que es $\lambda = \theta_1\theta_2$ ?
 \end{problem}
 
+\begin{solution} 
+    Para este ejercicio se tiene se implemento numéricamente la ecuación diferencial correspondiente al crecimiento logístico. Luego, simulamos 26 datos en un arreglo equiespaciado del tiempo con un ruido gaussiano tal como se pide en el enunciado. Podemos ver los datos graficados en la Fig \ref{Fig. 3.01}
 
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width = 10 cm]{Figures/Muestra.png} 
+        \caption{Simulación de datos de crecimiento logístico.}
+        \label{Fig. 3.01}
+    \end{figure}    
 
+    La distribución posterior es
+    \begin{align}
+        \pi(\theta_1,\theta_2|\mathbf{y}) \propto \mathcal{L}(\theta_1,\theta_2)  \pi(\theta_1,\theta_2),
+        \label{3.01}
+    \end{align}
 
+    donde la verosimilitud se obtiene del modelo gaussiano. Así
+    \begin{align}
+        \mathcal{L}(\theta_1,\theta_2) &= \prod_{i = 1}^{n} \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left \{ -\frac{1}{2\sigma^2} \left(y_i - F_{\theta}(t_i)\right) ^2   \right \}, \nonumber\\
+        &= \left(\frac{1}{2\pi\sigma^2}\right)^{n/2} \exp \left \{  -\frac{1}{2\sigma^2} \sum_{i = 1}^{n}\left(y_i - F_{\theta}(t_i)\right)^2 \right \}.
+        \label{3.02}
+    \end{align}
+    
+    Elegimos las distribuciones a priori gammas independientes
+    \begin{align*}
+        \theta_1 \sim Gamma\left(\alpha_0, \frac{\text{0.001}}{\alpha_0} \right) ,\\
+        \theta_2 \sim Gamma\left(\beta_0, \frac{1000}{\beta_0}\right) ,
+    \end{align*}
+    con $\alpha_0 = \beta_0 = 1000$. Así
+    \begin{align}
+        \pi(\theta_1,\theta_2) = \left(\frac{\text{0.001}}{\alpha_0}\right) ^{\alpha_0} \frac{\theta_1^{\alpha_0-1}\exp \left \{ -\text{0.001}\alpha_0 /\theta_1\right \} }{\Gamma(\alpha_0)}\cdot \left(\frac{\text{1000}}{\beta_0}\right) ^{\beta_0} \frac{\theta_2^{\beta_0-1}\exp \left \{ -\text{1000}\beta_0 /\theta_2\right \} }{\Gamma(\beta_0)}.
+        \label{3.03}
+    \end{align}
 
+    Las distribuciones a priori se dan en la Fig \ref{Fig. 3.02} con los parámetros anteriormente descritos.
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width = 15cm]{Figures/Apriori.png} 
+        \caption{Distribuciones a priori para $\theta_1$ y $\theta_2$.}
+        \label{Fig. 3.02}
+    \end{figure} 
 
+    Sustituyendo (\ref{3.02}) y (\ref{3.03}) en (\ref{3.01}) tenemos la distribución objetivo. La cual por medio de métodos Monte Carlo podemos simular de dicha distribución. Con MCMC simulamos una cadena de tamaño $T=$100000 tomamos las marginales de la posterior para cada parámetro las cuales vemos en la Fig \ref{Fig. 3.03} y en la Fig \ref{Fig. 3.04}.
 
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width = 10 cm]{Figures/Post_theta_1.png} 
+        \caption{Distribución marginal posterior para $\theta_1$ (azul) y distribución a priori (verde) con parámetro verdadero (negro).}
+        \label{Fig. 3.03}
+    \end{figure} 
 
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width = 10 cm]{Figures/Post_theta_2.png} 
+        \caption{Distribución marginal posterior para $\theta_2$ (azul) y distribución a priori (verde) con parámetro verdadero (negro).}
+        \label{Fig. 3.04}
+    \end{figure} 
 
+    De igual forma, para la tasa de crecimiento $\lambda$ obtenemos el histograma posterior obtenido simplemente de tomar el producto de cada marginal posterior, graficado en la Fig \ref{Fig. 3.05}.
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width = 10 cm]{Figures/Lambda.png} 
+        \caption{Posterior para parámetro de tasa de crecimiento $\lambda$.}
+        \label{Fig. 3.05}
+    \end{figure} 
 
+    Finalmente, graficamos la distribución predictiva de la cadena tomando submuestreos de la cadena fruto de MCMC y tomando la media en cada submuestreo para considerar la trayectoria generada por el forward map en la Fig \ref{Fig. 3.06}.
+    \begin{figure}[H] 
+        \centering 
+        \includegraphics[width = 10 cm ]{Figures/Predictiva.png} 
+        \caption{Distribución predictiva para crecimiento logístico (gris) y la trayectoria real simulada (azul).}
+        \label{Fig. 3.06}
+    \end{figure} 
 
-
+    Notamos que dicha distribución predictiva ajusta satisfactoriamente a la trayectoria simulada con los parámetros reales.
+    
+\end{solution}
 
 
 

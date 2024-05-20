@@ -1,0 +1,584 @@
+'''
+Version incompleta, partes usadas para tarea 2 de inferencia bayesiana.
+'''
+# %%
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import odeint
+from scipy.spatial import cKDTree
+from scipy.stats import gamma, norm
+import time
+import os
+from pytwalk import BUQ
+
+'''Reviar errores t-student'''
+from scipy.stats import t as t_dist
+
+#######################################
+###### Funciones ######################
+
+class VecinosCercanos:
+
+    def __init__(self,puntos):
+        # Construir el árbol cKDTree con los puntos
+        self.arbol = cKDTree(puntos)
+        self.solutions = {}  # Dictionary to store precomputed solutions
+
+    def compute_solutions(self, t, puntos_malla):
+        for i, punto in enumerate(puntos_malla):
+            solution = odeint(dinamica, y0, t, args=(punto[0], punto[1]))
+            self.solutions[i] = solution[:, 0]
+
+    def encontrar_vecinos_cercanos(self, punto, numero_de_vecinos=1):
+        # Buscar los vecinos más cercanos del punto dado
+        distancias, indices = self.arbol.query(punto, k=numero_de_vecinos)
+
+        # Devolver las distancias y los índices de los vecinos más cercanos
+        return distancias, indices
+
+def gravedad(y,t,g,b):
+    x, v = y
+    dxdt = v
+    dvdt = g - b*v
+    return [dxdt, dvdt]
+
+def logistico(P,t,theta_1,theta_2):
+
+    dPdt = theta_1*P*(theta_2-P)
+    return dPdt
+
+def resorte(y,t,k,b):
+    x, v = y
+    dxdt = v
+    dvdt = -k*x - b*v
+    return [dxdt, dvdt]
+
+def Forward( theta, t):
+
+    g,b = theta
+
+    # y0 = [0.0, 0.0]  
+    solutions = odeint(dinamica, y0 ,t, args=(g,b))
+    x = solutions[:,0]
+    return x
+
+def Forward_aprox(theta, t):
+
+    # Encuentra los vecinos más cercanos al punto (g,b)
+    distancias, indices = buscador_de_vecinos.encontrar_vecinos_cercanos(theta, numero_de_vecinos=num_vecinos)
+
+    # Pesos
+    epsilon = 1e-6 #10**(-6)
+    pesos = np.zeros(num_vecinos)
+    for i in range(num_vecinos):
+         pesos[i] = 1/(distancias[i] + epsilon) 
+    norma = sum(pesos)
+    pesos = pesos/norma
+    
+    # Combinacion de soluciones cercanas
+    n = len(t)
+    interpolacion = np.zeros(n)
+    for k in range(num_vecinos):
+
+        solucion = buscador_de_vecinos.solutions[indices[k]]
+        interpolacion = interpolacion + solucion*pesos[k]
+
+    return interpolacion 
+
+def Metropolis(F, t,x_data, g_0 , alpha, b_0 , beta, size, plot = True):
+
+    sigma = 5 #Stardard dev. for data
+
+    logdensity= norm.logpdf
+
+    simdata = lambda n, loc, scale: norm.rvs( size=n, loc=loc, scale=scale)
+    par_names=[  r"$g$", r"$b$" ] 
+
+    par_prior=[ gamma( alpha, scale = g_0/alpha), gamma(beta, scale=b_0/beta)]
+    par_supp  = [ lambda g: g>0.0, lambda b: b>0.0]
+
+    buq = BUQ( q=2, data=x_data, logdensity=logdensity, sigma=sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
+    # buq.SimData(x = np.array([ g, b])) #True parameters 
+
+
+    buq.RunMCMC( T=size, burn_in=10000)
+
+    if plot == True:
+        buq.PlotPost(par=0, burn_in=10000)
+        buq.PlotPost(par=1, burn_in=10000) 
+        buq.PlotCorner(burn_in=10000)
+        plt.show()
+
+    return buq.Output   
+
+def preproceso(puntos_malla):
+    'Buscador de vecinos cercanos y preproceso para calcular la solucion en de la ecuacion diferencial en cada punto'
+
+    # Crear una instancia de la clase VecinosCercanos
+    buscador_de_vecinos = VecinosCercanos(puntos_malla)
+
+    # Preproceso, calcula solucion en cada punto de la malla
+    buscador_de_vecinos.compute_solutions(t, puntos_malla)
+
+    return buscador_de_vecinos
+
+'''
+def visualizacion(sample, burn_in = 10000):
+     
+    g_sample = sample[:,0]
+    b_sample = sample[:,1]
+    log_post = sample[:,2]
+
+    plt.title('Cadena')
+    plt.plot(g_sample[:10000],label = 'g')
+    plt.plot(b_sample[:10000],label = 'b')
+    plt.legend()
+    plt.show()
+
+    plt.title('Trayectoria de MCMC')
+    plt.plot(g_sample[burn_in:],b_sample[burn_in:],linewidth = .5, color = 'gray')
+    plt.xlabel('g')
+    plt.ylabel('b')
+    plt.show() 
+
+    plt.title('LogPosterior de la cadena')
+    plt.plot(log_post[burn_in:], color = 'red')
+    plt.show()
+
+    plt.title('Distribuciones a priori y posterior para g')
+    plt.hist(g_sample[burn_in:], density= True, bins = 40)
+    dom_g = np.linspace(0,15,500)
+    plt.plot(dom_g, gamma.pdf(dom_g, a = alpha , scale = g_0/alpha),color = 'green')
+    plt.ylabel(r'$f(g)$')
+    plt.xlabel(r'$g$')
+    linea = np.linspace(0,0.5, 100)
+    linea_x = np.ones(100)
+    plt.plot(linea_x*g, linea, color = 'black', linewidth = 0.5)
+    plt.show()
+
+    plt.title('Distribuciones a priori y posterior para b')
+    plt.hist(b_sample[burn_in:], density= True, bins = 40)
+    dom_b = np.linspace(0,8,500)
+    plt.plot(dom_b, gamma.pdf(dom_b, a = beta, scale = b_0/beta),color = 'green')
+    plt.ylabel(r'$f(b)$')
+    plt.xlabel(r'$b$')
+    linea = np.linspace(0,1, 100)
+    linea_x = np.ones(100)
+    plt.plot(linea_x*b, linea, color = 'black', linewidth = 0.5)
+    plt.show()
+
+
+    # Grafica de la distribución de la curva estimada
+    t_grafica = np.linspace(0,cota_tiempo, 100)
+
+    space = 4000
+    ##### ARREGLAR BURN_IN ###
+    for i in range(0,size ,space):
+
+        submuestreo_g =  g_sample[i-1: i]
+        media_g = np.mean(submuestreo_g)
+
+        submuestreo_b =  b_sample[i-1: i]
+        media_b = np.mean(submuestreo_b)
+
+        solucion_estimada = odeint(dinamica, y0, t_grafica ,args=(media_g ,media_b))
+
+        x_estimado = solucion_estimada[:,0]
+
+        plt.plot(t_grafica, x_estimado, color = 'purple', alpha = 0.2)
+    
+    plt.scatter(t,x_data, color= 'blue', label = 'Datos sim. g = %2.2f, b = %2.2f' %(g,b))
+
+    plt.title('Curva estimada (n = %u)'%(n-1))
+    plt.xlabel('t')
+    plt.ylabel('Posición')
+    plt.legend()
+    plt.show()
+
+
+    estimador_g = np.mean(g_sample[burn_in:])    
+    estimador_b = np.mean(b_sample[burn_in:])
+    print('Estimador de g: ', estimador_g)  
+    print('Estimador de b: ', estimador_b)
+'''
+
+#######################################
+####### Inferencia ####################
+
+# modelo = ['gravedad', 'logístico', 'resorte']
+dinamica = logistico
+modelo = 'logistico'
+
+if modelo == 'gravedad':
+    y0 = [0.0, 0.0]
+if modelo == 'logistico':
+    y0 = [100.0]
+if modelo == 'resorte':
+    y0 = [1.0, 0.0]
+
+
+# Parametros principales (verdaderos)
+theta_1 = 0.001
+theta_2 = 1000
+
+# Simular las observaciones
+n = 26      # Tamaño de muestra (n-1)
+cota_tiempo = 10
+t = np.linspace(0,cota_tiempo,num = n)
+
+# Muestra (simulacion)
+x_data = Forward(np.array([theta_1,theta_2]), t)
+
+# Añadir ruido a los datos
+sigma = 30
+error = norm.rvs(0,sigma,n)
+# error = t_dist.rvs(3,size = n)
+error[0] = 0
+# x_data = x_data + error
+
+plt.scatter(t,x_data, color = 'orange')
+plt.xlabel(r'$t$')
+
+
+
+
+# Parametros de distribucion a prioi (Gamma) y MCMC
+theta_1_priori = 0.001
+alpha = 1000
+theta_2_priori = 1000
+beta = 1000
+size = 100000
+burn_in = 20000
+
+hacer_reporte = False
+path = 'Exp_Tarea_2/'  # Trayectoria relativa para archivar
+
+directory = path + 'Figuras/Generales'
+os.makedirs(directory, mode=0o777, exist_ok= True)
+directory = path + 'Figuras/Individual'
+os.makedirs(directory, mode=0o777, exist_ok= True)
+
+
+
+
+############# Experimentos #########
+num_vecinos_varios = np.array([5, 8, 16])
+num_puntos_malla = np.array([10, 15, 30, 50])
+
+Monte_carlo_aprox_compilador_g = np.zeros( (size,len(num_vecinos_varios)*len(num_puntos_malla)) )
+Monte_carlo_aprox_compilador_b = np.zeros( (size,len(num_vecinos_varios)*len(num_puntos_malla)) )
+# Tiempo_compilador = []
+
+
+if hacer_reporte == True:
+    reporte = open(path + 'reporte.txt','w')
+    reporte.write('REPORTE DE PROCEDIMIENTO \n\n')
+    reporte.write('Se hacen experimentos en inferencia bayesiana de problema inverso con forward map aproximado por vecinos cercanos con distintos vecinos y tamano de malla \n\n')
+    reporte.write('MODELO: %r' %modelo)
+    reporte.write('Observaciones (muestra): \n')
+    reporte.write('g = %r \n' %K)
+    reporte.write('b = %r \n' %r)
+    reporte.write('n = %r \n' %n)
+    reporte.write('tiempo [0,%r] \n\n' %cota_tiempo)
+    reporte.write('Parametros de a priori: \n')
+    reporte.write('g_0 = %r \n' %g_0)
+    reporte.write('alpha = %r \n' %alpha)
+    reporte.write('b_0 = %r \n' %b_0)
+    reporte.write('beta = %r \n\n' %beta)
+    reporte.write('Parametros de MCMC: \n')
+    reporte.write('T = %r \n' %size)
+    reporte.write('burn in = %r \n\n' %burn_in)
+    reporte.write('Para los vecinos %r \n' %num_vecinos_varios)
+    reporte.write('Con las mallas cuadradas %r \n\n' %num_puntos_malla)
+    reporte.close()
+
+# Forward Ordinario
+inicio_tiempo = time.time()
+
+monte_carlo = Metropolis(F= Forward, t=t, x_data=x_data, g_0 = theta_1_priori, alpha= alpha, b_0 = theta_2_priori, beta = beta, size = size, plot = False)
+
+fin = time.time()
+plt.show()
+
+#Reporte
+print('Tiempo Forward Ordinario:')
+print('Tiempo total: ', fin-inicio_tiempo)
+if hacer_reporte == True:
+
+    reporte = open(path + 'reporte.txt','a')
+    reporte.write('Forward Ordinario \n')
+    reporte.write('  Tiempo %.2f \n\n' %(fin-inicio_tiempo))
+    reporte.close()
+
+g_sample = monte_carlo[:,0]
+b_sample = monte_carlo[:,1]
+
+experimentos = False
+if experimentos == True:
+    contador = 1
+    for k in range(len(num_vecinos_varios)):
+
+        for j in range(len(num_puntos_malla)):
+            
+        
+            # Monte Carlo con Forward map aproximado
+            inicio_tiempo = time.time()
+
+            num_vecinos = num_vecinos_varios[k]
+            g_dom = np.linspace(700, 1500, num= num_puntos_malla[j])
+            b_dom = np.linspace(0, 6, num= num_puntos_malla[j])
+
+            # Crear la malla utilizando meshgrid
+            g_mesh, b_mesh = np.meshgrid(g_dom, b_dom)
+            # Obtener los puntos de la malla y combinarlos en una matriz
+            ''' Hacer las mallas fuera del for '''
+            puntos_malla = np.column_stack((g_mesh.ravel(), b_mesh.ravel()))
+
+            ''' Hacer el preproceso fuera de for '''
+            buscador_de_vecinos = preproceso(puntos_malla) 
+            preproceso_tiempo = time.time()
+            
+            monte_carlo_aprox = Metropolis(F= Forward_aprox, t=t, x_data=x_data, g_0 = g_0, alpha= alpha, b_0 = b_0, beta = beta, size = size, plot = False)
+            Monte_carlo_aprox_compilador_g[:,contador-1] = monte_carlo_aprox[:,0]
+            Monte_carlo_aprox_compilador_b[:,contador-1] = monte_carlo_aprox[:,1]
+
+            fin = time.time()
+            plt.show()
+
+            # Reporte
+            # Tiempo_compilador[contador] = fin-inicio_tiempo
+            print('Tiempo Aproximado (vecinos %r):' %num_vecinos_varios[k])
+            print('Tiempo preproceso: ', preproceso_tiempo - inicio_tiempo)
+            print('Tiempo total: ', fin-inicio_tiempo, '\n')
+
+            if hacer_reporte == True:   
+                reporte = open(path + 'reporte.txt','a')
+                reporte.write('Experimento %r \n'%contador)
+                reporte.write('  Forward Aproximado (%r vecinos, %r malla) \n'%(num_vecinos_varios[k],num_puntos_malla[j]))
+                reporte.write('  Tiempo: %.2f \n' %(fin-inicio_tiempo))
+                reporte.close()
+
+            # visualizacion(monte_carlo_aprox)
+
+
+            # Graficas
+            g_sample_aprox = monte_carlo_aprox[:,0]
+            b_sample_aprox = monte_carlo_aprox[:,1]
+
+
+            plt.title('A priori y posterior para K (%r vecinos y %r malla) '%(num_vecinos_varios[k],num_puntos_malla[j]))
+            plt.hist(g_sample[burn_in:], density= True, bins = 20,label = 'Ordinario',alpha = 0.9)
+            plt.hist(g_sample_aprox[burn_in:], density=True, bins = 20,label='Aproximado',alpha = 0.8,histtype='step')
+            dom_g = np.linspace(1000,1400,1000)
+            # plt.plot(dom_g, gamma.pdf(dom_g, a = alpha , scale = g_0/alpha),color = 'green')
+            plt.ylabel(r'$f(K)$')
+            plt.xlabel(r'$K$')
+            linea = np.linspace(0,0.03, 100)
+            linea_x = np.ones(100)
+            # plt.plot(linea_x*K, linea, color = 'black', linewidth = 0.5)
+            plt.legend()
+            if hacer_reporte == True:
+                plt.savefig(path + 'Figuras/Individual/posterior_g_%r.png'%contador)
+            plt.show()
+
+            plt.title('A priori y posterior para b (%r vecinos y %r malla) '%(num_vecinos_varios[k],num_puntos_malla[j]))
+            plt.hist(b_sample[burn_in:], density= True, bins = 40,label = 'Ordinario',alpha = 0.9)
+            plt.hist(b_sample_aprox[burn_in:], density=True, bins = 40, label = 'Aproximado',alpha = 0.8,histtype='step')
+            dom_b = np.linspace(0.8,1.6,500)
+            # plt.plot(dom_b, gamma.pdf(dom_b, a = beta, scale = b_0/beta),color = 'green')
+            plt.ylabel(r'$f(r)$')
+            plt.xlabel(r'$r$')
+            linea = np.linspace(0,1, 100)
+            linea_x = np.ones(100)
+            # plt.plot(linea_x*r, linea, color = 'black', linewidth = 0.5)
+            plt.legend()
+            if hacer_reporte == True:
+                plt.savefig(path + 'Figuras/Individual/posterior_b_%r.png'%contador)
+            plt.show()
+
+
+            contador += 1
+
+
+# %%
+
+def visualizacion(monte_carlo,t):
+        
+    theta_1_sample = g_sample[burn_in:]
+    theta_2_sample = b_sample[burn_in:]
+
+    # Distribuciones a priori theta_1 y theta_2
+    fig, axs = plt.subplots(1,2,figsize = (10,4))
+    fig.suptitle(r'Distribuciones a priori para $\theta_1$ y $\theta_2$')
+    # t_1 = np.linspace(0.0005,0.0015,500)
+    t_1 = np.linspace(min(theta_1_sample),max(theta_1_sample),500)
+    axs[0].plot(t_1, gamma.pdf(t_1, a = alpha, scale = theta_1_priori/alpha), color = 'green')
+    axs[0].set_xlabel(r'$\theta_1$')
+    # axs[0].set_ylabel(r'$f(\theta_1)$')
+    t_2 = np.linspace(900,1100,500)
+    axs[1].plot(t_2, gamma.pdf(t_2, a = beta, scale = theta_2_priori/beta), color = 'green')
+    axs[1].set_xlabel(r'$\theta_2$')
+    # axs[1].set_ylabel(r'$f(\theta_2)$')
+    # axs[0].label_outer()
+    # axs[1].label_outer()
+    # plt.savefig('Figures/distribuciones.png')
+    plt.show()
+
+
+    # Posterior Parametro 1
+    plt.hist(theta_1_sample, density = True ,bins = 40)
+    t_1 = np.linspace(0.000985,0.001015,100)
+    plt.plot(t_1, gamma.pdf(t_1,a = alpha,scale = theta_1_priori/alpha),color = 'green')
+    plt.xlabel(r'$\theta_1$')
+    plt.xticks(rotation=45, ha='right')
+    counts, bin_edges = np.histogram(theta_1_sample, bins=40, density=True)
+    max_density = np.max(counts)
+    linea = np.linspace(0,max_density/4, 10)
+    linea_x = np.ones(10)
+    plt.plot(linea_x*theta_1_priori, linea, color = 'black', linewidth = 0.5)
+    plt.show()
+
+    # Posterior Parametro 2
+    plt.hist(theta_2_sample, density = True, bins = 40)
+    t_2 = np.linspace(990,1010,100)
+    plt.plot(t_2, gamma.pdf(t_2, a = beta,scale = theta_2_priori/beta),color = 'green')
+    plt.xlabel(r'$\theta_2$')
+    plt.xticks(rotation=45, ha='right')
+    counts, bin_edges = np.histogram(theta_2_sample, bins=40, density=True)
+    max_density = np.max(counts)
+    linea = np.linspace(0,max_density/4, 10)
+    linea_x = np.ones(10)
+    plt.plot(linea_x*theta_2_priori, linea, color = 'black', linewidth = 0.5)
+    plt.show()
+
+    # Plot auxiliar
+    lamda = theta_1_sample*theta_2_sample
+    plt.hist(lamda,density = True,bins = 40)
+    plt.xlabel(r'$\lambda$')
+    plt.xticks(rotation=45, ha='right')
+    counts, bin_edges = np.histogram(lamda, bins=40, density=True)
+    max_density = np.max(counts)
+    linea = np.linspace(0,max_density/4, 10)
+    linea_x = np.ones(10)
+    plt.plot(linea_x, linea, color = 'black', linewidth = 0.5)
+
+    plt.show()
+
+    # Distribucion Predictiva
+    plt.title('Distribución predictiva')
+    space = 1000
+    for i in range(0,size ,space):
+
+        theta_1_burn = theta_1_sample[burn_in:]
+        theta_2_burn = theta_2_sample[burn_in:]
+        
+        submuestreo_theta1 =  theta_1_burn[i-1: i]
+        media_theta1 = np.mean(submuestreo_theta1)
+        submuestreo_theta2 =  theta_2_burn[i-1: i]
+        media_theta2 = np.mean(submuestreo_theta2)
+
+        solucion_estimada = odeint(dinamica, y0, t ,args=(media_theta1 ,media_theta2))
+        x_estimado = solucion_estimada[:,0]
+        
+        plt.plot(t, x_estimado, color = 'purple', alpha = 0.1)
+
+visualizacion(monte_carlo,t)
+
+# %%
+# Grafica convergencia por malla
+
+dom_g = np.linspace(250,3000,1000)
+dom_b = np.linspace(0.8,1.6,500)
+
+for k in range(len(num_vecinos_varios)):
+
+    fig, axs = plt.subplots(1,len(num_vecinos_varios) + 1,figsize = (12,4))
+    fig.suptitle('Evolución de la posterior de g para %r vecinos ' %num_vecinos_varios[k])
+    for l in range(len(num_vecinos_varios)+1):
+        axs[l].hist(g_sample[burn_in:], density = True , bins = 40)
+        g_sample_aprox = Monte_carlo_aprox_compilador_g[:,3*k + l]
+        axs[l].hist(g_sample_aprox[burn_in:], density = True, bins = 40, histtype  = 'step')
+        axs[l].plot(dom_g, gamma.pdf(dom_g, a = alpha , scale = g_0/alpha),color = 'green')
+        linea = np.linspace(0,0.001, 100)
+        linea_x = np.ones(100)
+        axs[l].plot(linea_x*K, linea, color = 'black', linewidth = 0.5)
+        # if l != 0 :
+        #     axs[l].label_outer()
+    if hacer_reporte == True:
+        plt.savefig(path + 'Figuras/Generales/convergencia_g_%r.png'%(k+1))
+    plt.show()
+
+
+    fig2, axs2 = plt.subplots(1,len(num_vecinos_varios) + 1,figsize = (12,4))
+    fig2.suptitle('Evolución de la posterior de b para %r vecinos ' %num_vecinos_varios[k])
+    for l in range(len(num_vecinos_varios)+1):
+        axs2[l].hist(b_sample[burn_in:], density = True , bins = 40)
+        b_sample_aprox = Monte_carlo_aprox_compilador_b[:,3*k + l]
+        axs2[l].hist(b_sample_aprox[burn_in:], density = True, bins = 40, histtype  = 'step')
+        axs2[l].plot(dom_b, gamma.pdf(dom_b, a = beta, scale = b_0/beta),color = 'green')
+        linea = np.linspace(0,1, 100)
+        linea_x = np.ones(100)
+        axs2[l].plot(linea_x*r, linea, color = 'black', linewidth = 0.5)
+        # if l != 0 :
+        #     axs[l].label_outer()
+    if hacer_reporte == True:
+        plt.savefig(path + 'Figuras/Generales/convergencia_b_%r.png'%(k+1))
+    plt.show()
+
+
+
+# # %%
+
+# Grafica de la distribución de la curva estimada
+t_grafica = np.linspace(0,cota_tiempo, 100)
+
+
+sol_graf = odeint(dinamica, y0 ,t_grafica, args=(K,r))
+x_graf = sol_graf[:,0]
+
+space = 4000
+num_experimento = 0
+for k in range(len(num_vecinos_varios)):
+    
+    fig3, axs3 = plt.subplots(1,len(num_vecinos_varios) + 1,figsize = (12,4))
+    fig3.suptitle('Distribución de la solución (%r vecinos)'%num_vecinos_varios[k])
+
+
+    for j in range(len(num_puntos_malla)):
+
+        # plt.title('Curva estimada %r puntos'% num_puntos_malla[j]   )
+        for i in range(0,size ,space):
+
+            g_sample_grap = Monte_carlo_aprox_compilador_g[:,num_experimento]
+            b_sample_grap = Monte_carlo_aprox_compilador_b[:,num_experimento]
+            g_sample_grap = g_sample_grap[burn_in:]
+            b_sample_grap = b_sample_grap[burn_in:]
+            
+            submuestreo_g =  g_sample_grap[i-1: i]
+            media_g = np.mean(submuestreo_g)
+            submuestreo_b =  b_sample[i-1: i]
+            media_b = np.mean(submuestreo_b)
+
+            solucion_estimada = odeint(dinamica, y0, t_grafica ,args=(media_g ,media_b))
+            x_estimado = solucion_estimada[:,0]
+            
+            # plt.plot(t_grafica, x_estimado, color = 'purple', alpha = 0.2)
+            axs3[j].plot(t_grafica, x_estimado, color = 'purple', alpha = 0.2)
+
+        axs3[j].plot(t_grafica,x_graf, color = 'blue', linewidth = 0.75)
+        num_experimento += 1
+
+        if j != 0 :
+            axs3[j].label_outer()
+    if hacer_reporte == True:
+        plt.savefig(path + 'Figuras/Generales/trayectoria_dist_%r.png'%(k+1))
+    plt.show()
+
+
+    # plt.scatter(t,x_data, color= 'blue', label = 'Datos sim. g = %2.2f, b = %2.2f' %(g,b))
+
+
+    # plt.xlabel('Tiempo')
+    # plt.ylabel('Posición')
+    # plt.legend()
+    # plt.show()
