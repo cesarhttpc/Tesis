@@ -81,17 +81,22 @@ def Forward_aprox(theta, t):
 
     return interpolacion 
 
-def Metropolis(F, t,y_data, theta1_priori , alpha, theta2_priori , beta, size, plot = True):
+def Metropolis(F, t,y_data, theta1_priori , alpha, theta2_priori , beta, size, Estimar_sigma = False, plot = True):
 
+    if Estimar_sigma == True:
+        data_MCMC = y_data
+    else:
+        data_MCMC = None
     logdensity= norm.logpdf
 
     simdata = lambda n, loc, scale: norm.rvs( size=n, loc=loc, scale=scale)
+    ''' Quitar par_names'''
     par_names=[  r"$g$", r"$b$" ] 
 
     par_prior=[ gamma( alpha, scale = theta1_priori/alpha), gamma(beta, scale=theta2_priori/beta)]
     par_supp  = [ lambda g: g>0.0, lambda b: b>0.0]
 
-    buq = BUQ( q=3, data=None, logdensity=logdensity, sigma = sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
+    buq = BUQ( q=3, data=data_MCMC, logdensity=logdensity, sigma = sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
     # buq = BUQ( q=2, data=y_data, logdensity=logdensity, sigma = sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
     # buq.SimData(x = np.array([ g, b])) #True parameters 
 
@@ -127,7 +132,7 @@ def visualizacion(monte_carlo,t, burn_in):
     plt.xlabel('t')
     plt.legend()
     if hacer_reporte == True:
-        plt.savefig(path + 'Figuras/Generales/Muestra_'+ modelo +'.png')
+        plt.savefig(path + 'Figuras/Generales/Muestra_'+ modelo + path_sigma + '.png')
     plt.show()
     
     # Distribuciones a priori theta_1 y theta_2
@@ -148,7 +153,7 @@ def visualizacion(monte_carlo,t, burn_in):
     # axs[0].label_outer()
     # axs[1].label_outer()
     if hacer_reporte == True:
-        plt.savefig(path + 'Figuras/Generales/Apriori_'+ modelo +'.png')
+        plt.savefig(path + 'Figuras/Generales/Apriori_'+ modelo + path_sigma + '.png')
     plt.show()
 
     # Posterior Conjunta
@@ -158,7 +163,7 @@ def visualizacion(monte_carlo,t, burn_in):
     plt.xlabel(r'$\theta_1$')
     plt.ylabel(r'$\theta_2$')
     if hacer_reporte == True:
-        plt.savefig(path + 'Figuras/Generales/Conjunta_'+ modelo +'.png')
+        plt.savefig(path + 'Figuras/Generales/Conjunta_'+ modelo + path_sigma + '.png')
     plt.show()
 
     # Posterior Parametro 1
@@ -174,7 +179,7 @@ def visualizacion(monte_carlo,t, burn_in):
     linea_x = np.ones(10)
     plt.plot(linea_x*theta_1, linea, color = 'black', linewidth = 0.5)
     if hacer_reporte == True:
-        plt.savefig(path + 'Figuras/Generales/Post_theta1_'+ modelo +'.png')
+        plt.savefig(path + 'Figuras/Generales/Post_theta1_'+ modelo + path_sigma + '.png')
     plt.show()
     
     # Posterior Parametro 2
@@ -190,7 +195,7 @@ def visualizacion(monte_carlo,t, burn_in):
     linea_x = np.ones(10)
     plt.plot(linea_x*theta_2, linea, color = 'black', linewidth = 0.5)
     if hacer_reporte == True:
-        plt.savefig(path + 'Figuras/Generales/Post_theta2_'+ modelo +'.png')
+        plt.savefig(path + 'Figuras/Generales/Post_theta2_'+ modelo + path_sigma + '.png')
     plt.show()
     
     # Plot auxiliar
@@ -206,7 +211,7 @@ def visualizacion(monte_carlo,t, burn_in):
         linea_x = np.ones(10)
         plt.plot(linea_x, linea, color = 'black', linewidth = 0.5)
         if hacer_reporte == True:
-            plt.savefig(path + 'Figuras/Generales/Lambda_'+ modelo +'.png')
+            plt.savefig(path + 'Figuras/Generales/Lambda_'+ modelo + path_sigma + '.png')
         plt.show()
     
 
@@ -234,7 +239,7 @@ def visualizacion(monte_carlo,t, burn_in):
     plt.xlabel(r't')
     plt.ylabel(r'x(t)')
     if hacer_reporte == True:
-        plt.savefig(path + 'Figuras/Generales/Predictiva_'+ modelo +'.png')
+        plt.savefig(path + 'Figuras/Generales/Predictiva_'+ modelo + path_sigma + '.png')
     plt.show()
 
 
@@ -242,10 +247,10 @@ def visualizacion(monte_carlo,t, burn_in):
 ####### Inferencia ####################
 
 # modelo = ['gravedad', 'logistico', 'SIR', 'resorte']
-# dinamica = gravedad
-# modelo = 'gravedad'
-dinamica = logistico
-modelo = 'logistico'
+dinamica = gravedad
+modelo = 'gravedad'
+# dinamica = logistico
+# modelo = 'logistico'
 
 # Simular las observaciones
 n = 26      # Tamaño de muestra (n-1)
@@ -318,10 +323,15 @@ if modelo == 'logistico':
 if modelo == 'SIR':
     pass
 
-
+Estimar_sigma = True
 exper_aprox = True
 hacer_reporte = True
-path = 'Exp_Central_sigma_'+ modelo +'/'  # Trayectoria relativa para archivar
+
+if Estimar_sigma == True:
+    path_sigma ='_sigma'
+else:
+    path_sigma = ''
+path = 'Exp_Central_'+ modelo + path_sigma +'/'  # Trayectoria relativa para archivar
 
 if hacer_reporte == True:
     directory = path + 'Figuras/Generales'
@@ -343,6 +353,7 @@ if hacer_reporte == True:
     reporte.write('REPORTE DE PROCEDIMIENTO \n\n')
     reporte.write('Enfoque bayesiano al problema inverso \n\n')
     reporte.write('MODELO: %s \n\n' %modelo)
+    reporte.write('Estima sigma: %r' %Estimar_sigma)
     reporte.write('Observaciones (muestra): \n')
     reporte.write('%s = %r \n' %(par_names[0],theta_1))
     reporte.write('%s = %r \n' %(par_names[1],theta_2))
@@ -363,7 +374,7 @@ if hacer_reporte == True:
 # Forward Ordinario
 inicio_tiempo = time.time()
 
-monte_carlo = Metropolis(F= Forward, t=t, y_data=y_data, theta1_priori = theta1_priori, alpha= alpha, theta2_priori = theta2_priori, beta = beta, size = size, plot = False)
+monte_carlo = Metropolis(F= Forward, t=t, y_data=y_data, theta1_priori = theta1_priori, alpha= alpha, theta2_priori = theta2_priori, beta = beta, size = size, Estimar_sigma = Estimar_sigma ,plot = False)
 
 fin = time.time()
 plt.show()
@@ -412,7 +423,7 @@ if exper_aprox == True:
             buscador_de_vecinos = preproceso(puntos_malla) 
             preproceso_tiempo = time.time()
             
-            monte_carlo_aprox = Metropolis(F= Forward_aprox, t=t, y_data=y_data, theta1_priori = theta1_priori, alpha= alpha, theta2_priori = theta2_priori, beta = beta, size = size, plot = False)
+            monte_carlo_aprox = Metropolis(F= Forward_aprox, t=t, y_data=y_data, theta1_priori = theta1_priori, alpha= alpha, theta2_priori = theta2_priori, beta = beta, size = size, Estimar_sigma = Estimar_sigma,plot = False)
             Monte_carlo_aprox_compilador_theta1[:,contador-1] = monte_carlo_aprox[:,0]
             Monte_carlo_aprox_compilador_theta2[:,contador-1] = monte_carlo_aprox[:,1]
 
@@ -456,7 +467,7 @@ if exper_aprox == True:
             plt.plot(linea_x*theta_1, linea, color = 'black', linewidth = 0.5)
             plt.legend()
             if hacer_reporte == True:
-                plt.savefig(path + 'Figuras/Individual/PostAprox_theta1_%r_'%contador + modelo + '.png')
+                plt.savefig(path + 'Figuras/Individual/PostAprox_theta1_%r_'%contador + modelo + path_sigma + '.png')
                 '''
                 plt.savefig(f'{path}Figuras/Individual/PostAprox_theta1_{contador}_{modelo}.png')
                 '''
@@ -481,7 +492,7 @@ if exper_aprox == True:
             plt.plot(linea_x*theta_2, linea, color = 'black', linewidth = 0.5)
             plt.legend()
             if hacer_reporte == True:
-                plt.savefig(path + 'Figuras/Individual/PostAprox_theta2_%r_'%contador + modelo + '.png')
+                plt.savefig(path + 'Figuras/Individual/PostAprox_theta2_%r_'%contador + modelo + path_sigma + '.png')
             plt.show()
 
 
@@ -509,7 +520,7 @@ if exper_aprox == True:
             # if l != 0 :
             #     axs[l].label_outer()
         if hacer_reporte == True:
-            plt.savefig(path + 'Figuras/Generales/Convergencia_theta1_%r_'%(k+1) + modelo + '.png')
+            plt.savefig(path + 'Figuras/Generales/Convergencia_theta1_%r_'%(k+1) + modelo + path_sigma + '.png')
         plt.show()
 
 
@@ -529,56 +540,10 @@ if exper_aprox == True:
             # if l != 0 :
             #     axs[l].label_outer()
         if hacer_reporte == True:
-            plt.savefig(path + 'Figuras/Generales/Convergencia_theta2_%r_'%(k+1) + modelo + '.png')
+            plt.savefig(path + 'Figuras/Generales/Convergencia_theta2_%r_'%(k+1) + modelo + path_sigma + '.png')
         plt.show()
 
-'''
 
-# Grafica de la distribución de la curva estimada
-t_grafica = np.linspace(0,cota_tiempo, 100)
-
-
-sol_graf = odeint(dinamica, y0 ,t_grafica, args=(theta_1,theta_2))
-x_graf = sol_graf[:,0]
-
-space = 4000
-num_experimento = 0
-for k in range(len(num_vecinos_varios)):
-    
-    fig3, axs3 = plt.subplots(1,len(num_vecinos_varios) + 1,figsize = (12,4))
-    fig3.suptitle('Distribución de la solución (%r vecinos)'%num_vecinos_varios[k])
-
-
-    for j in range(len(num_puntos_malla)):
-
-        # plt.title('Curva estimada %r puntos'% num_puntos_malla[j]   )
-        for i in range(0,size ,space):
-
-            theta1_sample_grap = Monte_carlo_aprox_compilador_theta1[:,num_experimento]
-            theta2_sample_grap = Monte_carlo_aprox_compilador_theta2[:,num_experimento]
-            theta1_sample_grap = theta1_sample_grap[burn_in:]
-            theta2_sample_grap = theta2_sample_grap[burn_in:]
-            
-            submuestreo_g =  theta1_sample_grap[i-1: i]
-            media_g = np.mean(submuestreo_g)
-            submuestreo_b =  theta2_sample[i-1: i]
-            media_b = np.mean(submuestreo_b)
-
-            solucion_estimada = odeint(dinamica, y0, t_grafica ,args=(media_g ,media_b))
-            x_estimado = solucion_estimada[:,0]
-            
-            # plt.plot(t_grafica, x_estimado, color = 'purple', alpha = 0.2)
-            axs3[j].plot(t_grafica, x_estimado, color = 'purple', alpha = 0.2)
-
-        axs3[j].plot(t_grafica,x_graf, color = 'blue', linewidth = 0.75)
-        num_experimento += 1
-
-        if j != 0 :
-            axs3[j].label_outer()
-    if hacer_reporte == True:
-        plt.savefig(path + 'Figuras/Generales/Trayectoria_dist_%r_' + modelo + '.png'%(k+1))
-    plt.show()
-    '''
 
 
 

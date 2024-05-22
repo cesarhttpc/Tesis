@@ -1,4 +1,3 @@
-
 \chapter{Implementación} 
 
 
@@ -57,6 +56,7 @@ se obtiene del siguiente análisis. Primeramente notemos que la aceleración de 
 de reordenar e integrar (\ref{3.1.05}) 
 \begin{align}
     \frac{dv}{dt } = -\frac{b}{m}(v - v_T)
+    \label{3.1.07}
 \end{align}
 e integrando con la condición inicial $v_0 = 0$
 \begin{align*}
@@ -78,7 +78,8 @@ Para obtener la función de la trayectoria, simplemente integramos una vez más 
 \end{align*}
 tomando $x_0 = 0$, finalmente nos queda que la trayectoria de la partícula es
 \begin{align}
-    x(t) = v_T \left [ t - \frac{m}{b} \left( 1- \exp\left\{-\frac{b}{m} t\right \}\right)\right]
+    x(t) = v_T \left [ t - \frac{m}{b} \left( 1- \exp\left\{-\frac{b}{m} t\right\}\right)\right]
+    \label{3.1.12}
 \end{align}
 Por tanto, podemos tomar el forward map $F(g,b) = x(t)$, prescindiendo de $m$ al considerar $m = 1$.
 
@@ -175,18 +176,307 @@ Una vez establecidos los modelos sobre los que trabajaremos, nos enfocamos en ab
 
 Según sea el caso, podemos tomar mediciones de caída de un objeto para ciertos tiempo, o podemos contar la población para cada intervalo de tiempo, observar los grupos de personas en un brote de cierto patógeno. Denotemos estas observaciones por $y_1, y_2, \cdots, y_n$. 
 
-Sin embargo, no es fácil tener acceso a dicha muestra, por lo que optaremos por simular los datos directamente del modelo seleccionando los parámetros convenientemente y además agregar un ruido gaussiano. Es decir, tomamos $\theta$ fijo, luego consideramos los tiempos a los cuales corresponderá la muestra, denotados por $t_1, t_2, \cdots, t_n$. Posteriormente, con el forward map $F_{\theta}$ generado según el modelo (ya sea analítico o numérico) evaluamos para cada tiempo (denotado por $F_{\theta}(t_i)$) y agregamos un ruido $\varepsilon_i \sim N(0,\sigma^2)$. Así la muestra considerada se constituye por
+Sin embargo, no es fácil tener acceso a dicha muestra, por lo que optaremos por simular los datos directamente del modelo seleccionando los parámetros convenientemente y además agregar un ruido gaussiano. Es decir, tomamos $\theta \in \mathbb{R}^d$ fijo, luego consideramos los tiempos a los cuales corresponderá la muestra, denotados por $t_1, t_2, \cdots, t_n$. Posteriormente, con el forward map $F_{\theta}$ generado según el modelo (ya sea analítico o numérico) evaluamos para cada tiempo (denotado por $F_{\theta}(t_i)$) y agregamos un ruido $\varepsilon_i \sim N(0,\sigma^2)$. Así la muestra considerada se constituye por
 \begin{align}
     y_i = F_{\theta}(t_i) + \varepsilon_i %\:\:\:\: \text{para } i = 1,2,\cdots,n.
+    \label{3.2.01}
 \end{align}
-para $i = 1,2, \cdots, n$. 
+para $i = 1,2, \cdots, n$. Dicho de otra forma la muestra contemplada 
+\begin{align}
+    \left \{ (y_1,t_1), (y_2, t_2), \cdots, (y_n, t_n)\right \} 
+\end{align}
+un conjunto de $n$ tuplas.
+
 
 Una vez establecida la muestra $y_i$, ahora nuestro propósito es abordar el problema inverso, esto es buscamos $\theta$ tal que $y_i \approx F_{\theta}(t_i)$. Del capitulo 2 sabemos que hay varias maneras de abordar el problema, en adelante solamente se usará el enfoque bayesiano del problema inverso.
 
-% \subsection{Distribución posterior}
+\subsection{Distribución posterior}
 
-\subsection{Forward map}
+En la teoría de la estadística bayesiana, el paradigma central se basa en obtener la distribución posterior de los parámetros de interés dada ciertas observaciones a las que denotamos por $\mathbf{y} = (y_1,y_2,\cdots, y_n)$. Luego, sabemos que salvo el caso de análisis conjugado podemos acceder directamente a dicha distribución posterior. En el caso del problema inverso no es posible determinar la distribución por medio de análisis conjugado en caso general, debido a que el forward map somete a la distribución posterior a una familia diferente a la familia de la distribución a priori.
+
+Para el vector de parámetros $\theta = (\theta_1,\theta_2, \cdots, \theta_d) \in \mathbb{R}^d$, recordemos la ecuación (\textcolor{red}{ecu}) 
+\begin{align}
+    \pi(\theta|\mathbf{y}) \propto f(\mathbf{y}|\theta) \pi(\theta)
+    \label{3.2.1.01}
+\end{align} 
+que nos da la distribución posterior salvo una constante en términos de la verosimilitud y la distribución a priori. Para obtener la verosimilitud, observemos de la ecuación (\ref{3.2.01}) que 
+\begin{align*}
+    \mathbf{y}_i \sim N(F_{\theta}(t_i)), \sigma^2)
+\end{align*}
+por lo que la verosimilitud para $\theta$ es la correspondiente al modelo normal, es decir
+\begin{align}
+    \mathcal{L} (\theta,\sigma) = f(\mathbf{y}|\theta) = \prod_{i = 1}^{n} \frac{1}{2\pi \sigma^2} \exp \left \{ -\frac{1}{2\sigma^2}\left(y_i - F_{\theta}(t_i)\right)^2 \right \} ,
+\end{align}
+simplificando
+\begin{align}
+    \mathcal{L}(\theta,\sigma) = \left(\frac{1}{2\pi \sigma^2}\right) ^{n/2}\exp \left \{  -\frac{1}{2\sigma^2}\sum_{i = 1}^{n} \left(y_i - F_{\theta}(t_i)\right)^2 \right \},
+    \label{3.2.1.02}
+\end{align}
+que es la verosimilitud en función de los parámetros $\theta$ y la desviación estándar $\sigma$. 
+
+Por otro lado, la distribución a priori representa el conocimiento previo a observar los datos. Para nuestro caso particular, los modelos propuestos en la sección (\textcolor{red}{citar sección}) dependen de parámetros no negativos, es decir, $\theta_i \geq 0$ para toda $i = 1,\cdots, d$. Incluso algunos de ellos se tiene bastante certeza de su valor verdadero, que podría pensarse en ajustar una distribución a priori normal. Sin embargo, ajustar una normal conlleva a tener problemas en el soporte, por lo que el siguiente paso es considerar una normal truncada. 
+
+Finalmente, se opto por proponer distribuciones a priori gamma, debido a que existe una parametrización en la cual se asemeja a una distribución normal pero con el soporte adecuado. La distribución gamma que tiene por  máximo a $\theta_{i}^{*}$ y asemeja una normal es 
+\begin{align}
+    \theta_i \sim Gamma\left(\alpha_i, \frac{\theta_i^{*}}{\alpha_i} \right) 
+    \label{3.2.1.03}
+\end{align}
+con $\theta_i^{*}$ y $\alpha_i$ parámetros conocidos.
+
+La parametrización de la $Gamma(\alpha,\beta)$ es tal que su función de densidad sea
+\begin{align*}
+    f(\theta|\alpha,\beta) = \frac{\beta^\alpha}{\Gamma(\alpha)} \theta^{\alpha-1} \exp \left \{ -\beta \theta\right \} 
+\end{align*}
+con $\alpha,\beta$ conocidos.
+
+Como $\theta_i$ se proponen independientes, entonces la distribución a priori para $\theta$ es
+\begin{align}
+    f(\theta|\alpha) &= f(\theta_1|\alpha_1) \cdots f(\theta_d|\alpha_d) \nonumber \\
+    &= \prod_{i = 1}^{n} \left[\frac{1}{\Gamma(\alpha_i)}\left(\frac{\theta_i^{*}}{\alpha_i}\right) ^{\alpha_i} \theta_i^{\alpha_i -1} \exp \left \{ -\frac{\theta_i^{*}}{\alpha_i}\theta_i\right \}\right] 
+    \label{3.2.1.04}
+\end{align}
+desarrollando
+\begin{align}
+    &f(\theta|\alpha) =  \nonumber \\
+    &\frac{1}{\Gamma(\alpha_1)}\left(\frac{\theta_1^{*}}{\alpha_1}\right) ^{\alpha_1} \theta_1^{\alpha_1 -1} \exp \left \{ -\frac{\theta_1^{*}}{\alpha_1}\theta_1\right \}  \cdots \frac{1}{\Gamma(\alpha_d)}\left(\frac{\theta_d^{*}}{\alpha_d}\right) ^{\alpha_d} \theta_d^{\alpha_d -1} \exp \left \{ -\frac{\theta_d^{*}}{\alpha_d}\theta_d\right \}
+    \label{3.2.1.05}
+\end{align}
+con $\alpha = (\alpha_1,\cdots, \alpha_p)$ y $\theta^{*} = (\theta_1^{*}, \cdots , \theta_d^{*})$ conocidos.
+
+Sustituyendo (\ref{3.2.1.02}) y (\ref{3.2.1.04}) en (\ref{3.2.1.01}) se tiene la forma funcional de la distribución posterior
+\begin{align}
+    \pi(\theta, \sigma|\mathbf{y}) \propto \left(\frac{1}{2\pi \sigma^2}\right) ^{n/2}\exp \left \{  -\frac{1}{2\sigma^2}\sum_{i = 1}^{n} \left(y_i - F_{\theta}(t_i)\right)^2 \right \} \prod_{i = 1}^{n} \left[\frac{1}{\Gamma(\alpha_i)}\left(\frac{\theta_i^{*}}{\alpha_i}\right) ^{\alpha_i} \theta_i^{\alpha_i -1} \exp \left \{ -\frac{\theta_i^{*}}{\alpha_i}\theta_i\right \}\right] 
+    \label{3.2.1.06}
+\end{align}
+
+Notemos que la distribución en (\ref{3.2.1.06}) no pertenece a una familia conocida. Para lidiar con este problema usamos métodos Monte Carlo. Más precisamente, podemos simular de la distribución posterior (\ref{3.2.1.06}).
+
+
+% \subsection{Forward map}
 \subsection{Simulación con MCMC}
+
+Al incursionar a la estadística bayesiana se aprende que se puede obtener la distribución posterior por medio del famoso análisis conjugado. Es decir se propone una distribución a priori convenientemente para que la distribución posterior pertenezca a la misma familia. Sin embargo, el análisis conjugado puede ser no trivial o incluso no existir. \textcolor{blue}{Otra forma es usando métodos numéricos para calcular la integral del denominador, sin embargo no es optimo para funciones de varias variables.}
+Por ello es que simular de la distribución posterior con MCMC (Markov Chain Monte Carlo) es la via optima para tener una muestra de dicha distribución, con dicha muestra podemos estimar cualquier momento de la distribución. Si estamos interesados en obtener la media de $X$, en beneficio de la ley de grandes números, podemos estimar como
+\begin{align}
+    \mathbb{E}\left [X\right ] \approx \frac{1}{n}\sum_{i = 1}^{n} X_i
+\end{align}
+De igual forma si estamos interesados en la media del estadístico $h(X)$ para un función $h$ arbitraria, se estima por
+\begin{align}
+    \mathbb{E}\left [h(X)\right ] \approx \frac{1}{n} \sum_{i=1}^{n} h(X_i)
+\end{align}
+donde $X_i$ es la simulación de la distribución posterior. 
+
+La distribución objetivo que se implementa en el MCMC es la distribución posterior (\ref{3.2.1.06}). Recordemos que la distribución posterior depende del forward map $F_{\theta}(t_i)$ obtenido de evaluar los tiempos de la muestra. Recordemos que $F_{\theta}(t_i)$ es la version discretizada de $F_{\theta}$. Sea $\theta \in \mathbb{R}^d$ la función
+\begin{align}
+    \theta  \mapsto F_{\theta} = x(t) 
+\end{align}
+tal que $x(t)$ es la solución de la ecuación diferencial ordinaria $x(t) = G(t,x(t),x'(t),x''(t)\cdots)$ del modelo bajo consideración.
+
+\subsubsection{Simulación del modelo gravitatorio}
+
+Para poder hacer simulaciones, es necesario determinar completamente la distribución posterior. El Forward map para el modelo gravitatorio es $F_{\theta} = F(g,b) = x(t)$ con la ecuación diferencial de la dinámica gravitacional dada en (\ref{3.1.03}) o equivalentemente en (\ref{3.1.12}). Además, es necesario saber como abordar el caso de la desviación estándar $\sigma$. Existen dos formas, pensar en $\sigma$ como parámetro conocido, por lo que no es necesario hacer inferencia, el otro caso es para $\sigma$ desconocida y veremos los detalles después de explicar el primer caso.
+
+Para el caso $\mathbf{\sigma}$ \textbf{conocido}, la distribución posterior (\ref{3.2.1.06}) tendrá como variables unicamente al vector de parámetros $\theta$, al ser una EDO dependiente solamente de $g$ y $b$ se sigue que $\theta = (g,b)$ siendo un vector en $\mathbb{R}^{d}$ con $d = 2$. Además es necesario definir las constantes para las distribuciones a priori gamma.
+
+
+
+\newpage
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 15 cm]{img/Exp_Central_gravedad/Figuras/Generales/Apriori_gravedad.png}     
+    % \caption{Distribuciones posterior para $\theta_1$ y $\theta_2$}
+    % \label{}
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad/Figuras/Generales/Muestra_gravedad.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad/Figuras/Generales/Conjunta_gravedad.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad/Figuras/Generales/Post_theta1_gravedad.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad/Figuras/Generales/Post_theta2_gravedad.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad/Figuras/Generales/Predictiva_gravedad.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+\textbf{sigma desconocido}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 15 cm]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png}     
+    % \caption{Distribuciones posterior para $\theta_1$ y $\theta_2$}
+    % \label{}
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+\textbf{Modelo logístico}
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 15 cm]{img/Exp_Central_logistico/Figuras/Generales/Apriori_logistico.png}     
+    % \caption{Distribuciones posterior para $\theta_1$ y $\theta_2$}
+    % \label{}
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_logistico/Figuras/Generales/Muestra_logistico.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_logistico/Figuras/Generales/Conjunta_logistico.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_logistico/Figuras/Generales/Post_theta1_logistico.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_logistico/Figuras/Generales/Post_theta2_logistico.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_logistico/Figuras/Generales/Predictiva_logistico.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+\textbf{Sigma desconocido}
+
+
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 15 cm]{img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png}     
+    % \caption{Distribuciones posterior para $\theta_1$ y $\theta_2$}
+    % \label{}
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+
+
 \subsection{Resultados}
 
 \section{Inferencia con aproximación.}
@@ -194,6 +484,289 @@ Una vez establecida la muestra $y_i$, ahora nuestro propósito es abordar el pro
 \subsection{Regla de interpolación(aproximación de forward map)}
 \subsection{Simulación MCMC}
 \subsection{Resultados}
+
+\textbf{Gravitatorio sigma conocido}
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_1_gravedad.png}
+    \label{fig:subfig1}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_2_gravedad.png}
+    \label{fig:subfig2}}
+    \\
+    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_3_gravedad.png}
+    \label{fig:subfig3}}
+    \qquad
+    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_4_gravedad.png}
+    \label{fig:subfig4}}
+    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
+    \label{fig:g_01}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_5_gravedad.png}
+    \label{fig:subfig1}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_6_gravedad.png}
+    \label{fig:subfig2}}
+    \\
+    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_7_gravedad.png}
+    \label{fig:subfig3}}
+    \qquad
+    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_8_gravedad.png}
+    \label{fig:subfig4}}
+    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
+    \label{fig:g_01}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_9_gravedad.png}
+    \label{fig:subfig1}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_10_gravedad.png}
+    \label{fig:subfig2}}
+    \\
+    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_11_gravedad.png}
+    \label{fig:subfig3}}
+    \qquad
+    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_12_gravedad.png}
+    \label{fig:subfig4}}
+    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
+    \label{fig:g_01}
+\end{figure}
+
+
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_1_gravedad.png}
+    \label{fig:subfig1}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_2_gravedad.png}
+    \label{fig:subfig2}}
+    \\
+    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_3_gravedad.png}
+    \label{fig:subfig3}}
+    \qquad
+    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_4_gravedad.png}
+    \label{fig:subfig4}}
+    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
+    \label{fig:g_01}
+\end{figure}
+
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_5_gravedad.png}
+    \label{fig:subfig1}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_6_gravedad.png}
+    \label{fig:subfig2}}
+    \\
+    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_7_gravedad.png}
+    \label{fig:subfig3}}
+    \qquad
+    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_8_gravedad.png}
+    \label{fig:subfig4}}
+    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
+    \label{fig:g_01}
+\end{figure}
+
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_9_gravedad.png}
+    \label{fig:subfig1}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_10_gravedad.png}
+    \label{fig:subfig2}}
+    \\
+    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_11_gravedad.png}
+    \label{fig:subfig3}}
+    \qquad
+    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_12_gravedad.png}
+    \label{fig:subfig4}}
+    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
+    \label{fig:g_01}
+\end{figure}
+
+
+
+
+\textbf{Modelo logístico}
+
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_1_logistico.png}
+    \label{fig:subfig1}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_2_logistico.png}
+    \label{fig:subfig2}}
+    \\
+    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_3_logistico.png}
+    \label{fig:subfig3}}
+    \qquad
+    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_4_logistico.png}
+    \label{fig:subfig4}}
+    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
+    \label{fig:g_01}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_5_logistico.png}
+    \label{fig:subfig1}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_6_logistico.png}
+    \label{fig:subfig2}}
+    \\
+    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_7_logistico.png}
+    \label{fig:subfig3}}
+    \qquad
+    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_8_logistico.png}
+    \label{fig:subfig4}}
+    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
+    \label{fig:g_01}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_9_logistico.png}
+    \label{fig:subfig1}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_10_logistico.png}
+    \label{fig:subfig2}}
+    \\
+    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_11_logistico.png}
+    \label{fig:subfig3}}
+    \qquad
+    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_12_logistico.png}
+    \label{fig:subfig4}}
+    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
+    \label{fig:g_01}
+\end{figure}
+
+
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_1_logistico.png}
+    \label{fig:subfig1}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_2_logistico.png}
+    \label{fig:subfig2}}
+    \\
+    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_3_logistico.png}
+    \label{fig:subfig3}}
+    \qquad
+    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_4_logistico.png}
+    \label{fig:subfig4}}
+    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
+    \label{fig:g_01}
+\end{figure}
+
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_5_logistico.png}
+    \label{fig:subfig1}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_6_logistico.png}
+    \label{fig:subfig2}}
+    \\
+    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_7_logistico.png}
+    \label{fig:subfig3}}
+    \qquad
+    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_8_logistico.png}
+    \label{fig:subfig4}}
+    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
+    \label{fig:g_01}
+\end{figure}
+
+
+
+\begin{figure}[h]
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_9_logistico.png}
+    \label{fig:subfig1}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_10_logistico.png}
+    \label{fig:subfig2}}
+    \\
+    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_11_logistico.png}
+    \label{fig:subfig3}}
+    \qquad
+    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_12_logistico.png}
+    \label{fig:subfig4}}
+    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
+    \label{fig:g_01}
+\end{figure}
+
+
+
+\newpage
 
 \newpage
 
@@ -258,7 +831,7 @@ Las distribuciones posteriores marginales de $g$ se muestran en las figuras \ref
     \qquad
     \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
     \includegraphics[width=0.4\textwidth]{img/posterior_g_2.png}
-    \label{fig:subfig2}}
+    \label{fig:subfig2}}\\
     \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
     \includegraphics[width=0.4\textwidth]{img/posterior_g_3.png}
     \label{fig:subfig3}}

@@ -5,11 +5,23 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Varias trayectorias con la dinámica gravitación sujeta a fricción para varias valores de los parámetros g,b.}}{9}{figure.caption.10}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Varias trayectorias con la dinámica de crecimiento logístico para varias valores de los parámetros K,r.}}{11}{figure.caption.11}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Trayectoria de cada grupo del modelo SIR con $\beta = 0.009$ y $\gamma = 0.5$.}}{12}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{16}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 8 vecinos cercanos.}}{17}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 16 vecinos cercanos.}}{18}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{19}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 8 vecinos cercanos.}}{20}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 16 vecinos cercanos.}}{21}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{30}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{31}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{32}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{33}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{34}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{35}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{36}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{37}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{38}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{39}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{40}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{41}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{42}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 8 vecinos cercanos.}}{43}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 16 vecinos cercanos.}}{44}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}}{45}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 8 vecinos cercanos.}}{46}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 16 vecinos cercanos.}}{47}{figure.caption.55}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
