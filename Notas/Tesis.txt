@@ -1,1 +1,5 @@
 Debería agregar número a todas las ecuaciones?
+
+Examen: 11/10
+Tarea1: 7.5
+Tarea2: 9

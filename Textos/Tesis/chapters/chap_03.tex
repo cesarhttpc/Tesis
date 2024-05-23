@@ -3,7 +3,7 @@
 
 Debido a que nos encontramos en un terreno carente de fundamentos teóricos, nuestra mejor arma para probar que grado de aproximación de los problemas inversos son consistentes es por medio de experimentación metodológica. Esto nos permite revelar obstáculos del nuevo método así como también las grandes ventajas. 
 
-Gran parte del trabajo de tesis se centra primordialmente en la experimentación con la propuesta innovadora para la solución bayesiana del problema inverso. Se hacen los experimentos con una implementación en Python cuyo código se encuentra adjunto. 
+Gran parte del trabajo de tesis se centra primordialmente en la experimentación con la propuesta innovadora para la solución bayesiana del problema inverso. Se hacen los experimentos con una implementación en Python cuyo código se encuentra adjunto.
 
 
 \section{Modelos de trabajo}
@@ -263,6 +263,7 @@ Por ello es que simular de la distribución posterior con MCMC (Markov Chain Mon
 De igual forma si estamos interesados en la media del estadístico $h(X)$ para un función $h$ arbitraria, se estima por
 \begin{align}
     \mathbb{E}\left [h(X)\right ] \approx \frac{1}{n} \sum_{i=1}^{n} h(X_i)
+    \label{3.2.2.01}
 \end{align}
 donde $X_i$ es la simulación de la distribución posterior. 
 
@@ -278,79 +279,107 @@ Para poder hacer simulaciones, es necesario determinar completamente la distribu
 
 Para el caso $\mathbf{\sigma}$ \textbf{conocido}, la distribución posterior (\ref{3.2.1.06}) tendrá como variables unicamente al vector de parámetros $\theta$, al ser una EDO dependiente solamente de $g$ y $b$ se sigue que $\theta = (g,b)$ siendo un vector en $\mathbb{R}^{d}$ con $d = 2$. Además es necesario definir las constantes para las distribuciones a priori gamma.
 
-
-
-\newpage
+Consideremos las distribuciones a priori (\ref{3.2.1.03}) como
+\begin{align}
+    g \sim Gamma \left(\alpha, \frac{\theta_1^{*}}{\alpha}\right) \\
+    b \sim Gamma \left(\beta, \frac{\theta_2^{*}}{\beta}\right) 
+\end{align}
+con $\alpha = 10$, $\beta = 1.1$ con máximo en $\theta_1^{*} = 10$ y $\theta_2^{*} = 2$. Podemos observar las distribuciones a priori en la Fig. \ref{Fig. 3.2.2.01}.
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 15 cm]{img/Exp_Central_gravedad/Figuras/Generales/Apriori_gravedad.png}     
-    % \caption{Distribuciones posterior para $\theta_1$ y $\theta_2$}
-    % \label{}
+    \caption{Distribuciones a priori para $\theta_1 = g$ y $\theta_2 = b$.}
+    \label{Fig. 3.2.2.01}
 \end{figure} 
+
+Ahora, generamos una muestra del forward map gravitatorio y agregamos un ruido gaussiano con $\sigma = 0.1$ obteniendo la muestra como en la Fig. \ref{Fig. 3.2.2.02}.
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad/Figuras/Generales/Muestra_gravedad.png} 
-    % \caption{}
-    % \label{Fig. }
+    \caption{Muestra $\mathbf{y}$ del modelo gravitatorio.}
+    \label{Fig. 3.2.2.02}
 \end{figure} 
 
+Luego, con la metodología propuesta, usando el algoritmo MCMC Metropolis-Hastings para una cadena de tamaño $T = 500,000$ y un burn in de 20,000 tenemos que la trayectoria seguida en el espacio de parámetros $\theta = (g,b)$ para la distribución posterior es el mostrado en la Fig. \ref{Fig. 3.2.2.03}. Notemos que dicha posterior tiene alta correlación entre parámetros. Para valores altos de $g$ es necesario tener más fricción $b$ con el medio para la misma trayectoria $\mathbf{y}$.
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad/Figuras/Generales/Conjunta_gravedad.png} 
-    % \caption{}
-    % \label{Fig. }
+    \caption{Cadena obtenida por MCMC para la distribución posterior conjunta.}
+    \label{Fig. 3.2.2.03}
 \end{figure} 
+
+Nos es de interés las marginales de la distribución posterior. Dado que la simulación de la cadena es bidimensional, de (\ref{3.2.2.01}) tomamos $h_1(X_1,X_2) = 1_{\{X_1\}}$ y $h_2(X_1,X_2)= 1_{\{X_2\}}$, dicho de otra forma, simplemente tomamos el histograma sobre una componente de la cadena dada por MCMC. Podemos ver las estimaciones a las distribuciones marginales posteriores para los parámetros $g$ y $b$ en la Fig.
 
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad/Figuras/Generales/Post_theta1_gravedad.png} 
-    % \caption{}
-    % \label{Fig. }
+    \caption{Distribución posterior para el parámetros $g$.}
+    \label{Fig. 3.2.2.04}
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad/Figuras/Generales/Post_theta2_gravedad.png} 
-    % \caption{}
-    % \label{Fig. }
+    \caption{Distribución posterior para el parámetro $b$.}
+    \label{Fig. 3.2.2.05}
 \end{figure} 
 
+Finalmente, es de interés observar la distribución que puede generar las curvas predictivas. Es decir, de la cadena $X_t$ fruto de MCMC, tomamos submuestreos en intervalos $X_{[iN,(i+1)N]}$ para tomar estimaciones de $g$ y $b$ y así aplicar el forward map para cada estimación. En la Fig.
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad/Figuras/Generales/Predictiva_gravedad.png} 
-    % \caption{}
-    % \label{Fig. }
+    \caption{Distribución predictiva para el modelo gravitatorio con $\sigma$ conocido.}
+    \label{Fig. 3.2.2.06}
 \end{figure} 
 
 
-\textbf{sigma desconocido}
+Por otro lado, el análisis previo se dio con $\sigma$ conocido. Sin embargo, este supuesto es irreal. Pues a pesar que el supuesto de normalidad de los errores es plausible, no lo es considerar la desviación estándar como parámetro conocido. 
+
+El caso de $\mathbf{\sigma}$ \textbf{desconocido} se considera a dicho parámetro como uno más de la distribución posterior dada en 
+(\ref{3.2.1.06}). 
+
+En el estudio de la distribución posterior para este caso, análogo al estudio previo con $\sigma$ conocido, proponemos las siguiente distribuciones a priori para $g$ y $b$ mostradas en la Fig. \ref{Fig. 3.2.2.07}
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 15 cm]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png}     
-    % \caption{Distribuciones posterior para $\theta_1$ y $\theta_2$}
-    % \label{}
+    \caption{Distribuciones a priori para $\theta_1 = g$ y $\theta_2 = b$.}
+    \label{Fig. 3.2.2.07}
 \end{figure} 
+
+En la Fig. (\ref{Fig. 3.2.2.08}) tenemos una muestra del modelo gravitatorio. Así, con el algoritmo de MCMC Metropolis-Hastings, la trayectoria de la cadena para la distribución posterior conjunta es \ref{Fig. 3.2.2.09}
+
+
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png} 
-    % \caption{}
-    % \label{Fig. }
+    \caption{Muestra $\mathbf{y}$ del modelo gravitatorio.}
+    \label{Fig. 3.2.2.08}
 \end{figure} 
-
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png} 
-    % \caption{}
-    % \label{Fig. }
+    \caption{Cadena obtenida por MCMC para la distribución posterior conjunta.}
+    \label{Fig. 3.2.2.09}
 \end{figure} 
+
+
+
+
+
+
+
+
+\newpage
+
+
 
 
 \begin{figure}[H] 
@@ -477,15 +506,28 @@ Para el caso $\mathbf{\sigma}$ \textbf{conocido}, la distribución posterior (\r
 
 
 
-\subsection{Resultados}
+% \subsection{Resultados}
 
 \section{Inferencia con aproximación.}
 
-\subsection{Regla de interpolación(aproximación de forward map)}
-\subsection{Simulación MCMC}
-\subsection{Resultados}
+Se propone una nueva forma de hacer el análisis bayesiano para el problema inverso. Ya hemos visto que la metodología desarrollada que la distribución posterior depende del forward map, y por ello el algoritmo de Metropolis-Hastings requiere que a cada pasa en el espacio de estados $\Theta$ en la cadena $X_t$, se solucione la ecuación diferencial del modelo para los parámetros propuestos por MCMC. Sin embargo, tenemos cadenas de medio millon de pasos, lo que complica el análisis bayesiano. En esta ocasión discutiremos una manera más optima de hacer el estudio.
 
-\textbf{Gravitatorio sigma conocido}
+\subsection{Regla de interpolación(aproximación de forward map)}
+
+Consideremos un enmallado donde para cada $\theta_i$ se particione en intervalos discretos de $[a_i,b_i]$ en $m$ intervalos equidistantes para toda $i \in \{1,2,...,d\}.$ 
+
+\textcolor{blue}{explicar detalles partición}
+
+
+
+\subsection{Simulación MCMC}
+% \subsection{Resultados}
+\subsubsection{Forward aproximado para el modelo gravitatorio}
+
+% \textbf{Gravitatorio sigma conocido}
+En el análisis bayesiano sobre el modelo gravitatorio obtuvimos la distribución posterior con el forward map ordinario. En este estudio se proponen hacer el mismo análisis con mallas cada vez más finas. Luego graficamos cada posterior con el forward map aproximado para estudiar su convergencia.
+
+
 
 \begin{figure}[h]
     \centering
@@ -822,137 +864,137 @@ Las distribuciones posteriores marginales de $g$ se muestran en las figuras \ref
 % \label{fig:fig}
 % \end{figure}
 
-% 5 vecinos
-\begin{figure}[h]
-    \centering
-    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_g_1.png}
-    \label{fig:subfig1}}
-    \qquad
-    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_g_2.png}
-    \label{fig:subfig2}}\\
-    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_g_3.png}
-    \label{fig:subfig3}}
-    \qquad
-    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_g_4.png}
-    \label{fig:subfig4}}
-    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
-    \label{fig:g_01}
-\end{figure}
+% % 5 vecinos
+% \begin{figure}[h]
+%     \centering
+%     \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_g_1.png}
+%     \label{fig:subfig1}}
+%     \qquad
+%     \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_g_2.png}
+%     \label{fig:subfig2}}\\
+%     \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_g_3.png}
+%     \label{fig:subfig3}}
+%     \qquad
+%     \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_g_4.png}
+%     \label{fig:subfig4}}
+%     \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
+%     \label{fig:g_01}
+% \end{figure}
 
 
-% 8 vecinos
-\begin{figure}[h]
-    \centering
-    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_g_5.png}
-    \label{fig:subfig1}}
-    \qquad
-    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_g_6.png}
-    \label{fig:subfig2}}
-    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_g_7.png}
-    \label{fig:subfig3}}
-    \qquad
-    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_g_8.png}
-    \label{fig:subfig4}}
-    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 8 vecinos cercanos.}
-    \label{fig:g_02}
-\end{figure}
+% % 8 vecinos
+% \begin{figure}[h]
+%     \centering
+%     \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_g_5.png}
+%     \label{fig:subfig1}}
+%     \qquad
+%     \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_g_6.png}
+%     \label{fig:subfig2}}
+%     \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_g_7.png}
+%     \label{fig:subfig3}}
+%     \qquad
+%     \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_g_8.png}
+%     \label{fig:subfig4}}
+%     \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 8 vecinos cercanos.}
+%     \label{fig:g_02}
+% \end{figure}
 
 
-% 16 vecinos
-\begin{figure}[h]
-    \centering
-    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_g_9.png}
-    \label{fig:subfig1}}
-    \qquad
-    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_g_10.png}
-    \label{fig:subfig2}}
-    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_g_11.png}
-    \label{fig:subfig3}}
-    \qquad
-    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_g_12.png}
-    \label{fig:subfig4}}
-    \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 16 vecinos cercanos.}
-    \label{fig:g_03}
-\end{figure}
-
-
-
-Para el otro parámetro $b$ tenemos las siguientes posteriores
-
-% 5 vecinos
-\begin{figure}[h]
-    \centering
-    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_b_1.png}
-    \label{fig:subfig1}}
-    \qquad
-    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_b_2.png}
-    \label{fig:subfig2}}
-    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_b_3.png}
-    \label{fig:subfig3}}
-    \qquad
-    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_b_4.png}
-    \label{fig:subfig4}}
-    \caption{Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
-    \label{fig:g_04}
-\end{figure}
-
-
-% 8 vecinos
-\begin{figure}[h]
-    \centering
-    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_b_5.png}
-    \label{fig:subfig1}}
-    \qquad
-    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_b_6.png}
-    \label{fig:subfig2}}
-    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_b_7.png}
-    \label{fig:subfig3}}
-    \qquad
-    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_b_8.png}
-    \label{fig:subfig4}}
-    \caption{Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 8 vecinos cercanos.}
-    \label{fig:g_05}
-\end{figure}
+% % 16 vecinos
+% \begin{figure}[h]
+%     \centering
+%     \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_g_9.png}
+%     \label{fig:subfig1}}
+%     \qquad
+%     \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_g_10.png}
+%     \label{fig:subfig2}}
+%     \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_g_11.png}
+%     \label{fig:subfig3}}
+%     \qquad
+%     \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_g_12.png}
+%     \label{fig:subfig4}}
+%     \caption{Distribución posterior para $g$ con Forward ordinario y Forward aproximado con 16 vecinos cercanos.}
+%     \label{fig:g_03}
+% \end{figure}
 
 
 
-% 16 vecinos
-\begin{figure}[h]
-    \centering
-    \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_b_9.png}
-    \label{fig:subfig1}}
-    \qquad
-    \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_b_10.png}
-    \label{fig:subfig2}}
-    \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_b_11.png}
-    \label{fig:subfig3}}
-    \qquad
-    \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
-    \includegraphics[width=0.4\textwidth]{img/posterior_b_12.png}
-    \label{fig:subfig4}}
-    \caption{Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 16 vecinos cercanos.}
-    \label{fig:g_06}
-\end{figure}
+% Para el otro parámetro $b$ tenemos las siguientes posteriores
+
+% % 5 vecinos
+% \begin{figure}[h]
+%     \centering
+%     \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_b_1.png}
+%     \label{fig:subfig1}}
+%     \qquad
+%     \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_b_2.png}
+%     \label{fig:subfig2}}
+%     \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_b_3.png}
+%     \label{fig:subfig3}}
+%     \qquad
+%     \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_b_4.png}
+%     \label{fig:subfig4}}
+%     \caption{Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 5 vecinos cercanos.}
+%     \label{fig:g_04}
+% \end{figure}
+
+
+% % 8 vecinos
+% \begin{figure}[h]
+%     \centering
+%     \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_b_5.png}
+%     \label{fig:subfig1}}
+%     \qquad
+%     \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_b_6.png}
+%     \label{fig:subfig2}}
+%     \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_b_7.png}
+%     \label{fig:subfig3}}
+%     \qquad
+%     \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_b_8.png}
+%     \label{fig:subfig4}}
+%     \caption{Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 8 vecinos cercanos.}
+%     \label{fig:g_05}
+% \end{figure}
+
+
+
+% % 16 vecinos
+% \begin{figure}[h]
+%     \centering
+%     \subfloat[Subfigure 1 list of figures text][Posterior con Forward aproximado en malla de 10x10]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_b_9.png}
+%     \label{fig:subfig1}}
+%     \qquad
+%     \subfloat[Subfigure 2 list of figures text][Posterior con Forward aproximado en malla de 15x15]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_b_10.png}
+%     \label{fig:subfig2}}
+%     \subfloat[Subfigure 3 list of figures text][Posterior con Forward aproximado en malla de 30x30]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_b_11.png}
+%     \label{fig:subfig3}}
+%     \qquad
+%     \subfloat[Subfigure 4 list of figures text][Posterior con Forward aproximado en malla de 50x50]{
+%     \includegraphics[width=0.4\textwidth]{img/posterior_b_12.png}
+%     \label{fig:subfig4}}
+%     \caption{Distribución posterior para $b$ con Forward ordinario y Forward aproximado con 16 vecinos cercanos.}
+%     \label{fig:g_06}
+% \end{figure}

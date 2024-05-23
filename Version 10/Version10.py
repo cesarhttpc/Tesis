@@ -44,6 +44,13 @@ def logistico(P,t,theta_1,theta_2):
     dPdt = theta_1*P*(theta_2-P)
     return dPdt
 
+def SIR(y,t,beta,gamma):
+    I, S, R= y
+    dSdt = -beta*S*I
+    dIdt = beta*S*I - gamma*I
+    dRdt = gamma*I
+    return [dIdt, dSdt, dRdt]
+
 def resorte(y,t,k,b):
     x, v = y
     dxdt = v
@@ -218,6 +225,7 @@ def visualizacion(monte_carlo,t, burn_in):
     # Distribucion Predictiva
     plt.title('Distribución predictiva')
     space = 1000
+    t_plot = np.linspace(0,cota_tiempo,500)
     for i in range(0,size ,space):
 
         theta_1_burn = theta1_sample_plot[burn_in:]
@@ -228,13 +236,13 @@ def visualizacion(monte_carlo,t, burn_in):
         submuestreo_theta2 =  theta_2_burn[i-1: i]
         media_theta2 = np.mean(submuestreo_theta2)
 
-        solucion_estimada = odeint(dinamica, y0, t ,args=(media_theta1 ,media_theta2))
+        solucion_estimada = odeint(dinamica, y0, t_plot ,args=(media_theta1 ,media_theta2))
         x_estimado = solucion_estimada[:,0]
         
-        plt.plot(t, x_estimado, color = 'gray', alpha = 0.5)
-    solucion = odeint(dinamica, y0, t ,args=(theta_1,theta_2))
+        plt.plot(t_plot, x_estimado, color = 'gray', alpha = 0.5)
+    solucion = odeint(dinamica, y0, t_plot ,args=(theta_1,theta_2))
     x_exacto = solucion[:,0]
-    plt.plot(t,x_exacto,color = 'Blue')
+    plt.plot(t_plot,x_exacto,color = 'Blue')
     # plt.scatter(t,x_data, color = 'orange')
     plt.xlabel(r't')
     plt.ylabel(r'x(t)')
@@ -246,11 +254,13 @@ def visualizacion(monte_carlo,t, burn_in):
 #######################################
 ####### Inferencia ####################
 
-# modelo = ['gravedad', 'logistico', 'SIR', 'resorte']
-dinamica = gravedad
-modelo = 'gravedad'
+# modelo = ['gravedad', 'logistico', 'SIR']
+# dinamica = gravedad
+# modelo = 'gravedad'
 # dinamica = logistico
 # modelo = 'logistico'
+dinamica = SIR
+modelo = 'SIR'
 
 # Simular las observaciones
 n = 26      # Tamaño de muestra (n-1)
@@ -288,8 +298,23 @@ if modelo == 'logistico':
     theta2_cota_min = 980
     theta2_cota_max = 1060
 if modelo == 'SIR':
+    # Parametros principales (verdaderos)
+    par_names = ['beta','gamma']
+    theta_1 = 0.009 #0.00009
+    theta_2 = 0.5
 
-    y0 = [1.0, 0.0]
+    # Muestra
+    y0 = [50, 500, 5]
+    # y0 = [50, 50000, 5]
+    cota_tiempo = 10
+    sigma = 10
+    # sigma = 1000
+
+    # Aproximación (Enmallado)
+    theta1_cota_min = 0.001
+    theta1_cota_max = 0.0015
+    theta2_cota_min = 0.1
+    theta2_cota_max = 1.4
 
 t = np.linspace(0,cota_tiempo,num = n)
 
@@ -321,16 +346,23 @@ if modelo == 'logistico':
     size = 100000
     burn_in = 20000
 if modelo == 'SIR':
-    pass
+    theta1_priori = 0.009
+    alpha = 100
+    theta2_priori = 0.5
+    beta = 100
+    size = 100000
+    burn_in = 20000
+
 
 Estimar_sigma = True
-exper_aprox = True
+exper_aprox = False
 hacer_reporte = True
 
 if Estimar_sigma == True:
     path_sigma ='_sigma'
 else:
     path_sigma = ''
+    
 path = 'Exp_Central_'+ modelo + path_sigma +'/'  # Trayectoria relativa para archivar
 
 if hacer_reporte == True:
@@ -392,10 +424,8 @@ if hacer_reporte == True:
 theta1_sample = monte_carlo[:,0]
 theta2_sample = monte_carlo[:,1]
 
-
+## %%
 visualizacion(monte_carlo,t,burn_in = burn_in)
-
-# #%%
 
 if exper_aprox == True:
         
@@ -542,10 +572,3 @@ if exper_aprox == True:
         if hacer_reporte == True:
             plt.savefig(path + 'Figuras/Generales/Convergencia_theta2_%r_'%(k+1) + modelo + path_sigma + '.png')
         plt.show()
-
-
-
-
-
-
-

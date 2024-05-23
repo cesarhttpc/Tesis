@@ -123,21 +123,21 @@ directory = path
 os.makedirs(directory, mode=0o777, exist_ok= True)
 
 def SIR(y,t,beta,gamma):
-    S, I, R= y
+    I, S, R= y
     dSdt = -beta*S*I
     dIdt = beta*S*I - gamma*I
     dRdt = gamma*I
-    return [dSdt, dIdt, dRdt]
+    return [dIdt, dSdt, dRdt]
 
 plt.title('Trayectoria del modelo SIR')
-beta = 0.009
+beta = 0.00009
 gamma = 0.5
 t = np.linspace(0,10,500)
-y0 = [500,10,5]
+y0 = [50,50000,5]
 soluciones = odeint(SIR,y0,t,args=(beta,gamma))
 
-S = soluciones[:,0]
-I = soluciones[:,1]
+I = soluciones[:,0]
+S = soluciones[:,1]
 R = soluciones[:,2]
 
 plt.plot(t,S, label = 'S')
@@ -148,3 +148,12 @@ plt.xlabel(r'$t$')
 plt.legend()
 
 # plt.savefig(path + 'Trayectorias_SIR.png')
+
+# %%
+
+
+from scipy.stats import gamma
+t = np.linspace(0,10,500)
+alpha  = 2
+centro = 5
+plt.plot(t,gamma.pdf(t, a = alpha, scale = centro/alpha))

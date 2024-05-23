@@ -22,12 +22,11 @@
 \contentsline {subsection}{\numberline {3.2.1}Distribución posterior}{13}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Simulación con MCMC}{16}{subsection.3.2.2}%
 \contentsline {subsubsection}{Simulación del modelo gravitatorio}{17}{section*.13}%
-\contentsline {subsection}{\numberline {3.2.3}Resultados}{29}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Inferencia con aproximación.}{29}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Regla de interpolación(aproximación de forward map)}{29}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Simulación MCMC}{29}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Resultados}{29}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Experimentación con la convergencia.}{30}{subsection.3.3.4}%
-\contentsline {chapter}{\numberline {4}Conclusiones y trabajo futuro}{49}{chapter.4}%
-\contentsline {chapter}{Referencias}{51}{chapter*.56}%
-\contentsline {chapter}{\numberline {A}Anexo}{53}{appendix.Alph1}%
+\contentsline {section}{\numberline {3.3}Inferencia con aproximación.}{30}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Regla de interpolación(aproximación de forward map)}{30}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Simulación MCMC}{31}{subsection.3.3.2}%
+\contentsline {subsubsection}{Forward aproximado para el modelo gravitatorio}{31}{section*.38}%
+\contentsline {subsection}{\numberline {3.3.3}Experimentación con la convergencia.}{32}{subsection.3.3.3}%
+\contentsline {chapter}{\numberline {4}Conclusiones y trabajo futuro}{43}{chapter.4}%
+\contentsline {chapter}{Referencias}{45}{chapter*.51}%
+\contentsline {chapter}{\numberline {A}Anexo}{47}{appendix.Alph1}%
