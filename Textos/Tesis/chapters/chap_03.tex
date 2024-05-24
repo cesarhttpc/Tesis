@@ -107,7 +107,7 @@ La solución explicita al modelo en (\ref{3.1.20}) es
 \end{align}
 que es una función creciente en el tiempo. Sin embargo, este modelo solo es valioso para pequeños intervalos de tiempo, ya que el crecimiento en una la tasa de cambio de la población tiende a decaer a medida que se consumen los recursos. 
 
-Para saldar con la dificultad planteada, podemos modelar la tasa de crecimiento de una población considerando tanto al tamaño de la población como a los recursos aún presentes. Consideremos a $K$ como la capacidad de sustento, que se puede interpretar como la cantidad máxima de población que los actuales recursos permiten mantener, entonces esperamos que a medida que crece la población, la tasa de crecimiento de la misma decresca.
+Para saldar con la dificultad planteada, podemos modelar la tasa de crecimiento de una población considerando tanto al tamaño de la población como a los recursos aún presentes. Consideremos a $K$ como la capacidad de sustento, que se puede interpretar como la cantidad máxima de población que los actuales recursos permiten mantener, entonces esperamos que a medida que crece la población, la tasa de crecimiento de la misma decrezca.
 
 El modelo que se propone es conocido como el modelo de crecimiento logístico. Este nos dice que el cambio de la población es proporcional al tamaño de la población misma así como a la proporción de recursos disponibles. Dicho modelo se puede escribir con la ecuación de Verhulst 
 \begin{align}
@@ -127,7 +127,7 @@ Por tanto, del cambio $u(t) = P^{-1}$ obtenemos la solución explicita a (\ref{3
 \end{align}
 donde verificamos que $\lim_{t \rightarrow \infty} = K $. 
 
-Podemos ver en la Fig \ref{fig:trayectoria_logistico} que sus trayectorias son no decrecientes y tiene asíntoticamente al parámetro $K$.
+Podemos ver en la Fig \ref{fig:trayectoria_logistico} que sus trayectorias son no decrecientes y tiene asintóticamente al parámetro $K$.
 
 
 \begin{figure}
@@ -141,7 +141,7 @@ Podemos ver en la Fig \ref{fig:trayectoria_logistico} que sus trayectorias son n
 
 \subsection{Modelo SIR}
 
-Los modelos epidemiológicos clasifican a la población en clases que distinguen si han tenido o no cierta enfermedad. Un modelo que captura con buena aproximación a varias enfermedades se es el modelo SIR. Este propone dividir a las $N$ personas de una población en tres grupos:
+Los modelos epidemiólogos clasifican a la población en clases que distinguen si han tenido o no cierta enfermedad. Un modelo que captura con buena aproximación a varias enfermedades se es el modelo SIR. Este propone dividir a las $N$ personas de una población en tres grupos:
 \begin{enumerate}
     \item Susceptible ($S$): Todas las personas que no han tenido la enfermedad ni están enfermas del brote de interés.
     \item Infectado ($I$): Son las personas que actualmente portan el patógeno y son además un vector de transmisión.
@@ -510,7 +510,7 @@ En la Fig. (\ref{Fig. 3.2.2.08}) tenemos una muestra del modelo gravitatorio. As
 
 \section{Inferencia con aproximación.}
 
-Se propone una nueva forma de hacer el análisis bayesiano para el problema inverso. Ya hemos visto que la metodología desarrollada que la distribución posterior depende del forward map, y por ello el algoritmo de Metropolis-Hastings requiere que a cada pasa en el espacio de estados $\Theta$ en la cadena $X_t$, se solucione la ecuación diferencial del modelo para los parámetros propuestos por MCMC. Sin embargo, tenemos cadenas de medio millon de pasos, lo que complica el análisis bayesiano. En esta ocasión discutiremos una manera más optima de hacer el estudio.
+Se propone una nueva forma de hacer el análisis bayesiano para el problema inverso. Ya hemos visto que la metodología desarrollada que la distribución posterior depende del forward map, y por ello el algoritmo de Metropolis-Hastings requiere que a cada pasa en el espacio de estados $\Theta$ en la cadena $X_t$, se solucione la ecuación diferencial del modelo para los parámetros propuestos por MCMC. Sin embargo, tenemos cadenas de medio millón de pasos, lo que complica el análisis bayesiano. En esta ocasión discutiremos una manera más optima de hacer el estudio.
 
 \subsection{Regla de interpolación(aproximación de forward map)}
 
