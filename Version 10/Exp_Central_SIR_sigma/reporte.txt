@@ -4,7 +4,8 @@ Enfoque bayesiano al problema inverso
 
 MODELO: SIR 
 
-Estima sigma: TrueObservaciones (muestra): 
+Estima sigma: True
+Observaciones (muestra): 
 beta = 0.009 
 gamma = 0.5 
 n = 26 
@@ -17,12 +18,48 @@ $theta_2 $= 0.5
 beta = 100 
 
 Parametros de MCMC: 
-T = 100000 
+T = 500000 
 burn in = 20000 
 
 Para los vecinos array([ 5,  8, 16]) 
 Con las mallas cuadradas array([10, 15, 30, 50]) 
 
 Forward Ordinario 
-  Tiempo 143.28 
+  Tiempo 1104.53 
 
+Experimento 1 
+  Forward Aproximado (5 vecinos, 10 malla) 
+  Tiempo: 751.97 
+Experimento 2 
+  Forward Aproximado (5 vecinos, 15 malla) 
+  Tiempo: 781.44 
+Experimento 3 
+  Forward Aproximado (5 vecinos, 30 malla) 
+  Tiempo: 771.88 
+Experimento 4 
+  Forward Aproximado (5 vecinos, 50 malla) 
+  Tiempo: 505.73 
+Experimento 5 
+  Forward Aproximado (8 vecinos, 10 malla) 
+  Tiempo: 688.79 
+Experimento 6 
+  Forward Aproximado (8 vecinos, 15 malla) 
+  Tiempo: 805.44 
+Experimento 7 
+  Forward Aproximado (8 vecinos, 30 malla) 
+  Tiempo: 819.62 
+Experimento 8 
+  Forward Aproximado (8 vecinos, 50 malla) 
+  Tiempo: 644.28 
+Experimento 9 
+  Forward Aproximado (16 vecinos, 10 malla) 
+  Tiempo: 526.41 
+Experimento 10 
+  Forward Aproximado (16 vecinos, 15 malla) 
+  Tiempo: 540.70 
+Experimento 11 
+  Forward Aproximado (16 vecinos, 30 malla) 
+  Tiempo: 784.23 
+Experimento 12 
+  Forward Aproximado (16 vecinos, 50 malla) 
+  Tiempo: 766.33 

@@ -1,0 +1,25 @@
+REPORTE DE PROCEDIMIENTO 
+
+Enfoque bayesiano al problema inverso 
+
+MODELO: logistico 
+
+Estima sigma: True
+Observaciones (muestra): 
+k = 0.04 
+L_inf = 923 
+Forward Ordinario 
+  Tiempo 115.24 
+
+Forward Ordinario 
+  Tiempo 105.68 
+
+Forward Ordinario 
+  Tiempo 110.23 
+
+Forward Ordinario 
+  Tiempo 93.59 
+
+Forward Ordinario 
+  Tiempo 92.76 
+

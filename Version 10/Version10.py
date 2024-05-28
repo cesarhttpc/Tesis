@@ -255,12 +255,12 @@ def visualizacion(monte_carlo,t, burn_in):
 ####### Inferencia ####################
 
 # modelo = ['gravedad', 'logistico', 'SIR']
-# dinamica = gravedad
-# modelo = 'gravedad'
+dinamica = gravedad
+modelo = 'gravedad'
 # dinamica = logistico
 # modelo = 'logistico'
-dinamica = SIR
-modelo = 'SIR'
+# dinamica = SIR
+# modelo = 'SIR'
 
 # Simular las observaciones
 n = 26      # Tamaño de muestra (n-1)
@@ -335,7 +335,7 @@ if modelo == 'gravedad':
     alpha = 10
     theta2_priori = 2
     beta = 1.1
-    size = 100000
+    size = 500000
     burn_in = 20000
 if modelo == 'logistico':
 
@@ -343,19 +343,19 @@ if modelo == 'logistico':
     alpha = 1000
     theta2_priori = 1000
     beta = 1000
-    size = 100000
+    size = 500000
     burn_in = 20000
 if modelo == 'SIR':
     theta1_priori = 0.009
     alpha = 100
     theta2_priori = 0.5
     beta = 100
-    size = 100000
+    size = 500000
     burn_in = 20000
 
 
 Estimar_sigma = True
-exper_aprox = False
+exper_aprox = True
 hacer_reporte = True
 
 if Estimar_sigma == True:
@@ -385,7 +385,7 @@ if hacer_reporte == True:
     reporte.write('REPORTE DE PROCEDIMIENTO \n\n')
     reporte.write('Enfoque bayesiano al problema inverso \n\n')
     reporte.write('MODELO: %s \n\n' %modelo)
-    reporte.write('Estima sigma: %r' %Estimar_sigma)
+    reporte.write('Estima sigma: %r\n' %Estimar_sigma)
     reporte.write('Observaciones (muestra): \n')
     reporte.write('%s = %r \n' %(par_names[0],theta_1))
     reporte.write('%s = %r \n' %(par_names[1],theta_2))

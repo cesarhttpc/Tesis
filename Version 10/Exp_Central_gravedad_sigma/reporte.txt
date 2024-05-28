@@ -4,6 +4,7 @@ Enfoque bayesiano al problema inverso
 
 MODELO: gravedad 
 
+Estima sigma: True
 Observaciones (muestra): 
 g = 9.81 
 b = 1.15 
@@ -17,48 +18,42 @@ $theta_2 $= 2
 beta = 1.1 
 
 Parametros de MCMC: 
-T = 100000 
+T = 500000 
 burn in = 20000 
 
 Para los vecinos array([ 5,  8, 16]) 
 Con las mallas cuadradas array([10, 15, 30, 50]) 
 
 Forward Ordinario 
-  Tiempo 66.09 
+  Tiempo 347.74 
 
 Experimento 1 
   Forward Aproximado (5 vecinos, 10 malla) 
-  Tiempo: 61.25 
+  Tiempo: 276.44 
 Experimento 2 
   Forward Aproximado (5 vecinos, 15 malla) 
-  Tiempo: 55.08 
+  Tiempo: 303.42 
 Experimento 3 
   Forward Aproximado (5 vecinos, 30 malla) 
-  Tiempo: 55.00 
+  Tiempo: 395.05 
 Experimento 4 
   Forward Aproximado (5 vecinos, 50 malla) 
-  Tiempo: 69.54 
+  Tiempo: 728.76 
 Experimento 5 
   Forward Aproximado (8 vecinos, 10 malla) 
-  Tiempo: 94.42 
+  Tiempo: 425.26 
 Experimento 6 
   Forward Aproximado (8 vecinos, 15 malla) 
-  Tiempo: 74.56 
+  Tiempo: 294.01 
 Experimento 7 
   Forward Aproximado (8 vecinos, 30 malla) 
-  Tiempo: 65.73 
+  Tiempo: 283.58 
 Experimento 8 
   Forward Aproximado (8 vecinos, 50 malla) 
-  Tiempo: 60.07 
+  Tiempo: 559.84 
 Experimento 9 
   Forward Aproximado (16 vecinos, 10 malla) 
-  Tiempo: 62.66 
+  Tiempo: 623.35 
 Experimento 10 
   Forward Aproximado (16 vecinos, 15 malla) 
-  Tiempo: 62.47 
-Experimento 11 
-  Forward Aproximado (16 vecinos, 30 malla) 
-  Tiempo: 63.25 
-Experimento 12 
-  Forward Aproximado (16 vecinos, 50 malla) 
-  Tiempo: 74.48 
+  Tiempo: 586.02 

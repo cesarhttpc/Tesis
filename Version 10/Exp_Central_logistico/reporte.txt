@@ -4,6 +4,7 @@ Enfoque bayesiano al problema inverso
 
 MODELO: logistico 
 
+Estima sigma: False
 Observaciones (muestra): 
 theta_1 = 0.001 
 theta_2 = 1000 
@@ -24,41 +25,41 @@ Para los vecinos array([ 5,  8, 16])
 Con las mallas cuadradas array([10, 15, 30, 50]) 
 
 Forward Ordinario 
-  Tiempo 638.56 
+  Tiempo 345.21 
 
 Experimento 1 
   Forward Aproximado (5 vecinos, 10 malla) 
-  Tiempo: 410.11 
+  Tiempo: 343.74 
 Experimento 2 
   Forward Aproximado (5 vecinos, 15 malla) 
-  Tiempo: 472.82 
+  Tiempo: 348.37 
 Experimento 3 
   Forward Aproximado (5 vecinos, 30 malla) 
-  Tiempo: 476.40 
+  Tiempo: 343.39 
 Experimento 4 
   Forward Aproximado (5 vecinos, 50 malla) 
-  Tiempo: 476.00 
+  Tiempo: 345.88 
 Experimento 5 
   Forward Aproximado (8 vecinos, 10 malla) 
-  Tiempo: 488.94 
+  Tiempo: 342.77 
 Experimento 6 
   Forward Aproximado (8 vecinos, 15 malla) 
-  Tiempo: 492.39 
+  Tiempo: 343.84 
 Experimento 7 
   Forward Aproximado (8 vecinos, 30 malla) 
-  Tiempo: 494.33 
+  Tiempo: 347.62 
 Experimento 8 
   Forward Aproximado (8 vecinos, 50 malla) 
-  Tiempo: 499.03 
+  Tiempo: 348.22 
 Experimento 9 
   Forward Aproximado (16 vecinos, 10 malla) 
-  Tiempo: 506.02 
+  Tiempo: 344.63 
 Experimento 10 
   Forward Aproximado (16 vecinos, 15 malla) 
-  Tiempo: 501.15 
+  Tiempo: 344.97 
 Experimento 11 
   Forward Aproximado (16 vecinos, 30 malla) 
-  Tiempo: 507.75 
+  Tiempo: 344.44 
 Experimento 12 
   Forward Aproximado (16 vecinos, 50 malla) 
-  Tiempo: 513.48 
+  Tiempo: 344.14 
