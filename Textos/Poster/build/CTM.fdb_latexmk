@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/CTM"] 1716970129 "build/CTM.bcf" "build/CTM.bbl" "build/CTM" 1716971380 0
+["biber build/CTM"] 1716970129 "build/CTM.bcf" "build/CTM.bbl" "build/CTM" 1716971571 0
   "./ref.bib" 1716933639 451 75b2e9625858d0a74e7fb8ac81602c58 ""
-  "build/CTM.bcf" 1716971380 107694 dbde7571217d22797bd84e95a6105cc0 "pdflatex"
+  "build/CTM.bcf" 1716971570 107694 dbde7571217d22797bd84e95a6105cc0 "pdflatex"
   (generated)
   "build/CTM.bbl"
   "build/CTM.blg"
   (rewritten before read)
-["pdflatex"] 1716971377 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Poster/CTM.tex" "build/CTM.pdf" "CTM" 1716971380 0
+["pdflatex"] 1716971567 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Poster/CTM.tex" "build/CTM.pdf" "CTM" 1716971571 0
   "C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1716933959 156971 6ebb55617c569712b0127c4e548473b3 ""
   "C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1716933961 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/ce_ra/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1693352273 24120579 85898b25958cf632ec7946174c56943b ""
@@ -221,11 +221,11 @@
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
   "CIMAT.sty" 1716933639 4035 a3bfc6e571e3532c5a0b6d361cb1bea8 ""
-  "CTM.tex" 1716971376 7692 65ca933a30d6f967ca71cb220420b5bc ""
-  "build/CTM.aux" 1716971379 270 91604846ca9cf645add1904336f652c1 "pdflatex"
+  "CTM.tex" 1716971567 7692 ff47ec27e33021229cdb8f7814b53ac9 ""
+  "build/CTM.aux" 1716971570 270 91604846ca9cf645add1904336f652c1 "pdflatex"
   "build/CTM.bbl" 1716970131 486 ee04f40f768daeed26442158e95aba61 "biber build/CTM"
-  "build/CTM.run.xml" 1716971380 2291 796bee3406af63caa9172b6e1b0e7273 "pdflatex"
-  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Poster/CTM.tex" 1716971376 7692 65ca933a30d6f967ca71cb220420b5bc ""
+  "build/CTM.run.xml" 1716971570 2291 796bee3406af63caa9172b6e1b0e7273 "pdflatex"
+  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Poster/CTM.tex" 1716971567 7692 ff47ec27e33021229cdb8f7814b53ac9 ""
   "figuras/5.png" 1708467598 13562 4e43396d5bffde1de183d6ef47238955 ""
   "figuras/Convergencia_theta1_1_gravedad_sigma.png" 1716256165 35163 d58ad83a6a15399639a2e7c2baba8f7f ""
   "figuras/Convergencia_theta1_2_logistico_sigma.png" 1716540886 52007 fa7603df90254be23270499b33cf2f03 ""
