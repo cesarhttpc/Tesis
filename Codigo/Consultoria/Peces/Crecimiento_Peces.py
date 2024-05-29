@@ -237,15 +237,16 @@ def visualizacion(monte_carlo,t, burn_in):
         plt.savefig(path + 'Figuras/Generales/Predictiva_'+ modelo + path_sigma + '.png')
     plt.show()
 
+
+#%%
+
 ################# Datos Dados ###################
-
-
 import pandas as pd
 
 # path_1 = "/EdadLong_1.csv"
-path_1 = 'C:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Codigo/Consultoria/EdadLong_1.csv'
+path_1 = 'C:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Codigo/Consultoria/Peces/EdadLong_01.csv'
 # path_2 = "/EdadLong_2.csv"
-path_2 = 'C:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Codigo/Consultoria/EdadLong_2.csv'
+path_2 = 'C:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Codigo/Consultoria/Peces/EdadLong_2.csv'
 
 EdadLong1 = pd.read_csv(path_1)
 EdadLong2 = pd.read_csv(path_2)
@@ -261,15 +262,19 @@ y_data = longitud
 t = edad
 
 
+#Graficas de datos
+plt.scatter(t,y_data,color='orange')
+plt.xlabel('Meses')
+plt.ylabel('Longitud')
+
+#%%
+####### MCMC ######
 # Modelo
 dinamica = logistico
 modelo = 'logistico'
 
 # L_inf = 923
 # L_inf = 888
-
-#Graficas de datos
-plt.scatter(t,y_data,color='orange')
 
 y0 = [1.0]
 theta_1 = 0.04
