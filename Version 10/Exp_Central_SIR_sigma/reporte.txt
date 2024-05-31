@@ -8,14 +8,14 @@ Estima sigma: True
 Observaciones (muestra): 
 beta = 0.009 
 gamma = 0.5 
-n = 26 
+n = 10 
 tiempo [0,10] 
 
 Parametros de a priori: 
-$theta_1 $= 0.009 
-alpha = 100 
+$theta_1 $= 0.01 
+alpha = 1 
 $theta_2 $= 0.5 
-beta = 100 
+beta = 1 
 
 Parametros de MCMC: 
 T = 500000 
@@ -25,41 +25,41 @@ Para los vecinos array([ 5,  8, 16])
 Con las mallas cuadradas array([10, 15, 30, 50]) 
 
 Forward Ordinario 
-  Tiempo 1104.53 
+  Tiempo 1632.96 
 
 Experimento 1 
   Forward Aproximado (5 vecinos, 10 malla) 
-  Tiempo: 751.97 
+  Tiempo: 480.50 
 Experimento 2 
   Forward Aproximado (5 vecinos, 15 malla) 
-  Tiempo: 781.44 
+  Tiempo: 379.91 
 Experimento 3 
   Forward Aproximado (5 vecinos, 30 malla) 
-  Tiempo: 771.88 
+  Tiempo: 375.13 
 Experimento 4 
   Forward Aproximado (5 vecinos, 50 malla) 
-  Tiempo: 505.73 
+  Tiempo: 308.28 
 Experimento 5 
   Forward Aproximado (8 vecinos, 10 malla) 
-  Tiempo: 688.79 
+  Tiempo: 424.61 
 Experimento 6 
   Forward Aproximado (8 vecinos, 15 malla) 
-  Tiempo: 805.44 
+  Tiempo: 507.65 
 Experimento 7 
   Forward Aproximado (8 vecinos, 30 malla) 
-  Tiempo: 819.62 
+  Tiempo: 443.84 
 Experimento 8 
   Forward Aproximado (8 vecinos, 50 malla) 
-  Tiempo: 644.28 
+  Tiempo: 455.21 
 Experimento 9 
   Forward Aproximado (16 vecinos, 10 malla) 
-  Tiempo: 526.41 
+  Tiempo: 392.67 
 Experimento 10 
   Forward Aproximado (16 vecinos, 15 malla) 
-  Tiempo: 540.70 
+  Tiempo: 406.15 
 Experimento 11 
   Forward Aproximado (16 vecinos, 30 malla) 
-  Tiempo: 784.23 
+  Tiempo: 359.56 
 Experimento 12 
   Forward Aproximado (16 vecinos, 50 malla) 
-  Tiempo: 766.33 
+  Tiempo: 366.12 

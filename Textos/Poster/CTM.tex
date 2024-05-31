@@ -112,6 +112,7 @@
         }	
         
         \column{0.32}
+
         
     \block{Forward Map Aproximado}{
             
@@ -127,11 +128,21 @@
 
         Además, es claro que para un vecino cercano $F^{*}_{\theta}\rightarrow F_{\theta}$ a medida que la malla se hace más fina.
 
-    
+        \vspace*{1cm}
     }
-
+    
+    
     
     \block{Experimentación}{
+
+        \vspace{-0.8cm}
+        \begin{center}
+            \Large{\textbf{Modelo gravitatorio}}
+        \end{center}
+        \vspace{0.5ex}\hrule 
+
+        \vspace*{1ex}
+
         Para el modelo de \textbf{caída gravitatoria sujeto a fricción}, la trayectoria es la distancia recorrida $x(t)$ dado por
         \begin{align*}
             m \ddot{x} = mg - b\dot{x}
@@ -147,9 +158,18 @@
     }
 
 
+    
     \column{0.32}
-    \block{Experimentación}{
+    \block{}{
         
+        \vspace{-0.8cm}
+        \begin{center}
+            \Large{\textbf{Modelo logístico}}
+        \end{center}
+        \vspace{0.5ex}\hrule 
+
+        \vspace*{1ex}
+
         El modelo \textbf{logístico} describe el crecimiento poblacional a lo largo del tiempo
         \begin{align*}
             \frac{X(t)}{dt} = \theta_1 X\left(\theta_2 - X\right) 
@@ -164,6 +184,13 @@
 
 
 
+        \vspace{-0.8cm}
+        \begin{center}
+            \Large{\textbf{Modelo epidemiológico}}
+        \end{center}
+        \vspace{0.5ex}\hrule 
+
+        \vspace*{1ex}
 
 
 
@@ -179,7 +206,10 @@
             \frac{dR}{dt} &= \gamma I \nonumber
         \end{align}
 
-
+        \begin{center}
+            \includegraphics[width = 30 cm]{figuras/Convergencia_theta1_1_SIR_sigma.png} 
+            \includegraphics[width = 30 cm]{figuras/Convergencia_theta2_1_SIR_sigma.png}
+        \end{center}
 
 
 
@@ -192,13 +222,13 @@
 
     }
     
-    \vspace{-0.1cm}
-    \block{References}{
-        \vspace{-1em}
-        \begin{footnotesize}
-        \printbibliography[heading=none]
-        \end{footnotesize}
-    }
+    % \vspace{-0.1cm}
+    % \block{References}{
+    %     \vspace{-1em}
+    %     \begin{footnotesize}
+    %     \printbibliography[heading=none]
+    %     \end{footnotesize}
+    % }
     
 \end{columns}
 \end{document}

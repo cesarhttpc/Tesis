@@ -255,15 +255,15 @@ def visualizacion(monte_carlo,t, burn_in):
 ####### Inferencia ####################
 
 # modelo = ['gravedad', 'logistico', 'SIR']
-dinamica = gravedad
-modelo = 'gravedad'
+# dinamica = gravedad
+# modelo = 'gravedad'
 # dinamica = logistico
 # modelo = 'logistico'
-# dinamica = SIR
-# modelo = 'SIR'
+dinamica = SIR
+modelo = 'SIR'
 
 # Simular las observaciones
-n = 26      # Tamaño de muestra (n-1)
+n = 10      # Tamaño de muestra (n-1)
 
 if modelo == 'gravedad':
     # Parametros principales (verdaderos)
@@ -311,10 +311,10 @@ if modelo == 'SIR':
     # sigma = 1000
 
     # Aproximación (Enmallado)
-    theta1_cota_min = 0.001
-    theta1_cota_max = 0.0015
+    theta1_cota_min = 0.0
+    theta1_cota_max = 0.08
     theta2_cota_min = 0.1
-    theta2_cota_max = 1.4
+    theta2_cota_max = 1.5
 
 t = np.linspace(0,cota_tiempo,num = n)
 
@@ -346,10 +346,10 @@ if modelo == 'logistico':
     size = 500000
     burn_in = 20000
 if modelo == 'SIR':
-    theta1_priori = 0.009
-    alpha = 100
+    theta1_priori = 0.01
+    alpha = 1
     theta2_priori = 0.5
-    beta = 100
+    beta = 1
     size = 500000
     burn_in = 20000
 

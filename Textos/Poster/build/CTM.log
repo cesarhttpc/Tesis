@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.29)  29 MAY 2024 02:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.29)  30 MAY 2024 03:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1060,56 +1060,75 @@ Package pdftex.def Info: figuras/bayes1.png  used on input line 112.
 <figuras/5.png, id=32, 401.0985pt x 312.9291pt>
 File: figuras/5.png Graphic file (type png)
 <use figuras/5.png>
-Package pdftex.def Info: figuras/5.png  used on input line 131.
+Package pdftex.def Info: figuras/5.png  used on input line 132.
 (pdftex.def)             Requested size: 426.79134pt x 332.97337pt.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 28.3669pt on input line 158.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 28.3669pt on input line 158.
 <figuras/Convergencia_theta1_1_gravedad_sigma.png, id=33, 867.24pt x 289.08pt>
 File: figuras/Convergencia_theta1_1_gravedad_sigma.png Graphic file (type png)
 <use figuras/Convergencia_theta1_1_gravedad_sigma.png>
-Package pdftex.def Info: figuras/Convergencia_theta1_1_gravedad_sigma.png  used on input line 147.
+Package pdftex.def Info: figuras/Convergencia_theta1_1_gravedad_sigma.png  used on input line 158.
 (pdftex.def)             Requested size: 853.58267pt x 284.54036pt.
 <figuras/Convergencia_theta2_1_gravedad_sigma.png, id=34, 867.24pt x 289.08pt>
 File: figuras/Convergencia_theta2_1_gravedad_sigma.png Graphic file (type png)
 <use figuras/Convergencia_theta2_1_gravedad_sigma.png>
-Package pdftex.def Info: figuras/Convergencia_theta2_1_gravedad_sigma.png  used on input line 147.
+Package pdftex.def Info: figuras/Convergencia_theta2_1_gravedad_sigma.png  used on input line 158.
 (pdftex.def)             Requested size: 853.58267pt x 284.54036pt.
 
-Overfull \hbox (23.26398pt too wide) in paragraph at lines 147--147
+Overfull \hbox (23.26398pt too wide) in paragraph at lines 158--158
  [] 
  []
 
 
-Overfull \hbox (23.26398pt too wide) in paragraph at lines 147--147
+Overfull \hbox (23.26398pt too wide) in paragraph at lines 158--158
  [] 
  []
 
 <figuras/Convergencia_theta1_2_logistico_sigma.png, id=35, 867.24pt x 289.08pt>
 File: figuras/Convergencia_theta1_2_logistico_sigma.png Graphic file (type png)
 <use figuras/Convergencia_theta1_2_logistico_sigma.png>
-Package pdftex.def Info: figuras/Convergencia_theta1_2_logistico_sigma.png  used on input line 193.
+Package pdftex.def Info: figuras/Convergencia_theta1_2_logistico_sigma.png  used on input line 223.
 (pdftex.def)             Requested size: 853.58267pt x 284.54036pt.
 <figuras/Convergencia_theta2_2_logistico_sigma.png, id=36, 867.24pt x 289.08pt>
 File: figuras/Convergencia_theta2_2_logistico_sigma.png Graphic file (type png)
 <use figuras/Convergencia_theta2_2_logistico_sigma.png>
-Package pdftex.def Info: figuras/Convergencia_theta2_2_logistico_sigma.png  used on input line 193.
+Package pdftex.def Info: figuras/Convergencia_theta2_2_logistico_sigma.png  used on input line 223.
 (pdftex.def)             Requested size: 853.58267pt x 284.54036pt.
 
-Overfull \hbox (23.26398pt too wide) in paragraph at lines 193--193
+Overfull \hbox (23.26398pt too wide) in paragraph at lines 223--223
  [] 
  []
 
 
-Overfull \hbox (23.26398pt too wide) in paragraph at lines 193--193
+Overfull \hbox (23.26398pt too wide) in paragraph at lines 223--223
  [] 
  []
 
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 201.
+<figuras/Convergencia_theta1_1_SIR_sigma.png, id=37, 867.24pt x 289.08pt>
+File: figuras/Convergencia_theta1_1_SIR_sigma.png Graphic file (type png)
+<use figuras/Convergencia_theta1_1_SIR_sigma.png>
+Package pdftex.def Info: figuras/Convergencia_theta1_1_SIR_sigma.png  used on input line 223.
+(pdftex.def)             Requested size: 853.58267pt x 284.54036pt.
+<figuras/Convergencia_theta2_1_SIR_sigma.png, id=38, 867.24pt x 289.08pt>
+File: figuras/Convergencia_theta2_1_SIR_sigma.png Graphic file (type png)
+<use figuras/Convergencia_theta2_1_SIR_sigma.png>
+Package pdftex.def Info: figuras/Convergencia_theta2_1_SIR_sigma.png  used on input line 223.
+(pdftex.def)             Requested size: 853.58267pt x 284.54036pt.
 
-LaTeX Warning: Empty bibliography on input line 201.
+Overfull \hbox (23.26398pt too wide) in paragraph at lines 223--223
+ [] 
+ []
+
+
+Overfull \hbox (23.26398pt too wide) in paragraph at lines 223--223
+ [] 
+ []
 
 [1
 
-{C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./logoCIMAT.jpg> <./figuras/Modelos.png> <./figuras/bayes1.png> <./figuras/5.png> <./figuras/Convergencia_theta1_1_gravedad_sigma.png> <./figuras/Convergencia_theta2_1_gravedad_sigma.png> <./figuras/Convergencia_theta1_2_logistico_sigma.png> <./figuras/Convergencia_theta2_2_logistico_sigma.png>] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Poster\build\CTM.aux)
+{C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./logoCIMAT.jpg> <./figuras/Modelos.png> <./figuras/bayes1.png> <./figuras/5.png> <./figuras/Convergencia_theta1_1_gravedad_sigma.png> <./figuras/Convergencia_theta2_1_gravedad_sigma.png> <./figuras/Convergencia_theta1_2_logistico_sigma.png> <./figuras/Convergencia_theta2_2_logistico_sigma.png> <./figuras/Convergencia_theta1_1_SIR_sigma.png> <./figuras/Convergencia_theta2_1_SIR_sigma.png>] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Poster\build\CTM.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
@@ -1119,17 +1138,17 @@ Package logreq Info: Writing requests to 'CTM.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28893 strings out of 475503
- 610190 string characters out of 5761834
- 1954248 words of memory out of 5000000
- 49622 multiletter control sequences out of 15000+600000
- 604364 words of font info for 100 fonts, out of 8000000 for 9000
+ 28904 strings out of 475503
+ 610776 string characters out of 5761834
+ 1953248 words of memory out of 5000000
+ 49632 multiletter control sequences out of 15000+600000
+ 607094 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,14n,121p,973b,2244s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Poster\build\CTM.pdf (1 page, 574071 bytes).
+Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Poster\build\CTM.pdf (1 page, 629099 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 149 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 159 words of extra memory for PDF output out of 10000 (max. 10000000)
 
