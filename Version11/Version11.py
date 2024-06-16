@@ -145,15 +145,15 @@ GuardarCadena = True
 ####### Inferencia ####################
 
 # modelo = ['gravedad', 'logistico', 'SIR']
-dinamica = gravedad
-modelo = 'gravedad'
-# dinamica = logistico
-# modelo = 'logistico'
+# dinamica = gravedad
+# modelo = 'gravedad'
+dinamica = logistico
+modelo = 'logistico'
 # dinamica = SIR
 # modelo = 'SIR'
 
 # Simular las observaciones
-n = 10      # Tamaño de muestra (n-1)
+n = 20      # Tamaño de muestra (n-1)
 
 if modelo == 'gravedad':
     # Parametros principales (verdaderos)

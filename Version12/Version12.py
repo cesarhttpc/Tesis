@@ -8,9 +8,9 @@ from scipy.stats import gamma, norm
 import time
 import os
 from matplotlib.patches import Rectangle
+
 from pytwalk import BUQ
-'''Reviar errores t-student'''
-from scipy.stats import t as t_dist
+# from scipy.stats import t as t_dist
 
 class VecinosCercanos:
 
@@ -79,34 +79,30 @@ def Forward_aprox(theta, t):
         interpolacion = interpolacion + solucion*pesos[k]
 
     return interpolacion 
-'''
-Cosas raras en Estimar_sigma
-'''
+
 def Metropolis(F, t,y_data, theta1_priori , alpha, theta2_priori , beta, size, Estimar_sigma = False, plot = True):
 
-    # # data_MCMC = y_data
+    # data_MCMC = y_data
     # if Estimar_sigma == True:
-    #     # sigma = None
-    #     data_MCMC = y_data
+    #     sigma = None
+        # data_MCMC = y_data
     # else:
-    #     data_MCMC = None
-
-
+    #     # sigma = sigma
+    #     # data_MCMC = None
+    #     pass
+    '''
+    Cosas raras en Estimar_sigma
+    '''
 
 
     logdensity= norm.logpdf
-
-    simdata = lambda n, loc, scale: norm.rvs( size=n, loc=loc, scale=scale)
-    ''' Quitar par_names'''
-    par_names=[  r"$g$", r"$b$" ] 
-
+    # simdata = lambda n, loc, scale: norm.rvs( size=n, loc=loc, scale=scale)
     par_prior=[ gamma( alpha, scale = theta1_priori/alpha), gamma(beta, scale=theta2_priori/beta)]
     par_supp  = [ lambda g: g>0.0, lambda b: b>0.0]
 
     buq = BUQ( q=3, data=y_data, logdensity=logdensity, sigma = sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
     # buq = BUQ( q=2, data=y_data, logdensity=logdensity, sigma = sigma, F=F, t=t, par_names=par_names, par_prior=par_prior, par_supp=par_supp)
     # buq.SimData(x = np.array([ g, b])) #True parameters 
-
 
     buq.RunMCMC( T=size, burn_in=10000)
 
@@ -133,22 +129,22 @@ def preproceso(puntos_malla):
 #########################
 #########################
 current_directory = os.getcwd()
-print(f"The new working directory is: {current_directory}")
-path_directorio = 'C:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Version11/'
+print(f"The working directory is: {current_directory}")
+path_directorio = 'C:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Version12/'
 
-Estimar_sigma = True
-exper_aprox   = True
+exper_aprox   = False
 hacer_reporte = True
 GuardarCadena = True
+Estimar_sigma = True # No sirve
 
 #######################################
 ####### Inferencia ####################
 
 # modelo = ['gravedad', 'logistico', 'SIR']
-dinamica = gravedad
-modelo = 'gravedad'
-# dinamica = logistico
-# modelo = 'logistico'
+# dinamica = gravedad
+# modelo = 'gravedad'
+dinamica = logistico
+modelo = 'logistico'
 # dinamica = SIR
 # modelo = 'SIR'
 
@@ -213,9 +209,8 @@ y_data = Forward(np.array([theta_1,theta_2]), t)
 
 # Añadir ruido a los datos
 error = norm.rvs(0,sigma,n)
-error[0] = 0
+# error[0] = 0
 y_data = y_data + error
-''' error = t_dist.rvs(3,size = n)'''
 
 
 # Parametros de distribucion a prioi (Gamma) y MCMC
@@ -224,7 +219,7 @@ if modelo == 'gravedad':
     alpha = 10
     theta2_priori = 2
     beta = 1.1
-    size = 600000
+    size = 60000
     burn_in = 20000
 if modelo == 'logistico':
     theta1_priori = 0.001  
@@ -247,7 +242,8 @@ if Estimar_sigma == True:
 else:
     path_sigma = ''
     
-path = 'Exp_Central_01_'+ modelo + path_sigma +'/'  # Trayectoria relativa para archivar
+path = 'Exp_Central_'+ modelo + path_sigma +'/'  # Trayectoria relativa para archivar
+print(path)
 
 if hacer_reporte == True:
     directory = path + 'Figuras/Generales'
@@ -255,9 +251,8 @@ if hacer_reporte == True:
     directory = path + 'Figuras/Individual'
     os.makedirs(directory, mode=0o777, exist_ok= True)
 
-
-############# Experimentos #########
-num_vecinos_varios = np.array([5, 8, 3])
+# Forward aproximado
+num_vecinos_varios = np.array([3, 5, 8])
 num_puntos_malla = np.array([10, 15, 30, 50])
 
 ## %%

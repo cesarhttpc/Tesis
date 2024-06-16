@@ -1,0 +1,29 @@
+REPORTE DE PROCEDIMIENTO 
+
+Enfoque bayesiano al problema inverso 
+
+MODELO: gravedad 
+
+Estima sigma: True
+Observaciones (muestra): 
+g = 9.81 
+b = 1.15 
+n = 10 
+tiempo [0,1.5] 
+
+Parametros de a priori: 
+$theta_1 $= 10 
+alpha = 10 
+$theta_2 $= 2 
+beta = 1.1 
+
+Parametros de MCMC: 
+T = 60000 
+burn in = 20000 
+
+Para los vecinos array([3, 5, 8]) 
+Con las mallas cuadradas array([10, 15, 30, 50]) 
+
+Forward Ordinario 
+  Tiempo 35.21 
+

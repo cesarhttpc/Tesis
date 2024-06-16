@@ -1,8 +1,44 @@
 
 \chapter{Antecedentes}
 
+En el capítulo 1 se habla a grandes rasgos de la estructura implícita de la modelación. Un sector importante es el del problema inverso. Aquí formalizaremos el concepto y detallaremos sus lineamientos. Se describe el enfoque bayesiano del problema inverso, que es un paradigma ampliamente estudiado. Otro enfoque al problema inverso es el operativo, el cual se aborde desde el problema directo como un operador actuando en el modelo, y el problema inverso como un operador inverso de este. Este último enfoque sale de los límites de estudio del texto. 
 
-\section{Solución bayesiana a  problemas Inversos}
+\section{Problema inverso}
+
+El estudio del problema inverso se remonta a mediados del siglo 17. Los físicos contemporáneos interesados en la relación causa-efecto de diferentes fenómenos físicos lograron predecir el comportamiento en la dinámica subyacente. Así, para la ley de gravitacional de newton, una vez obtenidas las masas de los cuerpos celestes (causas) es posible predecir las trayectorias que siguen en el tiempo (efecto). Estudiar los efectos de un fenómeno dada ciertas causas es el problema directo, se requiere la metodología descrita en la introducción. El problema inverso toma la dirección opuesta, dados los efectos, es de interés investigar las causas que lo ocasionaron. Retomando un ejemplo newtoniano, dado un campo gravitatorio circundando cierto cuerpo celeste, es de interés conocer la masa de dicho cuerpo. El problema inverso padece de no ser único, suele ser el caso que a ciertos efectos se correspondas varias causas. el hecho de que no exista una mapeo uno a uno entre causa y efecto complica el problema inverso. Sin embargo, la información que se tenga a priori del fenómeno es crucial para determinar con una menor ambigüedad las causas. 
+
+\subsection{Modelos descritos por ODEs}
+
+Los modelos matemáticos para describir fenómenos pueden venir de una amplia variedad de modelos. Tomese que se desea describir los costos de la renta de inmuebles en cierta ciudad $Y$ (efecto). Supongase que de análisis previos se concluyo que dicho fenómeno esta vinculado al tamaño del inmueble $X_1$, número de habitaciones $X_2$, ingreso medio por habitante $X_3$ (causas). Un modelo plausible es por modelos lineales generalizados
+\begin{align*}
+    Y = G(\beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3) + \varepsilon
+\end{align*}
+donde $G$ es la función liga, $\varepsilon \sim N(0,\sigma^2)$ un error aleatorio y $\beta = (\beta_0, \beta_1, \beta_2, \beta_3)$ son los parámetros del modelo. El problema directo considera predecir el valor de $Y$ conociendo $X = (X_1,X_2,X_3)$ y los parámetros del modelo $\beta$. Para esta clase de modelos el problema directo no representa complejidad. En contraste, el problema inverso precisa estimaciones de $\beta$  y $\sigma$ dada muestras de $Y$ y $X$, siendo un problema no trivial. 
+
+% Introducir los modelos por EDOs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\section{Solución bayesiana a  problemas inversos}
 
 \textcolor{blue}{Tratar a fondo sobre la teoría de problemas inversos. Cómo se define. Que es el Forward map. Métodos convencionales (superficialmente para resolución)}
 

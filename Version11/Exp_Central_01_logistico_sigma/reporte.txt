@@ -1,0 +1,29 @@
+REPORTE DE PROCEDIMIENTO 
+
+Enfoque bayesiano al problema inverso 
+
+MODELO: logistico 
+
+Estima sigma: True
+Observaciones (muestra): 
+theta_1 = 0.001 
+theta_2 = 1000 
+n = 20 
+tiempo [0,10] 
+
+Parametros de a priori: 
+$theta_1 $= 0.001 
+alpha = 1000 
+$theta_2 $= 1000 
+beta = 1000 
+
+Parametros de MCMC: 
+T = 500000 
+burn in = 20000 
+
+Para los vecinos array([5, 8, 3]) 
+Con las mallas cuadradas array([10, 15, 30, 50]) 
+
+Forward Ordinario 
+  Tiempo 657.88 
+
