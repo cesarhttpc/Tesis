@@ -381,6 +381,14 @@ OUTPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\
 INPUT .\chapters\chap_02.tex
 INPUT .\chapters\chap_02.tex
 INPUT chapters\chap_02.tex
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
+INPUT C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
+INPUT .\img\MCMC.png
+INPUT .\img\MCMC.png
+INPUT .\img\MCMC.png
+INPUT .\img\MCMC.png
+INPUT .\img\MCMC.png
+INPUT .\img\MCMC.png
 INPUT .\chapters\chap_03.tex
 INPUT .\chapters\chap_03.tex
 OUTPUT c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters\chap_03.aux
