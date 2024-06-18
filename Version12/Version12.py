@@ -12,24 +12,110 @@ from matplotlib.patches import Rectangle
 from pytwalk import BUQ
 # from scipy.stats import t as t_dist
 
+# class VecinosCercanos:
+
+#     def __init__(self,puntos):
+#         # Construir el árbol cKDTree con los puntos
+#         self.arbol = cKDTree(puntos)
+#         self.solutions = {}  # Dictionary to store precomputed solutions
+
+#     def compute_solutions(self, t, puntos_malla):
+#         for i, punto in enumerate(puntos_malla):
+#             solution = odeint(dinamica, y0, t, args=(punto[0], punto[1]))
+#             self.solutions[i] = solution[:, 0]
+
+#     def encontrar_vecinos_cercanos(self, punto, numero_de_vecinos=1):
+#         # Buscar los vecinos más cercanos del punto dado
+#         distancias, indices = self.arbol.query(punto, k=numero_de_vecinos)
+
+#         # Devolver las distancias y los índices de los vecinos más cercanos
+#         return distancias, indices
+
 class VecinosCercanos:
 
-    def __init__(self,puntos):
+    def __init__( self, malla, ax, bx, ay, by):
+        
+        ### This is a 2x2 array with the bounds of the support
+        ### bounds[0,:] ax, by
+        self.ax = ax
+        self.bx = bx
+        self.lx = bx-ax
+        self.ay = ay
+        self.by = by
+        self.ly = by-ay
+
+        self.n = malla.shape[0] #size of the grid
+        self.malla = np.zeros((self.n,2))
+        for i in range(self.n):
+            self.malla[i,:] = self.Transf(malla[i,:])
+
         # Construir el árbol cKDTree con los puntos
-        self.arbol = cKDTree(puntos)
+        self.arbol = cKDTree(self.malla)
         self.solutions = {}  # Dictionary to store precomputed solutions
 
-    def compute_solutions(self, t, puntos_malla):
-        for i, punto in enumerate(puntos_malla):
-            solution = odeint(dinamica, y0, t, args=(punto[0], punto[1]))
+    def Transf( self, p):
+        return np.array([ (p[0]-self.ax)/self.lx, (p[1]-self.ay)/self.ly])
+
+    def InvTransf( self, p):
+        return np.array([ self.ax + p[0]*self.lx, self.ay + p[1]*self.ly])
+    
+    def compute_solutions( self, t, malla):
+        for i, punto in enumerate(malla):
+            # punto = self.InvTransf(p)
+            solution = odeint( dinamica, y0, t, args=(punto[0], punto[1]))
             self.solutions[i] = solution[:, 0]
 
     def encontrar_vecinos_cercanos(self, punto, numero_de_vecinos=1):
+        p = self.Transf(punto)
         # Buscar los vecinos más cercanos del punto dado
-        distancias, indices = self.arbol.query(punto, k=numero_de_vecinos)
+        distancias, indices = self.arbol.query( p, k=numero_de_vecinos)
 
         # Devolver las distancias y los índices de los vecinos más cercanos
         return distancias, indices
+    
+
+
+
+# beta = np.linspace( 0.01, 0.1, num=5)
+
+# gam = np.linspace( 0.3, 0.6, num=5)
+
+# beta_mesh, ga_mesh = np.meshgrid( beta, gam)
+
+# malla = np.column_stack((beta_mesh.ravel(), ga_mesh.ravel()))
+
+# vc = VecinosCercanos( malla, 0.01, 0.1, 0.3, 0.6)
+
+# fig, ax = plt.subplots()
+
+# ax.plot( malla[:,0], malla[:,1], 'o')
+
+
+# punto = np.array([ 0.057, 0.43])
+
+# ax.plot( punto[0], punto[1], 'ro')
+
+# distancias, indices = vc.encontrar_vecinos_cercanos( punto, numero_de_vecinos=1)
+
+# indices
+
+# malla[indices,:]
+
+# ax.plot( malla[indices,0], malla[indices,1], 'go')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def gravedad(y,t,g,b):
     x, v = y
@@ -59,7 +145,7 @@ def Forward( theta, t):
 
 def Forward_aprox(theta, t):
 
-    # Encuentra los vecinos más cercanos al punto (g,b)
+    # Encuentra los vecinos más cercanos al punto (theta1,theta2)
     distancias, indices = buscador_de_vecinos.encontrar_vecinos_cercanos(theta, numero_de_vecinos=num_vecinos)
 
     # Pesos
@@ -114,11 +200,11 @@ def Metropolis(F, t,y_data, theta1_priori , alpha, theta2_priori , beta, size, E
 
     return buq.Output   
 
-def preproceso(puntos_malla):
+def preproceso(puntos_malla,theta1_cota_min,theta1_cota_max, theta2_cota_min, theta2_cota_max):
     'Buscador de vecinos cercanos y preproceso para calcular la solucion en de la ecuacion diferencial en cada punto'
 
     # Crear una instancia de la clase VecinosCercanos
-    buscador_de_vecinos = VecinosCercanos(puntos_malla)
+    buscador_de_vecinos = VecinosCercanos(puntos_malla, theta1_cota_min,theta1_cota_max,theta2_cota_min,theta2_cota_max)
 
     # Preproceso, calcula solucion en cada punto de la malla
     buscador_de_vecinos.compute_solutions(t, puntos_malla)
@@ -132,7 +218,7 @@ current_directory = os.getcwd()
 print(f"The working directory is: {current_directory}")
 path_directorio = 'C:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Version12/'
 
-exper_aprox   = False
+exper_aprox   = True
 hacer_reporte = True
 GuardarCadena = True
 Estimar_sigma = True # No sirve
@@ -143,10 +229,10 @@ Estimar_sigma = True # No sirve
 # modelo = ['gravedad', 'logistico', 'SIR']
 # dinamica = gravedad
 # modelo = 'gravedad'
-dinamica = logistico
-modelo = 'logistico'
-# dinamica = SIR
-# modelo = 'SIR'
+# dinamica = logistico
+# modelo = 'logistico'
+dinamica = SIR
+modelo = 'SIR'
 
 # Simular las observaciones
 n = 10      # Tamaño de muestra (n-1)
@@ -242,7 +328,7 @@ if Estimar_sigma == True:
 else:
     path_sigma = ''
     
-path = 'Exp_Central_'+ modelo + path_sigma +'/'  # Trayectoria relativa para archivar
+path = 'Experimento_malla_'+ modelo + path_sigma +'/'  # Trayectoria relativa para archivar
 print(path)
 
 if hacer_reporte == True:
@@ -323,10 +409,6 @@ if GuardarCadena == True:
     np.savetxt(path + 'Cadena.csv', combined_array, delimiter=",")#, fmt='%d')
 
 
-# %%
-###########################
-###########################
-###########################
 def visualizacion(monte_carlo,t, burn_in, title = True):
     
     theta1_sample_plot = monte_carlo[:,0]
@@ -566,7 +648,7 @@ def visualizacion(monte_carlo,t, burn_in, title = True):
 
 visualizacion(monte_carlo,t,burn_in = burn_in, title = True)
 
-# %%
+## %%
 if exper_aprox == True:
         
     contador = 1
@@ -590,7 +672,7 @@ if exper_aprox == True:
             puntos_malla = np.column_stack((theta1_mesh.ravel(), theta2_mesh.ravel()))
 
             ''' Hacer el preproceso fuera de for '''
-            buscador_de_vecinos = preproceso(puntos_malla) 
+            buscador_de_vecinos = preproceso(puntos_malla, theta1_cota_min, theta1_cota_max, theta2_cota_min, theta2_cota_max) 
             preproceso_tiempo = time.time()
             
             monte_carlo_aprox = Metropolis(F= Forward_aprox, t=t, y_data=y_data, theta1_priori = theta1_priori, alpha= alpha, theta2_priori = theta2_priori, beta = beta, size = size, Estimar_sigma = Estimar_sigma,plot = False)
@@ -632,7 +714,7 @@ if exper_aprox == True:
 CadenaCSV = pd.read_csv(path_directorio + path + 'Cadena.csv')
 monte_carlo = CadenaCSV.to_numpy()
 
-# %%
+## %%
 
 def visualizacion_aprox(monte_carlo, t, burn_in, title = True):
 

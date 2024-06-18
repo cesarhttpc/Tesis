@@ -858,6 +858,8 @@ En el análisis bayesiano sobre el modelo gravitatorio obtuvimos la distribució
 
 \newpage
 
+\newpage
+
 \subsection{Experimentación con la convergencia.}
 
 En esta sección se abordan las diferentes simulaciones para cada modelo. Empezando por el modelo de gravedad sujeto a fricción, nos interesa la distribución posterior de los parámetros $g$ y $b$. Con la metodología establecida y usando MCMC con la a priori \textcolor{red}{Grafico de la priori} anteriormente mencionada obtenemos una simulación de la distribución posterior conjunta. Tomando la marginal de cada parámetro y haciendo el histograma para la estimación de la distribución marginal tenemos las siguientes distribuciones posteriores marginales.
@@ -872,6 +874,102 @@ La muestra inicial de la trayectoria que sigue el modelo se hace mediante simula
 Para la simulación de los datos consideramos una muestra de 30 datos del modelo de gravedad en el intervalo de tiempo $[0,1.5]$. 
 
 Las distribuciones posteriores marginales de $g$ se muestran en las figuras \ref{fig:g_01} \ref{fig:g_02}    \ref{fig:g_03} 
+
+
+
+\newpage
+
+
+\subsubsection{Convergencia en el modelo epidemiólogico}
+
+El problema inverso en el modelo SIR se observa la relevancia de la aproximación del forward map. Recordemos que el forward map del modelo SIR no es posible obtenerse de manera analítica, lo que conlleva un consumo computacional añadido al momento de analizar los pormenores. Una dificultad para el forward map aproximado radica en el gran cambio de unidades, puesto que las unidades entre los parámetros $\beta$ y $\gamma$ difieren por un orden de magnitud, lo que es necesario del ajuste al espacio de parámetros. 
+
+
+Haciendo repetidas inferencias con distintas aproximaciones. Esto es tomar forward maps que consideren 3, 5, 8 vecinos cercanos con cubrimiento de malla desde $10 x 10, 15x15, 30x30, 50x50$. Al igual que los casos anteriores los tiempos de ejecución en cada caso se dan en la table (\ref{tabla_03})
+
+
+
+
+
+
+
+
+
+
+\begin{table}
+    \centering
+    \begin{tabular}{l r r r c}
+      \toprule
+       \textbf{Malla} & \textbf{\:\:\:\:\:10 x 10\:\:\:\:\:} & \textbf{\:\:\:\:\:15 x 15\:\:\:\:\:} & \textbf{\:\:\:\:\:30 x 30\:\:\:\:\:} & \textbf{\:\:\:\:\:50 x 50\:\:\:\:\:} \\
+      \midrule
+      5 vecinos & 5m 43s & 5m 36s & 5m 11s & 5m 15s\\
+      8 vecinos & 5m 06s & 5m 41s & 5m 11s & 5m 15s\\
+      \bottomrule
+    \end{tabular}
+    % \caption{A table caption.}
+    \label{tabla_03}
+\end{table}
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 15 cm ]{img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 15 cm ]{img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 15 cm ]{img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 15 cm ]{img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 15 cm ]{img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 15 cm ]{img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png} 
+    % \caption{}
+    % \label{Fig. }
+\end{figure} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 % \begin{figure}
 %     \centering
