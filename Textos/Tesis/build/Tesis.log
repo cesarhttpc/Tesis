@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.5)  17 JUN 2024 21:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.5)  17 JUN 2024 21:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1761,7 +1761,12 @@ LaTeX Warning: Reference `tabla_03' on page 43 undefined on input line 888.
 File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png>
 Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png  used on input line 916.
-(pdftex.def)             Requested size: 426.79134pt x 107.73315pt.
+(pdftex.def)             Requested size: 483.69684pt x 122.09758pt.
+
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 916--919
+ [][] 
+ []
+
 
 Underfull \vbox (badness 1609) has occurred while \output is active []
 
@@ -1772,7 +1777,12 @@ LaTeX Info: Redefining \% on input line 920.
 File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png>
 Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png  used on input line 923.
-(pdftex.def)             Requested size: 426.79134pt x 107.73315pt.
+(pdftex.def)             Requested size: 483.69684pt x 122.09758pt.
+
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 923--926
+ [][] 
+ []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1783,34 +1793,48 @@ LaTeX Info: Redefining \% on input line 927.
 File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png>
 Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png  used on input line 930.
-(pdftex.def)             Requested size: 426.79134pt x 107.73315pt.
+(pdftex.def)             Requested size: 483.69684pt x 122.09758pt.
+
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 930--933
+ [][] 
+ []
+
 <img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png, id=704, 1116.5715pt x 281.97345pt>
 File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png>
 Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png  used on input line 937.
-(pdftex.def)             Requested size: 426.79134pt x 107.77919pt.
+(pdftex.def)             Requested size: 483.69684pt x 122.14975pt.
 
-Underfull \vbox (badness 2020) has occurred while \output is active []
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 937--940
+ [][] 
+ []
 
 LaTeX Info: Redefining \. on input line 941.
 LaTeX Info: Redefining \% on input line 941.
- [45 <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_9_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_10_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_11_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_12_gravedad.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png>]
+[45 <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_9_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_10_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_11_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_12_gravedad.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png>]
 <img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png, id=718, 1116.5715pt x 281.97345pt>
 File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png>
 Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png  used on input line 944.
-(pdftex.def)             Requested size: 426.79134pt x 107.77919pt.
+(pdftex.def)             Requested size: 483.69684pt x 122.14975pt.
+
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 944--947
+ [][] 
+ []
+
 <img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png, id=719, 1116.5715pt x 281.97345pt>
 File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png>
 Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png  used on input line 951.
-(pdftex.def)             Requested size: 426.79134pt x 107.77919pt.
+(pdftex.def)             Requested size: 483.69684pt x 122.14975pt.
 
-Underfull \vbox (badness 1997) has occurred while \output is active []
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 951--954
+ [][] 
+ []
 
 LaTeX Info: Redefining \. on input line 955.
 LaTeX Info: Redefining \% on input line 955.
- [46 <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_1_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_2_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_3_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_4_logistico.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png>])
+[46 <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_1_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_2_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_3_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_4_logistico.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png>])
 LaTeX Info: Redefining \. on input line 99.
 LaTeX Info: Redefining \% on input line 99.
  [47 <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_5_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_6_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_7_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_8_logistico.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png>]
@@ -1900,7 +1924,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  99i,17n,101p,1287b,981s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2074.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.pdf (68 pages, 5187457 bytes).
+Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.pdf (68 pages, 5187459 bytes).
 PDF statistics:
  1417 PDF objects out of 1440 (max. 8388607)
  190 named destinations out of 1000 (max. 500000)
