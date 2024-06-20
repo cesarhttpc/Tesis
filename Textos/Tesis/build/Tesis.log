@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.5)  17 JUN 2024 21:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.5)  20 JUN 2024 02:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -604,305 +604,7 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
- (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_01.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_02.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_03.aux
-
-LaTeX Warning: Label `fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `fig:g_01' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `fig:g_01' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `fig:g_01' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `fig:g_01' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `fig:g_01' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `fig:g_01' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `fig:g_01' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `fig:g_01' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `fig:g_01' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `fig:g_01' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig2' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig3' multiply defined.
-
-
-LaTeX Warning: Label `fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:subfig4' multiply defined.
-
-
-LaTeX Warning: Label `fig:g_01' multiply defined.
-
-) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_04.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/conclusions.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/appendix.aux))
+ (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_01.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_02.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_03.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_04.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/conclusions.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/appendix.aux))
 \openout1 = `Tesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
@@ -1025,7 +727,7 @@ LaTeX Info: Redefining \BHBI on input line 139.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<logo/LOGOTIPO_SIN_FONDO-02.png, id=118, 166.7028pt x 213.9192pt>
+<logo/LOGOTIPO_SIN_FONDO-02.png, id=110, 166.7028pt x 213.9192pt>
 File: logo/LOGOTIPO_SIN_FONDO-02.png Graphic file (type png)
 <use logo/LOGOTIPO_SIN_FONDO-02.png>
 Package pdftex.def Info: logo/LOGOTIPO_SIN_FONDO-02.png  used on input line 54.
@@ -1042,7 +744,7 @@ Underfull \hbox (badness 10000) detected at line 54
 \T1/cmr/bx/n/17.28 T E S I S
  []
 
-<logo/banner_cimat_20200126_05.png, id=120, 820.06375pt x 248.93pt>
+<logo/banner_cimat_20200126_05.png, id=112, 820.06375pt x 248.93pt>
 File: logo/banner_cimat_20200126_05.png Graphic file (type png)
 <use logo/banner_cimat_20200126_05.png>
 Package pdftex.def Info: logo/banner_cimat_20200126_05.png  used on input line 54.
@@ -1074,13 +776,16 @@ LaTeX Info: Redefining \% on input line 85.
 ] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [7])
+)
 \tf@lof=\write6
 \openout6 = `Tesis.lof'.
 
+ [7]
 LaTeX Info: Redefining \. on input line 88.
 LaTeX Info: Redefining \% on input line 88.
- [8]
+ [8
+
+]
 \openout2 = `chapters/chap_01.aux'.
 
  (chapters/chap_01.tex
@@ -1091,7 +796,6 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.12 
       [1
-
 
 
 ])
@@ -1129,7 +833,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 95.
 LaTeX Info: Redefining \% on input line 95.
  [7]
-<img/MCMC.png, id=312, 604.2575pt x 373.395pt>
+<img/MCMC.png, id=266, 604.2575pt x 373.395pt>
 File: img/MCMC.png Graphic file (type png)
 <use img/MCMC.png>
 Package pdftex.def Info: img/MCMC.png  used on input line 121.
@@ -1161,7 +865,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 64.
 LaTeX Info: Redefining \% on input line 64.
  [13]
-<img/Trayectoria.png, id=356, 401.8212pt x 328.8285pt>
+<img/Trayectoria.png, id=310, 401.8212pt x 328.8285pt>
 File: img/Trayectoria.png Graphic file (type png)
 <use img/Trayectoria.png>
 Package pdftex.def Info: img/Trayectoria.png  used on input line 90.
@@ -1172,7 +876,7 @@ LaTeX Info: Redefining \% on input line 93.
 LaTeX Info: Redefining \. on input line 110.
 LaTeX Info: Redefining \% on input line 110.
  [15 <./img/Trayectoria.png>]
-<img/trayectoria_log.png, id=374, 420.6114pt x 328.8285pt>
+<img/trayectoria_log.png, id=328, 420.6114pt x 328.8285pt>
 File: img/trayectoria_log.png Graphic file (type png)
 <use img/trayectoria_log.png>
 Package pdftex.def Info: img/trayectoria_log.png  used on input line 135.
@@ -1186,7 +890,7 @@ LaTeX Info: Redefining \% on input line 146.
 LaTeX Info: Redefining \. on input line 156.
 LaTeX Info: Redefining \% on input line 156.
  [17 <./img/trayectoria_log.png>]
-<img/trayectoria_SIR.png, id=390, 412.6617pt x 328.8285pt>
+<img/trayectoria_SIR.png, id=344, 412.6617pt x 328.8285pt>
 File: img/trayectoria_SIR.png Graphic file (type png)
 <use img/trayectoria_SIR.png>
 Package pdftex.def Info: img/trayectoria_SIR.png  used on input line 164.
@@ -1219,7 +923,7 @@ Overfull \hbox (30.2881pt too wide) in paragraph at lines 273--275
 LaTeX Info: Redefining \. on input line 276.
 LaTeX Info: Redefining \% on input line 276.
 [22]
-<img/Exp_Central_gravedad/Figuras/Generales/Apriori_gravedad.png, id=441, 722.7pt x 289.08pt>
+<img/Exp_Central_gravedad/Figuras/Generales/Apriori_gravedad.png, id=395, 722.7pt x 289.08pt>
 File: img/Exp_Central_gravedad/Figuras/Generales/Apriori_gravedad.png Graphic file (type png)
 <use img/Exp_Central_gravedad/Figuras/Generales/Apriori_gravedad.png>
 Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Generales/Apriori_gravedad.png  used on input line 291.
@@ -1230,12 +934,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 295.
 LaTeX Info: Redefining \% on input line 295.
  [23]
-<img/Exp_Central_gravedad/Figuras/Generales/Muestra_gravedad.png, id=450, 462.528pt x 346.896pt>
+<img/Exp_Central_gravedad/Figuras/Generales/Muestra_gravedad.png, id=404, 462.528pt x 346.896pt>
 File: img/Exp_Central_gravedad/Figuras/Generales/Muestra_gravedad.png Graphic file (type png)
 <use img/Exp_Central_gravedad/Figuras/Generales/Muestra_gravedad.png>
 Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Generales/Muestra_gravedad.png  used on input line 300.
 (pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
-<img/Exp_Central_gravedad/Figuras/Generales/Conjunta_gravedad.png, id=452, 462.528pt x 346.896pt>
+<img/Exp_Central_gravedad/Figuras/Generales/Conjunta_gravedad.png, id=406, 462.528pt x 346.896pt>
 File: img/Exp_Central_gravedad/Figuras/Generales/Conjunta_gravedad.png Graphic file (type png)
 <use img/Exp_Central_gravedad/Figuras/Generales/Conjunta_gravedad.png>
 Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Generales/Conjunta_gravedad.png  used on input line 309.
@@ -1243,12 +947,12 @@ Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Generales/Conjunta_gra
 LaTeX Info: Redefining \. on input line 313.
 LaTeX Info: Redefining \% on input line 313.
  [24 <./img/Exp_Central_gravedad/Figuras/Generales/Apriori_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Generales/Muestra_gravedad.png>]
-<img/Exp_Central_gravedad/Figuras/Generales/Post_theta1_gravedad.png, id=461, 462.528pt x 346.896pt>
+<img/Exp_Central_gravedad/Figuras/Generales/Post_theta1_gravedad.png, id=415, 462.528pt x 346.896pt>
 File: img/Exp_Central_gravedad/Figuras/Generales/Post_theta1_gravedad.png Graphic file (type png)
 <use img/Exp_Central_gravedad/Figuras/Generales/Post_theta1_gravedad.png>
 Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Generales/Post_theta1_gravedad.png  used on input line 319.
 (pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
-<img/Exp_Central_gravedad/Figuras/Generales/Post_theta2_gravedad.png, id=462, 462.528pt x 346.896pt>
+<img/Exp_Central_gravedad/Figuras/Generales/Post_theta2_gravedad.png, id=416, 462.528pt x 346.896pt>
 File: img/Exp_Central_gravedad/Figuras/Generales/Post_theta2_gravedad.png Graphic file (type png)
 <use img/Exp_Central_gravedad/Figuras/Generales/Post_theta2_gravedad.png>
 Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Generales/Post_theta2_gravedad.png  used on input line 326.
@@ -1259,7 +963,7 @@ Underfull \vbox (badness 6575) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 330.
 LaTeX Info: Redefining \% on input line 330.
  [25 <./img/Exp_Central_gravedad/Figuras/Generales/Conjunta_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Generales/Post_theta1_gravedad.png>]
-<img/Exp_Central_gravedad/Figuras/Generales/Predictiva_gravedad.png, id=469, 462.528pt x 346.896pt>
+<img/Exp_Central_gravedad/Figuras/Generales/Predictiva_gravedad.png, id=423, 462.528pt x 346.896pt>
 File: img/Exp_Central_gravedad/Figuras/Generales/Predictiva_gravedad.png Graphic file (type png)
 <use img/Exp_Central_gravedad/Figuras/Generales/Predictiva_gravedad.png>
 Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Generales/Predictiva_gravedad.png  used on input line 335.
@@ -1267,12 +971,12 @@ Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Generales/Predictiva_g
 LaTeX Info: Redefining \. on input line 343.
 LaTeX Info: Redefining \% on input line 343.
  [26 <./img/Exp_Central_gravedad/Figuras/Generales/Post_theta2_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Generales/Predictiva_gravedad.png>]
-<img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png, id=478, 722.7pt x 289.08pt>
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png, id=432, 722.7pt x 289.08pt>
 File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png>
 Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png  used on input line 350.
 (pdftex.def)             Requested size: 426.79134pt x 170.71892pt.
-<img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png, id=481, 462.528pt x 346.896pt>
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png, id=435, 462.528pt x 346.896pt>
 File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png>
 Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png  used on input line 361.
@@ -1283,7 +987,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 365.
 LaTeX Info: Redefining \% on input line 365.
  [27 <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png>]
-<img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png, id=488, 462.528pt x 346.896pt>
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png, id=442, 462.528pt x 346.896pt>
 File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png>
 Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png  used on input line 368.
@@ -1291,17 +995,17 @@ Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjun
 LaTeX Info: Redefining \. on input line 380.
 LaTeX Info: Redefining \% on input line 380.
  [28 <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png> <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png>]
-<img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png, id=495, 462.528pt x 346.896pt>
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png, id=449, 395.7987pt x 340.1508pt>
 File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png>
 Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png  used on input line 387.
-(pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
-<img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png, id=496, 462.528pt x 346.896pt>
+(pdftex.def)             Requested size: 284.52756pt x 244.5295pt.
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png, id=450, 395.7987pt x 335.69415pt>
 File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png>
 Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png  used on input line 394.
-(pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
-<img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png, id=497, 462.528pt x 346.896pt>
+(pdftex.def)             Requested size: 284.52756pt x 241.32567pt.
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png, id=451, 462.528pt x 346.896pt>
 File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png>
 Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png  used on input line 402.
@@ -1312,12 +1016,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 406.
 LaTeX Info: Redefining \% on input line 406.
  [29 <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png> <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png>]
-<img/Exp_Central_logistico/Figuras/Generales/Apriori_logistico.png, id=506, 722.7pt x 289.08pt>
+<img/Exp_Central_logistico/Figuras/Generales/Apriori_logistico.png, id=460, 722.7pt x 289.08pt>
 File: img/Exp_Central_logistico/Figuras/Generales/Apriori_logistico.png Graphic file (type png)
 <use img/Exp_Central_logistico/Figuras/Generales/Apriori_logistico.png>
 Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Generales/Apriori_logistico.png  used on input line 412.
 (pdftex.def)             Requested size: 426.79134pt x 170.71892pt.
-<img/Exp_Central_logistico/Figuras/Generales/Muestra_logistico.png, id=507, 462.528pt x 346.896pt>
+<img/Exp_Central_logistico/Figuras/Generales/Muestra_logistico.png, id=461, 462.528pt x 346.896pt>
 File: img/Exp_Central_logistico/Figuras/Generales/Muestra_logistico.png Graphic file (type png)
 <use img/Exp_Central_logistico/Figuras/Generales/Muestra_logistico.png>
 Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Generales/Muestra_logistico.png  used on input line 419.
@@ -1328,12 +1032,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 423.
 LaTeX Info: Redefining \% on input line 423.
  [30 <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png> <./img/Exp_Central_logistico/Figuras/Generales/Apriori_logistico.png>]
-<img/Exp_Central_logistico/Figuras/Generales/Conjunta_logistico.png, id=516, 462.528pt x 346.896pt>
+<img/Exp_Central_logistico/Figuras/Generales/Conjunta_logistico.png, id=470, 462.528pt x 346.896pt>
 File: img/Exp_Central_logistico/Figuras/Generales/Conjunta_logistico.png Graphic file (type png)
 <use img/Exp_Central_logistico/Figuras/Generales/Conjunta_logistico.png>
 Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Generales/Conjunta_logistico.png  used on input line 427.
 (pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
-<img/Exp_Central_logistico/Figuras/Generales/Post_theta1_logistico.png, id=517, 462.528pt x 346.896pt>
+<img/Exp_Central_logistico/Figuras/Generales/Post_theta1_logistico.png, id=471, 462.528pt x 346.896pt>
 File: img/Exp_Central_logistico/Figuras/Generales/Post_theta1_logistico.png Graphic file (type png)
 <use img/Exp_Central_logistico/Figuras/Generales/Post_theta1_logistico.png>
 Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Generales/Post_theta1_logistico.png  used on input line 435.
@@ -1344,12 +1048,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 439.
 LaTeX Info: Redefining \% on input line 439.
  [31 <./img/Exp_Central_logistico/Figuras/Generales/Muestra_logistico.png> <./img/Exp_Central_logistico/Figuras/Generales/Conjunta_logistico.png>]
-<img/Exp_Central_logistico/Figuras/Generales/Post_theta2_logistico.png, id=526, 462.528pt x 346.896pt>
+<img/Exp_Central_logistico/Figuras/Generales/Post_theta2_logistico.png, id=480, 462.528pt x 346.896pt>
 File: img/Exp_Central_logistico/Figuras/Generales/Post_theta2_logistico.png Graphic file (type png)
 <use img/Exp_Central_logistico/Figuras/Generales/Post_theta2_logistico.png>
 Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Generales/Post_theta2_logistico.png  used on input line 442.
 (pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
-<img/Exp_Central_logistico/Figuras/Generales/Predictiva_logistico.png, id=527, 462.528pt x 346.896pt>
+<img/Exp_Central_logistico/Figuras/Generales/Predictiva_logistico.png, id=481, 462.528pt x 346.896pt>
 File: img/Exp_Central_logistico/Figuras/Generales/Predictiva_logistico.png Graphic file (type png)
 <use img/Exp_Central_logistico/Figuras/Generales/Predictiva_logistico.png>
 Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Generales/Predictiva_logistico.png  used on input line 450.
@@ -1360,12 +1064,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 454.
 LaTeX Info: Redefining \% on input line 454.
  [32 <./img/Exp_Central_logistico/Figuras/Generales/Post_theta1_logistico.png> <./img/Exp_Central_logistico/Figuras/Generales/Post_theta2_logistico.png>]
-<img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png, id=536, 722.7pt x 289.08pt>
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png, id=490, 722.7pt x 289.08pt>
 File: img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png Graphic file (type png)
 <use img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png>
 Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png  used on input line 463.
 (pdftex.def)             Requested size: 426.79134pt x 170.71892pt.
-<img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png, id=537, 462.528pt x 346.896pt>
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png, id=491, 462.528pt x 346.896pt>
 File: img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png Graphic file (type png)
 <use img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png>
 Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png  used on input line 470.
@@ -1376,28 +1080,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 474.
 LaTeX Info: Redefining \% on input line 474.
  [33 <./img/Exp_Central_logistico/Figuras/Generales/Predictiva_logistico.png> <./img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png>]
-<img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png, id=547, 462.528pt x 346.896pt>
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png, id=501, 462.528pt x 346.896pt>
 File: img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png Graphic file (type png)
 <use img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png>
 Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png  used on input line 478.
 (pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
-<img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png, id=548, 462.528pt x 346.896pt>
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png, id=502, 411.81854pt x 354.123pt>
 File: img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png Graphic file (type png)
 <use img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png>
 Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png  used on input line 486.
-(pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
+(pdftex.def)             Requested size: 284.52756pt x 244.66393pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 490.
 LaTeX Info: Redefining \% on input line 490.
  [34 <./img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png> <./img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png>]
-<img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png, id=557, 462.528pt x 346.896pt>
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png, id=511, 402.18256pt x 342.8007pt>
 File: img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png Graphic file (type png)
 <use img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png>
 Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png  used on input line 493.
-(pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
-<img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png, id=558, 462.528pt x 346.896pt>
+(pdftex.def)             Requested size: 284.52756pt x 242.53235pt.
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png, id=512, 462.528pt x 346.896pt>
 File: img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png Graphic file (type png)
 <use img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png>
 Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png  used on input line 501.
@@ -1408,448 +1112,315 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 505.
 LaTeX Info: Redefining \% on input line 505.
  [35 <./img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png> <./img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png>]
-<img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png, id=567, 722.7pt x 289.08pt>
-File: img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png Graphic file (type png)
-<use img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png  used on input line 510.
-(pdftex.def)             Requested size: 426.79134pt x 170.71892pt.
-<img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png, id=568, 462.528pt x 346.896pt>
+
+LaTeX Warning: Reference `fig. SIR_01' on page 36 undefined on input line 508.
+
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png, id=521, 462.528pt x 346.896pt>
 File: img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png  used on input line 517.
+Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png  used on input line 512.
 (pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 521.
-LaTeX Info: Redefining \% on input line 521.
- [36 <./img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png> <./img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png>]
-<img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png, id=577, 462.528pt x 346.896pt>
-File: img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png Graphic file (type png)
-<use img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png  used on input line 525.
-(pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
-<img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png, id=578, 399.05086pt x 340.1508pt>
-File: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png Graphic file (type png)
-<use img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png  used on input line 532.
-(pdftex.def)             Requested size: 284.52756pt x 242.54161pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 536.
-LaTeX Info: Redefining \% on input line 536.
- [37 <./img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png> <./img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png>]
-<img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png, id=587, 392.667pt x 344.7279pt>
-File: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png Graphic file (type png)
-<use img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png  used on input line 540.
-(pdftex.def)             Requested size: 284.52756pt x 249.79245pt.
-<img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png, id=588, 462.528pt x 346.896pt>
-File: img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png Graphic file (type png)
-<use img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png  used on input line 548.
-(pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 552.
-LaTeX Info: Redefining \% on input line 552.
- [38 <./img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png> <./img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 575.
-LaTeX Info: Redefining \% on input line 575.
- [39 <./img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png>]
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_1_gravedad.png, id=604, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_1_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_1_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_1_gravedad.png  used on input line 582.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_2_gravedad.png, id=605, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_2_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_2_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_2_gravedad.png  used on input line 586.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_3_gravedad.png, id=606, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_3_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_3_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_3_gravedad.png  used on input line 590.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_4_gravedad.png, id=607, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_4_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_4_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_4_gravedad.png  used on input line 594.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_5_gravedad.png, id=608, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_5_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_5_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_5_gravedad.png  used on input line 604.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_6_gravedad.png, id=609, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_6_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_6_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_6_gravedad.png  used on input line 608.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_7_gravedad.png, id=610, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_7_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_7_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_7_gravedad.png  used on input line 612.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_8_gravedad.png, id=611, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_8_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_8_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_8_gravedad.png  used on input line 616.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_9_gravedad.png, id=612, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_9_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_9_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_9_gravedad.png  used on input line 626.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_10_gravedad.png, id=613, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_10_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_10_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_10_gravedad.png  used on input line 630.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_11_gravedad.png, id=614, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_11_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_11_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_11_gravedad.png  used on input line 634.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_12_gravedad.png, id=615, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_12_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_12_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_12_gravedad.png  used on input line 638.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_1_gravedad.png, id=616, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_1_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_1_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_1_gravedad.png  used on input line 650.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_2_gravedad.png, id=617, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_2_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_2_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_2_gravedad.png  used on input line 654.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_3_gravedad.png, id=618, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_3_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_3_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_3_gravedad.png  used on input line 658.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_4_gravedad.png, id=619, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_4_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_4_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_4_gravedad.png  used on input line 662.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_5_gravedad.png, id=620, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_5_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_5_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_5_gravedad.png  used on input line 673.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_6_gravedad.png, id=621, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_6_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_6_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_6_gravedad.png  used on input line 677.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_7_gravedad.png, id=622, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_7_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_7_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_7_gravedad.png  used on input line 681.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_8_gravedad.png, id=623, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_8_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_8_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_8_gravedad.png  used on input line 685.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_9_gravedad.png, id=624, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_9_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_9_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_9_gravedad.png  used on input line 696.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_10_gravedad.png, id=625, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_10_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_10_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_10_gravedad.png  used on input line 700.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_11_gravedad.png, id=626, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_11_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_11_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_11_gravedad.png  used on input line 704.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_12_gravedad.png, id=627, 462.528pt x 346.896pt>
-File: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_12_gravedad.png Graphic file (type png)
-<use img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_12_gravedad.png>
-Package pdftex.def Info: img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_12_gravedad.png  used on input line 708.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_1_logistico.png, id=628, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_1_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_1_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_1_logistico.png  used on input line 724.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_2_logistico.png, id=629, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_2_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_2_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_2_logistico.png  used on input line 728.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_3_logistico.png, id=630, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_3_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_3_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_3_logistico.png  used on input line 732.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_4_logistico.png, id=631, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_4_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_4_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_4_logistico.png  used on input line 736.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_5_logistico.png, id=632, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_5_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_5_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_5_logistico.png  used on input line 746.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_6_logistico.png, id=633, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_6_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_6_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_6_logistico.png  used on input line 750.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_7_logistico.png, id=634, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_7_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_7_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_7_logistico.png  used on input line 754.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_8_logistico.png, id=635, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_8_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_8_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_8_logistico.png  used on input line 758.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_9_logistico.png, id=636, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_9_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_9_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_9_logistico.png  used on input line 768.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_10_logistico.png, id=637, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_10_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_10_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_10_logistico.png  used on input line 772.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_11_logistico.png, id=638, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_11_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_11_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_11_logistico.png  used on input line 776.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_12_logistico.png, id=639, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_12_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_12_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_12_logistico.png  used on input line 780.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_1_logistico.png, id=640, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_1_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_1_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_1_logistico.png  used on input line 792.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_2_logistico.png, id=641, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_2_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_2_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_2_logistico.png  used on input line 796.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_3_logistico.png, id=642, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_3_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_3_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_3_logistico.png  used on input line 800.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_4_logistico.png, id=643, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_4_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_4_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_4_logistico.png  used on input line 804.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_5_logistico.png, id=644, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_5_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_5_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_5_logistico.png  used on input line 815.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_6_logistico.png, id=645, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_6_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_6_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_6_logistico.png  used on input line 819.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_7_logistico.png, id=646, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_7_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_7_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_7_logistico.png  used on input line 823.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_8_logistico.png, id=647, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_8_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_8_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_8_logistico.png  used on input line 827.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_9_logistico.png, id=648, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_9_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_9_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_9_logistico.png  used on input line 838.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_10_logistico.png, id=649, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_10_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_10_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_10_logistico.png  used on input line 842.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_11_logistico.png, id=650, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_11_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_11_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_11_logistico.png  used on input line 846.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-<img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_12_logistico.png, id=651, 462.528pt x 346.896pt>
-File: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_12_logistico.png Graphic file (type png)
-<use img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_12_logistico.png>
-Package pdftex.def Info: img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_12_logistico.png  used on input line 850.
-(pdftex.def)             Requested size: 173.67297pt x 130.25505pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \. on input line 857.
-LaTeX Info: Redefining \% on input line 857.
-[40 <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_1_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_2_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_3_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_4_gravedad.png>]
-LaTeX Info: Redefining \. on input line 871.
-LaTeX Info: Redefining \% on input line 871.
- [41 <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_5_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_6_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_7_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_8_gravedad.png>]
-
-LaTeX Warning: Reference `fig:g_02' on page 42 undefined on input line 876.
-
-
-LaTeX Warning: Reference `fig:g_03' on page 42 undefined on input line 876.
-
-LaTeX Info: Redefining \. on input line 880.
-LaTeX Info: Redefining \% on input line 880.
-[42 <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_9_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_10_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_11_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta1_12_gravedad.png>]
-
-Package caption Warning: \label without proper reference on input line 910.
+Package caption Warning: \label without proper reference on input line 523.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `tabla_03' on page 43 undefined on input line 888.
+LaTeX Warning: Reference `Fig. SIR_02' on page 36 undefined on input line 517.
 
-<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png, id=681, 1116.5715pt x 281.853pt>
-File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png Graphic file (type png)
-<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png  used on input line 916.
-(pdftex.def)             Requested size: 483.69684pt x 122.09758pt.
+LaTeX Info: Redefining \. on input line 518.
+LaTeX Info: Redefining \% on input line 518.
+[36 <./img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png> <./img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png>]
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png, id=532, 722.7pt x 289.08pt>
+File: img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png  used on input line 521.
+(pdftex.def)             Requested size: 426.79134pt x 170.71892pt.
 
-Overfull \hbox (49.50777pt too wide) in paragraph at lines 916--919
+
+Package caption Warning: \label without proper reference on input line 532.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `Fig. SIR_03' on page 37 undefined on input line 526.
+
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png, id=534, 462.528pt x 346.896pt>
+File: img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png  used on input line 530.
+(pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
+
+Package caption Warning: \label without proper reference on input line 541.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `Fig. SIR_04' on page 37 undefined on input line 535.
+
+
+Package caption Warning: \label without proper reference on input line 548.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `Fig. SIR_05' on page 37 undefined on input line 535.
+
+LaTeX Info: Redefining \. on input line 536.
+LaTeX Info: Redefining \% on input line 536.
+[37 <./img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png> <./img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png>]
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png, id=545, 399.05086pt x 340.1508pt>
+File: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png  used on input line 539.
+(pdftex.def)             Requested size: 284.52756pt x 242.54161pt.
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png, id=546, 392.667pt x 344.7279pt>
+File: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png  used on input line 546.
+(pdftex.def)             Requested size: 284.52756pt x 249.79245pt.
+
+
+Package caption Warning: \label without proper reference on input line 557.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `Fig. SIR_06' on page 38 undefined on input line 551.
+
+LaTeX Info: Redefining \. on input line 552.
+LaTeX Info: Redefining \% on input line 552.
+[38 <./img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png> <./img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png>]
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png, id=556, 462.528pt x 346.896pt>
+File: img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png  used on input line 555.
+(pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
+LaTeX Info: Redefining \. on input line 589.
+LaTeX Info: Redefining \% on input line 589.
+ [39 <./img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png>]
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png, id=564, 1111.2717pt x 281.97345pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png  used on input line 605.
+(pdftex.def)             Requested size: 455.24408pt x 115.5152pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 605--608
  [][] 
  []
 
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png, id=565, 1116.5715pt x 283.0575pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png  used on input line 612.
+(pdftex.def)             Requested size: 455.24408pt x 115.40645pt.
 
-Underfull \vbox (badness 1609) has occurred while \output is active []
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 612--615
+ [][] 
+ []
 
-LaTeX Info: Redefining \. on input line 920.
-LaTeX Info: Redefining \% on input line 920.
- [43 <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_1_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_2_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_3_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_4_gravedad.png>]
-<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png, id=692, 1116.5715pt x 281.853pt>
-File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png Graphic file (type png)
-<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png  used on input line 923.
-(pdftex.def)             Requested size: 483.69684pt x 122.09758pt.
+LaTeX Info: Redefining \. on input line 618.
+LaTeX Info: Redefining \% on input line 618.
+[40 <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png> <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png>]
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png, id=575, 1111.2717pt x 281.97345pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png  used on input line 621.
+(pdftex.def)             Requested size: 455.24408pt x 115.5152pt.
 
-Overfull \hbox (49.50777pt too wide) in paragraph at lines 923--926
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 621--624
+ [][] 
+ []
+
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png, id=576, 1116.5715pt x 283.0575pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png  used on input line 628.
+(pdftex.def)             Requested size: 455.24408pt x 115.40645pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 628--631
+ [][] 
+ []
+
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png, id=577, 1111.2717pt x 281.97345pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png  used on input line 637.
+(pdftex.def)             Requested size: 455.24408pt x 115.5152pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 637--640
+ [][] 
+ []
+
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png, id=578, 1116.5715pt x 283.0575pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png  used on input line 644.
+(pdftex.def)             Requested size: 455.24408pt x 115.40645pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 644--647
  [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 927.
-LaTeX Info: Redefining \% on input line 927.
- [44 <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_5_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_6_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_7_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_8_gravedad.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png>]
-<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png, id=703, 1116.5715pt x 281.853pt>
-File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png Graphic file (type png)
-<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png  used on input line 930.
+LaTeX Info: Redefining \. on input line 648.
+LaTeX Info: Redefining \% on input line 648.
+ [41 <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png> <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png> <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png>]
+Overfull \hbox (12.61098pt too wide) in paragraph at lines 658--669
+ [][] 
+ []
+
+LaTeX Info: Redefining \. on input line 810.
+LaTeX Info: Redefining \% on input line 810.
+[42 <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png>]
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png, id=596, 1114.76476pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png  used on input line 828.
+(pdftex.def)             Requested size: 455.24408pt x 115.14948pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 828--831
+ [][] 
+ []
+
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png, id=597, 1116.5715pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png  used on input line 835.
+(pdftex.def)             Requested size: 455.24408pt x 114.96446pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 835--838
+ [][] 
+ []
+
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png, id=598, 1114.76476pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png  used on input line 844.
+(pdftex.def)             Requested size: 455.24408pt x 115.14948pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 844--847
+ [][] 
+ []
+
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png, id=599, 1116.5715pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png  used on input line 851.
+(pdftex.def)             Requested size: 455.24408pt x 114.96446pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 851--854
+ [][] 
+ []
+
+
+Underfull \vbox (badness 6758) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 855.
+LaTeX Info: Redefining \% on input line 855.
+ [43 <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png> <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png> <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png>]
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png, id=610, 1114.76476pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png  used on input line 860.
+(pdftex.def)             Requested size: 455.24408pt x 115.14948pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 860--863
+ [][] 
+ []
+
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png, id=611, 1116.5715pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png  used on input line 867.
+(pdftex.def)             Requested size: 455.24408pt x 114.96446pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 867--870
+ [][] 
+ []
+
+
+Overfull \hbox (12.61098pt too wide) in paragraph at lines 879--890
+ [][] 
+ []
+
+LaTeX Info: Redefining \. on input line 1076.
+LaTeX Info: Redefining \% on input line 1076.
+[44 <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png> <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png> <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png>]
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png, id=623, 1116.5715pt x 281.853pt>
+File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png  used on input line 1101.
 (pdftex.def)             Requested size: 483.69684pt x 122.09758pt.
 
-Overfull \hbox (49.50777pt too wide) in paragraph at lines 930--933
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 1101--1104
  [][] 
  []
 
-<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png, id=704, 1116.5715pt x 281.97345pt>
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png, id=624, 1116.5715pt x 281.853pt>
+File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png  used on input line 1108.
+(pdftex.def)             Requested size: 483.69684pt x 122.09758pt.
+
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 1108--1111
+ [][] 
+ []
+
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png, id=625, 1116.5715pt x 281.853pt>
+File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png  used on input line 1117.
+(pdftex.def)             Requested size: 483.69684pt x 122.09758pt.
+
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 1117--1120
+ [][] 
+ []
+
+
+Underfull \vbox (badness 1189) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1121.
+LaTeX Info: Redefining \% on input line 1121.
+ [45 <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png>]
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png, id=636, 1116.5715pt x 281.97345pt>
 File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png  used on input line 937.
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png  used on input line 1124.
 (pdftex.def)             Requested size: 483.69684pt x 122.14975pt.
 
-Overfull \hbox (49.50777pt too wide) in paragraph at lines 937--940
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 1124--1127
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 941.
-LaTeX Info: Redefining \% on input line 941.
-[45 <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_9_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_10_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_11_gravedad.png> <./img/Exp_Central_gravedad/Figuras/Individual/PostAprox_theta2_12_gravedad.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png>]
-<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png, id=718, 1116.5715pt x 281.97345pt>
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png, id=637, 1116.5715pt x 281.97345pt>
 File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png  used on input line 944.
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png  used on input line 1133.
 (pdftex.def)             Requested size: 483.69684pt x 122.14975pt.
 
-Overfull \hbox (49.50777pt too wide) in paragraph at lines 944--947
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 1133--1136
  [][] 
  []
 
-<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png, id=719, 1116.5715pt x 281.97345pt>
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png, id=638, 1116.5715pt x 281.97345pt>
 File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png  used on input line 951.
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png  used on input line 1140.
 (pdftex.def)             Requested size: 483.69684pt x 122.14975pt.
 
-Overfull \hbox (49.50777pt too wide) in paragraph at lines 951--954
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 1140--1143
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 955.
-LaTeX Info: Redefining \% on input line 955.
-[46 <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_1_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_2_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_3_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_4_logistico.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png>])
+
+Overfull \hbox (12.61098pt too wide) in paragraph at lines 1151--1162
+ [][] 
+ []
+
+LaTeX Info: Redefining \. on input line 1162.
+LaTeX Info: Redefining \% on input line 1162.
+[46 <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png>])
 LaTeX Info: Redefining \. on input line 99.
 LaTeX Info: Redefining \% on input line 99.
- [47 <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_5_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_6_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_7_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_8_logistico.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png>]
-LaTeX Info: Redefining \. on input line 99.
-LaTeX Info: Redefining \% on input line 99.
- [48 <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_9_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_10_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_11_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta1_12_logistico.png>]
-LaTeX Info: Redefining \. on input line 99.
-LaTeX Info: Redefining \% on input line 99.
- [49 <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_1_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_2_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_3_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_4_logistico.png>]
-LaTeX Info: Redefining \. on input line 99.
-LaTeX Info: Redefining \% on input line 99.
- [50 <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_5_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_6_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_7_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_8_logistico.png>]
-LaTeX Info: Redefining \. on input line 99.
-LaTeX Info: Redefining \% on input line 99.
- [51 <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_9_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_10_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_11_logistico.png> <./img/Exp_Central_logistico/Figuras/Individual/PostAprox_theta2_12_logistico.png>]
+ [47]
 \openout2 = `chapters/chap_04.aux'.
 
  (chapters/chap_04.tex)
@@ -1858,7 +1429,7 @@ LaTeX Info: Redefining \% on input line 99.
  (chapters/conclusions.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [52
+ [48
 
 
 
@@ -1868,28 +1439,28 @@ LaTeX Info: Redefining \% on input line 1.
 
 ]
 Cap\'{\i }tulo 4.
-) [53] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.bbl
+) [49] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.bbl
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [54
+ [50
 
 
 
-]) [55]
+]) [51]
 \openout2 = `chapters/appendix.aux'.
 
  (chapters/appendix.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [56
+ [52
 
 
 ]
 Ap\'{e}ndice A.
-) [57]
+) [53]
 LaTeX Info: Redefining \. on input line 113.
 LaTeX Info: Redefining \% on input line 113.
- [58
+ [54
 
 
 
@@ -1905,28 +1476,25 @@ L3 programming layer <2024-01-04>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `Tesis.out' has not changed.
-(rerunfilecheck)             Checksum: C702828B2B21B1BB24647D3217C5C405;4972.
+(rerunfilecheck)             Checksum: 251EECAF58D30AA3087B38D9DE57138F;4493.
  )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 90 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 26496 strings out of 474486
- 526962 string characters out of 5743756
- 1955542 words of memory out of 5000000
- 48094 multiletter control sequences out of 15000+600000
- 580510 words of font info for 84 fonts, out of 8000000 for 9000
+ 26225 strings out of 474486
+ 506897 string characters out of 5743756
+ 1940542 words of memory out of 5000000
+ 47829 multiletter control sequences out of 15000+600000
+ 578971 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,101p,1287b,981s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2074.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.pdf (68 pages, 5187459 bytes).
+ <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2074.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.pdf (64 pages, 9968180 bytes).
 PDF statistics:
- 1417 PDF objects out of 1440 (max. 8388607)
- 190 named destinations out of 1000 (max. 500000)
- 687 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1261 PDF objects out of 1440 (max. 8388607)
+ 186 named destinations out of 1000 (max. 500000)
+ 491 words of extra memory for PDF output out of 10000 (max. 10000000)
 

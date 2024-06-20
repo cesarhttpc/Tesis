@@ -22,11 +22,9 @@
 \contentsline {subsubsection}{Simulación del modelo gravitatorio}{23}{section*.9}%
 \contentsline {subsection}{\numberline {3.2.3}Simulación del modelo SIR}{36}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Inferencia con aproximación.}{39}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Regla de interpolación(aproximación de forward map)}{39}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Simulación MCMC}{40}{subsection.3.3.2}%
-\contentsline {subsubsection}{Forward aproximado para el modelo gravitatorio}{40}{section*.40}%
-\contentsline {subsection}{\numberline {3.3.3}Experimentación con la convergencia.}{41}{subsection.3.3.3}%
-\contentsline {subsubsection}{Convergencia en el modelo epidemiólogico}{43}{section*.53}%
-\contentsline {chapter}{\numberline {4}Conclusiones y trabajo futuro}{53}{chapter.4}%
-\contentsline {chapter}{Referencias}{55}{chapter*.61}%
-\contentsline {chapter}{\numberline {A}Anexo}{57}{appendix.Alph1}%
+\contentsline {subsection}{\numberline {3.3.1}Método aproximado al problema inverso}{40}{subsection.3.3.1}%
+\contentsline {subsubsection}{Forward map aproximado para el modelo gravitatorio}{40}{section*.40}%
+\contentsline {subsubsection}{Convergencia en el modelo epidemiólogico}{45}{section*.55}%
+\contentsline {chapter}{\numberline {4}Conclusiones y trabajo futuro}{49}{chapter.4}%
+\contentsline {chapter}{Referencias}{51}{chapter*.63}%
+\contentsline {chapter}{\numberline {A}Anexo}{53}{appendix.Alph1}%

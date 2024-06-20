@@ -227,15 +227,15 @@ Estimar_sigma = True # No sirve
 ####### Inferencia ####################
 
 # modelo = ['gravedad', 'logistico', 'SIR']
-# dinamica = gravedad
-# modelo = 'gravedad'
+dinamica = gravedad
+modelo = 'gravedad'
 # dinamica = logistico
 # modelo = 'logistico'
-dinamica = SIR
-modelo = 'SIR'
+# dinamica = SIR
+# modelo = 'SIR'
 
 # Simular las observaciones
-n = 10      # Tamaño de muestra (n-1)
+n = 16      # Tamaño de muestra (n-1)
 
 if modelo == 'gravedad':
     # Parametros principales (verdaderos)
@@ -305,14 +305,14 @@ if modelo == 'gravedad':
     alpha = 10
     theta2_priori = 2
     beta = 1.1
-    size = 60000
+    size = 600000
     burn_in = 20000
 if modelo == 'logistico':
     theta1_priori = 0.001  
     alpha = 1000
     theta2_priori = 1000
     beta = 1000
-    size = 500000
+    size = 600000
     burn_in = 20000
 if modelo == 'SIR':
     theta1_priori = 0.01
@@ -328,7 +328,7 @@ if Estimar_sigma == True:
 else:
     path_sigma = ''
     
-path = 'Experimento_malla_'+ modelo + path_sigma +'/'  # Trayectoria relativa para archivar
+path = 'Exp_Central_'+ modelo + path_sigma +'/'  # Trayectoria relativa para archivar
 print(path)
 
 if hacer_reporte == True:
@@ -946,13 +946,16 @@ visualizacion_aprox(monte_carlo, t, burn_in, title = False)
 
 
 
+# # %%
 
+# # tiempos = 357, 292,295,292,300, 303,302,293,302, 300,309,302,302 # grav
+# # tiempos = 1258, 603,576,565,362, 362,363,440,604, 608,624,621,621 # log
+# tiempos =  845, 338,1467,494,350,  359,350,356,357,  398,446,422,369          # SIR
+# for ejecucion in tiempos:
 
-# ejecucion = 315
-
-# minutos = ejecucion//60
-# segundos = ejecucion%60
-# print(minutos, segundos)
+#     minutos = ejecucion//60
+#     segundos = ejecucion%60
+#     print(minutos, segundos)
 
 
 
