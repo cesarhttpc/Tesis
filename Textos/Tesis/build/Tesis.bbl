@@ -1,6 +1,154 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Berger%
+}{%
+Berger%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+berger2013statistical}
+\APACinsertmetastar {%
+berger2013statistical}%
+\begin{APACrefauthors}%
+Berger, J\BPBI O.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2013}.
+\newblock
+\APACrefbtitle {Statistical decision theory and Bayesian analysis} {Statistical
+  decision theory and bayesian analysis}.
+\newblock
+\APACaddressPublisher{}{Springer Science \& Business Media}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dobson%
+\ \BBA {} Barnett%
+}{%
+Dobson%
+\ \BBA {} Barnett%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+dobson2018introduction}
+\APACinsertmetastar {%
+dobson2018introduction}%
+\begin{APACrefauthors}%
+Dobson, A\BPBI J.%
+\BCBT {}\ \BBA {} Barnett, A\BPBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2018}.
+\newblock
+\APACrefbtitle {An introduction to generalized linear models} {An introduction
+  to generalized linear models}.
+\newblock
+\APACaddressPublisher{}{Chapman and Hall/CRC}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kelley%
+}{%
+Kelley%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+kelley2010theory}
+\APACinsertmetastar {%
+kelley2010theory}%
+\begin{APACrefauthors}%
+Kelley, W\BPBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2010}.
+\newblock
+\APACrefbtitle {The theory of differential equations} {The theory of
+  differential equations}.
+\newblock
+\APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mengersen%
+\ \BBA {} Tweedie%
+}{%
+Mengersen%
+\ \BBA {} Tweedie%
+}{%
+{\protect \APACyear {1996}}%
+}]{%
+mengersen1996rates}
+\APACinsertmetastar {%
+mengersen1996rates}%
+\begin{APACrefauthors}%
+Mengersen, K\BPBI L.%
+\BCBT {}\ \BBA {} Tweedie, R\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1996}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Rates of convergence of the Hastings and Metropolis
+  algorithms} {Rates of convergence of the hastings and metropolis
+  algorithms}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{The annals of Statistics}{24}{1}{101--121}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Norris%
+}{%
+Norris%
+}{%
+{\protect \APACyear {1998}}%
+}]{%
+norris1998markov}
+\APACinsertmetastar {%
+norris1998markov}%
+\begin{APACrefauthors}%
+Norris, J\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1998}.
+\newblock
+\APACrefbtitle {Markov chains} {Markov chains}\ (\BNUM~2).
+\newblock
+\APACaddressPublisher{}{Cambridge university press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Robert%
+, Casella%
+\BCBL {}\ \BBA {} Casella%
+}{%
+Robert%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1999}}%
+}]{%
+robert1999monte}
+\APACinsertmetastar {%
+robert1999monte}%
+\begin{APACrefauthors}%
+Robert, C\BPBI P.%
+, Casella, G.%
+\BCBL {}\ \BBA {} Casella, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1999}.
+\newblock
+\APACrefbtitle {Monte Carlo statistical methods} {Monte carlo statistical
+  methods}\ (\BVOL~2).
+\newblock
+\APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Sears%
 \ \protect \BOthers {.}}{%
 Sears%
@@ -27,6 +175,83 @@ Sears, F\BPBI W.%
 \newblock
 \APACaddressPublisher{}{Fondo Educativo Interamericano Naucalpan de Ju{\'a}rez,
   M{\'e}xico}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tarantola%
+}{%
+Tarantola%
+}{%
+{\protect \APACyear {2005}}%
+}]{%
+tarantola2005inverse}
+\APACinsertmetastar {%
+tarantola2005inverse}%
+\begin{APACrefauthors}%
+Tarantola, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2005}.
+\newblock
+\APACrefbtitle {Inverse problem theory and methods for model parameter
+  estimation} {Inverse problem theory and methods for model parameter
+  estimation}.
+\newblock
+\APACaddressPublisher{}{SIAM}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wasserman%
+}{%
+Wasserman%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+wasserman2013all}
+\APACinsertmetastar {%
+wasserman2013all}%
+\begin{APACrefauthors}%
+Wasserman, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2013}.
+\newblock
+\APACrefbtitle {All of statistics: a concise course in statistical inference}
+  {All of statistics: a concise course in statistical inference}.
+\newblock
+\APACaddressPublisher{}{Springer Science \& Business Media}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Zill%
+, Cullen%
+, Hern{\'a}ndez%
+\BCBL {}\ \BBA {} L{\'o}pez%
+}{%
+Zill%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2002}}%
+}]{%
+zill2002ecuaciones}
+\APACinsertmetastar {%
+zill2002ecuaciones}%
+\begin{APACrefauthors}%
+Zill, D\BPBI G.%
+, Cullen, M\BPBI R.%
+, Hern{\'a}ndez, A\BPBI E\BPBI G.%
+\BCBL {}\ \BBA {} L{\'o}pez, E\BPBI F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2002}.
+\newblock
+\APACrefbtitle {Ecuaciones diferenciales con problemas de valores en la
+  frontera} {Ecuaciones diferenciales con problemas de valores en la frontera}\
+  (\BVOL~1).
+\newblock
+\APACaddressPublisher{}{Thomson}.
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

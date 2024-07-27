@@ -227,15 +227,15 @@ Estimar_sigma = True # No sirve
 ####### Inferencia ####################
 
 # modelo = ['gravedad', 'logistico', 'SIR']
-dinamica = gravedad
-modelo = 'gravedad'
+# dinamica = gravedad
+# modelo = 'gravedad'
 # dinamica = logistico
 # modelo = 'logistico'
-# dinamica = SIR
-# modelo = 'SIR'
+dinamica = SIR
+modelo = 'SIR'
 
 # Simular las observaciones
-n = 16      # Tamaño de muestra (n-1)
+n = 10      # Tamaño de muestra (n-1)
 
 if modelo == 'gravedad':
     # Parametros principales (verdaderos)
