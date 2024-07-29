@@ -6,8 +6,6 @@ A level-1 auxiliary file: chapters/chap_01.aux
 Reallocating 'name_of_file' (item size: 1) to 21 items.
 A level-1 auxiliary file: chapters/chap_02.aux
 Reallocating 'name_of_file' (item size: 1) to 21 items.
-A level-1 auxiliary file: chapters/chap_03.aux
-Reallocating 'name_of_file' (item size: 1) to 21 items.
 A level-1 auxiliary file: chapters/chap_04.aux
 Reallocating 'name_of_file' (item size: 1) to 25 items.
 A level-1 auxiliary file: chapters/conclusions.aux
@@ -26,45 +24,47 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: references.bib
+Warning--I didn't find a database entry for ""
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-You've used 10 entries,
+You've used 9 entries,
             6951 wiz_defined-function locations,
-            1324 strings with 12219 characters,
-and the built_in function-call counts, 17482 in all, are:
-= -- 2210
-> -- 150
-< -- 719
-+ -- 826
-- -- 20
-* -- 997
-:= -- 3012
-add.period$ -- 39
-call.type$ -- 10
-change.case$ -- 170
+            1318 strings with 11867 characters,
+and the built_in function-call counts, 15148 in all, are:
+= -- 1913
+> -- 123
+< -- 636
++ -- 688
+- -- 18
+* -- 870
+:= -- 2673
+add.period$ -- 36
+call.type$ -- 9
+change.case$ -- 153
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 532
-empty$ -- 758
-format.name$ -- 249
-if$ -- 3454
+cite$ -- 18
+duplicate$ -- 420
+empty$ -- 664
+format.name$ -- 191
+if$ -- 2997
 int.to.chr$ -- 0
-int.to.str$ -- 30
+int.to.str$ -- 27
 missing$ -- 0
-newline$ -- 245
-num.names$ -- 80
-pop$ -- 458
+newline$ -- 217
+num.names$ -- 72
+pop$ -- 394
 preamble$ -- 1
-purify$ -- 40
+purify$ -- 36
 quote$ -- 0
-skip$ -- 1069
+skip$ -- 941
 stack$ -- 0
-substring$ -- 925
-swap$ -- 258
-text.length$ -- 26
+substring$ -- 764
+swap$ -- 216
+text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 800
+type$ -- 720
 warning$ -- 0
-while$ -- 87
+while$ -- 68
 width$ -- 0
-write$ -- 296
+write$ -- 258
+(There was 1 warning)

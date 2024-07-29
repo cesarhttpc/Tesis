@@ -149,35 +149,6 @@ Robert, C\BPBI P.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Sears%
-\ \protect \BOthers {.}}{%
-Sears%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {1986}}%
-}]{%
-sears1986fisica}
-\APACinsertmetastar {%
-sears1986fisica}%
-\begin{APACrefauthors}%
-Sears, F\BPBI W.%
-, Zemansky, M\BPBI W.%
-, Young, H\BPBI D.%
-, Vara, R\BPBI H.%
-, Garc{\'\i}a, M\BPBI G.%
-, G{\"u}mes, E\BPBI R.%
-\BDBL {}Benites, F\BPBI G.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{1986}.
-\newblock
-\APACrefbtitle {F{\'\i}sica universitaria} {F{\'\i}sica universitaria}.
-\newblock
-\APACaddressPublisher{}{Fondo Educativo Interamericano Naucalpan de Ju{\'a}rez,
-  M{\'e}xico}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Tarantola%
 }{%
 Tarantola%

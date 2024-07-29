@@ -11,7 +11,7 @@ En el capítulo precedente relata la estructura subyacente de la modelación. Fo
 
 El estudio del problema inverso se remonta a mediados del siglo 17. Los físicos contemporáneos interesados en la relación causa-efecto de diferentes fenómenos físicos lograron predecir el comportamiento en la dinámica intrínseca. Así, para la ley de gravitacional de newton, una vez obtenidas las masas de los cuerpos celestes (causas) es realizable predecir las trayectorias que siguen los cuerpos en el tiempo (efecto). Estudiar los efectos de un fenómeno dada ciertas causas es el problema directo perteneciente al sector de modelación directa. El problema inverso toma la dirección opuesta, dados los efectos, es de interés investigar las causas que lo ocasionaron. Retomando un ejemplo newtoniano, dado un campo gravitatorio circundando cierto cuerpo celeste, es de interés conocer la masa de dicho cuerpo. Enfaticemos que el problema inverso adolece de no ser único, suele ser el caso que a ciertos efectos se correspondas varias causas. el hecho de que no exista una mapeo uno a uno entre causa y efecto complica el problema inverso. Sin embargo, la información que se tenga a priori del fenómeno es crucial para determinar con una menor ambigüedad las causas \cite{tarantola2005inverse}. 
 
-\subsection{Modelos descritos por ODEs}
+\subsection*{Modelos descritos por ODEs}
 
 Para describir fenómenos los modelos matemáticos pueden ser de una suntuosa cantidad de clases o estilos. Con fines pedagógicos, considere que se desea describir los costos de la renta $Y$ de inmuebles en cierta ciudad (efecto). Supongase que de análisis previos se concluyo que dicho fenómeno esta vinculado al tamaño del inmueble $X_1$, número de habitaciones $X_2$, ingreso medio por habitante $X_3$ (causas). Un modelo plausible es por modelos lineales generalizados
 \begin{align}
@@ -101,7 +101,7 @@ A mediados del siglo XX, la estadística bayesiana inició un crecimiento sin pr
 
 Obtener la distribución posterior (\ref{2.2.04}) con el método de Markov Chain Monte Carlo (MCMC) evita el calculo numérico de $h(\mathbf{y}$) como se ha mencionado previamente. En su lugar, MCMC estima la distribución posterior con una generosa muestra simulada de la misma distribución posterior salvo la constante de normalización. Por ende, con la misma muestra permite obtener estimaciones a cualquier momento de la distribución posterior asimismo la estimación de las distribuciones marginales. Los métodos MCMC busca encontrar una cadena de Markov $X^{(1)},X^{(2)},\cdots$ cuya distribución estacionaria sea la \textit{distribución objetivo} \footnote{En aplicaciones a la estadística bayesiana usando MCMC, la distribución posterior es la distribución objetivo.} $f(x)$ pese a que la misma no esté normalizada. 
 
-\subsection{Algoritmo Metropolis-Hastings}
+\subsection*{Algoritmo Metropolis-Hastings}
 
 El algoritmo de Metropolis-Hastings es un método de MCMC para generar muestras de una distribución objetivo $f(x)$ partiendo de muestras de una distribución propuesta $q(y|x)$ que no son necesariamente simétricas. Al igual que todo método MCMC, el algoritmo de Metropolis-Hastings genera una cadena $X_0, X_1, \cdots, X_N$ construyendo recursivamente la cadena dependiendo solamente del estado previo, es decir preservando la propiedad de Markov. El estado inicial $X_0$ se toma aleatoriamente. Luego, teniendo hasta el estado $X_i$, el estado $X_{i+1}$ se obtiene siguiendo 
 \begin{enumerate}
@@ -134,22 +134,46 @@ Pese a la enrevesada formalización del método, la estructura del algoritmo Met
 
 Asimismo, el segundo paso del algoritmo Metropolis-Hastings se observa la prescindencia del factor de normalización de la distribución objetivo puesto que solo es relevante el cociente $\frac{f(y)}{f(x)}$, un atributo peculiar de la distribución posterior. Paralelamente, el tercer paso del algoritmo se observa la propiedad de Markov, ya que la aceptación de la propuesta para pertenecer a la cadena depende estocásticamente del estado que lo precede unicamente.
 
-\section{Consistencia de un forward map aproximado}
+\section{Forward map aproximado}
 
+Hay que destacar que, una vez abordado el enfoque bayesiano para el problema inverso y el método MCMC para obtener la distribución posterior de los parámetros del modelo bajo estudio, el reto a superar recae en la implementación de la metodología descrita. Es preciso tener presente que pese a ser una metodología ampliamente funcional, no se cierra la puerta a inquerir mejoras en su procedimiento. Es por ello que la propuesta principal del trabajo de tesis es la introducción del forward map aproximado.
 
-La propuesta principal a la metodología ya establecida para abordar el problema inverso con el enfoque bayesiano es considerar aproximaciones del forward map. Existen diferentes maneras de hacer las aproximaciones del forward map. La forma propuesta es considerar una discretización del espacio de parámetros $\Theta$. Usando coordenadas, cada $\theta \in \Theta \subset \mathbb{R}^d$ se puede escribir como $\theta = (\theta_1, \theta_2, \cdots, \theta_d)$. Luego, considerese una partición equidistante $[\theta_i^{min},\theta_i^{max}]$ para todo $i \in \{1,\cdots,d\}$ donde $\theta_i^{min}$ y $\theta_i^{max}$ son cotas para el espacio de parámetros que contenga la masa de probabilidad, puede pensarse en tomar cuantiles de $0.01$ y $0.99$ respectivamente de la distribución marginal a priori para $\theta_i$. Consideremos que cada coordenada se particiona en $M$ puntos, luego hay $M^d$ puntos de la partición en el espacio de parámetros, denotando la malla como $\tilde{\Theta}\subset \Theta$.
+El forward map aproximado $F_{\theta}^{*}$ es una construcción multifacética basada en aproximaciones de estadística espacial. Tal aproximación pretende crear una distribución posterior aproximada $\pi^{*}(\theta|\mathbf{y})$ con la sustitución del forward map a su versión aproximada, de forma que la simulación de esta nueva distribución posterior sea más eficiente por el algoritmo Metropolis-Hastings. 
 
-Una vez establecido un enmallado de $\Theta$, se calcula el forward map solo para las intersecciones del enmallado. Así para cada $\tilde{\theta}_1, \tilde{\theta}_2, \cdots, \tilde{\theta}_{M^d}$ se obtiene el forward map $\tilde{y}_i = F(\tilde{\theta}_i)$ siendo cada una de estas funciones continuas. Posteriormente, para aproximar el Forward map en puntos $\theta \not\in \tilde{\Theta}$ se propone buscar a los $k$ puntos $\tilde{\theta}$ más cercanos en distancia euclideana. Denotando los $k$ vecinos de la malla más cercanos a $\theta$ por $\hat{\theta}_1, \cdots, \hat{\theta}_k$ cada uno a una distancia $d_1, \cdots, d_k$ de $\theta$. La aproximación al forward map es
+\subsection*{Construcción del forward map aproximado}
+Existen diferentes maneras de hacer las aproximaciones del forward map. La forma propuesta es considerar una discretización del espacio de parámetros $\Theta$. Usando coordenadas canónicas, cada $\theta \in \Theta \subset \mathbb{R}^d$ se puede escribir como $\theta = (\theta_1, \theta_2, \cdots, \theta_d)$. Consideremos para cada coordenada un intervalo $[\theta_i^{min},\theta_i^{max}]$ para toda $i \in \{1,\cdots,d\}$, donde $\theta_i^{min}$ y $\theta_i^{max}$ son cotas para el espacio de parámetros que contenga la masa de probabilidad, puede pensarse en tomar cuantiles de $0.01$ y $0.99$ respectivamente de la distribución marginal a priori para $\theta_i$. Posteriormente, tomemos una partición equidistante en $M$ puntos para cada coordenada. Más llanamente, la partición de la coordenada $i-$ésima es el conjunto $\mathcal{M}_i =\{ \theta_i^{(1)}, \theta_i^{(2)},\cdots , \theta_i^{(M-1)}, \theta_i^{(M)}\}$ con $\theta_i^{(1)} = \theta_i^{min}$ y $\theta_i^{(M)} = \theta_i^{max}$. De esta forma, la partición crea una malla $\mathcal{M} = \mathcal{M}_1 \times \cdots \times \mathcal{M}_d$ del espacio parametral $\Theta$. Observese que la cardinalidad de $\mathcal{M}$ es de $M^d$. Denotemos por $\vartheta$ a los elementos de $\mathcal{M}$, así el enmallado se constituye de $M^d$ parámetros. Es decir, se establece que $\mathcal{M} = \{\vartheta_1, \vartheta_2, \cdots, \vartheta_{M^d}\}$, notese que $\vartheta_j \in \Theta$ para toda $j \in \{1,\cdots, M^d \}$.
+
+Seguidamente, se requiere evaluar el forward map para cada elemento de $\mathcal{M}$, en la notación acordada se requiere $y_j = F(\vartheta_j)$, con $y_j = y_j(t)$ funciones continuas, que al estar restringidos a modelos dados por ODE es necesario un calculo intermedio. Dicho en otras palabras, solo se resuelven las ecuaciones diferenciales con los parámetros donde el enmallado interseca.
+
+Para terminar, el forward map aproximado para parámetros $\theta \notin \mathcal{M}$ se propone buscar a los $k$ vectores de parámetros $\vartheta$ más cercanos en distancia euclideana a $\theta$, denotando estos $k$ vecinos por $\vartheta^{(1)}, \cdots, \vartheta^{(k)}$ cada uno a una distancia $d_1, \cdots, d_k$ de $\theta$, respectivamente; con $d_1 \leq d_2 \leq \dots \leq d_k$. La aproximación al forward map es
 \begin{align}
-    F^{*}(\theta) = \sum_{i = 1}^{k} \frac{1}{d_i} \tilde{\theta}_i
+    F^{*}(\theta) = \sum_{j = 1}^{k} \omega_j \vartheta^{(j)}
 \end{align}
-que es una suma ponderada inversamente por las distancias, ya que se pretende que parámetros `lejanos' de $\theta$ tengan menor relevancia que los `cercanos'. 
+donde $\omega_j = d_j^{-1}/ \sum_{i=1}^{k} d_i^{-1}$, que es una suma ponderada inversamente por las distancias, ya que se pretende que parámetros `lejanos' de $\theta$ tengan menor relevancia que los `cercanos'. 
+
+
+\subsection*{Consistencia y utilidad del forward map aproximado}
+
+La preeminencia potencial del uso del forward map aproximado para el estudio del problema inverso reside parcialmente en un menor tiempo de ejecución de la implementación en contraste con su análogo ordinario. Existen modelos de ecuaciones diferenciales cuya implementación del problema inverso bajo enfoque bayesiano toma días en ejecutarse, vease \cite{}.
+Debido a la reticente necesidad humana en aplicaciones impostergables es imperativo agilizar el tiempo en operación. Concisamente en modelos epidemiológicos la rapidez de acción se torna fundamental como lo fue en la predicción de ocupación hospitalaria por COVID-19 en la zona metropolitana de la CDMX. \cite{}
+
+
+% por ello es que existe una necesidad inexorable ante la reticente necesidad humana de optimización en aplicaciones impostergables.
+
+
+
+
+
+
 
 % Esta estructura de aproximación se presta a la interpretación de que la información obtenida en mallas finas sea transmitidas a los vecinos.
 
 % Convergencia
 
-\section{Necesidad de trabajar con aproximaciones del Forward map}
 
-Existe una ventaja operativa de trabajar el problema inverso con el forward map aproximado pues como veremos en el capítulo 3 los tiempos de ejecución son menores comparado con el forward map ordinario. 
+
+
+% \subsection*{Necesidad de trabajar con aproximaciones del Forward map}
+
+% Existe una ventaja operativa de trabajar el problema inverso con el forward map aproximado pues como veremos en el capítulo 3 los tiempos de ejecución son menores comparado con el forward map ordinario. 
 
