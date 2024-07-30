@@ -24,6 +24,59 @@ Berger, J\BPBI O.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Capistr{\'a}n%
+, Capella%
+\BCBL {}\ \BBA {} Christen%
+}{%
+Capistr{\'a}n%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+capistran2020forecasting}
+\APACinsertmetastar {%
+capistran2020forecasting}%
+\begin{APACrefauthors}%
+Capistr{\'a}n, M\BPBI A.%
+, Capella, A.%
+\BCBL {}\ \BBA {} Christen, J\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Forecasting hospital demand during COVID-19 pandemic
+  outbreaks} {Forecasting hospital demand during covid-19 pandemic
+  outbreaks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:2006.01873}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Casella%
+\ \BBA {} Berger%
+}{%
+Casella%
+\ \BBA {} Berger%
+}{%
+{\protect \APACyear {2024}}%
+}]{%
+casella2024statistical}
+\APACinsertmetastar {%
+casella2024statistical}%
+\begin{APACrefauthors}%
+Casella, G.%
+\BCBT {}\ \BBA {} Berger, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2024}.
+\newblock
+\APACrefbtitle {Statistical inference} {Statistical inference}.
+\newblock
+\APACaddressPublisher{}{CRC Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Dobson%
 \ \BBA {} Barnett%
 }{%
@@ -47,6 +100,37 @@ Dobson, A\BPBI J.%
   to generalized linear models}.
 \newblock
 \APACaddressPublisher{}{Chapman and Hall/CRC}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Galaviz%
+}{%
+Galaviz%
+}{%
+{\protect \APACyear {2023}}%
+}]{%
+Anel}
+\APACinsertmetastar {%
+Anel}%
+\begin{APACrefauthors}%
+Galaviz, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2023}.
+\unskip\
+\newblock
+\APACrefbtitle {A physics-based surrogate model in inverse problem} {A
+  physics-based surrogate model in inverse problem}\ \APACtypeAddressSchool
+  {PhD thesis}{}{}.
+\unskip\
+\newblock
+\APACaddressSchool {Guanajuato, Guanajuato}{Centro de Investigación en
+  Matemáticas}.
+\unskip\
+\newblock
+\APACrefnote{Available at
+  \url{https://www.cimat.mx/Aplicaciones/biblioteca/TD/Pub/}}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -149,6 +233,35 @@ Robert, C\BPBI P.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Sears%
+\ \protect \BOthers {.}}{%
+Sears%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1986}}%
+}]{%
+sears1986fisica}
+\APACinsertmetastar {%
+sears1986fisica}%
+\begin{APACrefauthors}%
+Sears, F\BPBI W.%
+, Zemansky, M\BPBI W.%
+, Young, H\BPBI D.%
+, Vara, R\BPBI H.%
+, Garc{\'\i}a, M\BPBI G.%
+, G{\"u}mes, E\BPBI R.%
+\BDBL {}Benites, F\BPBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1986}.
+\newblock
+\APACrefbtitle {F{\'\i}sica universitaria} {F{\'\i}sica universitaria}.
+\newblock
+\APACaddressPublisher{}{Fondo Educativo Interamericano Naucalpan de Ju{\'a}rez,
+  M{\'e}xico}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Tarantola%
 }{%
 Tarantola%
@@ -170,6 +283,29 @@ Tarantola, A.%
   estimation}.
 \newblock
 \APACaddressPublisher{}{SIAM}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wasserman%
+}{%
+Wasserman%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+wasserman2006all}
+\APACinsertmetastar {%
+wasserman2006all}%
+\begin{APACrefauthors}%
+Wasserman, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2006}.
+\newblock
+\APACrefbtitle {All of nonparametric statistics} {All of nonparametric
+  statistics}.
+\newblock
+\APACaddressPublisher{}{Springer Science \& Business Media}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
