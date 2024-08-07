@@ -1,6 +1,80 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Alonso%
+\ \BBA {} Finn%
+}{%
+Alonso%
+\ \BBA {} Finn%
+}{%
+{\protect \APACyear {1970}}%
+}]{%
+alonso1970fisica}
+\APACinsertmetastar {%
+alonso1970fisica}%
+\begin{APACrefauthors}%
+Alonso, M.%
+\BCBT {}\ \BBA {} Finn, E\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1970}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {F{\'\i}sica: Volumen I: Mec{\'a}nica} {F{\'\i}sica:
+  Volumen i: Mec{\'a}nica}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Apostol%
+}{%
+Apostol%
+}{%
+{\protect \APACyear {1991}}%
+}]{%
+apostol1991calculus}
+\APACinsertmetastar {%
+apostol1991calculus}%
+\begin{APACrefauthors}%
+Apostol, T\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1991}.
+\newblock
+\APACrefbtitle {Calculus, Volume 1} {Calculus, volume 1}.
+\newblock
+\APACaddressPublisher{}{John Wiley \& Sons}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Apostol%
+}{%
+Apostol%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+apostol2019calculus}
+\APACinsertmetastar {%
+apostol2019calculus}%
+\begin{APACrefauthors}%
+Apostol, T\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2019}.
+\newblock
+\APACrefbtitle {Calculus II: c{\'a}lculo con funciones de varias variables y
+  {\'a}lgebra lineal, con aplicaciones para ecuaciones diferenciales y
+  probabilidad} {Calculus ii: c{\'a}lculo con funciones de varias variables y
+  {\'a}lgebra lineal, con aplicaciones para ecuaciones diferenciales y
+  probabilidad}.
+\newblock
+\APACaddressPublisher{}{Revert{\'e}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Berger%
 }{%
 Berger%
@@ -77,6 +151,33 @@ Casella, G.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Christen%
+\ \BBA {} Fox%
+}{%
+Christen%
+\ \BBA {} Fox%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+christen2010general}
+\APACinsertmetastar {%
+christen2010general}%
+\begin{APACrefauthors}%
+Christen, J\BPBI A.%
+\BCBT {}\ \BBA {} Fox, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A general purpose sampling algorithm for continuous
+  distributions (the t-walk)} {A general purpose sampling algorithm for
+  continuous distributions (the t-walk)}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Dobson%
 \ \BBA {} Barnett%
 }{%
@@ -134,6 +235,56 @@ Galaviz, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Griffiths%
+\ \BBA {} Higham%
+}{%
+Griffiths%
+\ \BBA {} Higham%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+griffiths2010numerical}
+\APACinsertmetastar {%
+griffiths2010numerical}%
+\begin{APACrefauthors}%
+Griffiths, D\BPBI F.%
+\BCBT {}\ \BBA {} Higham, D\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2010}.
+\newblock
+\APACrefbtitle {Numerical methods for ordinary differential equations: initial
+  value problems} {Numerical methods for ordinary differential equations:
+  initial value problems}\ (\BVOL~5).
+\newblock
+\APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Jim{\'e}nez~Bedolla%
+}{%
+Jim{\'e}nez~Bedolla%
+}{%
+{\protect \APACyear {2022}}%
+}]{%
+jimenez2022metodos}
+\APACinsertmetastar {%
+jimenez2022metodos}%
+\begin{APACrefauthors}%
+Jim{\'e}nez~Bedolla, J\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{}{}.
+\newblock
+\APACrefbtitle {M{\'e}todos num{\'e}ricos usando Python.} {M{\'e}todos
+  num{\'e}ricos usando python.}
+\newblock
+\APACaddressPublisher{}{Universidad Nacional Aut{\'o}noma de M{\'e}xico}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Kelley%
 }{%
 Kelley%
@@ -154,6 +305,31 @@ Kelley, W\BPBI G.%
   differential equations}.
 \newblock
 \APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mathews%
+\ \BBA {} Fink%
+}{%
+Mathews%
+\ \BBA {} Fink%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+mathews2000metodos}
+\APACinsertmetastar {%
+mathews2000metodos}%
+\begin{APACrefauthors}%
+Mathews, J.%
+\BCBT {}\ \BBA {} Fink, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2000}.
+\newblock
+\APACrefbtitle {M{\'e}todos Num{\'e}ricos} {M{\'e}todos num{\'e}ricos}.
+\newblock
+\APACaddressPublisher{}{Madrid: Prentice Hall}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -286,6 +462,28 @@ Tarantola, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Van~der Vaart%
+}{%
+Van~der Vaart%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+van2000asymptotic}
+\APACinsertmetastar {%
+van2000asymptotic}%
+\begin{APACrefauthors}%
+Van~der Vaart, A\BPBI W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2000}.
+\newblock
+\APACrefbtitle {Asymptotic statistics} {Asymptotic statistics}\ (\BVOL~3).
+\newblock
+\APACaddressPublisher{}{Cambridge university press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Wasserman%
 }{%
 Wasserman%
@@ -329,6 +527,29 @@ Wasserman, L.%
   {All of statistics: a concise course in statistical inference}.
 \newblock
 \APACaddressPublisher{}{Springer Science \& Business Media}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Weiss%
+}{%
+Weiss%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+weiss2013sir}
+\APACinsertmetastar {%
+weiss2013sir}%
+\begin{APACrefauthors}%
+Weiss, H\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The SIR model and the foundations of public health} {The
+  sir model and the foundations of public health}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Materials matematics}{}{}{0001--17}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

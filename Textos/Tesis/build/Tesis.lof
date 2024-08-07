@@ -4,15 +4,17 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Varias trayectorias con la dinámica gravitación sujeta a fricción para varias valores de los parámetros g,b.}}{19}{figure.caption.11}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Varias trayectorias con la dinámica de crecimiento logístico para varias valores de los parámetros K,r.}}{21}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Trayectoria de cada grupo del modelo SIR con $\beta = 0.009$ y $\gamma = 0.5$.}}{22}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Distribuciones a priori para $\theta _1 = g$ y $\theta _2 = b$.}}{28}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Muestra $\mathbf {y}$ del modelo gravitatorio.}}{28}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Cadena obtenida por MCMC para la distribución posterior conjunta.}}{29}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Distribución posterior para el parámetros $g$.}}{29}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Distribución posterior para el parámetro $b$.}}{30}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Distribución predictiva para el modelo gravitatorio con $\sigma $ conocido.}}{30}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Distribuciones a priori para $\theta _1 = g$ y $\theta _2 = b$.}}{31}{figure.caption.21}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Muestra $\mathbf {y}$ del modelo gravitatorio.}}{32}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Cadena obtenida por MCMC para la distribución posterior conjunta.}}{32}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Trayectoria de cada grupo del modelo SIR con $\beta = 0.009$ y $\gamma = 0.5$.}}{23}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Distribuciones marginal a priori para el parámetro $g$ (izquierda) y $b$ (derecha).}}{28}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Muestra $\mathbf {y}$ del modelo gravitatorio.}}{29}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Estimación de la distribución posterior conjunta por método MCMC Metropolis-Hastings.}}{30}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Distribución predictiva del modelo gravitatorio para los valores de tiempo de 0.2s y 0.7s.}}{30}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Distribución posterior (azul) y distribución a priori (verde) para el parámetros $g$ y $b$. }}{31}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Distribución predictiva para el modelo gravitatorio}}{32}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Muestra $\mathbf {y}$ para el modelo logístico.}}{32}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Distribuciones a priori para $\theta _1$ y $\theta _2$}}{33}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Posterior conjunta para el modelo logístico.}}{33}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Distribución posterior (azul) y distribución a priori (verde) para el parámetros $\theta _1$ y $\theta _2$. }}{34}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Distribución predictiva para el modelo logístico.}}{35}{figure.caption.26}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

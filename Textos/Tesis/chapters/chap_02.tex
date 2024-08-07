@@ -39,7 +39,7 @@ Más aún, se puede obtener el análisis del problema inverso para sistemas de e
        \end{matrix}
     \right.
 \end{align*}
-con $G_1, G_2, ..., G_d$ funciones continuas conocidas (\cite{zill2002ecuaciones}).
+con $G_1, G_2, ..., G_d$ funciones continuas conocidas (\cite{apostol2019calculus}).
 
 Observemos que la restricción implica restringir las variables en un soporte continuo, por lo que modelos con variables discretas deben de modificarse. En el capítulo 3 se detallan tres modelos de los cuales se consideraron los análisis del problema inverso. Dentro de estos se consideran modelos como la dinámica de caída libre sujeto a fricción, donde la distancia recorrida en caída se describe por
 \begin{align}
@@ -80,9 +80,10 @@ En consecuencia, se ha establecido una distribución para las observaciones $y_i
     \mathcal{L}(\theta,\sigma) &= f(\mathbf{y}|\theta) = \prod_{i = 1}^{n} \frac{1}{\sqrt{2\pi \sigma^2}} \exp \left \{ -\frac{1}{2\sigma^2}\left(y_i - F_{\theta}(t_i)\right)^2 \right \} , 
 \end{align*}
 simplificando
-\begin{align*}
-    \mathcal{L}(\theta,\sigma) = \left(\frac{1}{2\pi \sigma^2}\right) ^{n/2}\exp \left \{  -\frac{1}{2\sigma^2}\sum_{i = 1}^{n} \left(y_i - F_{\theta}(t_i)\right)^2 \right \},
-\end{align*}
+\begin{align}
+    f(\mathbf{y}|\theta) = \left(\frac{1}{2\pi \sigma^2}\right) ^{n/2}\exp \left \{  -\frac{1}{2\sigma^2}\sum_{i = 1}^{n} \left(y_i - F_{\theta}(t_i)\right)^2 \right \},
+    \label{2.2.03}
+\end{align}
 Del teorema de Bayes, se obtiene la distribución posterior para los parámetros
 \begin{align}
     \pi(\theta| \mathbf{y})  = \frac{f(\mathbf{y}|\theta)\pi(\theta)}{\int f(\mathbf{y}|\theta)\pi(\theta)d \theta},

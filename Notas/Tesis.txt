@@ -9,3 +9,11 @@ Tarea2: 9
 Hacer tiempos automaticos.
 
 tomar tiempos preproceso.
+
+
+Notas:
+grafica priori logistico tiene etiquetas mal. En lugar de gamma,beta es theta_1, theta_2.
+
+La grafica de tiempos fijos, la de cortes de la distribución predictiva no es distribución, necesita normalización.
+
+La grafica de la posterior conjunta logistico necesita desemplamar la leyenda de theta_1
