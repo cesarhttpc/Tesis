@@ -17,7 +17,8 @@
 \contentsline {subsection}{\numberline {3.2.2}Simulación con MCMC forward map ordinario}{26}{subsection.3.2.2}%
 \contentsline {subsubsection}{Simulación del modelo gravitatorio}{27}{section*.14}%
 \contentsline {subsubsection}{Simulación del modelo logístico}{31}{section*.21}%
-\contentsline {subsubsection}{Simulación del modelo SIR}{34}{section*.27}%
-\contentsline {chapter}{\numberline {4}Conclusiones y trabajo futuro}{37}{chapter.4}%
-\contentsline {chapter}{Referencias}{39}{chapter*.32}%
-\contentsline {chapter}{\numberline {A}Anexo}{41}{appendix.Alph1}%
+\contentsline {subsubsection}{Simulación del modelo SIR}{35}{section*.27}%
+\contentsline {section}{\numberline {3.3}Simulación con forward map aproximado}{37}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Conclusiones y trabajo futuro}{39}{chapter.4}%
+\contentsline {chapter}{Referencias}{41}{chapter*.33}%
+\contentsline {chapter}{\numberline {A}Anexo}{43}{appendix.Alph1}%

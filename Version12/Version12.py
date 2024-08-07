@@ -408,7 +408,7 @@ if GuardarCadena == True:
     # Save the combined array to a CSV file
     np.savetxt(path + 'Cadena.csv', combined_array, delimiter=",")#, fmt='%d')
 
-
+# %%
 def visualizacion(monte_carlo,t, burn_in, title = True):
     
     theta1_sample_plot = monte_carlo[:,0]
@@ -711,6 +711,7 @@ if exper_aprox == True:
 
             contador += 1
 
+# %%
 CadenaCSV = pd.read_csv(path_directorio + path + 'Cadena.csv')
 monte_carlo = CadenaCSV.to_numpy()
 
