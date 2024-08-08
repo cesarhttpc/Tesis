@@ -1,13 +1,6 @@
 \chapter{Implementación} 
 
-
 La teoría desarrollada referente a la convergencia en problemas inversos con froward map aproximado no es suficientemente general para considerarse un estudio integro. En su defecto se ha optado por un desarrollo heurístico centrado en experimentación con una variedad de parámetros o indicadores estratégicamente seleccionados. En adelante encararemos dos frentes, el primero de ellos es la implementación en código por medio del lenguaje de programación python, donde se tomaran modelos rudimentarios de ecuaciones diferenciales ordinarias. El segundo frente es el estudio de las distribuciones posteriores aproximadas en función de los atributos del forward map aproximado. Cabe enfatizar que parte considerable del trabajo de tesis involucra la ejecución de conocimientos técnicos de programación. La implementación fundamental se encuentra en el \href{https://github.com/cesarhttpc/Tesis}{enlace} adjunto \footnote{Implementación disponible en https://github.com/cesarhttpc/Tesis}.
-
-
-
-% Debido a que nos encontramos en un terreno carente de fundamentos teóricos, nuestra mejor arma para probar que grado de aproximación de los problemas inversos son consistentes es por medio de experimentación metodológica. Esto nos permite revelar obstáculos del nuevo método así como también las grandes ventajas. 
-
-% Gran parte del trabajo de tesis se centra primordialmente en la experimentación con la propuesta innovadora para la solución bayesiana del problema inverso. Se hacen los experimentos con una implementación en Python cuyo código se encuentra adjunto 
 
 \section{Modelos de trabajo}
 
@@ -31,7 +24,7 @@ bajo las condiciones iniciales $x(0) = x_0, \dot{x}(0) = v_0$. La solución a la
 \begin{align*}
     x(t) = \frac{1}{2}gt^2 + v_0 t + x_0.
 \end{align*}
-Vease los detalles del modelo en \cite{alonso1970fisica}
+Véase los detalles del modelo en \cite{alonso1970fisica}
 
 Sin embargo, dentro del marco establecido para el modelo gravitacional, no es un modelo realista ya que este no está considerando la desaceleración producto de la fricción con el medio que interactúa (aire). Por ello es necesario modelar la fuerza de fricción de forma adecuada. Un modelo físico plausible para la fricción es considerar una fuerza opuesta a la fuerza de gravedad y que está depende de la velocidad de la partícula. Consideremos dicha fuerza de fricción como $F_f = -bv(x) $. Podemos pensar que el modelo para la fuerza de fricción es una aproximación de los primeros polinomios de Taylor a primer grado, donde se descarta el termino constante ya que no tiene sentido físico que la fricción obedezca a marcos de referencia. 
 
@@ -84,7 +77,7 @@ tomando $x_0 = 0$, finalmente nos queda que la trayectoria de la partícula es
     x(t) = v_T \left [ t - \frac{m}{b} \left( 1- \exp\left\{-\frac{b}{m} t\right\}\right)\right],
     \label{3.1.12}
 \end{align}
-apegandose al método de integración dado por \cite{sears1986fisica}.
+apegándose al método de integración dado por \cite{sears1986fisica}.
 
 Por tanto, podemos tomar el forward map $F(g,b) = x(t)$, prescindiendo de $m$ al considerar $m = 1$.
 
@@ -135,7 +128,7 @@ Por tanto, del cambio $u(t) = P^{-1}$ obtenemos la solución explicita a (\ref{3
 \end{align}
 donde verificamos que $\lim_{t \rightarrow \infty} = K $. 
 
-Existe otra reparametrización del modelo lógistico que simplifica los cálculos en la metodología del problema inverso. Escribiremos que $X(t)$ sigue el crecimiento logístico si satisface
+Existe otra reparametrización del modelo logístico que simplifica los cálculos en la metodología del problema inverso. Escribiremos que $X(t)$ sigue el crecimiento logístico si satisface
 \begin{align}
     \frac{dX(t)}{dt} = \theta_1 X(t)\left(\theta_2 - X(t)\right).
     \label{3.1.2.06}
@@ -155,8 +148,6 @@ recuperamos la expresión dada en (\ref{3.1.2.03}).
 \end{figure}
 
 En la Fig \ref{fig:trayectoria_logistico} se muestran varias trayectorias del crecimiento poblacional con diferentes parámetros usando la parametrización interpretable en términos de tasa de crecimiento $r$ y poblacional máxima $K$. Además, vemos que cada trayectoria es no decreciente y tiende asintóticamente al parámetro $K$. 
-
-
 
 \subsection{Modelo SIR}
 
@@ -178,7 +169,6 @@ donde $\beta$ es la tasa de infección, $\gamma$ es la tasa de recuperación y $
 
 La solución explicita para $S(t), I(t), R(t)$ no existe en general, por ello se requieren métodos numéricos (\cite{mathews2000metodos}) para resolver numéricamente para cada grupo y poder construir el forward map . La implementación de python usando la paquetería odeint se pude ver en \cite{jimenez2022metodos} y en \cite{griffiths2010numerical}. En la Fig. \ref{fig:trayectoria_SIR} tenemos un ejemplo para un solo caso del modelo SIR con tasa de infección $\beta = 0.009$ y tasa de recuperación $\gamma = 0.5$
 
-
 \begin{figure}
     \centering
     \includegraphics[width = 10 cm]{img/trayectoria_SIR.png}
@@ -186,10 +176,6 @@ La solución explicita para $S(t), I(t), R(t)$ no existe en general, por ello se
     \label{fig:trayectoria_SIR}
 \end{figure}
 
-
-
-
-% \section{Inferencia sin aproximación}
 \section{Enfoque bayesiano al problema inverso}
 
 Una vez establecidos los modelos sobre los que trabajaremos, nos enfocamos en abordar el problema inverso para los mismos. Para ello, es necesario tener a disposición una muestra de la trayectoria del modelo al cual deseamos inferir sus parámetros.
@@ -198,7 +184,7 @@ Según sea el caso, podemos realizar mediciones de caída de un objeto para cier
 
 Sin embargo, no es fácil tener acceso a dicha muestra, por lo que optaremos por simular los datos directamente del modelo seleccionando los parámetros convenientemente y además agregar un ruido gaussiano. Es decir, tomamos $\theta \in \Theta$ fijo, luego consideramos los tiempos a los cuales corresponderá la muestra, denotados por $t_1, t_2, \cdots, t_n$. Posteriormente, con el forward map ordinario $F_{\theta}$ (sin aproximación por vecinos cercanos) generado según el modelo (ya sea analítico o numérico) evaluamos para cada tiempo (denotado por $F_{\theta}(t_i)$) y agregamos un ruido $\varepsilon_i \sim N(0,\sigma^2)$. Así la muestra considerada se constituye por
 \begin{align}
-    y_i = F_{\theta}(t_i) + \varepsilon_i,%\:\:\:\: \text{para } i = 1,2,\cdots,n.
+    y_i = F_{\theta}(t_i) + \varepsilon_i,
     \label{3.2.01}
 \end{align}
 para $i = 1,2, \cdots, n$. Dicho de otra forma la muestra contemplada es
@@ -206,7 +192,6 @@ para $i = 1,2, \cdots, n$. Dicho de otra forma la muestra contemplada es
     \left \{ (y_1,t_1), (y_2, t_2), \cdots, (y_n, t_n)\right \},
 \end{align}
 un conjunto de $n$ tuplas.
-
 
 Una vez establecida la muestra $y_i$, ahora el propósito es abordar el problema inverso, esto es, buscamos $\theta$ tal que $y_i \approx F_{\theta}(t_i)$. Ya hemos estudiado el enfoque bayesiano al problema inverso en el capítulo 2, desde luego la implementación obtenida aquí sera inicialmente el caso de forward map ordinario.
 
@@ -226,21 +211,6 @@ El análisis del calculo de la verosimilitud se trató en la sección 2 del cap�
     \label{3.2.1.02}
 \end{align}
 rescatamos la distribución posterior en función del forward map, salvo una constante. De esta forma, resta discutir las cualidades deseadas para los modelos anteriormente descritos.
-
-% Para obtener la verosimilitud, observemos de la ecuación (\ref{3.2.01}) que 
-% \begin{align*}
-%     \mathbf{y}_i \sim N(F_{\theta}(t_i)), \sigma^2)
-% \end{align*}
-% por lo que la verosimilitud para $\theta$ es la correspondiente al modelo normal, es decir
-% \begin{align}
-%     \mathcal{L} (\theta,\sigma) = f(\mathbf{y}|\theta) = \prod_{i = 1}^{n} \frac{1}{2\pi \sigma^2} \exp \left \{ -\frac{1}{2\sigma^2}\left(y_i - F_{\theta}(t_i)\right)^2 \right \} ,
-% \end{align}
-% simplificando
-% \begin{align}
-%     \mathcal{L}(\theta,\sigma) = \left(\frac{1}{2\pi \sigma^2}\right) ^{n/2}\exp \left \{  -\frac{1}{2\sigma^2}\sum_{i = 1}^{n} \left(y_i - F_{\theta}(t_i)\right)^2 \right \},
-%     \label{3.2.1.02}
-% \end{align}
-% que es la verosimilitud en función de los parámetros $\theta$ y la desviación estándar $\sigma$. 
 
 Para nuestro caso particular, todos los modelos propuestos en la sección precedente dependen de parámetros no negativos, es decir, $\theta_i \geq 0$ para toda $i = 1,\cdots, d$. Incluso algunos de ellos se tiene bastante certeza de su valor, que podría pensarse en ajustar una distribución a priori normal. Sin embargo, ajustar una normal conlleva a tener problemas en el soporte, por lo que puede pensarse en considerar una normal truncada a los positivos, sin embargo está complica innesariamente las expresiones para la distribución posterior. 
 
@@ -279,9 +249,7 @@ Sustituyendo (\ref{3.2.1.04}) en (\ref{3.2.1.02}) se tiene la forma funcional de
 
 Notemos que la distribución en (\ref{3.2.1.06}) no pertenece a una familia conocida. Para lidiar con este problema usamos métodos Monte Carlo. Más precisamente, podemos simular de la distribución posterior (\ref{3.2.1.06}).
 
-
-% \subsection{Forward map}
-\subsection{Simulación con MCMC forward map ordinario}
+\subsection{Simulación con forward map ordinario}
 
 Al incursionar a la estadística bayesiana se aprende que se puede obtener la distribución posterior por medio del famoso análisis conjugado. Es decir se propone una distribución a priori convenientemente para que la distribución posterior pertenezca a la misma familia. Sin embargo, el análisis conjugado puede ser no trivial o incluso no existir. Por ello es que simular de la distribución posterior con MCMC (Markov Chain Monte Carlo) es la via optima para tener una muestra $(X_i, i \in \{1,\cdots, T\})$ de dicha distribución, con la podemos estimar cualquier momento de la distribución. Si estamos interesados en obtener la media de $X$, en beneficio de la ley de grandes números (\cite{van2000asymptotic}), podemos estimar como
 \begin{align}
@@ -355,22 +323,9 @@ Es de interés las marginales de la distribución posterior. Dado que la simulac
     \label{Fig. 3.2.gravedad.theta}
 \end{figure}
 
-
-% \begin{figure}
-%     \centering 
-%     \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png} 
-%     \caption{Distribución posterior (azul) y distribución a priori (verde)para el parámetros $g$.}
-%     \label{Fig. 3.2.2.04}
-% \end{figure} 
-
-% \begin{figure}
-%     \centering 
-%     \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png} 
-%     \caption{Distribución posterior (azul) y distribución a priori (verde) para el parámetro $b$. }
-%     \label{Fig. 3.2.2.05}
-% \end{figure} 
-
 Finalmente, es de interés observar la distribución que puede generar las curvas predictivas. Es decir, de la cadena $X_t$ fruto de MCMC, tomamos submuestreos en intervalos $X_{[iN,(i+1)N]}$ para tomar estimaciones puntuales (media) de $g$ y $b$ y así aplicar el forward map para cada estimación. Dicho de otra forma, la información obtenida de la distribución posterior se desea transmitir directamente a la trayectoria, generando así distribuciones sobre las mismas.
+
+En la Fig. \ref{Fig. 3.2.2.06} se muestra en azul claro los distintos forward map $F_{\theta}$ con varias realizaciones de $\theta|\mathbf{y}$ dada por la estimación de la distribución posterior por Metropolis-Hastings, mientras que en azul oscuro se muestra el forward map de partida, es decir, de donde se realizaron las simulaciones para generar $\mathbf{y}$ (morado). Por tanto, notamos que de cierta forma, la información de la distribución posterior contiene a la simulación inicial.
 
 \begin{figure}
     \centering 
@@ -378,8 +333,6 @@ Finalmente, es de interés observar la distribución que puede generar las curva
     \caption{Distribución predictiva para el modelo gravitatorio}
     \label{Fig. 3.2.2.06}
 \end{figure} 
-
-En la Fig. \ref{Fig. 3.2.2.06} se muestra en azul claro los distintos forward map $F_{\theta}$ con varias realizaciones de $\theta|\mathbf{y}$ dada por la estimación de la distribución posterior por Metropolis-Hastings, mientras que en azul oscuro se muestra el forward map de partida, es decir, de donde se realizaron las simulaciones para generar $\mathbf{y}$ (morado). Por tanto, notamos que de cierta forma, la información de la distribución posterior contiene a la simulación inicial.
 
 \begin{figure}[H]
     \centering 

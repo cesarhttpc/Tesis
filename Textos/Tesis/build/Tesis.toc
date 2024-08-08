@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {3.1.3}Modelo SIR}{22}{subsection.3.1.3}%
 \contentsline {section}{\numberline {3.2}Enfoque bayesiano al problema inverso}{23}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Distribución posterior}{24}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Simulación con MCMC forward map ordinario}{26}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.2}Simulación con forward map ordinario}{26}{subsection.3.2.2}%
 \contentsline {subsubsection}{Simulación del modelo gravitatorio}{27}{section*.14}%
 \contentsline {subsubsection}{Simulación del modelo logístico}{31}{section*.21}%
 \contentsline {subsubsection}{Simulación del modelo SIR}{35}{section*.27}%
