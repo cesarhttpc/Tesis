@@ -14,14 +14,10 @@
 \contentsline {subsection}{\numberline {3.1.3}Modelo SIR}{22}{subsection.3.1.3}%
 \contentsline {section}{\numberline {3.2}Enfoque bayesiano al problema inverso}{23}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Distribución posterior}{24}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Simulación con forward map ordinario}{26}{subsection.3.2.2}%
-\contentsline {subsubsection}{Simulación del modelo gravitatorio}{27}{section*.14}%
-\contentsline {subsubsection}{Simulación del modelo logístico}{31}{section*.21}%
-\contentsline {subsubsection}{Simulación del modelo SIR}{35}{section*.27}%
-\contentsline {section}{\numberline {3.3}Simulación con forward map aproximado}{38}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Método aproximado al problema inverso}{40}{subsection.3.3.1}%
-\contentsline {subsubsection}{Forward map aproximado para el modelo gravitatorio}{40}{section*.34}%
-\contentsline {subsubsection}{Convergencia en el modelo epidemiólogico}{46}{section*.49}%
-\contentsline {chapter}{\numberline {4}Conclusiones y trabajo futuro}{49}{chapter.4}%
-\contentsline {chapter}{Referencias}{51}{chapter*.57}%
-\contentsline {chapter}{\numberline {A}Anexo}{53}{appendix.Alph1}%
+\contentsline {section}{\numberline {3.3}Simulación con forward map aproximado}{26}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Método aproximado al problema inverso}{29}{subsection.3.3.1}%
+\contentsline {subsubsection}{Forward map aproximado para el modelo gravitatorio}{29}{section*.16}%
+\contentsline {subsubsection}{Convergencia en el modelo epidemiólogico}{35}{section*.31}%
+\contentsline {chapter}{\numberline {4}Conclusiones y trabajo futuro}{39}{chapter.4}%
+\contentsline {chapter}{Referencias}{41}{chapter*.39}%
+\contentsline {chapter}{\numberline {A}Anexo}{43}{appendix.Alph1}%

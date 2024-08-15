@@ -127,11 +127,13 @@ def MetropolisHastingsRW(t_datos,x_datos,inicio,size= 100000,alpha= 100, beta= 1
    
 
 # Cantidad de vecinos
-num_vecinos = 5
+num_vecinos = 8
 
 # Definir el dominio de los puntos
-g_dom = np.linspace(0.01, 0.1, num=15)
-b_dom = np.linspace(0.3, 0.6, num=15)
+prop_1 = 1#2.2 #Libras
+prop_2 = 1#39 # pulgadas
+g_dom = np.linspace(7*prop_2, 12*prop_2, num=11)
+b_dom = np.linspace(0, prop_1*5, num=11)
 
 # Crear la malla utilizando meshgrid
 g_mesh, b_mesh = np.meshgrid(g_dom, b_dom)
@@ -143,7 +145,7 @@ puntos_malla = np.column_stack((g_mesh.ravel(), b_mesh.ravel()))
 buscador_de_vecinos = VecinosCercanos(puntos_malla)
 
 # Punto arbitrario para encontrar vecinos cercanos
-punto_arbitrario = np.array([0.037, 0.43])  
+punto_arbitrario = np.array([10.3*prop_2, 2.2*prop_1])  
 
 # Encuentra los vecinos más cercanos al punto arbitrario
 distancias, indices = buscador_de_vecinos.encontrar_vecinos_cercanos(punto_arbitrario, numero_de_vecinos=num_vecinos)
@@ -154,15 +156,17 @@ print("Índices de vecinos más cercanos:", indices)
 
 # Gráfica puntos en malla
 # plt.title('Enmallado')
-plt.xlabel(r'$\beta$')
-plt.ylabel(r'$\gamma$')
-plt.scatter(g_mesh,b_mesh)
-plt.scatter(punto_arbitrario[0],punto_arbitrario[1], color ='black')
+plt.xlabel(r'$g$ $(metros/segundos^2)$')
+plt.ylabel(r'$b$ $(kilogramos/segundos)$')
+plt.scatter(g_mesh,b_mesh, color = 'cornflowerblue')
+plt.scatter(punto_arbitrario[0],punto_arbitrario[1], color ='maroon', label=r'V. Cercanos $\vartheta$')
+plt.scatter(punto_arbitrario[0],punto_arbitrario[1], color ='red',label = r'Parámetro $\theta$')
 
 for k in range(num_vecinos):
 
     print(puntos_malla[indices[k]])
-    plt.scatter(puntos_malla[indices[k]][0],puntos_malla[indices[k]][1], color = 'red')
+    plt.scatter(puntos_malla[indices[k]][0],puntos_malla[indices[k]][1], color = 'maroon')
     
 plt.savefig('Exp_Central_SIR_sigma/Figuras/Generales/Vecinos_.png', dpi=600, bbox_inches='tight')
+plt.legend(loc = 1)
 plt.show()
