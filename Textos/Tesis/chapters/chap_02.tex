@@ -160,9 +160,10 @@ La preeminencia potencial del uso del forward map aproximado para el estudio del
 Debido a la reticente necesidad humana en aplicaciones impostergables es imperativo agilizar el tiempo en operación. Concisamente en modelos epidemiológicos la rapidez de acción se torna fundamental como lo fue en la predicción de ocupación hospitalaria por COVID-19 en la zona metropolitana de la CDMX (\cite{capistran2020forecasting}).
 
 Por otro lado, fuera de las aplicaciones prácticas del método esbozado con el forward map aproximado, es de sumo interés matemático el estudio de la consistencia del método propuesto. Recordemos que tenemos espacio de maniobra para la construcción del forward map aproximado al mover la densidad de puntos en la malla $M$ así como en la cantidad de vecinos $k$ usados para la suma ponderada. De esta misma forma, tras sustituir el forward map aproximado (\ref{2.4.01}) en la expresión (\ref{2.2.04}) obtenemos la distribución posterior aproximada de los parámetros del modelo. Formalizando, salvo un factor de normalización definimos
-\begin{align*}
+\begin{align}
     \tilde{\pi}^{k}_M(\theta|\mathbf{y}) \propto \left(\frac{1}{2\pi \sigma^2}\right) ^{n/2}\exp \left \{  -\frac{1}{2\sigma^2}\sum_{i = 1}^{n} \left(y_i - F^k_M(\theta)\right)^2 \right \}\pi(\theta),
-\end{align*}
+    \label{2.4.02}
+\end{align}
 la distribución posterior aproximada dado las observaciones $\mathbf{y} = (y_1,\cdots, y_n)$ al tiempo $t_1, \cdots, t_n$; respectivamente. Consideremos que la aproximación a la distribución posterior usando la metodología ordinaria del problema inverso es en efecto una aproximación plausible usando la \textit{distancia de Kullback-Leibler}.
 
 Si $f(x)$ y $g(x)$ son funciones de densidad de probabilidad. La distancia de Kullback-Leibler entre $f$ y $g$ se define como
