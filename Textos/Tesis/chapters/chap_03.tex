@@ -249,205 +249,205 @@ Sustituyendo (\ref{3.2.1.04}) en (\ref{3.2.1.02}) se tiene la forma funcional de
 
 Notemos que la distribución en (\ref{3.2.1.06}) no pertenece a una familia conocida. Para lidiar con este problema usamos métodos Monte Carlo. Más precisamente, podemos simular de la distribución posterior (\ref{3.2.1.06}).
 
-% \subsection{Simulación con forward map ordinario}
+\subsection{Simulación con forward map ordinario}
 
-% Al incursionar a la estadística bayesiana se aprende que se puede obtener la distribución posterior por medio del famoso análisis conjugado. Es decir se propone una distribución a priori convenientemente para que la distribución posterior pertenezca a la misma familia. Sin embargo, el análisis conjugado puede ser no trivial o incluso no existir. Por ello es que simular de la distribución posterior con MCMC (Markov Chain Monte Carlo) es la via optima para tener una muestra $(X_i, i \in \{1,\cdots, T\})$ de dicha distribución, con la podemos estimar cualquier momento de la distribución. Si estamos interesados en obtener la media de $X$, en beneficio de la ley de grandes números (\cite{van2000asymptotic}), podemos estimar como
-% \begin{align}
-%     \mathbb{E}\left [X\right ] \approx \frac{1}{T}\sum_{i = 1}^{T} X_i
-% \end{align}
-% De igual forma si estamos interesados en la media del estadístico $h(X)$ para un función $h$ arbitraria, se estima por
-% \begin{align}
-%     \mathbb{E}\left [h(X)\right ] \approx \frac{1}{T} \sum_{i=1}^{T} h(X_i)
-%     \label{3.2.2.01}
-% \end{align}
-% donde $X_i$ es la $i$-ésima simulación de la distribución posterior por Metropolis-Hastings.
+Al incursionar a la estadística bayesiana se aprende que se puede obtener la distribución posterior por medio del famoso análisis conjugado. Es decir se propone una distribución a priori convenientemente para que la distribución posterior pertenezca a la misma familia. Sin embargo, el análisis conjugado puede ser no trivial o incluso no existir. Por ello es que simular de la distribución posterior con MCMC (Markov Chain Monte Carlo) es la via optima para tener una muestra $(X_i, i \in \{1,\cdots, T\})$ de dicha distribución, con la podemos estimar cualquier momento de la distribución. Si estamos interesados en obtener la media de $X$, en beneficio de la ley de grandes números (\cite{van2000asymptotic}), podemos estimar como
+\begin{align}
+    \mathbb{E}\left [X\right ] \approx \frac{1}{T}\sum_{i = 1}^{T} X_i
+\end{align}
+De igual forma si estamos interesados en la media del estadístico $h(X)$ para un función $h$ arbitraria, se estima por
+\begin{align}
+    \mathbb{E}\left [h(X)\right ] \approx \frac{1}{T} \sum_{i=1}^{T} h(X_i)
+    \label{3.2.2.01}
+\end{align}
+donde $X_i$ es la $i$-ésima simulación de la distribución posterior por Metropolis-Hastings.
 
-% La distribución objetivo que se implementa en el MCMC es la distribución posterior (\ref{3.2.1.06}). Recordemos que la distribución posterior depende del forward map $F_{\theta}(t_i)$ obtenido de evaluar los tiempos de la muestra. Recordemos que $F_{\theta}(t_i)$ es la version discretizada de $F_{\theta}$. Sea $\theta \in \mathbb{R}^d$ la función
-% \begin{align}
-%     \theta  \mapsto F_{\theta} = x(t) 
-% \end{align}
-% tal que $x(t)$ es la solución de la ecuación diferencial ordinaria $x(t) = G(t,x(t),x'(t),x''(t)\cdots)$ del modelo bajo consideración.
+La distribución objetivo que se implementa en el MCMC es la distribución posterior (\ref{3.2.1.06}). Recordemos que la distribución posterior depende del forward map $F_{\theta}(t_i)$ obtenido de evaluar los tiempos de la muestra. Recordemos que $F_{\theta}(t_i)$ es la version discretizada de $F_{\theta}$. Sea $\theta \in \mathbb{R}^d$ la función
+\begin{align}
+    \theta  \mapsto F_{\theta} = x(t) 
+\end{align}
+tal que $x(t)$ es la solución de la ecuación diferencial ordinaria $x(t) = G(t,x(t),x'(t),x''(t)\cdots)$ del modelo bajo consideración.
 
-% \subsubsection{Simulación del modelo gravitatorio}
+\subsubsection{Simulación del modelo gravitatorio}
 
-% Para poder hacer simulaciones, es necesario determinar completamente la distribución posterior. El Forward map para el modelo gravitatorio es $F_{\theta} = F(g,b) = x(t)$ con la ecuación diferencial de la dinámica gravitacional dada en (\ref{3.1.03}) o equivalentemente en (\ref{3.1.12}). 
+Para poder hacer simulaciones, es necesario determinar completamente la distribución posterior. El Forward map para el modelo gravitatorio es $F_{\theta} = F(g,b) = x(t)$ con la ecuación diferencial de la dinámica gravitacional dada en (\ref{3.1.03}) o equivalentemente en (\ref{3.1.12}). 
 
-% Además, es necesario saber como abordar el caso de la desviación estándar $\sigma$. En esencia existen dos formas, pensar en $\sigma$ como parámetro conocido, por lo que no es necesario hacer inferencia, manteniendo la distribución posterior tal como se ha detallado. En el otro caso es para $\sigma$ desconocida, al no tener certeza de su valor esta es agregada a los parámetros a inferir. Siguiendo el paradigma bayesiano, se establece una distribución a priori para $\sigma$ independiente de la distribución a priori para $\theta$. En otras palabras, ahora la distribución posterior depende de $d+1$ parámetros. Sin embargo para fines de esta tesis, nos abstendremos de los casos en los que $\sigma$ es desconocida.
+Además, es necesario saber como abordar el caso de la desviación estándar $\sigma$. En esencia existen dos formas, pensar en $\sigma$ como parámetro conocido, por lo que no es necesario hacer inferencia, manteniendo la distribución posterior tal como se ha detallado. En el otro caso es para $\sigma$ desconocida, al no tener certeza de su valor esta es agregada a los parámetros a inferir. Siguiendo el paradigma bayesiano, se establece una distribución a priori para $\sigma$ independiente de la distribución a priori para $\theta$. En otras palabras, ahora la distribución posterior depende de $d+1$ parámetros. Sin embargo para fines de esta tesis, nos abstendremos de los casos en los que $\sigma$ es desconocida.
 
-% De esta manera, la distribución posterior (\ref{3.2.1.06}) tendrá como variables unicamente al vector de parámetros $\theta$, al ser una EDO dependiente solamente de $g$ y $b$ se sigue que $\theta = (g,b)$ siendo un vector en $\mathbb{R}^{d}$ con $d = 2$. Además es necesario definir las constantes para las distribuciones a priori gamma.
+De esta manera, la distribución posterior (\ref{3.2.1.06}) tendrá como variables unicamente al vector de parámetros $\theta$, al ser una EDO dependiente solamente de $g$ y $b$ se sigue que $\theta = (g,b)$ siendo un vector en $\mathbb{R}^{d}$ con $d = 2$. Además es necesario definir las constantes para las distribuciones a priori gamma.
 
-% Consideremos las distribuciones a priori (\ref{3.2.1.03}) como
-% \begin{align}
-%     g \sim Gamma \left(\alpha, \frac{\theta_1^{*}}{\alpha}\right) \\
-%     b \sim Gamma \left(\beta, \frac{\theta_2^{*}}{\beta}\right) 
-% \end{align}
-% con $\alpha = 10$, $\beta = 1.1$ con máximo en $\theta_1^{*} = 10$ y $\theta_2^{*} = 2$. Podemos observar las distribuciones a priori en la Fig. \ref{Fig. 3.2.2.01}.
+Consideremos las distribuciones a priori (\ref{3.2.1.03}) como
+\begin{align}
+    g \sim Gamma \left(\alpha, \frac{\theta_1^{*}}{\alpha}\right) \\
+    b \sim Gamma \left(\beta, \frac{\theta_2^{*}}{\beta}\right) 
+\end{align}
+con $\alpha = 10$, $\beta = 1.1$ con máximo en $\theta_1^{*} = 10$ y $\theta_2^{*} = 2$. Podemos observar las distribuciones a priori en la Fig. \ref{Fig. 3.2.2.01}.
 
-% \begin{figure}[H] 
-%     \centering 
-%     \includegraphics[width = 15 cm]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png}
-%     \caption{Distribuciones marginal a priori para el parámetro $g$ (izquierda) y $b$ (derecha).}
-%     \label{Fig. 3.2.2.01}
-% \end{figure} 
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 15 cm]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png}
+    \caption{Distribuciones marginal a priori para el parámetro $g$ (izquierda) y $b$ (derecha).}
+    \label{Fig. 3.2.2.01}
+\end{figure} 
 
-% Ahora, generamos una muestra $\mathbf{y}$ del forward map gravitatorio y agregamos un ruido gaussiano con $\sigma = 0.1$ obteniendo la muestra como en la Fig. \ref{Fig. 3.2.2.02}.
+Ahora, generamos una muestra $\mathbf{y}$ del forward map gravitatorio y agregamos un ruido gaussiano con $\sigma = 0.1$ obteniendo la muestra como en la Fig. \ref{Fig. 3.2.2.02}.
 
-% \begin{figure}
-%     \centering 
-%     \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png} 
-%     \caption{Muestra $\mathbf{y}$ del modelo gravitatorio.}
-%     \label{Fig. 3.2.2.02}
-% \end{figure} 
+\begin{figure}
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png} 
+    \caption{Muestra $\mathbf{y}$ del modelo gravitatorio.}
+    \label{Fig. 3.2.2.02}
+\end{figure} 
 
-% Luego, con la metodología propuesta, usando el algoritmo MCMC Metropolis-Hastings (\cite{christen2010general}) para una cadena de tamaño $T = 600,000$ y un burn in de 20,000 tenemos que la trayectoria seguida en el espacio de parámetros $\theta = (g,b)$ para la distribución posterior (conjunta) es el mostrado en la Fig. \ref{Fig. 3.2.2.03}. Notemos que dicha posterior tiene alta correlación entre parámetros. Esto tiene la interpretación física que para valores altos de $g$ es necesario tener más fricción $b$ con el medio para la misma trayectoria $\mathbf{y}$.
+Luego, con la metodología propuesta, usando el algoritmo MCMC Metropolis-Hastings (\cite{christen2010general}) para una cadena de tamaño $T = 600,000$ y un burn in de 20,000 tenemos que la trayectoria seguida en el espacio de parámetros $\theta = (g,b)$ para la distribución posterior (conjunta) es el mostrado en la Fig. \ref{Fig. 3.2.2.03}. Notemos que dicha posterior tiene alta correlación entre parámetros. Esto tiene la interpretación física que para valores altos de $g$ es necesario tener más fricción $b$ con el medio para la misma trayectoria $\mathbf{y}$.
 
-% \begin{figure}
-%     \centering 
-%     \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png} 
-%     \caption{Estimación de la distribución posterior conjunta por método MCMC Metropolis-Hastings.}
-%     \label{Fig. 3.2.2.03}
-% \end{figure} 
+\begin{figure}
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png} 
+    \caption{Estimación de la distribución posterior conjunta por método MCMC Metropolis-Hastings.}
+    \label{Fig. 3.2.2.03}
+\end{figure} 
 
-% Es de interés las marginales de la distribución posterior. Dado que la simulación de la cadena es bidimensional, de (\ref{3.2.2.01}) tomamos $h_1(X_1,X_2) = 1_{\{X_1\}}$ y $h_2(X_1,X_2)= 1_{\{X_2\}}$, dicho de otra forma, simplemente tomamos el histograma sobre una componente de la cadena dada por MCMC. Podemos ver las estimaciones a las distribuciones marginales posteriores para los parámetros $g$ y $b$ en  Fig. \ref{Fig. 3.2.2.04} y Fig. \ref{Fig. 3.2.2.05}
+Es de interés las marginales de la distribución posterior. Dado que la simulación de la cadena es bidimensional, de (\ref{3.2.2.01}) tomamos $h_1(X_1,X_2) = 1_{\{X_1\}}$ y $h_2(X_1,X_2)= 1_{\{X_2\}}$, dicho de otra forma, simplemente tomamos el histograma sobre una componente de la cadena dada por MCMC. Podemos ver las estimaciones a las distribuciones marginales posteriores para los parámetros $g$ y $b$ en  Fig. \ref{Fig. 3.2.2.04} y Fig. \ref{Fig. 3.2.2.05}
 
-% \begin{figure}[h]
-%     \centering
-%     \subfloat[Subfigure 1 list of figures text][Posterior para $g$.]{
-%     \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png}
-%     \label{Fig. 3.2.2.04}}
-%     \qquad
-%     \subfloat[Subfigure 2 list of figures text][Posterior para $b$.]{
-%     \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png}
-%     \label{Fig. 3.2.2.05}}
-%     \caption{Distribución posterior (azul) y distribución a priori (verde) para el parámetros $g$ y $b$ del modelo gravitatorio. }
-%     \label{Fig. 3.2.gravedad.theta}
-% \end{figure}
+\begin{figure}[h]
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior para $g$.]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png}
+    \label{Fig. 3.2.2.04}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior para $b$.]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png}
+    \label{Fig. 3.2.2.05}}
+    \caption{Distribución posterior (azul) y distribución a priori (verde) para el parámetros $g$ y $b$ del modelo gravitatorio. }
+    \label{Fig. 3.2.gravedad.theta}
+\end{figure}
 
-% Finalmente, es de interés observar la distribución que puede generar las curvas predictivas. Es decir, de la cadena $X_t$ fruto de MCMC, tomamos submuestreos en intervalos $X_{[iN,(i+1)N]}$ para tomar estimaciones puntuales (media) de $g$ y $b$ y así aplicar el forward map para cada estimación. Dicho de otra forma, la información obtenida de la distribución posterior se desea transmitir directamente a la trayectoria, generando así distribuciones sobre las mismas.
+Finalmente, es de interés observar la distribución que puede generar las curvas predictivas. Es decir, de la cadena $X_t$ fruto de MCMC, tomamos submuestreos en intervalos $X_{[iN,(i+1)N]}$ para tomar estimaciones puntuales (media) de $g$ y $b$ y así aplicar el forward map para cada estimación. Dicho de otra forma, la información obtenida de la distribución posterior se desea transmitir directamente a la trayectoria, generando así distribuciones sobre las mismas.
 
-% En la Fig. \ref{Fig. 3.2.2.06} se muestra en azul claro los distintos forward map $F_{\theta}$ con varias realizaciones de $\theta|\mathbf{y}$ dada por la estimación de la distribución posterior por Metropolis-Hastings, mientras que en azul oscuro se muestra el forward map de partida, es decir, de donde se realizaron las simulaciones para generar $\mathbf{y}$ (morado). Por tanto, notamos que de cierta forma, la información de la distribución posterior contiene a la simulación inicial.
+En la Fig. \ref{Fig. 3.2.2.06} se muestra en azul claro los distintos forward map $F_{\theta}$ con varias realizaciones de $\theta|\mathbf{y}$ dada por la estimación de la distribución posterior por Metropolis-Hastings, mientras que en azul oscuro se muestra el forward map de partida, es decir, de donde se realizaron las simulaciones para generar $\mathbf{y}$ (morado). Por tanto, notamos que de cierta forma, la información de la distribución posterior contiene a la simulación inicial.
 
-% \begin{figure}
-%     \centering 
-%     \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png} 
-%     \caption{Distribución predictiva para el modelo gravitatorio}
-%     \label{Fig. 3.2.2.06}
-% \end{figure} 
+\begin{figure}
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png} 
+    \caption{Distribución predictiva para el modelo gravitatorio}
+    \label{Fig. 3.2.2.06}
+\end{figure} 
 
-% \begin{figure}[H]
-%     \centering 
-%     \includegraphics[width = 15 cm]{img/Exp_Central_gravedad_sigma/Figuras/Generales/TiempoFijo_gravedad_sigma.png} 
-%     \caption{Distribución predictiva del modelo gravitatorio para los valores de tiempo de 0.2s y 0.7s.}
-%     \label{Fig. 3.2.2.07}
-% \end{figure} 
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width = 15 cm]{img/Exp_Central_gravedad_sigma/Figuras/Generales/TiempoFijo_gravedad_sigma.png} 
+    \caption{Distribución predictiva del modelo gravitatorio para los valores de tiempo de 0.2s y 0.7s.}
+    \label{Fig. 3.2.2.07}
+\end{figure} 
 
-% Más aún, para ejemplificar la distribución predictiva, considere dos valores fijos de $t$ y tomese cortes verticales de la distribución predictiva. En la Fig. \ref{Fig. 3.2.2.07} nos muestra para el tiempo $t = 0.2 s$ y $t = 0.7s$ la distribución de probabilidad de la posición de la partícula afectada por la gravedad en ese momento de tiempo. 
+Más aún, para ejemplificar la distribución predictiva, considere dos valores fijos de $t$ y tomese cortes verticales de la distribución predictiva. En la Fig. \ref{Fig. 3.2.2.07} nos muestra para el tiempo $t = 0.2 s$ y $t = 0.7s$ la distribución de probabilidad de la posición de la partícula afectada por la gravedad en ese momento de tiempo. 
 
-% \subsubsection{Simulación del modelo logístico}
+\subsubsection{Simulación del modelo logístico}
 
-% En el modelo gravitacional tenemos un ejemplo de simulación del problema inverso donde las unidades de los parámetros difieren por un orden de magnitud a lo sumo, ya que las estimaciones del parámetro $g$ es aproximadamente 10 veces más grande que las estimaciones del parámetro $b$ en el sistema de unidades métrico decimal. Por tanto, es de interés trabajar un modelo cuyas estimaciones de los parámetros tengan un amplio margen de diferencia. El modelo logístico con la parametrización dada en (\ref{3.1.2.06}) el parámetro $\theta_2$ difiere en seis ordenes de magnitud respecto al parámetro $\theta_1$ \footnote{Para una población suficientemente grande y con una moderada tasa de crecimiento.}. En secciones posteriores retomaremos algunos comentarios respecto a esta clase de modelos.
+En el modelo gravitacional tenemos un ejemplo de simulación del problema inverso donde las unidades de los parámetros difieren por un orden de magnitud a lo sumo, ya que las estimaciones del parámetro $g$ es aproximadamente 10 veces más grande que las estimaciones del parámetro $b$ en el sistema de unidades métrico decimal. Por tanto, es de interés trabajar un modelo cuyas estimaciones de los parámetros tengan un amplio margen de diferencia. El modelo logístico con la parametrización dada en (\ref{3.1.2.06}) el parámetro $\theta_2$ difiere en seis ordenes de magnitud respecto al parámetro $\theta_1$ \footnote{Para una población suficientemente grande y con una moderada tasa de crecimiento.}. En secciones posteriores retomaremos algunos comentarios respecto a esta clase de modelos.
 
-% Siguiendo la metodología ordinario para la resolución del problema inverso en el modelo, con la base de datos simuladas del mismo considerando $\theta_1 = 0.001$ y $\theta_2 = 1000$ con un ruido gaussiano aditivo de desviación estándar $\sigma = 30$ graficado en la Fig. \ref{Fig. 3.2.log.muestra}.
+Siguiendo la metodología ordinario para la resolución del problema inverso en el modelo, con la base de datos simuladas del mismo considerando $\theta_1 = 0.001$ y $\theta_2 = 1000$ con un ruido gaussiano aditivo de desviación estándar $\sigma = 30$ graficado en la Fig. \ref{Fig. 3.2.log.muestra}.
 
-% \begin{figure}[H] 
-%     \centering 
-%     \includegraphics[width = 10 cm ]{img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png} 
-%     \caption{Muestra $\mathbf{y}$ para el modelo logístico.}
-%     \label{Fig. 3.2.log.muestra}
-% \end{figure} 
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png} 
+    \caption{Muestra $\mathbf{y}$ para el modelo logístico.}
+    \label{Fig. 3.2.log.muestra}
+\end{figure} 
 
-% Posteriormente, definamos las constantes (\ref{3.2.1.03}) de las distribuciones gamma a priori. Seleccionemos las constantes semejantes a las simuladas (fines ilustrativos), cuyas graficas se muestran en la Fig. \ref{Fig. 3.2.log.priori}
+Posteriormente, definamos las constantes (\ref{3.2.1.03}) de las distribuciones gamma a priori. Seleccionemos las constantes semejantes a las simuladas (fines ilustrativos), cuyas graficas se muestran en la Fig. \ref{Fig. 3.2.log.priori}
 
-% \begin{figure} 
-%     \centering 
-%     \includegraphics[width = 15 cm]{img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png}     
-%     \caption{Distribuciones a priori para $\theta_1$ y $\theta_2$}
-%     \label{Fig. 3.2.log.priori}
-% \end{figure} 
+\begin{figure} 
+    \centering 
+    \includegraphics[width = 15 cm]{img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png}     
+    \caption{Distribuciones a priori para $\theta_1$ y $\theta_2$}
+    \label{Fig. 3.2.log.priori}
+\end{figure} 
 
-% De esta forma, análogo al modelo gravitacional, generamos una cadena con la implementación del algoritmo Metropolis-Hastings dado por \cite{christen2010general} con $T = 600,000$ iteraciones y un burn in de 20,000 estados. La distribución posterior, Fig. \ref{Fig. 3.2.log.conjunta}, muestra una forma acampanada ligeramente simétrica con una sutil correlación negativa entre parámetros. Las distribución marginal para $\theta_1$ y $\theta_2$ se muestran en la Fig. \ref{Fig. 3.2.log.theta1} y \ref{Fig. 3.2.log.theta2}.
+De esta forma, análogo al modelo gravitacional, generamos una cadena con la implementación del algoritmo Metropolis-Hastings dado por \cite{christen2010general} con $T = 600,000$ iteraciones y un burn in de 20,000 estados. La distribución posterior, Fig. \ref{Fig. 3.2.log.conjunta}, muestra una forma acampanada ligeramente simétrica con una sutil correlación negativa entre parámetros. Las distribución marginal para $\theta_1$ y $\theta_2$ se muestran en la Fig. \ref{Fig. 3.2.log.theta1} y \ref{Fig. 3.2.log.theta2}.
 
-% \begin{figure}
-%     \centering 
-%     \includegraphics[width = 10 cm ]{img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png} 
-%     \caption{Posterior conjunta para el modelo logístico.}
-%     \label{Fig. 3.2.log.conjunta}
-% \end{figure} 
+\begin{figure}
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png} 
+    \caption{Posterior conjunta para el modelo logístico.}
+    \label{Fig. 3.2.log.conjunta}
+\end{figure} 
 
-% \begin{figure}
-%     \centering
-%     \subfloat[Subfigure 1 list of figures text][Posterior para $\theta_1$.]{
-%     \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png}
-%     \label{Fig. 3.2.log.theta1}}
-%     \qquad
-%     \subfloat[Subfigure 2 list of figures text][Posterior para $\theta_2$.]{
-%     \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png}
-%     \label{Fig. 3.2.log.theta2}}
-%     \caption{Distribución posterior (azul) y distribución a priori (verde) para el parámetros $\theta_1$ y $\theta_2$ del modelo logístico.}
-%     \label{Fig. 3.2.log.theta}
-% \end{figure}
+\begin{figure}
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior para $\theta_1$.]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png}
+    \label{Fig. 3.2.log.theta1}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior para $\theta_2$.]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png}
+    \label{Fig. 3.2.log.theta2}}
+    \caption{Distribución posterior (azul) y distribución a priori (verde) para el parámetros $\theta_1$ y $\theta_2$ del modelo logístico.}
+    \label{Fig. 3.2.log.theta}
+\end{figure}
 
-% Finalmente, el análisis concluye con la distribución predictiva dada por el forward map tomando estimaciones puntuales de la distribución posterior, en la Fig. \ref{Fig. 3.2.log.predictiva} notamos que la distribución tiene una varianza mayor que en el modelo gravitacional, además de observar que la trayectoria de partida (azul oscuro) se encuentra incluida en la predicción dada por el problema inverso.
+Finalmente, el análisis concluye con la distribución predictiva dada por el forward map tomando estimaciones puntuales de la distribución posterior, en la Fig. \ref{Fig. 3.2.log.predictiva} notamos que la distribución tiene una varianza mayor que en el modelo gravitacional, además de observar que la trayectoria de partida (azul oscuro) se encuentra incluida en la predicción dada por el problema inverso.
 
-% \begin{figure}
-%     \centering 
-%     \includegraphics[width = 10 cm ]{img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png} 
-%     \caption{Distribución predictiva para el modelo logístico.}
-%     \label{Fig. 3.2.log.predictiva}
-% \end{figure} 
+\begin{figure}
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png} 
+    \caption{Distribución predictiva para el modelo logístico.}
+    \label{Fig. 3.2.log.predictiva}
+\end{figure} 
 
-% \subsubsection{Simulación del modelo SIR}
+\subsubsection{Simulación del modelo SIR}
 
-% Para el modelo epidemiólogico tomamos una muestra de $n =10$ observaciones de infectados en una población cerrada a lo largo del tiempo. Al igual que los modelos previos, dichas observaciones son simulaciones del forward map con ruido gaussiano. En la Fig. \ref{Fig. SIR_01} vemos la grafica de la muestra de infectados, notamos que tienen un rápido crecimiento para después decaer suavemente.
+Para el modelo epidemiólogico tomamos una muestra de $n =10$ observaciones de infectados en una población cerrada a lo largo del tiempo. Al igual que los modelos previos, dichas observaciones son simulaciones del forward map con ruido gaussiano. En la Fig. \ref{Fig. SIR_01} vemos la grafica de la muestra de infectados, notamos que tienen un rápido crecimiento para después decaer suavemente.
 
-% \begin{figure}
-%     \centering 
-%     \includegraphics[width = 10 cm]{img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png} 
-%     \caption{Muestra $\mathbf{y}$ del modelo SIR.}
-%     \label{Fig. SIR_01}
-% \end{figure} 
+\begin{figure}
+    \centering 
+    \includegraphics[width = 10 cm]{img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png} 
+    \caption{Muestra $\mathbf{y}$ del modelo SIR.}
+    \label{Fig. SIR_01}
+\end{figure} 
 
-% Para abordar el problema inverso establezcamos los parámetros que se desea hacer inferencia. El espacio parametral se conforma por $\theta = (\beta,\gamma)$ donde $\beta >0$ es la tasa de infección y $\gamma > 0$ es la tasa de recuperación dados en (\ref{3.1.3.01}). Nuevamente como se trata de parámetros positivos usamos la distribución a priori (\ref{3.2.1.03}). Podemos rescatar un conocimiento a priori sobre su distribución previo a los datos (\cite{weiss2013sir}). La elección considera para las distribuciones gamma a priori son mostradas en la Fig. \ref{Fig. SIR_02}.
+Para abordar el problema inverso establezcamos los parámetros que se desea hacer inferencia. El espacio parametral se conforma por $\theta = (\beta,\gamma)$ donde $\beta >0$ es la tasa de infección y $\gamma > 0$ es la tasa de recuperación dados en (\ref{3.1.3.01}). Nuevamente como se trata de parámetros positivos usamos la distribución a priori (\ref{3.2.1.03}). Podemos rescatar un conocimiento a priori sobre su distribución previo a los datos (\cite{weiss2013sir}). La elección considera para las distribuciones gamma a priori son mostradas en la Fig. \ref{Fig. SIR_02}.
 
-% \begin{figure}[H] 
-%     \centering 
-%     \includegraphics[width = 15 cm ]{img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png} 
-%     \caption{Distribuciones marginal a priori para el parámetro $\beta$ (izquierda) y $\gamma$ (derecha).}
-%     \label{Fig. SIR_02}
-% \end{figure} 
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 15 cm ]{img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png} 
+    \caption{Distribuciones marginal a priori para el parámetro $\beta$ (izquierda) y $\gamma$ (derecha).}
+    \label{Fig. SIR_02}
+\end{figure} 
 
-% Análogamente a los modelos previos, una vez obtenida la forma funcional de la distribución posterior, usando el algoritmo Metropolis-Hastings para una cadena de tamaño $T = 600,000$. La distribución posterior dada se muestra en la Fig. \ref{Fig. SIR_03} que muestra una forma de media luna concentrada en el borde izquierdo. 
+Análogamente a los modelos previos, una vez obtenida la forma funcional de la distribución posterior, usando el algoritmo Metropolis-Hastings para una cadena de tamaño $T = 600,000$. La distribución posterior dada se muestra en la Fig. \ref{Fig. SIR_03} que muestra una forma de media luna concentrada en el borde izquierdo. 
 
-% \begin{figure}[H] 
-%     \centering 
-%     \includegraphics[width = 10 cm]{img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png} 
-%     \caption{Distribución posterior conjunta para el modelo SIR.}
-%     \label{Fig. SIR_03}
-% \end{figure} 
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm]{img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png} 
+    \caption{Distribución posterior conjunta para el modelo SIR.}
+    \label{Fig. SIR_03}
+\end{figure} 
 
-% \begin{figure}[h]
-%     \centering
-%     \subfloat[Subfigure 1 list of figures text][Posterior para $\beta$.]{
-%     \includegraphics[width=0.4\textwidth]{img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png}
-%     \label{Fig. SIR_04}}
-%     \qquad
-%     \subfloat[Subfigure 2 list of figures text][Posterior para $\gamma$.]{
-%     \includegraphics[width=0.4\textwidth]{img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png}
-%     \label{Fig. SIR_05}}
-%     \caption{Distribución posterior (azul) y distribución a priori (verde) para el parámetros $\beta$ y $\gamma$ del modelo SIR. }
-%     \label{Fig. SIR.theta}
-% \end{figure}
+\begin{figure}[h]
+    \centering
+    \subfloat[Subfigure 1 list of figures text][Posterior para $\beta$.]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png}
+    \label{Fig. SIR_04}}
+    \qquad
+    \subfloat[Subfigure 2 list of figures text][Posterior para $\gamma$.]{
+    \includegraphics[width=0.4\textwidth]{img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png}
+    \label{Fig. SIR_05}}
+    \caption{Distribución posterior (azul) y distribución a priori (verde) para el parámetros $\beta$ y $\gamma$ del modelo SIR. }
+    \label{Fig. SIR.theta}
+\end{figure}
 
-% Para observar la distribución para cada parámetro se toma la distribución marginal, respectivamente. Observemos de la Fig. \ref{Fig. SIR_04} y Fig. \ref{Fig. SIR_05} la distribución de $\beta$ se aglomera en valores cercanos a cero, mientras que para $\gamma$ tenemos bastante diferencia respecto a la distribución a priori.
+Para observar la distribución para cada parámetro se toma la distribución marginal, respectivamente. Observemos de la Fig. \ref{Fig. SIR_04} y Fig. \ref{Fig. SIR_05} la distribución de $\beta$ se aglomera en valores cercanos a cero, mientras que para $\gamma$ tenemos bastante diferencia respecto a la distribución a priori.
 
-% Tomando realizaciones $ \theta_j = (\beta_j,\gamma_j)$ de la distribución posterior para luego calcular $F(\theta_j)$ nos da la distribución vista para la cantidad de infectados en tiempo arbitrario dado por el modelo SIR. Tal gráfico dado en Fig. \ref{Fig. SIR_06} vemos que el modelo (azul fuerte) se encuentra incluido en las distribuciones de infectados.
+Tomando realizaciones $ \theta_j = (\beta_j,\gamma_j)$ de la distribución posterior para luego calcular $F(\theta_j)$ nos da la distribución vista para la cantidad de infectados en tiempo arbitrario dado por el modelo SIR. Tal gráfico dado en Fig. \ref{Fig. SIR_06} vemos que el modelo (azul fuerte) se encuentra incluido en las distribuciones de infectados.
 
-% \begin{figure}[H] 
-%     \centering 
-%     \includegraphics[width = 10 cm ]{img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png} 
-%     \caption{Distribución predictiva para el modelo SIR.}
-%     \label{Fig. SIR_06}
-% \end{figure} 
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 10 cm ]{img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png} 
+    \caption{Distribución predictiva para el modelo SIR.}
+    \label{Fig. SIR_06}
+\end{figure} 
 
 
 \section{Simulación con forward map aproximado}
@@ -461,7 +461,7 @@ Recordemos de la sección 4 del capítulo 2 la construcción del forward map apr
 \end{align}
 donde $\omega_j = d_j^{-1}/ \sum_{i=1}^{k} d_i^{-1}$. Notemos que el forward map aproximado usa el forward map ordinario $F(\vartheta)$ para los elementos de la malla $\mathcal{M}$. Así la construcción de la distribución posterior aproximada $\pi_{M}^{k}$ se da reemplazando el forward map ordinario en la distribución posterior de los parámetros, tal como en la ecuación (\ref{2.4.02}).
 
-Las aproximaciones del forward map se hacen con inferencias de los k puntos más cercanos. Particularmente se experimentó con vecinos $k = 3,5,8$. Además, para indagar en la convergencia de la distribución aproximada se toman la resolución de la aproximación de forma creciente. Es decir, se aproxima el forward map con mallas de tamaño $M \times M$ con $M = 10, 15, 30, 50$.
+Previo a realizar las simulaciones para distintos casos es necesario revisar un último concepto. Proceder a estimar las distribuciones posteriores aproximadas, de la forma detalla a lo largo de este texto, tendría un inconveniente al analizar la convergencia a mediada que la malla con la que se aproxima se hace cada vez más fina. Este problema se salda con la regularización de las unidades.
 
 \subsection*{Regularización de las unidades}
 
@@ -469,48 +469,40 @@ Un paso previo a la obtención del forward map aproximado es la regularización 
 
 Consisamente, las unidades del modelo gravitatorio para $g$ usualmente se dan en $metros/segundo$ y para $b$ en $kilogramos/segundo$. Sin embargo, piense en la reparametrización donde se contemplan kilómetros en lugar de metros y gramos en lugar de kilogramos, pues la distancia euclidiana resultará en un incremento en tres ordenes de magnitud para $b$ y un decrecimiento en tres ordenes para $g$. De forma que los nuevos vecinos más cercanos terminan por ignorar cualquier propuesta que involucre un cambio para $b$. Lo mismo pasa en el caso de que la parametrización de cada parámetro difiera en más de un orden de magnitud.
 
-En la Fig. \ref{Vecinos} se muestra un enmallado para el modelo gravitatorio en unidades estándar \ref{Fig. 3.3_Vecinos1}, mientras que en \ref{Fig. 3.3_vecinos2} se toma la reparametrización en libras y pulgadas. Notese que los vecinos cercanos (rojo oscuro) al parámetro $\theta$ (rojo) se ven ampliamente alterados.
+En la Fig. \ref{Vecinos} se muestra un enmallado para el modelo gravitatorio en unidades estándar \ref{Fig. 3.3_Vecinos1}, mientras que en \ref{Fig. 3.3_vecinos2} se toma la reparametrización en libras y pulgadas. Notese que los vecinos cercanos (rojo oscuro) al parámetro $\theta$ (rojo) se ven ampliamente alterados. En consecuencia, la construcción del forward map es sensible a reparametrizaciones.
 
 \begin{figure}[h]
     \centering
-    \subfloat[Subfigure 1 list of figures text][Posterior para $g$.]{
+    \subfloat[Subfigure 1 list of figures text][Malla en unidades estándar.]{
     \includegraphics[width=0.4\textwidth]{img/Vecinos_1.png}
     \label{Fig. 3.3_Vecinos1}}
     \qquad
-    \subfloat[Subfigure 2 list of figures text][Posterior para $b$.]{
+    \subfloat[Subfigure 2 list of figures text][Malla unidades anglosajonas.]{
     \includegraphics[width=0.4\textwidth]{img/Vecinos_2.png}
     \label{Fig. 3.3_vecinos2}}
     \caption{Malla para el modelo gravitatorio (azul) con los 8 vecinos más cercanos al parámetro $\theta$ (rojo) con unidades estándar (izquierda) y unidades anglosajonas (derecha).}
     \label{Vecinos}
 \end{figure}
 
+\subsubsection{Construcción de la regularización de unidades}
 
+Como hemos visto, la amplia diferencia en ordenes de magnitud entre parámetros conduce a una construcción patógena del forward map. Por esto mismo, la regularización de las unidades se establece como una técnica para normalizar cada parámetro al intervalo $[0,1]$.
 
+Recordemos la notación usada en la sección 2.4. Sea $\theta = (\theta_1,\cdots, \theta_d) \in \Theta$. Sea $\mathcal{M}$ una malla de $\Theta$, de forma que 
+$\mathcal{M} = \mathcal{M}_1\times\cdots\times \mathcal{M}_d$, donde $\mathcal{M}_i = \{\theta_i^{Min},\theta_{i}^{(2)},\cdots,\theta_i^{(M-1)}\theta_i^{Min}\}$. 
 
+Para cada componente de $\theta$, aplicamos la transformación de normalización $\varphi$ a la malla $\mathcal{M}$, donde a cada elemento $\theta_i^{(j)}\in \mathcal{M}_i$ se aplica la transformación
+\begin{align}
+    \varphi_i^{(j)} = \frac{\theta_i^{(j)} - \theta_i^{Min}}{\theta_i^{Max}-\theta_i^{Min}}.
+    \label{3.3.02}
+\end{align}
 
+Considerando que $\mathcal{N}_i = \{\varphi_i^{(1)},\cdots, \varphi_i^{(M)}\}$ para cada $i \in \{1,\cdots,d\}$.  De forma que se crea un enmallado uniforme $\mathcal{N} = \mathcal{N}_1 \times \cdots \times \mathcal{N}_d$. Con la transformación (\ref{3.3.02}) tenemos que el espacio reparametrizado $\mathcal{N}$ es un subconjunto del espacio $[0,1]^d = [0,1]\times \cdots \times [0,1]$, por lo que al usar distancia euclidiana los vecinos más cercanos no serán sensibles a reparametrizaciones. En adelante entenderemos a los $k$ vecinos más cercanos $\vartheta^{j}$ con la reparametrización $\phi$ y la malla $\mathcal{N}$ para la construcción del forward map aproximado en (\ref{3.3.01}). 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\newpage
-
-Recordemos que se usa distancia euclidiana, denotemos
-\begin{align*}
-    \text{d}(\theta, \vartheta^{(j)}) = d_j
-\end{align*}
+% Recordemos que se usa distancia euclidiana, denotemos
+% \begin{align*}
+%     \text{d}(\theta, \vartheta^{(j)}) = d_j
+% \end{align*}
 
 % Con la regla de interpolación dada en (\textcolor{red}{referencia}) aproximamos el forward map repetidamente. Se pretende buscar la mejor aproximación a la distribución posterior modificando el forward aproximado tanto en la cantidad de puntos por rejilla así con en la cantidad de vecinos cercanos contemplados para la interpolación. 
 
@@ -536,37 +528,31 @@ Recordemos que se usa distancia euclidiana, denotemos
 
 % \subsection{Regla de interpolación(aproximación de forward map)}
 
+\subsection*{Experimentación con distribuciones posteriores aproximadas}
 
+Las aproximaciones de la distrbicuión posterior considera aproximaciones del forward map. Estas se hacen con la \textit{interpolación} de $k$ vecinos más cercanos de la malla $\mathcal{N}$. Particularmente se experimentó con vecinos $k = 3,5,8$. Además, para indagar en la convergencia de la distribución aproximada se toman la resolución de la aproximación de forma creciente. Es decir, se aproxima el forward map con mallas de tamaño $M \times M$ con $M = 10, 15, 30, 50$.
 
-\textcolor{blue}{Imagen discretización forward map}
+\subsubsection*{Forward map aproximado para el modelo gravitatorio}
 
+En el análisis bayesiano sobre el modelo gravitatorio se obtuvo la distribución posterior con el forward map ordinario para cada una de las aproximaciones propuestas. Dichas distribuciones las cotejaremos con una aproximación a la misma de forma que sea visible o no la convergencia al análogo ordinario.
 
+Para empezar, tomemos la aproximación del forward map con 3 vecinos cercanos $(k= 3)$. Luego, calculemos la distribución posterior para cada rejilla $(m = 10, 15, 30, 50)$. Tenemos la distribución bidimensional conjunta. Luego se toma las distribuciones marginales para cada parámetro $g,b$. Al ser un estudio heurístico, el grado de aproximación se hace tras simple comparación de la distribución marginal aproximada  para cada parámetro, $\pi^{*}(g)$ con $\pi(g)$, y comparación de $\pi^{*}(b) = \pi(b)$.
 
-\subsection{Método aproximado al problema inverso}
-\subsubsection{Forward map aproximado para el modelo gravitatorio}
-
-En el análisis bayesiano sobre el modelo gravitatorio se obtuvo la distribución posterior con el forward map ordinario para cada una de las aproximaciones propuestas. 
-
-Tomemos la aproximación del forward map con 3 vecinos cercanos $(k= 3)$. Luego, calculemos la distribución posterior para cada rejilla $(m = 10, 15, 30, 50)$. Tenemos la distribución bidimensional conjunta. Luego se toma las distribuciones marginales para cada parámetro $g,b$. Al ser un estudio heurístico, el grado de aproximación se hace tras simple comparación de la distribución marginal aproximada  para cada parámetro, $\pi^{*}(g)$ con $\pi(g)$, y comparación de $\pi^{*}(b) = \pi(b)$.
-
-
-En la Fig. () se muestran las distribuciones marginales para la aproximación del forward map con $k = 3$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
+En la Fig. \ref{Fig. Aprox grav 3v} se muestran las distribuciones marginales para la aproximación del forward map con $k = 3$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 16 cm ]{img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png} 
-    % \caption{}
-    % \label{Fig. }
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 16 cm ]{img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png} 
-    % \caption{}
-    % \label{Fig. }
+    \caption{Distribuciones marginales posteriores aproximadas (rojo) con forward map aproximado a tres vecinos cercanos y una malla de resolución 10,15,30,50 de izquierda a derecha. En azul la distribución posterior con forward map ordinario para modelo gravitacional.}
+    \label{Fig. Aprox grav 3v}
 \end{figure} 
 
-En la Fig. () se muestran las distribuciones marginales para la aproximación del forward map con $k = 5$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
+Luego, aumentando la cantidad de vecinos cercanos en la aproximación a $k = 5$. En la Fig. \ref{Fig. Aprox grav 5v} se muestran las distribuciones marginales para la aproximación del forward map con $k = 5$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 
 \begin{figure}[H] 
     \centering 
@@ -574,15 +560,14 @@ En la Fig. () se muestran las distribuciones marginales para la aproximación de
     % \caption{}
     % \label{Fig. }
 \end{figure} 
-
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 16 cm ]{img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png} 
-    % \caption{}
-    % \label{Fig. }
+    \caption{Distribuciones marginales posteriores aproximadas (rojo) con forward map aproximado a cinco vecinos cercanos y una malla de resolución 10,15,30,50 de izquierda a derecha. En azul la distribución posterior con forward map ordinario para modelo gravitacional.}
+    \label{Fig. Aprox grav 5v}
 \end{figure} 
 
-En la Fig. () se muestran las distribuciones marginales para la aproximación del forward map con $k = 8$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
+En la Fig. \ref{Fig. Aprox grav 8v} se muestran las distribuciones marginales para la aproximación del forward map con $k = 8$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 
 \begin{figure}[H] 
     \centering 
@@ -590,20 +575,16 @@ En la Fig. () se muestran las distribuciones marginales para la aproximación de
     % \caption{}
     % \label{Fig. }
 \end{figure} 
-
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 16 cm ]{img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png} 
-    % \caption{}
-    % \label{Fig. }
+    \caption{Distribuciones marginales posteriores aproximadas (rojo) con forward map aproximado a ocho vecinos cercanos y una malla de resolución 10,15,30,50 de izquierda a derecha. En azul la distribución posterior con forward map ordinario para modelo gravitacional.}
+    \label{Fig. Aprox grav 8v}
 \end{figure} 
 
-Notemos del análisis previo que de manera general las distribuciones posteriores aproximadas $\pi^{*}(g,b)$ mejora a medida que la malla se hace más fina. Luego, la mejor aproximación se obtiene con la malla más fina que discretiza el espacio parametral en 50x50 puntos. Queda definir que cantidad de vecinos hace la aproximación mejor. Notese que para 8 vecinos (k = 8) no ajusta para el parámetro $g$ lo que descarta esta elección. Finalmente, para 3 y 5 vecinos tenemos distribuciones bastante similares por lo que la elección es indiferente. Así, seleccionamos el forward map aproximado con 3 vecinos en una malla 50x50.
+Notemos del análisis previo que de manera general las distribuciones posteriores aproximadas $\pi^{*}(g,b)$ mejora a medida que la malla se hace más fina. Luego, la mejor aproximación se obtiene con la malla más fina que discretiza el espacio parametral en 50x50 puntos. Queda definir que cantidad de vecinos hace la aproximación mejor. Nótese que para 8 vecinos (k = 8) no ajusta para el parámetro $g$ lo que descarta esta elección. Finalmente, para 3 y 5 vecinos tenemos distribuciones bastante similares por lo que la elección es indiferente. Así, seleccionamos el forward map aproximado con 3 vecinos en una malla 50x50.
 
-Es necesario establecer una estructura para realizar comparaciones entre el método ordinario y aproximado. Para saber la factibilidad del método se considera al tiempo de ejecución, que es una variable tangible. 
-
-El tiempo de ejecución del método ordinario para el problema inverso en el modelo gravitacional es de \textbf{5 min 57 s}
-
+Para saber la factibilidad del método se considera al tiempo de ejecución, que es una variable tangible y de fácil acceso. El tiempo de ejecución del método ordinario para el problema inverso en el modelo gravitacional es de \textbf{5 min 57 s}
 
 \begin{table}[H]
     \centering
@@ -764,14 +745,7 @@ Vemos que la aproximación elegida tiene una ganancia de 57 segundos de ejecuci�
 \textbf{Forward map aproximado para el modelo logístico}
 
 
-
-
-
-
-
-
-
-
+El modelo logístico es de particular interés ya que al tener parámetros cuyas unidades difieren en varios grados de magnitud. Esto nos permite poner a prueba el modelo con la regularización de las unidades que sin ella el forward map aproximado tomará en cuenta solo para valores donde la distancia euclidiana es menor, que en este caso es para el parámetros $\theta_1$. Al igual que el modelo gravitacional, aquí realizamos los mismos experimentos con $k = 3,5,8$ y una resolución de malla de $M = 10, 15, 30, 50$.
 
 En la Fig. () se muestran las distribuciones marginales para la aproximación del forward map con $k = 3$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 
@@ -781,12 +755,11 @@ En la Fig. () se muestran las distribuciones marginales para la aproximación de
     % \caption{}
     % \label{Fig. }
 \end{figure} 
-
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 16 cm ]{img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png} 
-    % \caption{}
-    % \label{Fig. }
+    \caption{Distribuciones marginales posteriores aproximadas (rojo) con forward map aproximado a tres vecinos cercanos y una malla de resolución 10,15,30,50 de izquierda a derecha. En azul la distribución posterior con forward map ordinario para modelo logístico.}
+    \label{Fig. Aprox log 3v}
 \end{figure} 
 
 En la Fig. () se muestran las distribuciones marginales para la aproximación del forward map con $k = 5$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
@@ -797,12 +770,11 @@ En la Fig. () se muestran las distribuciones marginales para la aproximación de
     % \caption{}
     % \label{Fig. }
 \end{figure} 
-
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 16 cm ]{img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png} 
-    % \caption{}
-    % \label{Fig. }
+    \caption{Distribuciones marginales posteriores aproximadas (rojo) con forward map aproximado a cinco vecinos cercanos y una malla de resolución 10,15,30,50 de izquierda a derecha. En azul la distribución posterior con forward map ordinario para modelo logístico.}
+    \label{Fig. Aprox log 5v}
 \end{figure} 
 
 En la Fig. () se muestran las distribuciones marginales para la aproximación del forward map con $k = 8$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
@@ -813,12 +785,11 @@ En la Fig. () se muestran las distribuciones marginales para la aproximación de
     % \caption{}
     % \label{Fig. }
 \end{figure} 
-
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 16 cm ]{img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png} 
-    % \caption{}
-    % \label{Fig. }
+    \caption{Distribuciones marginales posteriores aproximadas (rojo) con forward map aproximado a ocho vecinos cercanos y una malla de resolución 10,15,30,50 de izquierda a derecha. En azul la distribución posterior con forward map ordinario.}
+    \label{Fig. Aprox grav 8v}
 \end{figure} 
 
 

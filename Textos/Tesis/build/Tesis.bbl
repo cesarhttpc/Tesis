@@ -151,6 +151,33 @@ Casella, G.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Christen%
+\ \BBA {} Fox%
+}{%
+Christen%
+\ \BBA {} Fox%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+christen2010general}
+\APACinsertmetastar {%
+christen2010general}%
+\begin{APACrefauthors}%
+Christen, J\BPBI A.%
+\BCBT {}\ \BBA {} Fox, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A general purpose sampling algorithm for continuous
+  distributions (the t-walk)} {A general purpose sampling algorithm for
+  continuous distributions (the t-walk)}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Dobson%
 \ \BBA {} Barnett%
 }{%
@@ -432,6 +459,28 @@ Tarantola, A.%
   estimation}.
 \newblock
 \APACaddressPublisher{}{SIAM}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Van~der Vaart%
+}{%
+Van~der Vaart%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+van2000asymptotic}
+\APACinsertmetastar {%
+van2000asymptotic}%
+\begin{APACrefauthors}%
+Van~der Vaart, A\BPBI W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2000}.
+\newblock
+\APACrefbtitle {Asymptotic statistics} {Asymptotic statistics}\ (\BVOL~3).
+\newblock
+\APACaddressPublisher{}{Cambridge university press}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
