@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.5)  19 AUG 2024 16:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.5)  30 AUG 2024 16:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -604,11 +604,7 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
- (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_01.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_02.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_03.aux
-
-LaTeX Warning: Label `Fig. Aprox grav 8v' multiply defined.
-
-) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_04.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/conclusions.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/appendix.aux))
+ (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_01.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_02.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_03.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_04.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/conclusions.aux))
 \openout1 = `Tesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
@@ -731,7 +727,7 @@ LaTeX Info: Redefining \BHBI on input line 139.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<logo/LOGOTIPO_SIN_FONDO-02.png, id=86, 166.7028pt x 213.9192pt>
+<logo/LOGOTIPO_SIN_FONDO-02.png, id=82, 166.7028pt x 213.9192pt>
 File: logo/LOGOTIPO_SIN_FONDO-02.png Graphic file (type png)
 <use logo/LOGOTIPO_SIN_FONDO-02.png>
 Package pdftex.def Info: logo/LOGOTIPO_SIN_FONDO-02.png  used on input line 57.
@@ -748,7 +744,7 @@ Underfull \hbox (badness 10000) detected at line 57
 \T1/cmr/bx/n/17.28 T E S I S
  []
 
-<logo/banner_cimat_20200126_05.png, id=88, 820.06375pt x 248.93pt>
+<logo/banner_cimat_20200126_05.png, id=84, 820.06375pt x 248.93pt>
 File: logo/banner_cimat_20200126_05.png Graphic file (type png)
 <use logo/banner_cimat_20200126_05.png>
 Package pdftex.def Info: logo/banner_cimat_20200126_05.png  used on input line 57.
@@ -819,55 +815,53 @@ Cap\'{\i }tulo 2.
 
 
 ]
-LaTeX Info: Redefining \. on input line 41.
-LaTeX Info: Redefining \% on input line 41.
+LaTeX Info: Redefining \. on input line 40.
+LaTeX Info: Redefining \% on input line 40.
  [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 61.
-LaTeX Info: Redefining \% on input line 61.
+LaTeX Info: Redefining \. on input line 60.
+LaTeX Info: Redefining \% on input line 60.
  [5]
-LaTeX Info: Redefining \. on input line 73.
-LaTeX Info: Redefining \% on input line 73.
+LaTeX Info: Redefining \. on input line 72.
+LaTeX Info: Redefining \% on input line 72.
  [6]
 Underfull \vbox (badness 1221) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 98.
-LaTeX Info: Redefining \% on input line 98.
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
  [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 109.
-LaTeX Info: Redefining \% on input line 109.
+LaTeX Info: Redefining \. on input line 108.
+LaTeX Info: Redefining \% on input line 108.
  [8]
-<img/MCMC.png, id=331, 604.2575pt x 373.395pt>
+<img/MCMC.png, id=357, 604.2575pt x 373.395pt>
 File: img/MCMC.png Graphic file (type png)
 <use img/MCMC.png>
-Package pdftex.def Info: img/MCMC.png  used on input line 127.
+Package pdftex.def Info: img/MCMC.png  used on input line 126.
 (pdftex.def)             Requested size: 398.33858pt x 246.15088pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 131.
-LaTeX Info: Redefining \% on input line 131.
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
  [9]
-Overfull \hbox (14.25684pt too wide) in paragraph at lines 134--135
+Overfull \hbox (14.25684pt too wide) in paragraph at lines 133--134
 []\T1/cmr/m/n/12 Pese a la en-re-ve-sa-da for-ma-li-za-ción del mé-to-do, la es-truc-tu-ra del al-go-rit-mo Metropolis-
  []
 
-LaTeX Info: Redefining \. on input line 137.
-LaTeX Info: Redefining \% on input line 137.
+LaTeX Info: Redefining \. on input line 136.
+LaTeX Info: Redefining \% on input line 136.
 [10 <./img/MCMC.png>]
-LaTeX Info: Redefining \. on input line 146.
-LaTeX Info: Redefining \% on input line 146.
+LaTeX Info: Redefining \. on input line 145.
+LaTeX Info: Redefining \% on input line 145.
  [11]
-LaTeX Info: Redefining \. on input line 161.
-LaTeX Info: Redefining \% on input line 161.
+LaTeX Info: Redefining \. on input line 160.
+LaTeX Info: Redefining \% on input line 160.
  [12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 182.
-LaTeX Info: Redefining \% on input line 182.
+LaTeX Info: Redefining \. on input line 181.
+LaTeX Info: Redefining \% on input line 181.
  [13])
 LaTeX Info: Redefining \. on input line 100.
 LaTeX Info: Redefining \% on input line 100.
@@ -895,7 +889,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 83.
 LaTeX Info: Redefining \% on input line 83.
  [18]
-<img/Trayectoria.png, id=422, 401.8212pt x 328.8285pt>
+<img/Trayectoria.png, id=451, 401.8212pt x 328.8285pt>
 File: img/Trayectoria.png Graphic file (type png)
 <use img/Trayectoria.png>
 Package pdftex.def Info: img/Trayectoria.png  used on input line 88.
@@ -909,7 +903,7 @@ LaTeX Info: Redefining \% on input line 99.
 LaTeX Info: Redefining \. on input line 123.
 LaTeX Info: Redefining \% on input line 123.
  [20]
-<img/trayectoria_log.png, id=443, 420.6114pt x 328.8285pt>
+<img/trayectoria_log.png, id=472, 420.6114pt x 328.8285pt>
 File: img/trayectoria_log.png Graphic file (type png)
 <use img/trayectoria_log.png>
 Package pdftex.def Info: img/trayectoria_log.png  used on input line 145.
@@ -923,7 +917,7 @@ LaTeX Info: Redefining \% on input line 151.
 LaTeX Info: Redefining \. on input line 171.
 LaTeX Info: Redefining \% on input line 171.
  [22]
-<img/trayectoria_SIR.png, id=471, 412.6617pt x 328.8285pt>
+<img/trayectoria_SIR.png, id=500, 412.6617pt x 328.8285pt>
 File: img/trayectoria_SIR.png Graphic file (type png)
 <use img/trayectoria_SIR.png>
 Package pdftex.def Info: img/trayectoria_SIR.png  used on input line 174.
@@ -951,12 +945,12 @@ Overfull \hbox (30.2881pt too wide) in paragraph at lines 268--270
 LaTeX Info: Redefining \. on input line 276.
 LaTeX Info: Redefining \% on input line 276.
 [27]
-<img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png, id=528, 722.7pt x 289.08pt>
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png, id=557, 722.7pt x 289.08pt>
 File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png>
 Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png  used on input line 288.
 (pdftex.def)             Requested size: 426.79134pt x 170.71892pt.
-<img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png, id=530, 462.528pt x 346.896pt>
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png, id=559, 462.528pt x 346.896pt>
 File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png>
 Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png  used on input line 297.
@@ -964,7 +958,7 @@ Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestr
 LaTeX Info: Redefining \. on input line 303.
 LaTeX Info: Redefining \% on input line 303.
  [28 <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png>]
-<img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png, id=541, 462.528pt x 346.896pt>
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png, id=573, 462.528pt x 346.896pt>
 File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png>
 Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png  used on input line 306.
@@ -974,12 +968,12 @@ Underfull \hbox (badness 1194) in paragraph at lines 307--307
 [][]\T1/cmr/bx/n/10.95 Figura 3.6[][]: []|\T1/cmr/m/n/10.95 Es-ti-ma-ción de la dis-tri-bu-ción pos-te-rior con-jun-ta por mé-to-do MCMC
  []
 
-<img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png, id=545, 395.7987pt x 340.1508pt>
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png, id=577, 395.7987pt x 340.1508pt>
 File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png>
 Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png  used on input line 317.
 (pdftex.def)             Requested size: 173.67297pt x 149.25159pt.
-<img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png, id=546, 395.7987pt x 335.69415pt>
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png, id=578, 395.7987pt x 335.69415pt>
 File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png>
 Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png  used on input line 321.
@@ -993,12 +987,12 @@ Underfull \vbox (badness 1270) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 329.
 LaTeX Info: Redefining \% on input line 329.
  [29 <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png>]
-<img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png, id=555, 462.528pt x 346.896pt>
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png, id=587, 462.528pt x 346.896pt>
 File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png>
 Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png  used on input line 332.
 (pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
-<img/Exp_Central_gravedad_sigma/Figuras/Generales/TiempoFijo_gravedad_sigma.png, id=556, 722.7pt x 289.08pt>
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/TiempoFijo_gravedad_sigma.png, id=588, 722.7pt x 289.08pt>
 File: img/Exp_Central_gravedad_sigma/Figuras/Generales/TiempoFijo_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_sigma/Figuras/Generales/TiempoFijo_gravedad_sigma.png>
 Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/TiempoFijo_gravedad_sigma.png  used on input line 339.
@@ -1006,7 +1000,7 @@ Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Tiempo
 LaTeX Info: Redefining \. on input line 345.
 LaTeX Info: Redefining \% on input line 345.
  [30 <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png> <./img/Exp_Central_gravedad_sigma/Figuras/Generales/TiempoFijo_gravedad_sigma.png>]
-<img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png, id=567, 462.528pt x 346.896pt>
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png, id=599, 462.528pt x 346.896pt>
 File: img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png Graphic file (type png)
 <use img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png>
 Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png  used on input line 354.
@@ -1017,7 +1011,7 @@ Underfull \vbox (badness 7256) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 358.
 LaTeX Info: Redefining \% on input line 358.
  [31 <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png> <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png>]
-<img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png, id=579, 722.7pt x 289.08pt>
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png, id=611, 722.7pt x 289.08pt>
 File: img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png Graphic file (type png)
 <use img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png>
 Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png  used on input line 363.
@@ -1025,22 +1019,22 @@ Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Aprio
 LaTeX Info: Redefining \. on input line 369.
 LaTeX Info: Redefining \% on input line 369.
  [32 <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png> <./img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png>]
-<img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png, id=591, 462.528pt x 346.896pt>
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png, id=623, 462.528pt x 346.896pt>
 File: img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png Graphic file (type png)
 <use img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png>
 Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png  used on input line 372.
 (pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
-<img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png, id=592, 411.81854pt x 354.123pt>
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png, id=624, 411.81854pt x 354.123pt>
 File: img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png Graphic file (type png)
 <use img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png>
 Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png  used on input line 381.
 (pdftex.def)             Requested size: 173.67297pt x 149.34123pt.
-<img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png, id=593, 402.18256pt x 342.8007pt>
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png, id=625, 402.18256pt x 342.8007pt>
 File: img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png Graphic file (type png)
 <use img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png>
 Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png  used on input line 385.
 (pdftex.def)             Requested size: 173.67297pt x 148.0291pt.
-<img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png, id=595, 462.528pt x 346.896pt>
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png, id=627, 462.528pt x 346.896pt>
 File: img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png Graphic file (type png)
 <use img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png>
 Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png  used on input line 394.
@@ -1054,12 +1048,12 @@ LaTeX Info: Redefining \% on input line 402.
 LaTeX Info: Redefining \. on input line 402.
 LaTeX Info: Redefining \% on input line 402.
  [34 <./img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png> <./img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png> <./img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png>]
-<img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png, id=612, 462.528pt x 346.896pt>
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png, id=644, 462.528pt x 346.896pt>
 File: img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png>
 Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png  used on input line 405.
 (pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
-<img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png, id=618, 722.7pt x 289.08pt>
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png, id=650, 722.7pt x 289.08pt>
 File: img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png>
 Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png  used on input line 414.
@@ -1070,17 +1064,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 418.
 LaTeX Info: Redefining \% on input line 418.
  [35 <./img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png>]
-<img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png, id=626, 462.528pt x 346.896pt>
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png, id=658, 462.528pt x 346.896pt>
 File: img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png>
 Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png  used on input line 423.
 (pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
-<img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png, id=627, 399.05086pt x 340.1508pt>
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png, id=659, 399.05086pt x 340.1508pt>
 File: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png>
 Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png  used on input line 432.
 (pdftex.def)             Requested size: 173.67297pt x 148.03706pt.
-<img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png, id=628, 392.667pt x 344.7279pt>
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png, id=660, 392.667pt x 344.7279pt>
 File: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png>
 Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png  used on input line 436.
@@ -1092,7 +1086,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Info: Redefining \. on input line 444.
 LaTeX Info: Redefining \% on input line 444.
 [36 <./img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png> <./img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png>]
-<img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png, id=638, 462.528pt x 346.896pt>
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png, id=670, 462.528pt x 346.896pt>
 File: img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png>
 Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png  used on input line 447.
@@ -1106,252 +1100,253 @@ LaTeX Info: Redefining \% on input line 456.
 LaTeX Info: Redefining \. on input line 469.
 LaTeX Info: Redefining \% on input line 469.
  [38]
-<img/Vecinos_1.png, id=657, 403.2666pt x 317.988pt>
+<img/Vecinos_1.png, id=686, 403.2666pt x 317.988pt>
 File: img/Vecinos_1.png Graphic file (type png)
 <use img/Vecinos_1.png>
-Package pdftex.def Info: img/Vecinos_1.png  used on input line 478.
+Package pdftex.def Info: img/Vecinos_1.png  used on input line 476.
 (pdftex.def)             Requested size: 173.67297pt x 136.95052pt.
-<img/Vecinos_2.png, id=658, 414.1071pt x 317.988pt>
+<img/Vecinos_2.png, id=687, 414.1071pt x 317.988pt>
 File: img/Vecinos_2.png Graphic file (type png)
 <use img/Vecinos_2.png>
-Package pdftex.def Info: img/Vecinos_2.png  used on input line 482.
+Package pdftex.def Info: img/Vecinos_2.png  used on input line 480.
 (pdftex.def)             Requested size: 173.67297pt x 133.3648pt.
-LaTeX Info: Redefining \. on input line 490.
-LaTeX Info: Redefining \% on input line 490.
+
+Underfull \vbox (badness 3449) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 486.
+LaTeX Info: Redefining \% on input line 486.
  [39 <./img/Vecinos_1.png> <./img/Vecinos_2.png>]
-Overfull \hbox (34.45346pt too wide) in paragraph at lines 491--493
-\T1/cmr/m/n/12 una ma-lla de $\OT1/cmr/m/n/12 ^^B$\T1/cmr/m/n/12 , de for-ma que $\OMS/cmsy/m/n/12 M \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 M[] ^^B [] ^^B M[]$\T1/cmr/m/n/12 , don-de $\OMS/cmsy/m/n/12 M[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 ^^R[]; ^^R[]; []  ; ^^R[]^^R[]\OMS/cmsy/m/n/12 g$\T1/cmr/m/n/12 . 
+Overfull \hbox (39.71729pt too wide) in paragraph at lines 492--493
+\T1/cmr/m/n/12 una ma-lla de $\OT1/cmr/m/n/12 ^^B$\T1/cmr/m/n/12 , de for-ma que $\OMS/cmsy/m/n/12 M \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 M[] ^^B [] ^^B M[]$\T1/cmr/m/n/12 , don-de $\OMS/cmsy/m/n/12 M[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 ^^R[]; ^^R[]; []  ; ^^R[]; ^^R[]\OMS/cmsy/m/n/12 g$\T1/cmr/m/n/12 .
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 538.
-LaTeX Info: Redefining \% on input line 538.
- [40]
-<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png, id=676, 1111.2717pt x 281.97345pt>
+LaTeX Info: Redefining \. on input line 533.
+LaTeX Info: Redefining \% on input line 533.
+[40]
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png, id=710, 1111.2717pt x 281.97345pt>
 File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png>
-Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png  used on input line 545.
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png  used on input line 543.
 (pdftex.def)             Requested size: 455.24408pt x 115.5152pt.
 
-Overfull \hbox (21.05501pt too wide) in paragraph at lines 545--546
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 543--544
  [][] 
  []
 
-<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png, id=677, 1116.5715pt x 283.0575pt>
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png, id=711, 1116.5715pt x 283.0575pt>
 File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png Graphic file (type png)
 <use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png>
-Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png  used on input line 550.
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png  used on input line 548.
 (pdftex.def)             Requested size: 455.24408pt x 115.40645pt.
 
-Overfull \hbox (21.05501pt too wide) in paragraph at lines 550--551
- [][] 
- []
-
-LaTeX Info: Redefining \. on input line 556.
-LaTeX Info: Redefining \% on input line 556.
-[41 <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png> <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png>]
-<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png, id=687, 1111.2717pt x 281.97345pt>
-File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png Graphic file (type png)
-<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png>
-Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png  used on input line 559.
-(pdftex.def)             Requested size: 455.24408pt x 115.5152pt.
-
-Overfull \hbox (21.05501pt too wide) in paragraph at lines 559--562
- [][] 
- []
-
-<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png, id=688, 1116.5715pt x 283.0575pt>
-File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png Graphic file (type png)
-<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png>
-Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png  used on input line 565.
-(pdftex.def)             Requested size: 455.24408pt x 115.40645pt.
-
-Overfull \hbox (21.05501pt too wide) in paragraph at lines 565--566
- [][] 
- []
-
-<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png, id=690, 1111.2717pt x 281.97345pt>
-File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png Graphic file (type png)
-<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png>
-Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png  used on input line 574.
-(pdftex.def)             Requested size: 455.24408pt x 115.5152pt.
-
-Overfull \hbox (21.05501pt too wide) in paragraph at lines 574--577
- [][] 
- []
-
-<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png, id=691, 1116.5715pt x 283.0575pt>
-File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png Graphic file (type png)
-<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png>
-Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png  used on input line 580.
-(pdftex.def)             Requested size: 455.24408pt x 115.40645pt.
-
-Overfull \hbox (21.05501pt too wide) in paragraph at lines 580--581
- [][] 
- []
-
-LaTeX Info: Redefining \. on input line 584.
-LaTeX Info: Redefining \% on input line 584.
-[42 <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png> <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png> <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png>]
-Overfull \hbox (12.61098pt too wide) in paragraph at lines 591--602
- [][] 
- []
-
-LaTeX Info: Redefining \. on input line 743.
-LaTeX Info: Redefining \% on input line 743.
-[43 <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png>]
-<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png, id=707, 1114.76476pt x 281.97345pt>
-File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png Graphic file (type png)
-<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png>
-Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png  used on input line 754.
-(pdftex.def)             Requested size: 455.24408pt x 115.14948pt.
-
-Overfull \hbox (21.05501pt too wide) in paragraph at lines 754--757
- [][] 
- []
-
-<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png, id=708, 1116.5715pt x 281.97345pt>
-File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png Graphic file (type png)
-<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png>
-Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png  used on input line 760.
-(pdftex.def)             Requested size: 455.24408pt x 114.96446pt.
-
-Overfull \hbox (21.05501pt too wide) in paragraph at lines 760--761
- [][] 
- []
-
-<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png, id=709, 1114.76476pt x 281.97345pt>
-File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png Graphic file (type png)
-<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png>
-Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png  used on input line 769.
-(pdftex.def)             Requested size: 455.24408pt x 115.14948pt.
-
-Overfull \hbox (21.05501pt too wide) in paragraph at lines 769--772
- [][] 
- []
-
-<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png, id=710, 1116.5715pt x 281.97345pt>
-File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png Graphic file (type png)
-<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png>
-Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png  used on input line 775.
-(pdftex.def)             Requested size: 455.24408pt x 114.96446pt.
-
-Overfull \hbox (21.05501pt too wide) in paragraph at lines 775--776
- [][] 
- []
-
-LaTeX Info: Redefining \. on input line 778.
-LaTeX Info: Redefining \% on input line 778.
-[44 <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png> <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png>]
-<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png, id=718, 1114.76476pt x 281.97345pt>
-File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png Graphic file (type png)
-<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png>
-Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png  used on input line 784.
-(pdftex.def)             Requested size: 455.24408pt x 115.14948pt.
-
-Overfull \hbox (21.05501pt too wide) in paragraph at lines 784--787
- [][] 
- []
-
-<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png, id=719, 1116.5715pt x 281.97345pt>
-File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png Graphic file (type png)
-<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png>
-Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png  used on input line 790.
-(pdftex.def)             Requested size: 455.24408pt x 114.96446pt.
-
-Overfull \hbox (21.05501pt too wide) in paragraph at lines 790--791
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 548--549
  [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 794.
-LaTeX Info: Redefining \% on input line 794.
- [45 <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png> <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png> <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png>]
-Overfull \hbox (12.61098pt too wide) in paragraph at lines 802--813
+LaTeX Info: Redefining \. on input line 552.
+LaTeX Info: Redefining \% on input line 552.
+ [41 <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png>]
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png, id=720, 1111.2717pt x 281.97345pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png  used on input line 557.
+(pdftex.def)             Requested size: 455.24408pt x 115.5152pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 557--560
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 999.
-LaTeX Info: Redefining \% on input line 999.
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png, id=721, 1116.5715pt x 283.0575pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png  used on input line 563.
+(pdftex.def)             Requested size: 455.24408pt x 115.40645pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 563--564
+ [][] 
+ []
+
+LaTeX Info: Redefining \. on input line 569.
+LaTeX Info: Redefining \% on input line 569.
+[42 <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png> <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png> <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png>]
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png, id=731, 1111.2717pt x 281.97345pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png  used on input line 572.
+(pdftex.def)             Requested size: 455.24408pt x 115.5152pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 572--575
+ [][] 
+ []
+
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png, id=732, 1116.5715pt x 283.0575pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png  used on input line 578.
+(pdftex.def)             Requested size: 455.24408pt x 115.40645pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 578--579
+ [][] 
+ []
+
+
+Overfull \hbox (12.61098pt too wide) in paragraph at lines 589--600
+ [][] 
+ []
+
+LaTeX Info: Redefining \. on input line 601.
+LaTeX Info: Redefining \% on input line 601.
+[43 <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png> <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png>]
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png, id=741, 1114.76476pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png  used on input line 751.
+(pdftex.def)             Requested size: 455.24408pt x 115.14948pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 751--754
+ [][] 
+ []
+
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png, id=742, 1116.5715pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png  used on input line 757.
+(pdftex.def)             Requested size: 455.24408pt x 114.96446pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 757--758
+ [][] 
+ []
+
+LaTeX Info: Redefining \. on input line 763.
+LaTeX Info: Redefining \% on input line 763.
+[44 <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png> <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png>]
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png, id=753, 1114.76476pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png  used on input line 766.
+(pdftex.def)             Requested size: 455.24408pt x 115.14948pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 766--769
+ [][] 
+ []
+
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png, id=754, 1116.5715pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png  used on input line 772.
+(pdftex.def)             Requested size: 455.24408pt x 114.96446pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 772--773
+ [][] 
+ []
+
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png, id=756, 1114.76476pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png  used on input line 781.
+(pdftex.def)             Requested size: 455.24408pt x 115.14948pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 781--784
+ [][] 
+ []
+
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png, id=757, 1116.5715pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png  used on input line 787.
+(pdftex.def)             Requested size: 455.24408pt x 114.96446pt.
+
+Overfull \hbox (21.05501pt too wide) in paragraph at lines 787--788
+ [][] 
+ []
+
+
+Underfull \vbox (badness 1888) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 791.
+LaTeX Info: Redefining \% on input line 791.
+ [45 <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png> <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png> <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png>]
+Overfull \hbox (12.61098pt too wide) in paragraph at lines 796--807
+ [][] 
+ []
+
+LaTeX Info: Redefining \. on input line 953.
+LaTeX Info: Redefining \% on input line 953.
 [46 <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png>]
-<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png, id=736, 1116.5715pt x 281.853pt>
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png, id=776, 1116.5715pt x 281.853pt>
 File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png  used on input line 1024.
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png  used on input line 958.
 (pdftex.def)             Requested size: 483.69684pt x 122.09758pt.
 
-Overfull \hbox (49.50777pt too wide) in paragraph at lines 1024--1027
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 958--961
  [][] 
  []
 
-<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png, id=737, 1116.5715pt x 281.853pt>
-File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png Graphic file (type png)
-<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png  used on input line 1031.
-(pdftex.def)             Requested size: 483.69684pt x 122.09758pt.
-
-Overfull \hbox (49.50777pt too wide) in paragraph at lines 1031--1034
- [][] 
- []
-
-<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png, id=738, 1116.5715pt x 281.853pt>
-File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png Graphic file (type png)
-<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png  used on input line 1040.
-(pdftex.def)             Requested size: 483.69684pt x 122.09758pt.
-
-Overfull \hbox (49.50777pt too wide) in paragraph at lines 1040--1043
- [][] 
- []
-
-
-Underfull \vbox (badness 1189) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 1044.
-LaTeX Info: Redefining \% on input line 1044.
- [47 <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png>]
-<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png, id=748, 1116.5715pt x 281.97345pt>
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png, id=777, 1116.5715pt x 281.97345pt>
 File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png  used on input line 1047.
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png  used on input line 964.
 (pdftex.def)             Requested size: 483.69684pt x 122.14975pt.
 
-Overfull \hbox (49.50777pt too wide) in paragraph at lines 1047--1050
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 964--965
  [][] 
  []
 
-<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png, id=749, 1116.5715pt x 281.97345pt>
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png, id=779, 1116.5715pt x 281.853pt>
+File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png  used on input line 973.
+(pdftex.def)             Requested size: 483.69684pt x 122.09758pt.
+
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 973--976
+ [][] 
+ []
+
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png, id=780, 1116.5715pt x 281.97345pt>
 File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png  used on input line 1056.
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png  used on input line 979.
 (pdftex.def)             Requested size: 483.69684pt x 122.14975pt.
 
-Overfull \hbox (49.50777pt too wide) in paragraph at lines 1056--1059
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 979--980
  [][] 
  []
 
-<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png, id=750, 1116.5715pt x 281.97345pt>
+LaTeX Info: Redefining \. on input line 983.
+LaTeX Info: Redefining \% on input line 983.
+[47 <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png>]
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png, id=791, 1116.5715pt x 281.853pt>
+File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png  used on input line 988.
+(pdftex.def)             Requested size: 483.69684pt x 122.09758pt.
+
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 988--991
+ [][] 
+ []
+
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png, id=792, 1116.5715pt x 281.97345pt>
 File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png Graphic file (type png)
 <use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png>
-Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png  used on input line 1063.
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png  used on input line 994.
 (pdftex.def)             Requested size: 483.69684pt x 122.14975pt.
 
-Overfull \hbox (49.50777pt too wide) in paragraph at lines 1063--1066
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 994--995
  [][] 
  []
 
 
-Overfull \hbox (12.61098pt too wide) in paragraph at lines 1074--1085
+Overfull \hbox (12.61098pt too wide) in paragraph at lines 1004--1015
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 1085.
-LaTeX Info: Redefining \% on input line 1085.
-[48 <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png>])
+LaTeX Info: Redefining \. on input line 1015.
+LaTeX Info: Redefining \% on input line 1015.
+[48 <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png>])
 LaTeX Info: Redefining \. on input line 102.
 LaTeX Info: Redefining \% on input line 102.
  [49]
@@ -1373,62 +1368,89 @@ LaTeX Info: Redefining \% on input line 1.
 
 ]
 Cap\'{\i }tulo 4.
-) [51] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.bbl
+[51]
+<img/Unidades_1.png, id=817, 1116.45105pt x 281.853pt>
+File: img/Unidades_1.png Graphic file (type png)
+<use img/Unidades_1.png>
+Package pdftex.def Info: img/Unidades_1.png  used on input line 11.
+(pdftex.def)             Requested size: 483.69684pt x 122.11047pt.
+
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 11--14
+ [][] 
+ []
+
+<img/Unidades_2.png, id=818, 1133.31406pt x 281.853pt>
+File: img/Unidades_2.png Graphic file (type png)
+<use img/Unidades_2.png>
+Package pdftex.def Info: img/Unidades_2.png  used on input line 17.
+(pdftex.def)             Requested size: 483.69684pt x 120.29556pt.
+
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 17--18
+ [][] 
+ []
+
+<img/Unidades_3.png, id=819, 1116.45105pt x 281.853pt>
+File: img/Unidades_3.png Graphic file (type png)
+<use img/Unidades_3.png>
+Package pdftex.def Info: img/Unidades_3.png  used on input line 24.
+(pdftex.def)             Requested size: 483.69684pt x 122.11047pt.
+
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 24--27
+ [][] 
+ []
+
+<img/Unidades_4.png, id=820, 1133.31406pt x 281.853pt>
+File: img/Unidades_4.png Graphic file (type png)
+<use img/Unidades_4.png>
+Package pdftex.def Info: img/Unidades_4.png  used on input line 30.
+(pdftex.def)             Requested size: 483.69684pt x 120.29556pt.
+
+Overfull \hbox (49.50777pt too wide) in paragraph at lines 30--31
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 34.
+LaTeX Info: Redefining \% on input line 34.
+ [52 <./img/Unidades_1.png> <./img/Unidades_2.png> <./img/Unidades_3.png>]) [53 <./img/Unidades_4.png>] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.bbl
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [52
+ [54
 
 
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 234.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 289.
  (C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [53])
-LaTeX Info: Redefining \. on input line 114.
-LaTeX Info: Redefining \% on input line 114.
- [54]
-\openout2 = `chapters/appendix.aux'.
-
- (chapters/appendix.tex
-Ap\'{e}ndice A.
-) [55
-
-
-]
+) [55])
 LaTeX Info: Redefining \. on input line 116.
 LaTeX Info: Redefining \% on input line 116.
- [56
-
-
-
-] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.aux
+ [56] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
- (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_01.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_02.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_03.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_04.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/conclusions.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/appendix.aux))
+ (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_01.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_02.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_03.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/chap_04.aux) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\chapters/conclusions.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `Tesis.out' has not changed.
-(rerunfilecheck)             Checksum: FAE9FC705F1F6F9C1F883A3FEF081431;3157.
+(rerunfilecheck)             Checksum: 65BD2F1EC8D9D743FBBBEE87EE68D854;3083.
  )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 93 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 26360 strings out of 474486
- 505947 string characters out of 5743756
- 1942542 words of memory out of 5000000
- 47932 multiletter control sequences out of 15000+600000
+ 26401 strings out of 474486
+ 506377 string characters out of 5743756
+ 1943542 words of memory out of 5000000
+ 47971 multiletter control sequences out of 15000+600000
  584217 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,101p,1617b,981s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,101p,1619b,981s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
 
@@ -1439,9 +1461,9 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2074.pk> <C:\Users\ce_ra\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.pdf (66 pages, 10003745 bytes).
+Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Tesis\build\Tesis.pdf (66 pages, 11121072 bytes).
 PDF statistics:
- 1500 PDF objects out of 1728 (max. 8388607)
- 207 named destinations out of 1000 (max. 500000)
- 398 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1551 PDF objects out of 1728 (max. 8388607)
+ 215 named destinations out of 1000 (max. 500000)
+ 410 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -212,7 +212,7 @@ El análisis del calculo de la verosimilitud se trató en la sección 2 del cap�
 \end{align}
 rescatamos la distribución posterior en función del forward map, salvo una constante. De esta forma, resta discutir las cualidades deseadas para los modelos anteriormente descritos.
 
-Para nuestro caso particular, todos los modelos propuestos en la sección precedente dependen de parámetros no negativos, es decir, $\theta_i \geq 0$ para toda $i = 1,\cdots, d$. Incluso algunos de ellos se tiene bastante certeza de su valor, que podría pensarse en ajustar una distribución a priori normal. Sin embargo, ajustar una normal conlleva a tener problemas en el soporte, por lo que puede pensarse en considerar una normal truncada a los positivos, sin embargo está complica innesariamente las expresiones para la distribución posterior. 
+Para nuestro caso particular, todos los modelos propuestos en la sección precedente dependen de parámetros no negativos, es decir, $\theta_i \geq 0$ para toda $i = 1,\cdots, d$. Incluso algunos de ellos se tiene bastante certeza de su valor, que podría pensarse en ajustar una distribución a priori normal. Sin embargo, ajustar una normal conlleva a tener problemas en el soporte, por lo que puede pensarse en considerar una normal truncada a los positivos, sin embargo está complica innecesariamente las expresiones para la distribución posterior. 
 
 Finalmente, se opta por proponer distribuciones a priori gamma, debido a que existe una parametrización en la cual se asemeja a una distribución normal pero con el soporte adecuado. La distribución gamma que tiene por  máximo a $\theta_{i}^{*}$ y asemeja una normal es 
 \begin{align}
@@ -299,7 +299,7 @@ Ahora, generamos una muestra $\mathbf{y}$ del forward map gravitatorio y agregam
     \label{Fig. 3.2.2.02}
 \end{figure} 
 
-Luego, con la metodología propuesta, usando el algoritmo MCMC Metropolis-Hastings (\cite{christen2010general}) para una cadena de tamaño $T = 600,000$ y un burn in de 20,000 tenemos que la trayectoria seguida en el espacio de parámetros $\theta = (g,b)$ para la distribución posterior (conjunta) es el mostrado en la Fig. \ref{Fig. 3.2.2.03}. Notemos que dicha posterior tiene alta correlación entre parámetros. Esto tiene la interpretación física que para valores altos de $g$ es necesario tener más fricción $b$ con el medio para la misma trayectoria $\mathbf{y}$.
+Luego, con la implementación de la metodología propuesta (\cite{kaipio2006statistical}), usando el algoritmo MCMC Metropolis-Hastings (\cite{christen2010general}) para una cadena de tamaño $T = 600,000$ y un burn in de 20,000 tenemos que la trayectoria seguida en el espacio de parámetros $\theta = (g,b)$ para la distribución posterior (conjunta) es el mostrado en la Fig. \ref{Fig. 3.2.2.03}. Notemos que dicha posterior tiene alta correlación entre parámetros. Esto tiene la interpretación física que para valores altos de $g$ es necesario tener más fricción $b$ con el medio para la misma trayectoria $\mathbf{y}$.
 
 \begin{figure}
     \centering 
@@ -341,7 +341,7 @@ En la Fig. \ref{Fig. 3.2.2.06} se muestra en azul claro los distintos forward ma
     \label{Fig. 3.2.2.07}
 \end{figure} 
 
-Más aún, para ejemplificar la distribución predictiva, considere dos valores fijos de $t$ y tomese cortes verticales de la distribución predictiva. En la Fig. \ref{Fig. 3.2.2.07} nos muestra para el tiempo $t = 0.2 s$ y $t = 0.7s$ la distribución de probabilidad de la posición de la partícula afectada por la gravedad en ese momento de tiempo. 
+Más aún, para ejemplificar la distribución predictiva, considere dos valores fijos de $t$ y tómese cortes verticales de la distribución predictiva. En la Fig. \ref{Fig. 3.2.2.07} nos muestra para el tiempo $t = 0.2 s$ y $t = 0.7s$ la distribución de probabilidad de la posición de la partícula afectada por la gravedad en ese momento de tiempo. 
 
 \subsubsection{Simulación del modelo logístico}
 
@@ -356,7 +356,7 @@ Siguiendo la metodología ordinario para la resolución del problema inverso en 
     \label{Fig. 3.2.log.muestra}
 \end{figure} 
 
-Posteriormente, definamos las constantes (\ref{3.2.1.03}) de las distribuciones gamma a priori. Seleccionemos las constantes semejantes a las simuladas (fines ilustrativos), cuyas graficas se muestran en la Fig. \ref{Fig. 3.2.log.priori}
+Posteriormente, definamos las constantes (\ref{3.2.1.03}) de las distribuciones gamma a priori. Seleccionemos las constantes semejantes a las simuladas (fines ilustrativos), cuyas gráficas se muestran en la Fig. \ref{Fig. 3.2.log.priori}
 
 \begin{figure} 
     \centering 
@@ -398,7 +398,7 @@ Finalmente, el análisis concluye con la distribución predictiva dada por el fo
 
 \subsubsection{Simulación del modelo SIR}
 
-Para el modelo epidemiólogico tomamos una muestra de $n =10$ observaciones de infectados en una población cerrada a lo largo del tiempo. Al igual que los modelos previos, dichas observaciones son simulaciones del forward map con ruido gaussiano. En la Fig. \ref{Fig. SIR_01} vemos la grafica de la muestra de infectados, notamos que tienen un rápido crecimiento para después decaer suavemente.
+Para el modelo epidemiólogico tomamos una muestra de $n =10$ observaciones de infectados en una población cerrada a lo largo del tiempo. Al igual que los modelos previos, dichas observaciones son simulaciones del forward map con ruido gaussiano. En la Fig. \ref{Fig. SIR_01} vemos la gráfica de la muestra de infectados, notamos que tienen un rápido crecimiento para después decaer suavemente.
 
 \begin{figure}
     \centering 
@@ -461,17 +461,15 @@ Recordemos de la sección 4 del capítulo 2 la construcción del forward map apr
 \end{align}
 donde $\omega_j = d_j^{-1}/ \sum_{i=1}^{k} d_i^{-1}$. Notemos que el forward map aproximado usa el forward map ordinario $F(\vartheta)$ para los elementos de la malla $\mathcal{M}$. Así la construcción de la distribución posterior aproximada $\pi_{M}^{k}$ se da reemplazando el forward map ordinario en la distribución posterior de los parámetros, tal como en la ecuación (\ref{2.4.02}).
 
-Previo a realizar las simulaciones para distintos casos es necesario revisar un último concepto. Proceder a estimar las distribuciones posteriores aproximadas, de la forma detalla a lo largo de este texto, tendría un inconveniente al analizar la convergencia a mediada que la malla con la que se aproxima se hace cada vez más fina. Este problema se salda con la regularización de las unidades.
+Previo a realizar las simulaciones para distintos casos es necesario revisar un último concepto. Proceder a estimar las distribuciones posteriores aproximadas, de la forma detalla a lo largo de este texto, tendría un inconveniente al analizar la convergencia a mediada que se aumenta la resolución de la malla. Este problema se salda con la regularización de las unidades.
 
 \subsection*{Regularización de las unidades}
 
 Un paso previo a la obtención del forward map aproximado es la regularización de las unidades. La regularización de la unidades es una aporte fundamental en la metodología del enfoque bayesiano del problema inverso con el forward map aproximado. Veremos más adelante que según el modelo, las distribuciones posteriores aproximadas son sensibles a las unidades de medida de las observables. Esto significa que el método aproximado propuesto confronta una laguna estructural que amerita rectificación. Para ver esto, observe la ecuación del forward map aproximado (\ref{3.3.01}) depende de los $k$ vecinos más cercanos $\vartheta^{(j)}$ del parámetro $\theta =(\theta_1,\cdots,\theta_d)\in \Theta$. Dado que siempre existe reparametrización del modelo, entonces las unidades de $\theta_1$ y $\theta_2$, por ejemplo, se pueden alterar a gusto, lo que termina afectando las distancias y modificando a otros vecinos cercanos. 
 
-Consisamente, las unidades del modelo gravitatorio para $g$ usualmente se dan en $metros/segundo$ y para $b$ en $kilogramos/segundo$. Sin embargo, piense en la reparametrización donde se contemplan kilómetros en lugar de metros y gramos en lugar de kilogramos, pues la distancia euclidiana resultará en un incremento en tres ordenes de magnitud para $b$ y un decrecimiento en tres ordenes para $g$. De forma que los nuevos vecinos más cercanos terminan por ignorar cualquier propuesta que involucre un cambio para $b$. Lo mismo pasa en el caso de que la parametrización de cada parámetro difiera en más de un orden de magnitud.
+Concisamente, las unidades del modelo gravitatorio para $g$ usualmente se dan en $metros/segundo$ y para $b$ en $kilogramos/segundo$. Sin embargo, piense en la reparametrización donde se contemplan kilómetros en lugar de metros y gramos en lugar de kilogramos, pues la distancia euclidiana resultará en un incremento en tres ordenes de magnitud para $b$ y un decrecimiento en tres ordenes para $g$. De forma que los nuevos vecinos más cercanos terminan por ignorar cualquier propuesta que involucre un cambio para $b$. Lo mismo pasa en el caso de que la parametrización de cada parámetro difiera en más de un orden de magnitud.
 
-En la Fig. \ref{Vecinos} se muestra un enmallado para el modelo gravitatorio en unidades estándar \ref{Fig. 3.3_Vecinos1}, mientras que en \ref{Fig. 3.3_vecinos2} se toma la reparametrización en libras y pulgadas. Notese que los vecinos cercanos (rojo oscuro) al parámetro $\theta$ (rojo) se ven ampliamente alterados. En consecuencia, la construcción del forward map es sensible a reparametrizaciones.
-
-\begin{figure}[h]
+\begin{figure}
     \centering
     \subfloat[Subfigure 1 list of figures text][Malla en unidades estándar.]{
     \includegraphics[width=0.4\textwidth]{img/Vecinos_1.png}
@@ -484,20 +482,20 @@ En la Fig. \ref{Vecinos} se muestra un enmallado para el modelo gravitatorio en 
     \label{Vecinos}
 \end{figure}
 
+De igual forma, la aproximación del forward map en el caso del modelo gravitacional esta condicionada a las unidades de medida, veamos el caso concreto de usar unidades estándar (Sistema Internacional) y el caso de unidades anglosajonas. En la Fig. \ref{Vecinos} se muestra un enmallado para el modelo gravitatorio en unidades estándar \ref{Fig. 3.3_Vecinos1}, mientras que en \ref{Fig. 3.3_vecinos2} se toma la reparametrización en libras y pulgadas. Nótese que los vecinos cercanos (rojo oscuro) al parámetro $\theta$ (rojo) se ven ampliamente alterados. En consecuencia, es necesario regular las unidades de forma que el uso de cualquier sistema de unidades sea irrelevante para la aproximación del forward map.
+
+
 \subsubsection{Construcción de la regularización de unidades}
 
-Como hemos visto, la amplia diferencia en ordenes de magnitud entre parámetros conduce a una construcción patógena del forward map. Por esto mismo, la regularización de las unidades se establece como una técnica para normalizar cada parámetro al intervalo $[0,1]$.
+Como hemos visto, la amplia diferencia en ordenes de magnitud entre parámetros conduce a una construcción patógena del forward map. Por esto mismo, la regularización de las unidades se establece como una técnica para normalizar cada parámetro al intervalo $[0,1]$. 
 
-Recordemos la notación usada en la sección 2.4. Sea $\theta = (\theta_1,\cdots, \theta_d) \in \Theta$. Sea $\mathcal{M}$ una malla de $\Theta$, de forma que 
-$\mathcal{M} = \mathcal{M}_1\times\cdots\times \mathcal{M}_d$, donde $\mathcal{M}_i = \{\theta_i^{Min},\theta_{i}^{(2)},\cdots,\theta_i^{(M-1)}\theta_i^{Min}\}$. 
-
-Para cada componente de $\theta$, aplicamos la transformación de normalización $\varphi$ a la malla $\mathcal{M}$, donde a cada elemento $\theta_i^{(j)}\in \mathcal{M}_i$ se aplica la transformación
+Recordemos la notación usada en la sección 2.4. Sea $\theta = (\theta_1,\cdots, \theta_d) \in \Theta$. Sea $\mathcal{M}$ una malla de $\Theta$, de forma que $\mathcal{M} = \mathcal{M}_1\times\cdots\times \mathcal{M}_d$, donde $\mathcal{M}_i = \{\theta_i^{Min},\theta_{i}^{(2)},\cdots,\theta_i^{(M-1)},\theta_i^{Min}\}$. Para cada componente de $\theta$, aplicamos la transformación de normalización $\varphi$ a la malla $\mathcal{M}$, donde a cada elemento $\theta_i^{(j)}\in \mathcal{M}_i$ se aplica la transformación
 \begin{align}
     \varphi_i^{(j)} = \frac{\theta_i^{(j)} - \theta_i^{Min}}{\theta_i^{Max}-\theta_i^{Min}}.
     \label{3.3.02}
 \end{align}
 
-Considerando que $\mathcal{N}_i = \{\varphi_i^{(1)},\cdots, \varphi_i^{(M)}\}$ para cada $i \in \{1,\cdots,d\}$.  De forma que se crea un enmallado uniforme $\mathcal{N} = \mathcal{N}_1 \times \cdots \times \mathcal{N}_d$. Con la transformación (\ref{3.3.02}) tenemos que el espacio reparametrizado $\mathcal{N}$ es un subconjunto del espacio $[0,1]^d = [0,1]\times \cdots \times [0,1]$, por lo que al usar distancia euclidiana los vecinos más cercanos no serán sensibles a reparametrizaciones. En adelante entenderemos a los $k$ vecinos más cercanos $\vartheta^{j}$ con la reparametrización $\phi$ y la malla $\mathcal{N}$ para la construcción del forward map aproximado en (\ref{3.3.01}). 
+Considerando que $\mathcal{N}_i = \{\varphi_i^{(1)},\cdots, \varphi_i^{(M)}\}$ para cada $i \in \{1,\cdots,d\}$.  De forma que se crea un enmallado uniforme $\mathcal{N} = \mathcal{N}_1 \times \cdots \times \mathcal{N}_d$. Con la transformación (\ref{3.3.02}) tenemos que el espacio reparametrizado $\mathcal{N}$ es un subconjunto del espacio $[0,1]^d$, por lo que al usar distancia euclidiana los vecinos más cercanos no serán sensibles a reparametrizaciones. En adelante entenderemos a los $k$ vecinos más cercanos $\vartheta^{j}$ con la reparametrización $\phi$ y la malla $\mathcal{N}$ para la construcción del forward map aproximado en (\ref{3.3.01}). 
 
 % Recordemos que se usa distancia euclidiana, denotemos
 % \begin{align*}
@@ -530,13 +528,13 @@ Considerando que $\mathcal{N}_i = \{\varphi_i^{(1)},\cdots, \varphi_i^{(M)}\}$ p
 
 \subsection*{Experimentación con distribuciones posteriores aproximadas}
 
-Las aproximaciones de la distrbicuión posterior considera aproximaciones del forward map. Estas se hacen con la \textit{interpolación} de $k$ vecinos más cercanos de la malla $\mathcal{N}$. Particularmente se experimentó con vecinos $k = 3,5,8$. Además, para indagar en la convergencia de la distribución aproximada se toman la resolución de la aproximación de forma creciente. Es decir, se aproxima el forward map con mallas de tamaño $M \times M$ con $M = 10, 15, 30, 50$.
+Las aproximaciones de la distribución posterior considera aproximaciones del forward map. Estas se hacen con la \textit{interpolación} de $k$ vecinos más cercanos de la malla $\mathcal{N}$. Particularmente se experimentó con vecinos $k = 3,5,8$. Además, para indagar en la convergencia de la distribución aproximada se toman la resolución de la aproximación de forma creciente. Es decir, se aproxima el forward map con mallas de tamaño $M \times M$ con $M = 10, 15, 30, 50$.
 
 \subsubsection*{Forward map aproximado para el modelo gravitatorio}
 
 En el análisis bayesiano sobre el modelo gravitatorio se obtuvo la distribución posterior con el forward map ordinario para cada una de las aproximaciones propuestas. Dichas distribuciones las cotejaremos con una aproximación a la misma de forma que sea visible o no la convergencia al análogo ordinario.
 
-Para empezar, tomemos la aproximación del forward map con 3 vecinos cercanos $(k= 3)$. Luego, calculemos la distribución posterior para cada rejilla $(m = 10, 15, 30, 50)$. Tenemos la distribución bidimensional conjunta. Luego se toma las distribuciones marginales para cada parámetro $g,b$. Al ser un estudio heurístico, el grado de aproximación se hace tras simple comparación de la distribución marginal aproximada  para cada parámetro, $\pi^{*}(g)$ con $\pi(g)$, y comparación de $\pi^{*}(b) = \pi(b)$.
+Para empezar, tomemos la aproximación del forward map con 3 vecinos cercanos $(k= 3)$. Luego, estimamos la distribución posterior conjunta para cada rejilla $(M = 10, 15, 30, 50)$ con el algoritmo Metropolis-Hastings (\cite{christen2010general}). Luego se toma las distribuciones marginales para cada parámetro $g,b$. Al ser un estudio heurístico, el grado de aproximación se hace tras simple comparación de la distribución marginal aproximada  para cada parámetro, $\tilde{\pi}^{k}_M(g)$ con $\pi(g)$, y comparación de $\tilde{\pi}^{k}_M(b)$ con $\pi(b)$.
 
 En la Fig. \ref{Fig. Aprox grav 3v} se muestran las distribuciones marginales para la aproximación del forward map con $k = 3$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 
@@ -552,7 +550,7 @@ En la Fig. \ref{Fig. Aprox grav 3v} se muestran las distribuciones marginales pa
     \label{Fig. Aprox grav 3v}
 \end{figure} 
 
-Luego, aumentando la cantidad de vecinos cercanos en la aproximación a $k = 5$. En la Fig. \ref{Fig. Aprox grav 5v} se muestran las distribuciones marginales para la aproximación del forward map con $k = 5$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
+Luego, aumentando la cantidad de vecinos cercanos en la aproximación a $k = 5$, podemos ver en la Fig. \ref{Fig. Aprox grav 5v} las distribuciones marginales para la aproximación del forward map con $k = 5$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 
 \begin{figure}[H] 
     \centering 
@@ -582,7 +580,7 @@ En la Fig. \ref{Fig. Aprox grav 8v} se muestran las distribuciones marginales pa
     \label{Fig. Aprox grav 8v}
 \end{figure} 
 
-Notemos del análisis previo que de manera general las distribuciones posteriores aproximadas $\pi^{*}(g,b)$ mejora a medida que la malla se hace más fina. Luego, la mejor aproximación se obtiene con la malla más fina que discretiza el espacio parametral en 50x50 puntos. Queda definir que cantidad de vecinos hace la aproximación mejor. Nótese que para 8 vecinos (k = 8) no ajusta para el parámetro $g$ lo que descarta esta elección. Finalmente, para 3 y 5 vecinos tenemos distribuciones bastante similares por lo que la elección es indiferente. Así, seleccionamos el forward map aproximado con 3 vecinos en una malla 50x50.
+Notemos del análisis previo que de manera general las distribuciones posteriores aproximadas $\tilde{\pi}^{k}_M(g,b)$ mejora a medida que la malla se hace más fina. Luego, la mejor aproximación se obtiene con la malla más fina que discretiza el espacio parametral en 50x50 puntos. Queda definir que cantidad de vecinos hace la aproximación mejor. Nótese que para 8 vecinos (k = 8) no ajusta para el parámetro $g$ lo que descarta esta elección. Finalmente, para 3 y 5 vecinos tenemos distribuciones bastante similares por lo que la elección es indiferente. Así, seleccionamos el forward map aproximado con 3 vecinos en una malla 50x50.
 
 Para saber la factibilidad del método se considera al tiempo de ejecución, que es una variable tangible y de fácil acceso. El tiempo de ejecución del método ordinario para el problema inverso en el modelo gravitacional es de \textbf{5 min 57 s}
 
@@ -740,14 +738,13 @@ Vemos que la aproximación elegida tiene una ganancia de 57 segundos de ejecuci�
 %     \label{fig:g_01}
 % \end{figure}
 
-\newpage
+\subsubsection*{Forward map aproximado para el modelo logístico}
 
-\textbf{Forward map aproximado para el modelo logístico}
+Es de interés analizar la metodología aproximada propuesta para otros modelos. La experimentación con el modelo logístico nos permite dilucidar en el comportamiento de la metodología en cuestión. Al igual que el modelo gravitacional, aquí realizamos los mismos experimentos con $k = 3,5,8$ y una resolución de malla de $M = 10, 15, 30, 50$.
 
+% El modelo logístico es de particular interés ya que al tener parámetros cuyas unidades difieren en varios grados de magnitud. Esto nos permite poner a prueba el modelo con la regularización de las unidades que sin ella el forward map aproximado tomará en cuenta solo para valores donde la distancia euclidiana es menor, que en este caso es para el parámetros $\theta_1$. 
 
-El modelo logístico es de particular interés ya que al tener parámetros cuyas unidades difieren en varios grados de magnitud. Esto nos permite poner a prueba el modelo con la regularización de las unidades que sin ella el forward map aproximado tomará en cuenta solo para valores donde la distancia euclidiana es menor, que en este caso es para el parámetros $\theta_1$. Al igual que el modelo gravitacional, aquí realizamos los mismos experimentos con $k = 3,5,8$ y una resolución de malla de $M = 10, 15, 30, 50$.
-
-En la Fig. () se muestran las distribuciones marginales para la aproximación del forward map con $k = 3$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
+Empezando por tres vecinos cercanos para aproximación del forward map, vemos en la Fig. \ref{Fig. Aprox log 3v} las distribuciones marginales para la aproximación del forward map con $k = 3$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 
 \begin{figure}[H] 
     \centering 
@@ -762,7 +759,7 @@ En la Fig. () se muestran las distribuciones marginales para la aproximación de
     \label{Fig. Aprox log 3v}
 \end{figure} 
 
-En la Fig. () se muestran las distribuciones marginales para la aproximación del forward map con $k = 5$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
+Posteriormente, para cinco vecinos cercanos, en la Fig. \ref{Fig. Aprox log 5v} se muestran las distribuciones marginales para la aproximación del forward map con $k = 5$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 
 \begin{figure}[H] 
     \centering 
@@ -777,7 +774,7 @@ En la Fig. () se muestran las distribuciones marginales para la aproximación de
     \label{Fig. Aprox log 5v}
 \end{figure} 
 
-En la Fig. () se muestran las distribuciones marginales para la aproximación del forward map con $k = 8$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
+Finalmente, para ocho vecinos cercanos, en la Fig. \ref{Fig. Aprox log 8v} se muestran las distribuciones marginales para la aproximación del forward map con $k = 8$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 
 \begin{figure}[H] 
     \centering 
@@ -789,13 +786,10 @@ En la Fig. () se muestran las distribuciones marginales para la aproximación de
     \centering 
     \includegraphics[width = 16 cm ]{img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png} 
     \caption{Distribuciones marginales posteriores aproximadas (rojo) con forward map aproximado a ocho vecinos cercanos y una malla de resolución 10,15,30,50 de izquierda a derecha. En azul la distribución posterior con forward map ordinario.}
-    \label{Fig. Aprox grav 8v}
+    \label{Fig. Aprox log 8v}
 \end{figure} 
 
-
-
 El tiempo de ejecución del método ordinario para el problema inverso en el modelo logístico es de \textbf{20 min 58 s}
-
 
 \begin{table}[H]
     \centering
@@ -812,54 +806,7 @@ El tiempo de ejecución del método ordinario para el problema inverso en el mod
     % \label{tabla_03}
 \end{table}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Observemos que el grado de aproximación es plausible para cada experimento. Notemos que el parámetro $\theta_1$ aproxima mejor que el parámetro $\theta_2$. Dichos experimentos muestran comportamientos no esperados, pese a esto, el tiempo de ejecución es significativamente menor que su análogo ordinario puesto que reduce el tiempo de cálculo en un $70\%$ aproximadamente.
 
 % \begin{figure}[h]
 %     \centering
@@ -996,28 +943,15 @@ El tiempo de ejecución del método ordinario para el problema inverso en el mod
 %     \label{fig:g_01}
 % \end{figure}
 
-\newpage
-
-\newpage
-
-\newpage
-
-\newpage
-
-
 \subsubsection{Convergencia en el modelo epidemiólogico}
 
-El problema inverso en el modelo SIR se observa la relevancia de la aproximación del forward map. Recordemos que el forward map del modelo SIR no es posible obtenerse de manera analítica, lo que conlleva un consumo computacional añadido al momento de analizar los pormenores. Una dificultad para el forward map aproximado radica en el gran cambio de unidades, puesto que las unidades entre los parámetros $\beta$ y $\gamma$ difieren por un orden de magnitud, lo que es necesario del ajuste al espacio de parámetros. 
+En el modelo epidemiológico SIR, el cual sabemos que su problema directo no tiene solución analítica, haciendolo el modelo más sensato para fenómenos naturales. Además, la relevancia del modelo se encuentra en las diferencias de los ordenes de magnitud para sus parámetros $\alpha,\beta$, que es un experimento de merito para la metodología aproximada propuesta.
 
 
-% Haciendo repetidas inferencias con distintas aproximaciones. Esto es tomar forward maps que consideren 3, 5, 8 vecinos cercanos con cubrimiento de malla desde $10 x 10, 15x15, 30x30, 50x50$. Al igual que los casos anteriores los tiempos de ejecución en cada caso se dan en la table (\ref{tabla_03})
+De igual forma que las aproximaciones en modelos precedentes, en este caso se hacen repetidas distribuciones posteriores aproximadas con distintos forward map aproximados. Esto es tomar forward maps que consideren 3, 5, 8 vecinos cercanos con resolución de malla M = 10, 15, 30, 50.
 
-
-
-
-
-En la Fig. () se muestran las distribuciones marginales para la aproximación del forward map con $k = 5$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
-
+Empezando por tres vecinos cercanos, se muestran 
+en la Fig. \ref{Fig. Aprox SIR 3v} las distribuciones marginales para la aproximación del forward map con $k = 5$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 
 \begin{figure}[H] 
     \centering 
@@ -1025,6 +959,14 @@ En la Fig. () se muestran las distribuciones marginales para la aproximación de
     % \caption{}
     % \label{Fig. }
 \end{figure} 
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 17 cm ]{img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png}
+    \caption{Distribuciones marginales posteriores aproximadas (rojo) con forward map aproximado a tres vecinos cercanos y una malla de resolución 10,15,30,50 de izquierda a derecha. En azul la distribución posterior con forward map ordinario para modelo SIR.}
+    \label{Fig. Aprox SIR 3v}
+\end{figure} 
+
+Posteriormente, con cinco vecinos cercanos, en la Fig. \ref{Fig. Aprox SIR 5v} se muestran las distribuciones marginales para la aproximación del forward map con $k = 5$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 
 \begin{figure}[H] 
     \centering 
@@ -1032,8 +974,14 @@ En la Fig. () se muestran las distribuciones marginales para la aproximación de
     % \caption{}
     % \label{Fig. }
 \end{figure} 
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width = 17 cm ]{img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png} 
+    \caption{Distribuciones marginales posteriores aproximadas (rojo) con forward map aproximado a cinco vecinos cercanos y una malla de resolución 10,15,30,50 de izquierda a derecha. En azul la distribución posterior con forward map ordinario para modelo SIR.}
+    \label{Fig. Aprox SIR 5v} 
+\end{figure} 
 
-En la Fig. () se muestran las distribuciones marginales para la aproximación del forward map con $k = 5$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
+Finalmente, en la Fig. \ref{Fig. Aprox SIR 8v} se muestran las distribuciones marginales para la aproximación del forward map con $k = 8$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 
 \begin{figure}[H] 
     \centering 
@@ -1041,33 +989,15 @@ En la Fig. () se muestran las distribuciones marginales para la aproximación de
     % \caption{}
     % \label{Fig. }
 \end{figure} 
-
-\begin{figure}[H] 
-    \centering 
-    \includegraphics[width = 17 cm ]{img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png} 
-    % \caption{}
-    % \label{Fig. }
-\end{figure} 
-
-En la Fig. () se muestran las distribuciones marginales para la aproximación del forward map con $k = 5$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
-
-\begin{figure}[H] 
-    \centering 
-    \includegraphics[width = 17 cm ]{img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png} 
-    % \caption{}
-    % \label{Fig. }
-\end{figure} 
-
 \begin{figure}[H] 
     \centering 
     \includegraphics[width = 17 cm ]{img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png} 
-    % \caption{}
-    % \label{Fig. }
+    \caption{Distribuciones marginales posteriores aproximadas (rojo) con forward map aproximado a ocho vecinos cercanos y una malla de resolución 10,15,30,50 de izquierda a derecha. En azul la distribución posterior con forward map ordinario para modelo SIR.}
+    \label{Fig. Aprox SIR 8v}
 \end{figure} 
 
 
-El tiempo de ejecución del método ordinario para el problema inverso en el modelo gravitacional es de \textbf{14 min 05 seg}
-
+El tiempo de ejecución del método ordinario para el problema inverso en el modelo gravitacional es de \textbf{14 min 05 seg}. Mientras que los distintos tiempos de ejecución para las posteriores aproximadas se tabulan a continuación.
 
 \begin{table}[H]
     \centering
@@ -1084,6 +1014,7 @@ El tiempo de ejecución del método ordinario para el problema inverso en el mod
     % \label{tabla_03}
 \end{table}
 
+Dado que la aproximación es bastante razonable incluso para mallas no tan finas, una elección predilecta para $k$ y $M$ no surge por simple inspección. Sin embargo, debido al tiempo de ejecución es que se toma a la aproximación optima con $k = 3$ y $M=50$.
 
 
 

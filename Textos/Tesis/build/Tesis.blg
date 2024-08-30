@@ -14,8 +14,6 @@ A level-1 auxiliary file: chapters/conclusions.aux
 Reallocating 'name_of_file' (item size: 1) to 8 items.
 The style file: apacite.bst
 Reallocating 'name_of_file' (item size: 1) to 11 items.
-Reallocating 'name_of_file' (item size: 1) to 22 items.
-A level-1 auxiliary file: chapters/appendix.aux
 Reallocating 'glb_str_end' (item size: 4) to 20 items.
 Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
 Reallocating 'global_strs' (item size: 1) to 4000000 items.
@@ -29,45 +27,45 @@ Database file #1: references.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No journal in alonso1970fisica
 Warning--No journal in christen2010general
-You've used 23 entries,
+You've used 27 entries,
             6951 wiz_defined-function locations,
-            1385 strings with 13833 characters,
-and the built_in function-call counts, 38908 in all, are:
-= -- 4950
-> -- 311
-< -- 1656
-+ -- 1744
-- -- 46
-* -- 2223
-:= -- 6758
-add.period$ -- 93
-call.type$ -- 23
-change.case$ -- 393
+            1407 strings with 14410 characters,
+and the built_in function-call counts, 45766 in all, are:
+= -- 5799
+> -- 371
+< -- 1960
++ -- 2041
+- -- 54
+* -- 2651
+:= -- 7966
+add.period$ -- 109
+call.type$ -- 27
+change.case$ -- 461
 chr.to.int$ -- 0
-cite$ -- 48
-duplicate$ -- 1090
-empty$ -- 1681
-format.name$ -- 499
-if$ -- 7742
+cite$ -- 56
+duplicate$ -- 1284
+empty$ -- 1973
+format.name$ -- 593
+if$ -- 9095
 int.to.chr$ -- 0
-int.to.str$ -- 69
+int.to.str$ -- 81
 missing$ -- 0
-newline$ -- 555
-num.names$ -- 184
-pop$ -- 958
+newline$ -- 653
+num.names$ -- 216
+pop$ -- 1072
 preamble$ -- 1
-purify$ -- 94
+purify$ -- 110
 quote$ -- 0
-skip$ -- 2510
+skip$ -- 2975
 stack$ -- 0
-substring$ -- 1941
-swap$ -- 542
-text.length$ -- 58
+substring$ -- 2275
+swap$ -- 661
+text.length$ -- 70
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 1904
+type$ -- 2224
 warning$ -- 2
-while$ -- 173
+while$ -- 205
 width$ -- 0
-write$ -- 659
+write$ -- 780
 (There were 2 warnings)

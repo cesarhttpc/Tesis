@@ -20,7 +20,6 @@
 \contentsline {subsubsection}{Simulación del modelo SIR}{35}{section*.27}%
 \contentsline {section}{\numberline {3.3}Simulación con forward map aproximado}{38}{section.3.3}%
 \contentsline {subsubsection}{Construcción de la regularización de unidades}{40}{section*.35}%
-\contentsline {subsubsection}{Convergencia en el modelo epidemiólogico}{47}{section*.52}%
+\contentsline {subsubsection}{Convergencia en el modelo epidemiólogico}{46}{section*.53}%
 \contentsline {chapter}{\numberline {4}Conclusiones y trabajo futuro}{51}{chapter.4}%
-\contentsline {chapter}{Referencias}{53}{chapter*.60}%
-\contentsline {chapter}{\numberline {A}Anexo}{55}{appendix.Alph1}%
+\contentsline {chapter}{Referencias}{55}{chapter*.65}%

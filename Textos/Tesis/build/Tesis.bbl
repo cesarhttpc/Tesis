@@ -98,6 +98,34 @@ Berger, J\BPBI O.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Calvetti%
+\ \BBA {} Somersalo%
+}{%
+Calvetti%
+\ \BBA {} Somersalo%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+calvetti2018inverse}
+\APACinsertmetastar {%
+calvetti2018inverse}%
+\begin{APACrefauthors}%
+Calvetti, D.%
+\BCBT {}\ \BBA {} Somersalo, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Inverse problems: From regularization to Bayesian
+  inference} {Inverse problems: From regularization to bayesian
+  inference}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Wiley Interdisciplinary Reviews: Computational
+  Statistics}{10}{3}{e1427}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Capistr{\'a}n%
 , Capella%
 \BCBL {}\ \BBA {} Christen%
@@ -175,6 +203,33 @@ Christen, J\BPBI A.%
   continuous distributions (the t-walk)}.{\BBCQ}
 \newblock
 
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Cotter%
+, Dashti%
+\BCBL {}\ \BBA {} Stuart%
+}{%
+Cotter%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+cotter2010approximation}
+\APACinsertmetastar {%
+cotter2010approximation}%
+\begin{APACrefauthors}%
+Cotter, S\BPBI L.%
+, Dashti, M.%
+\BCBL {}\ \BBA {} Stuart, A\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Approximation of Bayesian inverse problems for PDEs}
+  {Approximation of bayesian inverse problems for pdes}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{SIAM journal on numerical analysis}{48}{1}{322--345}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -282,6 +337,32 @@ Jim{\'e}nez~Bedolla, J\BPBI C.%
   num{\'e}ricos usando python.}
 \newblock
 \APACaddressPublisher{}{Universidad Nacional Aut{\'o}noma de M{\'e}xico}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kaipio%
+\ \BBA {} Somersalo%
+}{%
+Kaipio%
+\ \BBA {} Somersalo%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+kaipio2006statistical}
+\APACinsertmetastar {%
+kaipio2006statistical}%
+\begin{APACrefauthors}%
+Kaipio, J.%
+\BCBT {}\ \BBA {} Somersalo, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2006}.
+\newblock
+\APACrefbtitle {Statistical and computational inverse problems} {Statistical
+  and computational inverse problems}\ (\BVOL~160).
+\newblock
+\APACaddressPublisher{}{Springer Science \& Business Media}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -435,6 +516,29 @@ Sears, F\BPBI W.%
 \newblock
 \APACaddressPublisher{}{Fondo Educativo Interamericano Naucalpan de Ju{\'a}rez,
   M{\'e}xico}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Stuart%
+}{%
+Stuart%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+stuart2010inverse}
+\APACinsertmetastar {%
+stuart2010inverse}%
+\begin{APACrefauthors}%
+Stuart, A\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Inverse problems: a Bayesian perspective} {Inverse
+  problems: a bayesian perspective}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Acta numerica}{19}{}{451--559}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
