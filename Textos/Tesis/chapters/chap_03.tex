@@ -7,7 +7,7 @@ La teoría desarrollada referente a la convergencia en problemas inversos con fr
 Existen una variedad de modelos a los que se puede aplicar la metodología anteriormente descrita para problemas inversos. Sin embargo, cada modelo tiene sus bemoles, lo que dificulta calibrar (en general), para cada aspecto en la distribución de los parámetros, como puede ser el caso de tomar las distribuciones a priori adecuadas, la variación de la muestra, los dominios adecuados para graficar las distribuciones a posterior, entre otras. Por ello, nos permitiremos enfocarnos en solo tres modelos que son el modelo gravitatorio sujeto a fricción para un partícula en caída, el modelo de crecimiento logístico para una población en crecimiento y finalmente el modelo epidemiológico SIR para brotes de enfermedades de transmisión directa.
 
 
-\subsection{Modelo Gravitatorio}
+\subsection*{Modelo Gravitatorio}
 
 Consideremos una partícula puntual en un campo gravitatorio cercano a la superficie terrestre. Por medio de la dinámica clásica podemos modelar dicha caída con las leyes de Newton. Sea $x(t)$ la distancia recorrida (unidimensional) por la partícula puntual en el tiempo $t$. De la segunda ley de Newton sabemos que
 \begin{align}
@@ -90,7 +90,7 @@ Por otro lado, recordemos que la idea principal es resolver el problema inverso.
     \label{fig:trayectoria_gravedad}
 \end{figure}
 
-\subsection{Modelo Logístico}
+\subsection*{Modelo Logístico}
 
 Un modelo de crecimiento poblacional simple caracterizado por una ecuación diferencial es aquel que la tasa de cambio de la población es proporcional al tamaño actual de la población. Sea $P(t)$ el tamaño de la población al tiempo $t$. El modelo descrito es 
 \begin{align}
@@ -149,7 +149,7 @@ recuperamos la expresión dada en (\ref{3.1.2.03}).
 
 En la Fig \ref{fig:trayectoria_logistico} se muestran varias trayectorias del crecimiento poblacional con diferentes parámetros usando la parametrización interpretable en términos de tasa de crecimiento $r$ y poblacional máxima $K$. Además, vemos que cada trayectoria es no decreciente y tiende asintóticamente al parámetro $K$. 
 
-\subsection{Modelo SIR}
+\subsection*{Modelo SIR}
 
 Los modelos epidemiólogos clasifican a la población en clases que distinguen si han tenido o no cierta enfermedad. Un modelo que captura con buena aproximación a varias enfermedades se es el modelo SIR. Este propone dividir a las $N$ personas de una población en tres grupos:
 \begin{enumerate}
@@ -195,7 +195,7 @@ un conjunto de $n$ tuplas.
 
 Una vez establecida la muestra $y_i$, ahora el propósito es abordar el problema inverso, esto es, buscamos $\theta$ tal que $y_i \approx F_{\theta}(t_i)$. Ya hemos estudiado el enfoque bayesiano al problema inverso en el capítulo 2, desde luego la implementación obtenida aquí sera inicialmente el caso de forward map ordinario.
 
-\subsection{Distribución posterior}
+\subsection*{Distribución posterior}
 
 En la teoría de la estadística bayesiana, el paradigma central se basa en obtener la distribución posterior de los parámetros de interés dada ciertas observaciones a las que hemos denotamos por $\mathbf{y} = (y_1,y_2,\cdots, y_n)$. 
 En coordenadas canónicas, el vector de parámetros es $\theta = (\theta_1,\theta_2, \cdots, \theta_d) \in \mathbb{R}^d$. Recordemos de (\ref{2.2.04}) que la distribución posterior satisface la ecuación  
@@ -249,7 +249,7 @@ Sustituyendo (\ref{3.2.1.04}) en (\ref{3.2.1.02}) se tiene la forma funcional de
 
 Notemos que la distribución en (\ref{3.2.1.06}) no pertenece a una familia conocida. Para lidiar con este problema usamos métodos Monte Carlo. Más precisamente, podemos simular de la distribución posterior (\ref{3.2.1.06}).
 
-\subsection{Simulación con forward map ordinario}
+\subsection*{Simulación con forward map ordinario}
 
 Al incursionar a la estadística bayesiana se aprende que se puede obtener la distribución posterior por medio del famoso análisis conjugado. Es decir se propone una distribución a priori convenientemente para que la distribución posterior pertenezca a la misma familia. Sin embargo, el análisis conjugado puede ser no trivial o incluso no existir. Por ello es que simular de la distribución posterior con MCMC (Markov Chain Monte Carlo) es la via optima para tener una muestra $(X_i, i \in \{1,\cdots, T\})$ de dicha distribución, con la podemos estimar cualquier momento de la distribución. Si estamos interesados en obtener la media de $X$, en beneficio de la ley de grandes números (\cite{van2000asymptotic}), podemos estimar como
 \begin{align}
