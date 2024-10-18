@@ -1,13 +1,12 @@
 \chapter{Implementación} 
 
-La teoría desarrollada referente a la convergencia en problemas inversos con froward map aproximado no es suficientemente general para considerarse un estudio integro. En su defecto se ha optado por un desarrollo heurístico centrado en experimentación con una variedad de parámetros o indicadores estratégicamente seleccionados. En adelante encararemos dos frentes, el primero de ellos es la implementación en código por medio del lenguaje de programación python, donde se tomaran modelos rudimentarios de ecuaciones diferenciales ordinarias. El segundo frente es el estudio de las distribuciones posteriores aproximadas en función de los atributos del forward map aproximado. Cabe enfatizar que parte considerable del trabajo de tesis involucra la ejecución de conocimientos técnicos de programación. La implementación fundamental se encuentra en el \href{https://github.com/cesarhttpc/Tesis}{enlace} adjunto \footnote{Implementación disponible en https://github.com/cesarhttpc/Tesis}.
+La teoría desarrollada referente a la convergencia en problemas inversos con forward map aproximado no es suficientemente general para considerarse un estudio integro. En su defecto se ha optado por un desarrollo heurístico centrado en experimentación con una variedad de parámetros o indicadores estratégicamente seleccionados. En adelante encararemos dos frentes, el primero de ellos es la implementación en código por medio del lenguaje de programación Python, donde se tomarán modelos rudimentarios de ecuaciones diferenciales ordinarias. El segundo frente es el estudio de las distribuciones posteriores aproximadas en función de los atributos del forward map aproximado. Cabe enfatizar que parte considerable del trabajo de tesis involucra la ejecución de conocimientos técnicos de programación. La implementación fundamental se encuentra en el \href{https://github.com/cesarhttpc/Tesis}{enlace} adjunto \footnote{Implementación disponible en https://github.com/cesarhttpc/Tesis}.
 
 \section{Modelos de trabajo}
 
-Existen una variedad de modelos a los que se puede aplicar la metodología anteriormente descrita para problemas inversos. Sin embargo, cada modelo tiene sus bemoles, lo que dificulta calibrar (en general), para cada aspecto en la distribución de los parámetros, como puede ser el caso de tomar las distribuciones a priori adecuadas, la variación de la muestra, los dominios adecuados para graficar las distribuciones a posterior, entre otras. Por ello, nos permitiremos enfocarnos en solo tres modelos que son el modelo gravitatorio sujeto a fricción para un partícula en caída, el modelo de crecimiento logístico para una población en crecimiento y finalmente el modelo epidemiológico SIR para brotes de enfermedades de transmisión directa.
+Existen una variedad de modelos a los que se puede aplicar la metodología anteriormente descrita para problemas inversos. Sin embargo, cada modelo tiene sus bemoles, lo que dificulta calibrar (en general), para cada aspecto en la distribución de los parámetros, como puede ser el caso de tomar las distribuciones a priori adecuadas, la variación de la muestra, los dominios adecuados para graficar las distribuciones a posterior, entre otras. Por ello, nos permitiremos enfocarnos en solo tres modelos que son el modelo gravitatorio sujeto a fricción para un partícula en caída, el modelo de crecimiento logístico para una población en crecimiento y finalmente el modelo epidemiológico SIR para brotes de enfermedades de transmisión directa. Más adelante analizaremos el uso de modelos sustitutos.
 
-
-\subsection*{Modelo Gravitatorio}
+\subsection{Modelo Gravitatorio}
 
 Consideremos una partícula puntual en un campo gravitatorio cercano a la superficie terrestre. Por medio de la dinámica clásica podemos modelar dicha caída con las leyes de Newton. Sea $x(t)$ la distancia recorrida (unidimensional) por la partícula puntual en el tiempo $t$. De la segunda ley de Newton sabemos que
 \begin{align}
@@ -26,14 +25,14 @@ bajo las condiciones iniciales $x(0) = x_0, \dot{x}(0) = v_0$. La solución a la
 \end{align*}
 Véase los detalles del modelo en \cite{alonso1970fisica}
 
-Sin embargo, dentro del marco establecido para el modelo gravitacional, no es un modelo realista ya que este no está considerando la desaceleración producto de la fricción con el medio que interactúa (aire). Por ello es necesario modelar la fuerza de fricción de forma adecuada. Un modelo físico plausible para la fricción es considerar una fuerza opuesta a la fuerza de gravedad y que está depende de la velocidad de la partícula. Consideremos dicha fuerza de fricción como $F_f = -bv(x) $. Podemos pensar que el modelo para la fuerza de fricción es una aproximación de los primeros polinomios de Taylor a primer grado, donde se descarta el termino constante ya que no tiene sentido físico que la fricción obedezca a marcos de referencia. 
+Sin embargo, dentro del marco establecido para el modelo gravitacional, no es un modelo realista ya que este no está considerando la desaceleración producto de la fricción con el medio que interactúa (aire). Por ello es necesario modelar la fuerza de fricción de forma adecuada. Un modelo físico plausible para la fricción es considerar una fuerza opuesta a la fuerza de gravedad y que está depende de la velocidad de la partícula. Consideremos dicha fuerza de fricción como $F_f = -bv(x) $. Podemos pensar que el modelo para la fuerza de fricción es una aproximación en polinomios de Taylor a primer grado, donde se descarta el termino constante ya que no tiene sentido físico que la fricción obedezca a marcos de referencia. 
 
 El modelo que estamos interesados es entonces el \textbf{modelo gravitatorio sujeto a fricción}, cuya ecuación dinámica es 
 \begin{align}
     m \ddot{x} = mg - b\dot{x},
     \label{3.1.03}
 \end{align}
-que representa la trayectoria de la partícula sujeta a dos fuerzas opuestas, la gravitatoria y la fricción con el medio. Además con las condiciones iniciales $x(0) = x_0, \dot{x}(0) = v_0$ Notemos que dados los parámetros $\theta = (g,b)$ podemos determinar unívocamente la trayectoria de interés. 
+que representa la trayectoria de la partícula sujeta a dos fuerzas opuestas, la gravitatoria y la fricción con el medio. Además con las condiciones iniciales $x(0) = x_0, \dot{x}(0) = v_0$. Notemos que dados los parámetros $\theta = (g,b)$ podemos determinar unívocamente la trayectoria de interés. 
 
 Para poder hacer inferencia bayesiana en el problema inverso, es necesario construir el forward map $F(\theta)$. Esto puede ser de dos maneras, podemos resolver la ecuación diferencial y obtener $x(t)$ en términos de $\theta = (g,b)$ en caso de que exista dicha solución explicita. Otra forma de construir el forward map es utilizando métodos numéricos para resolver la EDO.
 
@@ -90,7 +89,7 @@ Por otro lado, recordemos que la idea principal es resolver el problema inverso.
     \label{fig:trayectoria_gravedad}
 \end{figure}
 
-\subsection*{Modelo Logístico}
+\subsection{Modelo Logístico}
 
 Un modelo de crecimiento poblacional simple caracterizado por una ecuación diferencial es aquel que la tasa de cambio de la población es proporcional al tamaño actual de la población. Sea $P(t)$ el tamaño de la población al tiempo $t$. El modelo descrito es 
 \begin{align}
@@ -108,14 +107,14 @@ que es una función creciente en el tiempo. Sin embargo, este modelo solo es val
 
 Para saldar con la dificultad planteada, podemos modelar la tasa de crecimiento de una población considerando tanto al tamaño de la población como a los recursos aún presentes. Consideremos a $K$ como la capacidad de sustento, que se puede interpretar como la cantidad máxima de población que los actuales recursos permiten mantener, entonces esperamos que a medida que crece la población, la tasa de crecimiento de la misma decrezca.
 
-El modelo que se propone es conocido como el modelo de crecimiento logístico. Este nos dice que el cambio de la población es proporcional al tamaño de la población misma así como a la proporción de recursos disponibles. Dicho modelo se puede escribir con la ecuación de Verhulst (\cite{zill2002ecuaciones}) 
+El modelo que se propone es conocido como el modelo de crecimiento logístico. Este nos dice que el cambio de la población es proporcional al tamaño de la población misma así como a la proporción de recursos disponibles. Dicho modelo se puede escribir con la ecuación de Verhulst \citep{zill2002ecuaciones} 
 \begin{align}
     \frac{dP}{dt} = rP\left(1- \frac{P}{K}  \right),
     \label{3.1.2.03}
 \end{align}
 donde $r$ es la tasa de crecimiento y $K$ la capacidad de sustento.
 
-A pesar de que la ecuación diferencial del modelo de crecimiento logístico es no lineal tiene solución explicita. Notemos que la EDO pertenece a la familia de las EDO de Bernoulli (\cite{apostol1991calculus}), esto es tiene la forma
+A pesar de que la ecuación diferencial del modelo de crecimiento logístico es no lineal tiene solución explicita. Notemos que la EDO pertenece a la familia de las EDO de Bernoulli \citep{apostol1991calculus}, esto es tiene la forma
 \begin{align*}
     \frac{dy}{dt} + P(x) y =Q(x) y^n,
 \end{align*}
@@ -149,12 +148,12 @@ recuperamos la expresión dada en (\ref{3.1.2.03}).
 
 En la Fig \ref{fig:trayectoria_logistico} se muestran varias trayectorias del crecimiento poblacional con diferentes parámetros usando la parametrización interpretable en términos de tasa de crecimiento $r$ y poblacional máxima $K$. Además, vemos que cada trayectoria es no decreciente y tiende asintóticamente al parámetro $K$. 
 
-\subsection*{Modelo SIR}
+\subsection{Modelo SIR}
 
-Los modelos epidemiólogos clasifican a la población en clases que distinguen si han tenido o no cierta enfermedad. Un modelo que captura con buena aproximación a varias enfermedades se es el modelo SIR. Este propone dividir a las $N$ personas de una población en tres grupos:
+Los modelos epidemiólogos clasifican a la población en clases que distinguen si han tenido o no cierta enfermedad. Un modelo que captura con buena aproximación a varias enfermedades es el modelo SIR. Este propone dividir a las $N$ personas de una población en tres grupos:
 \begin{enumerate}
     \item Susceptible ($S$): Cantidad de personas que no han tenido la enfermedad ni están enfermas del brote de interés.
-    \item Infectado ($I$): Son las personas que actualmente portan el patógeno y son además un vector de transmisión.
+    \item Infeccioso ($I$): Son las personas que actualmente portan el patógeno y son además un vector de transmisión.
     \item Recuperado ($R$): Para aquellas personas que se han recuperado de la enfermedad y ya tienen inmunidad o también para aquellas que perecieron.
 \end{enumerate}
 
@@ -165,9 +164,9 @@ Así, el modelo propuesto supone que la tasa de cambios de las personas suscepti
     \label{3.1.3.01} \\
     \frac{dR}{dt} &= \gamma I, \nonumber
 \end{align}
-donde $\beta$ es la tasa de infección, $\gamma$ es la tasa de recuperación y $S + I + R = N$ (\cite{weiss2013sir}).
+donde $\beta$ es la tasa de infección, $\gamma$ es la tasa de recuperación y $S + I + R = N$ \citep{weiss2013sir}.
 
-La solución explicita para $S(t), I(t), R(t)$ no existe en general, por ello se requieren métodos numéricos (\cite{mathews2000metodos}) para resolver numéricamente para cada grupo y poder construir el forward map . La implementación de python usando la paquetería odeint se pude ver en \cite{jimenez2022metodos} y en \cite{griffiths2010numerical}. En la Fig. \ref{fig:trayectoria_SIR} tenemos un ejemplo para un solo caso del modelo SIR con tasa de infección $\beta = 0.009$ y tasa de recuperación $\gamma = 0.5$
+La solución explicita para $S(t), I(t), R(t)$ no existe en general, por ello se requieren métodos numéricos \citep{mathews2000metodos} para resolver numéricamente para cada grupo y poder construir el forward map . La implementación de python usando la paquetería odeint se pude ver en \cite{jimenez2022metodos} y en \cite{griffiths2010numerical}. En la Fig. \ref{fig:trayectoria_SIR} tenemos un ejemplo para un solo caso del modelo SIR con tasa de infección $\beta = 0.009$ y tasa de recuperación $\gamma = 0.5$
 
 \begin{figure}
     \centering
@@ -193,12 +192,12 @@ para $i = 1,2, \cdots, n$. Dicho de otra forma la muestra contemplada es
 \end{align}
 un conjunto de $n$ tuplas.
 
-Una vez establecida la muestra $y_i$, ahora el propósito es abordar el problema inverso, esto es, buscamos $\theta$ tal que $y_i \approx F_{\theta}(t_i)$. Ya hemos estudiado el enfoque bayesiano al problema inverso en el capítulo 2, desde luego la implementación obtenida aquí sera inicialmente el caso de forward map ordinario.
+Una vez establecida la muestra $y_i$, ahora el propósito es abordar el problema inverso, esto es, buscamos $\theta$ tal que $y_i \approx F_{\theta}(t_i)$. Ya hemos estudiado el enfoque bayesiano al problema inverso en el capítulo 2, desde luego la implementación obtenida aquí sera inicialmente el caso de forward map ordinario. Más adelante estudiaremos el forward map aproximado.
 
-\subsection*{Distribución posterior}
+\subsection{Distribución posterior}
 
 En la teoría de la estadística bayesiana, el paradigma central se basa en obtener la distribución posterior de los parámetros de interés dada ciertas observaciones a las que hemos denotamos por $\mathbf{y} = (y_1,y_2,\cdots, y_n)$. 
-En coordenadas canónicas, el vector de parámetros es $\theta = (\theta_1,\theta_2, \cdots, \theta_d) \in \mathbb{R}^d$. Recordemos de (\ref{2.2.04}) que la distribución posterior satisface la ecuación  
+El vector de parámetros es $\theta = (\theta_1,\theta_2, \cdots, \theta_d) \in \mathbb{R}^d$. Recordemos de (\ref{2.2.04}) que la distribución posterior satisface la ecuación  
 \begin{align}
     \pi(\theta|\mathbf{y}) \propto f(\mathbf{y}|\theta) \pi(\theta),
     \label{3.2.1.01}
@@ -212,14 +211,14 @@ El análisis del calculo de la verosimilitud se trató en la sección 2 del cap�
 \end{align}
 rescatamos la distribución posterior en función del forward map, salvo una constante. De esta forma, resta discutir las cualidades deseadas para los modelos anteriormente descritos.
 
-Para nuestro caso particular, todos los modelos propuestos en la sección precedente dependen de parámetros no negativos, es decir, $\theta_i \geq 0$ para toda $i = 1,\cdots, d$. Incluso algunos de ellos se tiene bastante certeza de su valor, que podría pensarse en ajustar una distribución a priori normal. Sin embargo, ajustar una normal conlleva a tener problemas en el soporte, por lo que puede pensarse en considerar una normal truncada a los positivos, sin embargo está complica innecesariamente las expresiones para la distribución posterior. 
+Para nuestro caso particular, todos los modelos propuestos en la sección precedente dependen de parámetros no negativos, es decir, $\theta_i \geq 0$ para toda $i = 1,\cdots, d$ (inclusive condiciones iniciales). Incluso algunos de ellos se tiene bastante certeza de su valor, que podría pensarse en ajustar una distribución a priori normal. Sin embargo, ajustar una normal conlleva a tener problemas en el soporte, por lo que puede pensarse en considerar una normal truncada a los positivos, sin embargo está complica innecesariamente las expresiones para la distribución posterior. 
 
-Finalmente, se opta por proponer distribuciones a priori gamma, debido a que existe una parametrización en la cual se asemeja a una distribución normal pero con el soporte adecuado. La distribución gamma que tiene por  máximo a $\theta_{i}^{*}$ y asemeja una normal es 
+Finalmente, se opta por proponer distribuciones a priori gamma, debido a que existe una parametrización en la cual se asemeja a una distribución normal pero con el soporte adecuado. La distribución gamma que tiene por  máximo a $\theta_{i}^{*}$ y asemeja una normal, aunque asimétrica, es 
 \begin{align}
     \theta_i \sim Gamma\left(\alpha_i, \frac{\theta_i^{*}}{\alpha_i} \right),
     \label{3.2.1.03}
 \end{align}
-con $\theta_i^{*}$ y $\alpha_i$ parámetros conocidos.
+con $\theta_i^{*}$ y $\alpha_i$ parámetros conocidos. Vea por ejemplo la Fig. \ref{Fig. 3.2.2.01}.
 
 La parametrización de la $Gamma(\alpha,\beta)$ es tal que su función de densidad sea
 \begin{align*}
@@ -249,9 +248,9 @@ Sustituyendo (\ref{3.2.1.04}) en (\ref{3.2.1.02}) se tiene la forma funcional de
 
 Notemos que la distribución en (\ref{3.2.1.06}) no pertenece a una familia conocida. Para lidiar con este problema usamos métodos Monte Carlo. Más precisamente, podemos simular de la distribución posterior (\ref{3.2.1.06}).
 
-\subsection*{Simulación con forward map ordinario}
+\subsection{Simulación con forward map ordinario}
 
-Al incursionar a la estadística bayesiana se aprende que se puede obtener la distribución posterior por medio del famoso análisis conjugado. Es decir se propone una distribución a priori convenientemente para que la distribución posterior pertenezca a la misma familia. Sin embargo, el análisis conjugado puede ser no trivial o incluso no existir. Por ello es que simular de la distribución posterior con MCMC (Markov Chain Monte Carlo) es la via optima para tener una muestra $(X_i, i \in \{1,\cdots, T\})$ de dicha distribución, con la podemos estimar cualquier momento de la distribución. Si estamos interesados en obtener la media de $X$, en beneficio de la ley de grandes números (\cite{van2000asymptotic}), podemos estimar como
+Al incursionar a la estadística bayesiana se aprende que se puede obtener la distribución posterior por medio del famoso análisis conjugado. Es decir se propone una distribución a priori convenientemente para que la distribución posterior pertenezca a la misma familia. Sin embargo, el análisis conjugado puede ser no trivial o incluso no existir. Por ello es que simular de la distribución posterior con MCMC (Markov Chain Monte Carlo) es la via necesaria en muchos casos para tener una muestra $(X_i, i \in \{1,\cdots, T\})$ de dicha distribución, con la que podemos estimar cualquier momento de la distribución. Si estamos interesados en obtener la media de $X$, en beneficio de la ley de grandes números \citep{van2000asymptotic}, podemos estimar como
 \begin{align}
     \mathbb{E}\left [X\right ] \approx \frac{1}{T}\sum_{i = 1}^{T} X_i
 \end{align}
@@ -270,9 +269,9 @@ tal que $x(t)$ es la solución de la ecuación diferencial ordinaria $x(t) = G(t
 
 \subsubsection{Simulación del modelo gravitatorio}
 
-Para poder hacer simulaciones, es necesario determinar completamente la distribución posterior. El Forward map para el modelo gravitatorio es $F_{\theta} = F(g,b) = x(t)$ con la ecuación diferencial de la dinámica gravitacional dada en (\ref{3.1.03}) o equivalentemente en (\ref{3.1.12}). 
+Para poder hacer simulaciones, es necesario determinar completamente la distribución posterior. El Forward map para el modelo gravitatorio es $F_{\theta} = F(g,b) = x(t)$ con la ecuación diferencial de la dinámica gravitacional dada en (\ref{3.1.03}) o equivalentemente en (\ref{3.1.12}), con $x_0 = 0$ y $v_0 = 0$ las condiciones iniciales conocidas.
 
-Además, es necesario saber como abordar el caso de la desviación estándar $\sigma$. En esencia existen dos formas, pensar en $\sigma$ como parámetro conocido, por lo que no es necesario hacer inferencia, manteniendo la distribución posterior tal como se ha detallado. En el otro caso es para $\sigma$ desconocida, al no tener certeza de su valor esta es agregada a los parámetros a inferir. Siguiendo el paradigma bayesiano, se establece una distribución a priori para $\sigma$ independiente de la distribución a priori para $\theta$. En otras palabras, ahora la distribución posterior depende de $d+1$ parámetros. Sin embargo para fines de esta tesis, nos abstendremos de los casos en los que $\sigma$ es desconocida.
+Además, es necesario saber como abordar el caso de la desviación estándar $\sigma$. En esencia existen dos formas, pensar en $\sigma$ como parámetro conocido, por lo que no es necesario hacer inferencia, manteniendo la distribución posterior tal como se ha detallado. En el otro caso es para $\sigma$ desconocida, al no tener certeza de su valor esta es agregada a los parámetros a inferir. Siguiendo el paradigma bayesiano, se establece una distribución a priori para $\sigma$ independiente de la distribución a priori para $\theta$. En otras palabras, ahora la distribución posterior depende de $d+1$ parámetros. Sin embargo para fines de esta tesis, nos abstendremos de los casos en los que $\sigma$ es conocida.
 
 De esta manera, la distribución posterior (\ref{3.2.1.06}) tendrá como variables unicamente al vector de parámetros $\theta$, al ser una EDO dependiente solamente de $g$ y $b$ se sigue que $\theta = (g,b)$ siendo un vector en $\mathbb{R}^{d}$ con $d = 2$. Además es necesario definir las constantes para las distribuciones a priori gamma.
 
@@ -299,7 +298,7 @@ Ahora, generamos una muestra $\mathbf{y}$ del forward map gravitatorio y agregam
     \label{Fig. 3.2.2.02}
 \end{figure} 
 
-Luego, con la implementación de la metodología propuesta (\cite{kaipio2006statistical}), usando el algoritmo MCMC Metropolis-Hastings (\cite{christen2010general}) para una cadena de tamaño $T = 600,000$ y un burn in de 20,000 tenemos que la trayectoria seguida en el espacio de parámetros $\theta = (g,b)$ para la distribución posterior (conjunta) es el mostrado en la Fig. \ref{Fig. 3.2.2.03}. Notemos que dicha posterior tiene alta correlación entre parámetros. Esto tiene la interpretación física que para valores altos de $g$ es necesario tener más fricción $b$ con el medio para la misma trayectoria $\mathbf{y}$.
+Luego, con la implementación de la metodología propuesta \citep{kaipio2006statistical}, usando el algoritmo MCMC Metropolis-Hastings \citep{christen2010general} para una cadena de tamaño $T = 600,000$ y un burn in de 20,000 tenemos que la trayectoria seguida en el espacio de parámetros $\theta = (g,b)$ para la distribución posterior (conjunta) es el mostrado en la Fig. \ref{Fig. 3.2.2.03}. Notemos que dicha posterior tiene alta correlación entre parámetros. Esto tiene la interpretación física que para valores altos de $g$ es necesario tener más fricción $b$ con el medio para la misma trayectoria $\mathbf{y}$.
 
 \begin{figure}
     \centering 
@@ -407,7 +406,7 @@ Para el modelo epidemiólogico tomamos una muestra de $n =10$ observaciones de i
     \label{Fig. SIR_01}
 \end{figure} 
 
-Para abordar el problema inverso establezcamos los parámetros que se desea hacer inferencia. El espacio parametral se conforma por $\theta = (\beta,\gamma)$ donde $\beta >0$ es la tasa de infección y $\gamma > 0$ es la tasa de recuperación dados en (\ref{3.1.3.01}). Nuevamente como se trata de parámetros positivos usamos la distribución a priori (\ref{3.2.1.03}). Podemos rescatar un conocimiento a priori sobre su distribución previo a los datos (\cite{weiss2013sir}). La elección considera para las distribuciones gamma a priori son mostradas en la Fig. \ref{Fig. SIR_02}.
+Para abordar el problema inverso establezcamos los parámetros que se desea hacer inferencia. El espacio parametral se conforma por $\theta = (\beta,\gamma)$ donde $\beta >0$ es la tasa de infección y $\gamma > 0$ es la tasa de recuperación dados en (\ref{3.1.3.01}). Nuevamente como se trata de parámetros positivos usamos la distribución a priori (\ref{3.2.1.03}). Podemos rescatar un conocimiento a priori sobre su distribución previo a los datos \citep{weiss2013sir}. La elección considera para las distribuciones gamma a priori son mostradas en la Fig. \ref{Fig. SIR_02}.
 
 \begin{figure}[H] 
     \centering 
@@ -463,7 +462,7 @@ donde $\omega_j = d_j^{-1}/ \sum_{i=1}^{k} d_i^{-1}$. Notemos que el forward map
 
 Previo a realizar las simulaciones para distintos casos es necesario revisar un último concepto. Proceder a estimar las distribuciones posteriores aproximadas, de la forma detalla a lo largo de este texto, tendría un inconveniente al analizar la convergencia a mediada que se aumenta la resolución de la malla. Este problema se salda con la regularización de las unidades.
 
-\subsection*{Regularización de las unidades}
+\subsection{Regularización de las unidades}
 
 Un paso previo a la obtención del forward map aproximado es la regularización de las unidades. La regularización de la unidades es una aporte fundamental en la metodología del enfoque bayesiano del problema inverso con el forward map aproximado. Veremos más adelante que según el modelo, las distribuciones posteriores aproximadas son sensibles a las unidades de medida de las observables. Esto significa que el método aproximado propuesto confronta una laguna estructural que amerita rectificación. Para ver esto, observe la ecuación del forward map aproximado (\ref{3.3.01}) depende de los $k$ vecinos más cercanos $\vartheta^{(j)}$ del parámetro $\theta =(\theta_1,\cdots,\theta_d)\in \Theta$. Dado que siempre existe reparametrización del modelo, entonces las unidades de $\theta_1$ y $\theta_2$, por ejemplo, se pueden alterar a gusto, lo que termina afectando las distancias y modificando a otros vecinos cercanos. 
 
@@ -526,15 +525,15 @@ Considerando que $\mathcal{N}_i = \{\varphi_i^{(1)},\cdots, \varphi_i^{(M)}\}$ p
 
 % \subsection{Regla de interpolación(aproximación de forward map)}
 
-\subsection*{Experimentación con distribuciones posteriores aproximadas}
+\subsection{Experimentación con distribuciones posteriores aproximadas}
 
 Las aproximaciones de la distribución posterior considera aproximaciones del forward map. Estas se hacen con la \textit{interpolación} de $k$ vecinos más cercanos de la malla $\mathcal{N}$. Particularmente se experimentó con vecinos $k = 3,5,8$. Además, para indagar en la convergencia de la distribución aproximada se toman la resolución de la aproximación de forma creciente. Es decir, se aproxima el forward map con mallas de tamaño $M \times M$ con $M = 10, 15, 30, 50$.
 
-\subsubsection*{Forward map aproximado para el modelo gravitatorio}
+\subsubsection{Forward map aproximado para el modelo gravitatorio}
 
 En el análisis bayesiano sobre el modelo gravitatorio se obtuvo la distribución posterior con el forward map ordinario para cada una de las aproximaciones propuestas. Dichas distribuciones las cotejaremos con una aproximación a la misma de forma que sea visible o no la convergencia al análogo ordinario.
 
-Para empezar, tomemos la aproximación del forward map con 3 vecinos cercanos $(k= 3)$. Luego, estimamos la distribución posterior conjunta para cada rejilla $(M = 10, 15, 30, 50)$ con el algoritmo Metropolis-Hastings (\cite{christen2010general}). Luego se toma las distribuciones marginales para cada parámetro $g,b$. Al ser un estudio heurístico, el grado de aproximación se hace tras simple comparación de la distribución marginal aproximada  para cada parámetro, $\tilde{\pi}^{k}_M(g)$ con $\pi(g)$, y comparación de $\tilde{\pi}^{k}_M(b)$ con $\pi(b)$.
+Para empezar, tomemos la aproximación del forward map con 3 vecinos cercanos $(k= 3)$. Luego, estimamos la distribución posterior conjunta para cada rejilla $(M = 10, 15, 30, 50)$ con el algoritmo Metropolis-Hastings \citep{christen2010general}. Luego se toma las distribuciones marginales para cada parámetro $g,b$. Al ser un estudio heurístico, el grado de aproximación se hace tras simple comparación de la distribución marginal aproximada  para cada parámetro, $\tilde{\pi}^{k}_M(g)$ con $\pi(g)$, y comparación de $\tilde{\pi}^{k}_M(b)$ con $\pi(b)$.
 
 En la Fig. \ref{Fig. Aprox grav 3v} se muestran las distribuciones marginales para la aproximación del forward map con $k = 3$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 
@@ -738,7 +737,7 @@ Vemos que la aproximación elegida tiene una ganancia de 57 segundos de ejecuci�
 %     \label{fig:g_01}
 % \end{figure}
 
-\subsubsection*{Forward map aproximado para el modelo logístico}
+\subsubsection{Forward map aproximado para el modelo logístico}
 
 Es de interés analizar la metodología aproximada propuesta para otros modelos. La experimentación con el modelo logístico nos permite dilucidar en el comportamiento de la metodología en cuestión. Al igual que el modelo gravitacional, aquí realizamos los mismos experimentos con $k = 3,5,8$ y una resolución de malla de $M = 10, 15, 30, 50$.
 
@@ -945,7 +944,7 @@ Observemos que el grado de aproximación es plausible para cada experimento. Not
 
 \subsubsection{Convergencia en el modelo epidemiólogico}
 
-En el modelo epidemiológico SIR, el cual sabemos que su problema directo no tiene solución analítica, haciendolo el modelo más sensato para fenómenos naturales. Además, la relevancia del modelo se encuentra en las diferencias de los ordenes de magnitud para sus parámetros $\alpha,\beta$, que es un experimento de merito para la metodología aproximada propuesta.
+En el modelo epidemiológico SIR, el cual sabemos que su problema directo no tiene solución analítica, haciéndolo el modelo más sensato para fenómenos naturales. Además, la relevancia del modelo se encuentra en las diferencias de los ordenes de magnitud para sus parámetros $\alpha,\beta$, que es un experimento de merito para la metodología aproximada propuesta.
 
 
 De igual forma que las aproximaciones en modelos precedentes, en este caso se hacen repetidas distribuciones posteriores aproximadas con distintos forward map aproximados. Esto es tomar forward maps que consideren 3, 5, 8 vecinos cercanos con resolución de malla M = 10, 15, 30, 50.

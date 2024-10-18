@@ -27,45 +27,45 @@ Database file #1: references.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No journal in alonso1970fisica
 Warning--No journal in christen2010general
-You've used 27 entries,
+You've used 28 entries,
             6951 wiz_defined-function locations,
-            1407 strings with 14410 characters,
-and the built_in function-call counts, 45766 in all, are:
-= -- 5799
-> -- 371
-< -- 1960
-+ -- 2041
-- -- 54
-* -- 2651
-:= -- 7966
-add.period$ -- 109
-call.type$ -- 27
-change.case$ -- 461
+            1413 strings with 14627 characters,
+and the built_in function-call counts, 47831 in all, are:
+= -- 6060
+> -- 385
+< -- 2066
++ -- 2159
+- -- 56
+* -- 2793
+:= -- 8371
+add.period$ -- 113
+call.type$ -- 28
+change.case$ -- 478
 chr.to.int$ -- 0
-cite$ -- 56
-duplicate$ -- 1284
-empty$ -- 1973
-format.name$ -- 593
-if$ -- 9095
+cite$ -- 58
+duplicate$ -- 1335
+empty$ -- 2045
+format.name$ -- 617
+if$ -- 9474
 int.to.chr$ -- 0
-int.to.str$ -- 81
+int.to.str$ -- 84
 missing$ -- 0
-newline$ -- 653
-num.names$ -- 216
-pop$ -- 1072
+newline$ -- 678
+num.names$ -- 224
+pop$ -- 1096
 preamble$ -- 1
-purify$ -- 110
+purify$ -- 114
 quote$ -- 0
-skip$ -- 2975
+skip$ -- 3099
 stack$ -- 0
-substring$ -- 2275
-swap$ -- 661
-text.length$ -- 70
+substring$ -- 2404
+swap$ -- 691
+text.length$ -- 72
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 2224
+type$ -- 2304
 warning$ -- 2
-while$ -- 205
+while$ -- 212
 width$ -- 0
-write$ -- 780
+write$ -- 811
 (There were 2 warnings)

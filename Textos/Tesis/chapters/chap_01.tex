@@ -1,20 +1,22 @@
 \chapter{Introducción}
 
-En una amplia gama de disciplinas se utilizan modelos que pretenden describir diversos fenómenos. La inmensa mayoría de estos modelos son matemáticos y establecen relaciones entre variables expresadas mediante ecuaciones dependientes de ciertos parámetros. El tipo de modelos consideraros son aquellos cuyas variables se pueden expresar ya sea en una forma funcional o en forma de ecuación diferencial ordinaria (ODE).
+En una amplia gama de disciplinas se utilizan modelos que pretenden describir diversos fenómenos. La inmensa mayoría de estos modelos son matemáticos y establecen relaciones entre variables expresadas mediante ecuaciones dependientes de ciertos parámetros. El tipo de modelos que vamos a considerar en esta tesis son aquellos cuyas variables se pueden expresar ya sea en una forma funcional o en forma de ecuación diferencial ordinaria (ODE).
 
-\section*{Proceso de modelación}
+\section{Proceso de modelación}
 
-El proceso de modelación de un fenómeno involucra tres sectores principales.Al investigar un fenómeno, se identifican, proponen y prueban las variables que influyen en él. Este proceso, conocido como \textbf{parametrización}, implica seleccionar las variables relevantes para la descripción del modelo.
+El proceso de modelación de un fenómeno involucra tres sectores principales. Al investigar un fenómeno, se identifican, proponen y prueban las variables que influyen en él. Este proceso, conocido como \textbf{parametrización}, implica seleccionar las variables relevantes para la descripción del modelo.
 
 Una vez determinadas las variables del modelo, se establecen explícita o implícitamente las relaciones entre ellas. Se pueden proponer modelos lineales generalizados, series temporales, ecuaciones diferenciales o simplemente ecuaciones algebraicas con las variables y parámetros de ajuste, que en adelante llamaremos simplemente parámetros. Este sector del proceso se conoce como \textbf{modelación directa}.
 
-El último sector de la modelación es el \textbf{problema inverso}. Como su nombre indica, se refiere a inferir los parámetros del modelo a partir de una muestra del fenómeno modelado. Esto es opuesto al problema directo, que busca describir explícitamente la dinámica del fenómeno a partir de parámetros fijos \cite{calvetti2018inverse}. 
+El último sector de la modelación es el \textbf{problema inverso}. Como su nombre indica, se refiere a inferir los parámetros del modelo a partir de una muestra del fenómeno modelado. Esto es opuesto al problema directo, que busca describir explícitamente la dinámica del fenómeno a partir de parámetros fijos \citep{calvetti2018inverse}. 
 
 El proceso de modelación no sigue una línea recta. Es por ello que se optó por llamar a sus partes como sectores de modelación en lugar de etapas de modelación, ya que todos estos sectores siguen un camino cíclico según las virtudes de cada modelo en particular. 
 
-Una vez aclarado que los modelos considerados son aquellos que pueden expresarse como una ODE dependientes de parámetros, la tesis se centra en el problema inverso desde el enfoque bayesiano. En el capítulo 2 se describe el paradigma bayesiano aplicado al problema inverso. Además de los antecedentes necesarios para hacer de este texto autocontenido. 
+Una vez aclarado que los modelos considerados aquí son aquellos que pueden expresarse como una ODE dependientes de parámetros, la tesis se centra en el problema inverso desde el enfoque bayesiano. En el capítulo 2 se describe el paradigma bayesiano aplicado al problema inverso, además de los antecedentes necesarios para hacer de este texto autocontenido. 
 
-En el capítulo 3 se describe las implementaciones realizadas para la inferencia bayesiana de los parámetros de tres modelos particulares según el paradigma convencional. Además, se propone un método aproximado para realizar el mismo procedimiento, cuestionando la factibilidad de esta propuesta como sustituto del paradigma original.
+En el capítulo 3 se describen las implementaciones realizadas para la inferencia bayesiana de los parámetros de tres modelos particulares según el paradigma convencional. Además, se propone un método aproximado para realizar el mismo procedimiento, cuestionando la factibilidad de esta propuesta como sustituto del paradigma original. 
+
+El objetivo de esta tesis es experimentar con el uso de modelos sustitutos para el problema directo, es por ello que el método aproximado propuesto aquí es central para el trabajo de tesis. Las inferencias de los modelos sustitutos en sus diferentes variantes son plasmadas en el capitulo 3 donde las conclusiones obtenidas se describen en el capítulo 4.
 
 
 

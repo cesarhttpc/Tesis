@@ -206,6 +206,34 @@ Christen, J\BPBI A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Christen%
+\ \BBA {} P{\'e}rez-Garmendia%
+}{%
+Christen%
+\ \BBA {} P{\'e}rez-Garmendia%
+}{%
+{\protect \APACyear {2021}}%
+}]{%
+christen2021weak}
+\APACinsertmetastar {%
+christen2021weak}%
+\begin{APACrefauthors}%
+Christen, J\BPBI A.%
+\BCBT {}\ \BBA {} P{\'e}rez-Garmendia, J\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Weak and tv consistency in bayesian uncertainty
+  quantification using disintegration} {Weak and tv consistency in bayesian
+  uncertainty quantification using disintegration}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Bolet{\'\i}n de la Sociedad Matem{\'a}tica
+  Mexicana}{27}{1}{2}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Cotter%
 , Dashti%
 \BCBL {}\ \BBA {} Stuart%
