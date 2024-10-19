@@ -12,25 +12,6 @@ from matplotlib.patches import Rectangle
 from pytwalk import BUQ
 # from scipy.stats import t as t_dist
 
-# class VecinosCercanos:
-
-#     def __init__(self,puntos):
-#         # Construir el árbol cKDTree con los puntos
-#         self.arbol = cKDTree(puntos)
-#         self.solutions = {}  # Dictionary to store precomputed solutions
-
-#     def compute_solutions(self, t, puntos_malla):
-#         for i, punto in enumerate(puntos_malla):
-#             solution = odeint(dinamica, y0, t, args=(punto[0], punto[1]))
-#             self.solutions[i] = solution[:, 0]
-
-#     def encontrar_vecinos_cercanos(self, punto, numero_de_vecinos=1):
-#         # Buscar los vecinos más cercanos del punto dado
-#         distancias, indices = self.arbol.query(punto, k=numero_de_vecinos)
-
-#         # Devolver las distancias y los índices de los vecinos más cercanos
-#         return distancias, indices
-
 class VecinosCercanos:
 
     def __init__( self, malla, ax, bx, ay, by):
@@ -73,50 +54,6 @@ class VecinosCercanos:
         # Devolver las distancias y los índices de los vecinos más cercanos
         return distancias, indices
     
-
-
-
-# beta = np.linspace( 0.01, 0.1, num=5)
-
-# gam = np.linspace( 0.3, 0.6, num=5)
-
-# beta_mesh, ga_mesh = np.meshgrid( beta, gam)
-
-# malla = np.column_stack((beta_mesh.ravel(), ga_mesh.ravel()))
-
-# vc = VecinosCercanos( malla, 0.01, 0.1, 0.3, 0.6)
-
-# fig, ax = plt.subplots()
-
-# ax.plot( malla[:,0], malla[:,1], 'o')
-
-
-# punto = np.array([ 0.057, 0.43])
-
-# ax.plot( punto[0], punto[1], 'ro')
-
-# distancias, indices = vc.encontrar_vecinos_cercanos( punto, numero_de_vecinos=1)
-
-# indices
-
-# malla[indices,:]
-
-# ax.plot( malla[indices,0], malla[indices,1], 'go')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def gravedad(y,t,g,b):
     x, v = y
     dxdt = v
@@ -218,7 +155,7 @@ current_directory = os.getcwd()
 print(f"The working directory is: {current_directory}")
 path_directorio = 'C:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Version12/'
 
-exper_aprox   = True
+exper_aprox   = False
 hacer_reporte = True
 GuardarCadena = True
 Estimar_sigma = True # No sirve
@@ -229,17 +166,17 @@ Estimar_sigma = True # No sirve
 # modelo = ['gravedad', 'logistico', 'SIR']
 # dinamica = gravedad
 # modelo = 'gravedad'
-# dinamica = logistico
-# modelo = 'logistico'
-dinamica = SIR
-modelo = 'SIR'
+dinamica = logistico
+modelo = 'logistico'
+# dinamica = SIR
+# modelo = 'SIR'
 
 # Simular las observaciones
-n = 10      # Tamaño de muestra (n-1)
+n = 16      # Tamaño de muestra (n-1)
 
 if modelo == 'gravedad':
     # Parametros principales (verdaderos)
-    par_names = ['g','b']
+    par_names = [r'$g$',r'$b$']
     theta_1 = 9.81
     theta_2 = 1.15
 
@@ -255,7 +192,7 @@ if modelo == 'gravedad':
     theta2_cota_max = 6
 if modelo == 'logistico':
     # Parametros principales (verdaderos)
-    par_names = ['theta_1','theta_2']
+    par_names = [r'$\theta_1$',r'$\theta_2$']
     theta_1 = 0.001
     theta_2 = 1000
 
@@ -271,7 +208,7 @@ if modelo == 'logistico':
     theta2_cota_max = 1060
 if modelo == 'SIR':
     # Parametros principales (verdaderos)
-    par_names = ['beta','gamma']
+    par_names = [r'$\beta$',r'$\gamma$']
     theta_1 = 0.009 #0.00009
     theta_2 = 0.5
 
@@ -328,7 +265,7 @@ if Estimar_sigma == True:
 else:
     path_sigma = ''
     
-path = 'Exp_Central_'+ modelo + path_sigma +'/'  # Trayectoria relativa para archivar
+path = 'Exp_Temp_'+ modelo + path_sigma +'/'  # Trayectoria relativa para archivar
 print(path)
 
 if hacer_reporte == True:
@@ -409,6 +346,7 @@ if GuardarCadena == True:
     np.savetxt(path + 'Cadena.csv', combined_array, delimiter=",")#, fmt='%d')
 
 # %%
+
 def visualizacion(monte_carlo,t, burn_in, title = True):
     
     theta1_sample_plot = monte_carlo[:,0]
@@ -458,13 +396,13 @@ def visualizacion(monte_carlo,t, burn_in, title = True):
     quantil1_sup = gamma.ppf(0.999, a = alpha, scale = theta1_priori/alpha)
     t1_quantil = np.linspace(quantil1_inf, quantil1_sup,500)
     axs[0].plot(t1_quantil, gamma.pdf(t1_quantil, a = alpha, scale = theta1_priori/alpha), color = 'seagreen')
-    axs[0].set_xlabel(r'$\beta$')
+    axs[0].set_xlabel(par_names[0])
     axs[0].set_ylabel('Densidad')
     quantil2_inf = gamma.ppf(0.001, a = beta, scale = theta2_priori/beta)
     quantil2_sup = gamma.ppf(0.999, a = beta, scale = theta2_priori/beta)
     t2_quantil = np.linspace(quantil2_inf, quantil2_sup,500)
     axs[1].plot(t2_quantil, gamma.pdf(t2_quantil, a = beta, scale = theta2_priori/beta), color = 'seagreen')
-    axs[1].set_xlabel(r'$\gamma$')
+    axs[1].set_xlabel(par_names[1])
     axs[1].set_ylabel('Densidad')
     # axs[0].label_outer()
     # axs[1].label_outer()
@@ -476,8 +414,10 @@ def visualizacion(monte_carlo,t, burn_in, title = True):
     if title == True:
         plt.title(r'Posterior conjunta')
     plt.hist2d(theta1_sample[burn_in:], theta2_sample[burn_in:], bins = 40, cmap='Blues')
+    plt.scatter(theta_1,theta_2, color = 'black',marker = 'x')
     plt.xlabel(par_names[0])
     plt.ylabel(par_names[1])
+    plt.xticks(rotation=45, ha='right')
     if hacer_reporte == True:
         plt.savefig(path + 'Figuras/Generales/Conjunta_'+ modelo + path_sigma + '.png',dpi=600)
     plt.show()
@@ -519,6 +459,7 @@ def visualizacion(monte_carlo,t, burn_in, title = True):
     fig, ((ax0, ax1), (ax2, ax3)) = plt.subplots(nrows=2, ncols=2)
     ax0.set_title('Posterior conjunta')
     ax0.hist2d(theta1_sample[burn_in:], theta2_sample[burn_in:], bins = 40, cmap='Blues')
+    ax0.scatter(theta_1,theta_2, color = 'black',marker = 'x')
     # ax0.legend(prop={'size': 6})
     ax0.set_xlabel(par_names[0])
     ax0.set_ylabel(par_names[1])
@@ -610,7 +551,6 @@ def visualizacion(monte_carlo,t, burn_in, title = True):
     if hacer_reporte == True:
         plt.savefig(path + 'Figuras/Generales/Predictiva_'+ modelo + path_sigma + '.png', dpi=600)
     plt.show()
-
 
     # Distribución a un dato
     if title == True:
