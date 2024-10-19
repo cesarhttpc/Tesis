@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {3.2.1}Distribución posterior}{24}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Simulación con forward map ordinario}{26}{subsection.3.2.2}%
 \contentsline {subsubsection}{Simulación del modelo gravitatorio}{27}{section*.9}%
-\contentsline {subsubsection}{Simulación del modelo logístico}{31}{section*.16}%
+\contentsline {subsubsection}{Simulación del modelo logístico}{32}{section*.16}%
 \contentsline {subsubsection}{Simulación del modelo SIR}{35}{section*.22}%
 \contentsline {section}{\numberline {3.3}Simulación con forward map aproximado}{38}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Regularización de las unidades}{38}{subsection.3.3.1}%

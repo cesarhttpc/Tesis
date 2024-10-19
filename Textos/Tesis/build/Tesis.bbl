@@ -126,31 +126,32 @@ Calvetti, D.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Capistr{\'a}n%
+Capistran%
 , Capella%
 \BCBL {}\ \BBA {} Christen%
 }{%
-Capistr{\'a}n%
+Capistran%
 \ \protect \BOthers {.}}{%
-{\protect \APACyear {2020}}%
+{\protect \APACyear {2021}}%
 }]{%
 capistran2020forecasting}
 \APACinsertmetastar {%
 capistran2020forecasting}%
 \begin{APACrefauthors}%
-Capistr{\'a}n, M\BPBI A.%
+Capistran, M\BPBI A.%
 , Capella, A.%
 \BCBL {}\ \BBA {} Christen, J\BPBI A.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2020}{}{}.
+\APACrefYearMonthDay{2021}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Forecasting hospital demand during COVID-19 pandemic
-  outbreaks} {Forecasting hospital demand during covid-19 pandemic
-  outbreaks}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Forecasting hospital demand in metropolitan areas during
+  the current COVID-19 pandemic and estimates of lockdown-induced 2nd waves}
+  {Forecasting hospital demand in metropolitan areas during the current
+  covid-19 pandemic and estimates of lockdown-induced 2nd waves}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{arXiv preprint arXiv:2006.01873}{}{}{}.
+\APACjournalVolNumPages{PloS one}{16}{1}{e0245669}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

@@ -271,6 +271,13 @@ tal que $x(t)$ es la solución de la ecuación diferencial ordinaria $x(t) = G(t
 
 Para poder hacer simulaciones, es necesario determinar completamente la distribución posterior. El Forward map para el modelo gravitatorio es $F_{\theta} = F(g,b) = x(t)$ con la ecuación diferencial de la dinámica gravitacional dada en (\ref{3.1.03}) o equivalentemente en (\ref{3.1.12}), con $x_0 = 0$ y $v_0 = 0$ las condiciones iniciales conocidas.
 
+\begin{figure} 
+    \centering 
+    \includegraphics[width = 15 cm]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png}
+    \caption{Distribuciones marginal a priori para el parámetro $g$ (izquierda) y $b$ (derecha).}
+    \label{Fig. 3.2.2.01}
+\end{figure} 
+
 Además, es necesario saber como abordar el caso de la desviación estándar $\sigma$. En esencia existen dos formas, pensar en $\sigma$ como parámetro conocido, por lo que no es necesario hacer inferencia, manteniendo la distribución posterior tal como se ha detallado. En el otro caso es para $\sigma$ desconocida, al no tener certeza de su valor esta es agregada a los parámetros a inferir. Siguiendo el paradigma bayesiano, se establece una distribución a priori para $\sigma$ independiente de la distribución a priori para $\theta$. En otras palabras, ahora la distribución posterior depende de $d+1$ parámetros. Sin embargo para fines de esta tesis, nos abstendremos de los casos en los que $\sigma$ es conocida.
 
 De esta manera, la distribución posterior (\ref{3.2.1.06}) tendrá como variables unicamente al vector de parámetros $\theta$, al ser una EDO dependiente solamente de $g$ y $b$ se sigue que $\theta = (g,b)$ siendo un vector en $\mathbb{R}^{d}$ con $d = 2$. Además es necesario definir las constantes para las distribuciones a priori gamma.
@@ -282,23 +289,12 @@ Consideremos las distribuciones a priori (\ref{3.2.1.03}) como
 \end{align}
 con $\alpha = 10$, $\beta = 1.1$ con máximo en $\theta_1^{*} = 10$ y $\theta_2^{*} = 2$. Podemos observar las distribuciones a priori en la Fig. \ref{Fig. 3.2.2.01}.
 
-\begin{figure}[H] 
-    \centering 
-    \includegraphics[width = 15 cm]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png}
-    \caption{Distribuciones marginal a priori para el parámetro $g$ (izquierda) y $b$ (derecha).}
-    \label{Fig. 3.2.2.01}
-\end{figure} 
-
-Ahora, generamos una muestra $\mathbf{y}$ del forward map gravitatorio y agregamos un ruido gaussiano con $\sigma = 0.1$ obteniendo la muestra como en la Fig. \ref{Fig. 3.2.2.02}.
-
 \begin{figure}
     \centering 
     \includegraphics[width = 10 cm ]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png} 
     \caption{Muestra $\mathbf{y}$ del modelo gravitatorio.}
     \label{Fig. 3.2.2.02}
 \end{figure} 
-
-Luego, con la implementación de la metodología propuesta \citep{kaipio2006statistical}, usando el algoritmo MCMC Metropolis-Hastings \citep{christen2010general} para una cadena de tamaño $T = 600,000$ y un burn in de 20,000 tenemos que la trayectoria seguida en el espacio de parámetros $\theta = (g,b)$ para la distribución posterior (conjunta) es el mostrado en la Fig. \ref{Fig. 3.2.2.03}. Notemos que dicha posterior tiene alta correlación entre parámetros. Esto tiene la interpretación física que para valores altos de $g$ es necesario tener más fricción $b$ con el medio para la misma trayectoria $\mathbf{y}$.
 
 \begin{figure}
     \centering 
@@ -307,9 +303,7 @@ Luego, con la implementación de la metodología propuesta \citep{kaipio2006stat
     \label{Fig. 3.2.2.03}
 \end{figure} 
 
-Es de interés las marginales de la distribución posterior. Dado que la simulación de la cadena es bidimensional, de (\ref{3.2.2.01}) tomamos $h_1(X_1,X_2) = 1_{\{X_1\}}$ y $h_2(X_1,X_2)= 1_{\{X_2\}}$, dicho de otra forma, simplemente tomamos el histograma sobre una componente de la cadena dada por MCMC. Podemos ver las estimaciones a las distribuciones marginales posteriores para los parámetros $g$ y $b$ en  Fig. \ref{Fig. 3.2.2.04} y Fig. \ref{Fig. 3.2.2.05}
-
-\begin{figure}[h]
+\begin{figure}
     \centering
     \subfloat[Subfigure 1 list of figures text][Posterior para $g$.]{
     \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png}
@@ -318,13 +312,13 @@ Es de interés las marginales de la distribución posterior. Dado que la simulac
     \subfloat[Subfigure 2 list of figures text][Posterior para $b$.]{
     \includegraphics[width=0.4\textwidth]{img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png}
     \label{Fig. 3.2.2.05}}
-    \caption{Distribución posterior (azul) y distribución a priori (verde) para el parámetros $g$ y $b$ del modelo gravitatorio. }
+    \caption{Distribución posterior (azul) y distribución a priori (verde) para el parámetros $g$ y $b$ del modelo gravitatorio. Los valores verdaderos se marcan en negro.}
     \label{Fig. 3.2.gravedad.theta}
 \end{figure}
 
-Finalmente, es de interés observar la distribución que puede generar las curvas predictivas. Es decir, de la cadena $X_t$ fruto de MCMC, tomamos submuestreos en intervalos $X_{[iN,(i+1)N]}$ para tomar estimaciones puntuales (media) de $g$ y $b$ y así aplicar el forward map para cada estimación. Dicho de otra forma, la información obtenida de la distribución posterior se desea transmitir directamente a la trayectoria, generando así distribuciones sobre las mismas.
+Ahora, generamos una muestra $\mathbf{y}$ del forward map gravitatorio y agregamos un ruido gaussiano con $\sigma = 0.1$ obteniendo la muestra como en la Fig. \ref{Fig. 3.2.2.02}.
 
-En la Fig. \ref{Fig. 3.2.2.06} se muestra en azul claro los distintos forward map $F_{\theta}$ con varias realizaciones de $\theta|\mathbf{y}$ dada por la estimación de la distribución posterior por Metropolis-Hastings, mientras que en azul oscuro se muestra el forward map de partida, es decir, de donde se realizaron las simulaciones para generar $\mathbf{y}$ (morado). Por tanto, notamos que de cierta forma, la información de la distribución posterior contiene a la simulación inicial.
+Luego, con la implementación de la metodología propuesta \citep{kaipio2006statistical}, usando el algoritmo MCMC Metropolis-Hastings t-walk \citep{christen2010general} para una cadena de tamaño $T = 600,000$ y un burn in de 20,000 tenemos que la trayectoria seguida en el espacio de parámetros $\theta = (g,b)$ para la distribución posterior (conjunta) es el mostrado en la Fig. \ref{Fig. 3.2.2.03}. Notemos que dicha posterior tiene alta correlación entre parámetros. Esto tiene la interpretación física que para valores altos de $g$ es necesario tener más fricción $b$ con el medio para la misma trayectoria $\mathbf{y}$.
 
 \begin{figure}
     \centering 
@@ -333,6 +327,11 @@ En la Fig. \ref{Fig. 3.2.2.06} se muestra en azul claro los distintos forward ma
     \label{Fig. 3.2.2.06}
 \end{figure} 
 
+Es de interés las marginales de la distribución posterior. Dado que la simulación de la cadena es bidimensional, de (\ref{3.2.2.01}) tomamos $h_1(X_1,X_2) = 1_{\{X_1\}}$ y $h_2(X_1,X_2)= 1_{\{X_2\}}$, dicho de otra forma, simplemente tomamos el histograma sobre una componente de la cadena dada por MCMC. Podemos ver las estimaciones a las distribuciones marginales posteriores para los parámetros $g$ y $b$ en  Fig. \ref{Fig. 3.2.2.04} y Fig. \ref{Fig. 3.2.2.05}
+
+
+Finalmente, es de interés observar la distribución que puede generar las curvas predictivas. Es decir, de la cadena $X_t$ fruto de MCMC, tomamos submuestreos en intervalos $X_{[iN,(i+1)N]}$ para tomar estimaciones puntuales (media) de $g$ y $b$ y así aplicar el forward map para cada estimación. Dicho de otra forma, la información obtenida de la distribución posterior se desea transmitir directamente a la trayectoria, generando así distribuciones sobre las mismas.
+
 \begin{figure}[H]
     \centering 
     \includegraphics[width = 15 cm]{img/Exp_Central_gravedad_sigma/Figuras/Generales/TiempoFijo_gravedad_sigma.png} 
@@ -340,22 +339,24 @@ En la Fig. \ref{Fig. 3.2.2.06} se muestra en azul claro los distintos forward ma
     \label{Fig. 3.2.2.07}
 \end{figure} 
 
+En la Fig. \ref{Fig. 3.2.2.06} se muestra en azul claro los distintos forward map $F_{\theta}$ con varias realizaciones de $\theta|\mathbf{y}$ dada por la estimación de la distribución posterior por Metropolis-Hastings, mientras que en azul oscuro se muestra el forward map de partida, es decir, de donde se realizaron las simulaciones para generar $\mathbf{y}$ (morado). Por tanto, notamos que de cierta forma, la información de la distribución posterior contiene a la simulación inicial, es decir al valor verdadero.
+
 Más aún, para ejemplificar la distribución predictiva, considere dos valores fijos de $t$ y tómese cortes verticales de la distribución predictiva. En la Fig. \ref{Fig. 3.2.2.07} nos muestra para el tiempo $t = 0.2 s$ y $t = 0.7s$ la distribución de probabilidad de la posición de la partícula afectada por la gravedad en ese momento de tiempo. 
+
+% \newpage
 
 \subsubsection{Simulación del modelo logístico}
 
-En el modelo gravitacional tenemos un ejemplo de simulación del problema inverso donde las unidades de los parámetros difieren por un orden de magnitud a lo sumo, ya que las estimaciones del parámetro $g$ es aproximadamente 10 veces más grande que las estimaciones del parámetro $b$ en el sistema de unidades métrico decimal. Por tanto, es de interés trabajar un modelo cuyas estimaciones de los parámetros tengan un amplio margen de diferencia. El modelo logístico con la parametrización dada en (\ref{3.1.2.06}) el parámetro $\theta_2$ difiere en seis ordenes de magnitud respecto al parámetro $\theta_1$ \footnote{Para una población suficientemente grande y con una moderada tasa de crecimiento.}. En secciones posteriores retomaremos algunos comentarios respecto a esta clase de modelos.
+En el modelo gravitacional tenemos un ejemplo de simulación del problema inverso donde las unidades de los parámetros no difieren significativamente en ordenes de magnitud. En secciones posteriores se explica el concepto de regularización de las unidades, donde la metodología aproximada para modelos cuyos ordenes de magnitud difieren significativamente tienen sesgo en la estimación de la distribución posterior. Dicho lo anterior, siguiendo la metodología ordinaria para la resolución del problema inverso en el modelo logístico, con la base de datos simuladas del mismo considerando $\theta_1 = 0.001$ y $\theta_2 = 1000$ con un ruido gaussiano aditivo de desviación estándar $\sigma = 30$ graficado en la Fig. \ref{Fig. 3.2.log.muestra}.
 
-Siguiendo la metodología ordinario para la resolución del problema inverso en el modelo, con la base de datos simuladas del mismo considerando $\theta_1 = 0.001$ y $\theta_2 = 1000$ con un ruido gaussiano aditivo de desviación estándar $\sigma = 30$ graficado en la Fig. \ref{Fig. 3.2.log.muestra}.
-
-\begin{figure}[H] 
+\begin{figure}
     \centering 
     \includegraphics[width = 10 cm ]{img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png} 
     \caption{Muestra $\mathbf{y}$ para el modelo logístico.}
     \label{Fig. 3.2.log.muestra}
 \end{figure} 
 
-Posteriormente, definamos las constantes (\ref{3.2.1.03}) de las distribuciones gamma a priori. Seleccionemos las constantes semejantes a las simuladas (fines ilustrativos), cuyas gráficas se muestran en la Fig. \ref{Fig. 3.2.log.priori}
+Posteriormente, definamos las constantes de las distribuciones gamma a priori en (\ref{3.2.1.03}). Seleccionemos las constantes semejantes a los valores verdaderos, cuyas gráficas se muestran en la Fig. \ref{Fig. 3.2.log.priori}
 
 \begin{figure} 
     \centering 
@@ -364,7 +365,7 @@ Posteriormente, definamos las constantes (\ref{3.2.1.03}) de las distribuciones 
     \label{Fig. 3.2.log.priori}
 \end{figure} 
 
-De esta forma, análogo al modelo gravitacional, generamos una cadena con la implementación del algoritmo Metropolis-Hastings dado por \cite{christen2010general} con $T = 600,000$ iteraciones y un burn in de 20,000 estados. La distribución posterior, Fig. \ref{Fig. 3.2.log.conjunta}, muestra una forma acampanada ligeramente simétrica con una sutil correlación negativa entre parámetros. Las distribución marginal para $\theta_1$ y $\theta_2$ se muestran en la Fig. \ref{Fig. 3.2.log.theta1} y \ref{Fig. 3.2.log.theta2}.
+De esta forma, análogo al modelo gravitacional, generamos una cadena con la implementación del algoritmo Metropolis-Hastings dado por \cite{christen2010general} con $T = 600,000$ iteraciones y un burn in de 20,000 estados. La distribución posterior, Fig. \ref{Fig. 3.2.log.conjunta}, muestra una forma acampanada ligeramente asimétrica con una sutil correlación negativa entre parámetros. Las distribución marginal para $\theta_1$ y $\theta_2$ se muestran en la Fig. \ref{Fig. 3.2.log.theta1} y \ref{Fig. 3.2.log.theta2}.
 
 \begin{figure}
     \centering 
@@ -382,7 +383,7 @@ De esta forma, análogo al modelo gravitacional, generamos una cadena con la imp
     \subfloat[Subfigure 2 list of figures text][Posterior para $\theta_2$.]{
     \includegraphics[width=0.4\textwidth]{img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png}
     \label{Fig. 3.2.log.theta2}}
-    \caption{Distribución posterior (azul) y distribución a priori (verde) para el parámetros $\theta_1$ y $\theta_2$ del modelo logístico.}
+    \caption{Distribución posterior (azul) y distribución a priori (verde) para el parámetros $\theta_1$ y $\theta_2$ del modelo logístico. Los valores verdaderos se marcan en negro.}
     \label{Fig. 3.2.log.theta}
 \end{figure}
 
@@ -397,7 +398,7 @@ Finalmente, el análisis concluye con la distribución predictiva dada por el fo
 
 \subsubsection{Simulación del modelo SIR}
 
-Para el modelo epidemiólogico tomamos una muestra de $n =10$ observaciones de infectados en una población cerrada a lo largo del tiempo. Al igual que los modelos previos, dichas observaciones son simulaciones del forward map con ruido gaussiano. En la Fig. \ref{Fig. SIR_01} vemos la gráfica de la muestra de infectados, notamos que tienen un rápido crecimiento para después decaer suavemente.
+Para el modelo epidemiólogico tomamos una muestra de $n =10$ observaciones de infectados en una población cerrada a lo largo del tiempo. Al igual que los modelos previos, dichas observaciones son simulaciones del forward map con ruido gaussiano. Tomando una muestra de $n = 10$ con parámetros $\beta = 0.009$, $\gamma = 0.5$ y ruido con desviación estándar de $\sigma = 10$ y dando las condiciones iniciales por conocidas con $I(0) = 50$, $S(0)= 500$, $R(0)=5$. En la Fig. \ref{Fig. SIR_01} vemos la gráfica de la muestra de infectados, notamos que tienen un rápido crecimiento para después decaer suavemente.
 
 \begin{figure}
     \centering 
@@ -433,7 +434,7 @@ Análogamente a los modelos previos, una vez obtenida la forma funcional de la d
     \subfloat[Subfigure 2 list of figures text][Posterior para $\gamma$.]{
     \includegraphics[width=0.4\textwidth]{img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png}
     \label{Fig. SIR_05}}
-    \caption{Distribución posterior (azul) y distribución a priori (verde) para el parámetros $\beta$ y $\gamma$ del modelo SIR. }
+    \caption{Distribución posterior (azul) y distribución a priori (verde) para el parámetros $\beta$ y $\gamma$ del modelo SIR. Los valores verdaderos se marcan en negro. }
     \label{Fig. SIR.theta}
 \end{figure}
 
@@ -455,12 +456,12 @@ Es fundamental en este proyecto contrastar las distribuciones posteriores fruto 
 
 Recordemos de la sección 4 del capítulo 2 la construcción del forward map aproximado. Consideremos una partición tipo malla $\mathcal{M}$. Sea $\vartheta \in \mathcal{M}$ un elemento del subconjunto del espacio de parámetros $\Theta$. Sea $\vartheta^{(1)},\cdots, \vartheta^{(k)}$ los $k$ vecinos mas cercanos a $\theta$. Para $\theta \notin \mathcal{M}$ el forward map aproximado a $k$ vecinos cercanos de definición (o resolución)  $M$ es:
 \begin{align}
-    \tilde{F}^{k}_M(\theta) = \sum_{j = 1}^{k} \omega_j F \left(\vartheta^{(j)}\right)
+    \tilde{F}^{k}_M(\theta) = \sum_{j = 1}^{k} \omega_j(\theta) F \left(\vartheta^{(j)}\right)
     \label{3.3.01}
 \end{align}
-donde $\omega_j = d_j^{-1}/ \sum_{i=1}^{k} d_i^{-1}$. Notemos que el forward map aproximado usa el forward map ordinario $F(\vartheta)$ para los elementos de la malla $\mathcal{M}$. Así la construcción de la distribución posterior aproximada $\pi_{M}^{k}$ se da reemplazando el forward map ordinario en la distribución posterior de los parámetros, tal como en la ecuación (\ref{2.4.02}).
+donde $\omega_j(\theta) = d_j(\theta)^{-1}/ \sum_{i=1}^{k} d_i(\theta)^{-1}$ con $d_j = d(\theta,\vartheta^{(j)})$ . Notemos que el forward map aproximado usa el forward map ordinario $F(\vartheta)$ para los elementos de la malla $\mathcal{M}$. Así la construcción de la distribución posterior aproximada $\pi_{M}^{k}$ se da reemplazando el forward map ordinario en la distribución posterior de los parámetros, tal como en la ecuación (\ref{2.4.02}).
 
-Previo a realizar las simulaciones para distintos casos es necesario revisar un último concepto. Proceder a estimar las distribuciones posteriores aproximadas, de la forma detalla a lo largo de este texto, tendría un inconveniente al analizar la convergencia a mediada que se aumenta la resolución de la malla. Este problema se salda con la regularización de las unidades.
+Previo a realizar las simulaciones para distintos casos es necesario revisar un último concepto. Proceder a estimar las distribuciones posteriores aproximadas, de la forma detallada a lo largo de este texto, tendría un inconveniente al analizar la convergencia a mediada que se aumenta la resolución de la malla. Este problema se salda con la regularización de las unidades.
 
 \subsection{Regularización de las unidades}
 
@@ -488,7 +489,7 @@ De igual forma, la aproximación del forward map en el caso del modelo gravitaci
 
 Como hemos visto, la amplia diferencia en ordenes de magnitud entre parámetros conduce a una construcción patógena del forward map. Por esto mismo, la regularización de las unidades se establece como una técnica para normalizar cada parámetro al intervalo $[0,1]$. 
 
-Recordemos la notación usada en la sección 2.4. Sea $\theta = (\theta_1,\cdots, \theta_d) \in \Theta$. Sea $\mathcal{M}$ una malla de $\Theta$, de forma que $\mathcal{M} = \mathcal{M}_1\times\cdots\times \mathcal{M}_d$, donde $\mathcal{M}_i = \{\theta_i^{Min},\theta_{i}^{(2)},\cdots,\theta_i^{(M-1)},\theta_i^{Min}\}$. Para cada componente de $\theta$, aplicamos la transformación de normalización $\varphi$ a la malla $\mathcal{M}$, donde a cada elemento $\theta_i^{(j)}\in \mathcal{M}_i$ se aplica la transformación
+Recordemos la notación usada en la sección 2.4. Sea $\theta = (\theta_1,\cdots, \theta_d) \in \Theta$. Sea $\mathcal{M}$ una malla de $\Theta$, de forma que $\mathcal{M} = \mathcal{M}_1\times\cdots\times \mathcal{M}_d$, donde $\mathcal{M}_i = \{\theta_i^{Min},\theta_{i}^{(2)},\cdots,\theta_i^{(M-1)},\theta_i^{Max}\}$. Para cada componente de $\theta$, aplicamos la transformación de normalización $\varphi$ a la malla $\mathcal{M}$, donde a cada elemento $\theta_i^{(j)}\in \mathcal{M}_i$ se aplica la transformación
 \begin{align}
     \varphi_i^{(j)} = \frac{\theta_i^{(j)} - \theta_i^{Min}}{\theta_i^{Max}-\theta_i^{Min}}.
     \label{3.3.02}
@@ -533,7 +534,7 @@ Las aproximaciones de la distribución posterior considera aproximaciones del fo
 
 En el análisis bayesiano sobre el modelo gravitatorio se obtuvo la distribución posterior con el forward map ordinario para cada una de las aproximaciones propuestas. Dichas distribuciones las cotejaremos con una aproximación a la misma de forma que sea visible o no la convergencia al análogo ordinario.
 
-Para empezar, tomemos la aproximación del forward map con 3 vecinos cercanos $(k= 3)$. Luego, estimamos la distribución posterior conjunta para cada rejilla $(M = 10, 15, 30, 50)$ con el algoritmo Metropolis-Hastings \citep{christen2010general}. Luego se toma las distribuciones marginales para cada parámetro $g,b$. Al ser un estudio heurístico, el grado de aproximación se hace tras simple comparación de la distribución marginal aproximada  para cada parámetro, $\tilde{\pi}^{k}_M(g)$ con $\pi(g)$, y comparación de $\tilde{\pi}^{k}_M(b)$ con $\pi(b)$.
+Para empezar, tomemos la aproximación del forward map con 3 vecinos cercanos $(k= 3)$. Luego, estimamos la distribución posterior conjunta para cada rejilla $(M = 10, 15, 30, 50)$ haciendo MCMC con el t-walk \citep{christen2010general}. Luego se toman las distribuciones marginales para cada parámetro $g,b$. Al ser un estudio heurístico, el grado de aproximación se hace tras simple comparación de la distribución marginal aproximada  para cada parámetro, $\tilde{\pi}^{k}_M(g)$ con $\pi(g)$, y comparación de $\tilde{\pi}^{k}_M(b)$ con $\pi(b)$.
 
 En la Fig. \ref{Fig. Aprox grav 3v} se muestran las distribuciones marginales para la aproximación del forward map con $k = 3$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 

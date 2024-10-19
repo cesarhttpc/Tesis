@@ -29,15 +29,15 @@ Warning--No journal in alonso1970fisica
 Warning--No journal in christen2010general
 You've used 28 entries,
             6951 wiz_defined-function locations,
-            1413 strings with 14627 characters,
-and the built_in function-call counts, 47831 in all, are:
-= -- 6060
+            1415 strings with 14721 characters,
+and the built_in function-call counts, 48438 in all, are:
+= -- 6128
 > -- 385
-< -- 2066
-+ -- 2159
+< -- 2134
++ -- 2227
 - -- 56
-* -- 2793
-:= -- 8371
+* -- 2856
+:= -- 8564
 add.period$ -- 113
 call.type$ -- 28
 change.case$ -- 478
@@ -46,20 +46,20 @@ cite$ -- 58
 duplicate$ -- 1335
 empty$ -- 2045
 format.name$ -- 617
-if$ -- 9474
+if$ -- 9542
 int.to.chr$ -- 0
 int.to.str$ -- 84
 missing$ -- 0
 newline$ -- 678
 num.names$ -- 224
-pop$ -- 1096
+pop$ -- 1095
 preamble$ -- 1
 purify$ -- 114
 quote$ -- 0
-skip$ -- 3099
+skip$ -- 3105
 stack$ -- 0
-substring$ -- 2404
-swap$ -- 691
+substring$ -- 2472
+swap$ -- 697
 text.length$ -- 72
 text.prefix$ -- 0
 top$ -- 1
