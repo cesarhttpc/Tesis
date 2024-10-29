@@ -153,9 +153,11 @@ def preproceso(puntos_malla,theta1_cota_min,theta1_cota_max, theta2_cota_min, th
 #########################
 current_directory = os.getcwd()
 print(f"The working directory is: {current_directory}")
-path_directorio = 'C:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Version12/'
+path_directorio = 'C:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Codigo/Version12/'
 
-exper_aprox   = False
+Ejecutacion_Previa = True
+
+exper_aprox   = True
 hacer_reporte = True
 GuardarCadena = True
 Estimar_sigma = True # No sirve
@@ -166,10 +168,10 @@ Estimar_sigma = True # No sirve
 # modelo = ['gravedad', 'logistico', 'SIR']
 # dinamica = gravedad
 # modelo = 'gravedad'
-dinamica = logistico
-modelo = 'logistico'
-# dinamica = SIR
-# modelo = 'SIR'
+# dinamica = logistico
+# modelo = 'logistico'
+dinamica = SIR
+modelo = 'SIR'
 
 # Simular las observaciones
 n = 16      # Tamaño de muestra (n-1)
@@ -265,7 +267,7 @@ if Estimar_sigma == True:
 else:
     path_sigma = ''
     
-path = 'Exp_Temp_'+ modelo + path_sigma +'/'  # Trayectoria relativa para archivar
+path = 'Exp_Central_'+ modelo + path_sigma +'/'  # Trayectoria relativa para archivar
 print(path)
 
 if hacer_reporte == True:
@@ -283,69 +285,72 @@ num_puntos_malla = np.array([10, 15, 30, 50])
 ############################################
 ############################################
 ############################################
-Monte_carlo_aprox_compilador_theta1 = np.zeros( (size,len(num_vecinos_varios)*len(num_puntos_malla)) )
-Monte_carlo_aprox_compilador_theta2 = np.zeros( (size,len(num_vecinos_varios)*len(num_puntos_malla)) )
-Tiempo_compilador = np.array((len(num_vecinos_varios),len(num_puntos_malla)))
+if Ejecutacion_Previa == False:
 
-if hacer_reporte == True:
-    reporte = open(path + 'reporte.txt','w')
-    reporte.write('REPORTE DE PROCEDIMIENTO \n\n')
-    reporte.write('Enfoque bayesiano al problema inverso \n\n')
-    reporte.write('MODELO: %s \n\n' %modelo)
-    reporte.write('Estima sigma: %r\n' %Estimar_sigma)
-    reporte.write('Observaciones (muestra): \n')
-    reporte.write('%s = %r \n' %(par_names[0],theta_1))
-    reporte.write('%s = %r \n' %(par_names[1],theta_2))
-    reporte.write('n = %r \n' %n)
-    reporte.write('tiempo [0,%r] \n\n' %cota_tiempo)
-    reporte.write('Parametros de a priori: \n')
-    reporte.write('$theta_1 $= %r \n' %theta1_priori)
-    reporte.write('alpha = %r \n' %alpha)
-    reporte.write('$theta_2 $= %r \n' %theta2_priori)
-    reporte.write('beta = %r \n\n' %beta)
-    reporte.write('Parametros de MCMC: \n')
-    reporte.write('T = %r \n' %size)
-    reporte.write('burn in = %r \n\n' %burn_in)
-    reporte.write('Para los vecinos %r \n' %num_vecinos_varios)
-    reporte.write('Con las mallas cuadradas %r \n\n' %num_puntos_malla)
-    reporte.close()
 
-# Forward Ordinario
-inicio_tiempo = time.time()
+    Monte_carlo_aprox_compilador_theta1 = np.zeros( (size,len(num_vecinos_varios)*len(num_puntos_malla)) )
+    Monte_carlo_aprox_compilador_theta2 = np.zeros( (size,len(num_vecinos_varios)*len(num_puntos_malla)) )
+    Tiempo_compilador = np.array((len(num_vecinos_varios),len(num_puntos_malla)))
 
-monte_carlo = Metropolis(F= Forward, t=t, y_data=y_data, theta1_priori = theta1_priori, alpha= alpha, theta2_priori = theta2_priori, beta = beta, size = size, Estimar_sigma = Estimar_sigma ,plot = False)
+    if hacer_reporte == True:
+        reporte = open(path + 'reporte.txt','w')
+        reporte.write('REPORTE DE PROCEDIMIENTO \n\n')
+        reporte.write('Enfoque bayesiano al problema inverso \n\n')
+        reporte.write('MODELO: %s \n\n' %modelo)
+        reporte.write('Estima sigma: %r\n' %Estimar_sigma)
+        reporte.write('Observaciones (muestra): \n')
+        reporte.write('%s = %r \n' %(par_names[0],theta_1))
+        reporte.write('%s = %r \n' %(par_names[1],theta_2))
+        reporte.write('n = %r \n' %n)
+        reporte.write('tiempo [0,%r] \n\n' %cota_tiempo)
+        reporte.write('Parametros de a priori: \n')
+        reporte.write('$theta_1 $= %r \n' %theta1_priori)
+        reporte.write('alpha = %r \n' %alpha)
+        reporte.write('$theta_2 $= %r \n' %theta2_priori)
+        reporte.write('beta = %r \n\n' %beta)
+        reporte.write('Parametros de MCMC: \n')
+        reporte.write('T = %r \n' %size)
+        reporte.write('burn in = %r \n\n' %burn_in)
+        reporte.write('Para los vecinos %r \n' %num_vecinos_varios)
+        reporte.write('Con las mallas cuadradas %r \n\n' %num_puntos_malla)
+        reporte.close()
 
-fin = time.time()
-plt.show()
+    # Forward Ordinario
+    inicio_tiempo = time.time()
 
-#Reporte
-print('Tiempo Forward Ordinario:')
-print('Tiempo total: ', fin-inicio_tiempo)
-if hacer_reporte == True:
+    monte_carlo = Metropolis(F= Forward, t=t, y_data=y_data, theta1_priori = theta1_priori, alpha= alpha, theta2_priori = theta2_priori, beta = beta, size = size, Estimar_sigma = Estimar_sigma ,plot = False)
 
-    reporte = open(path + 'reporte.txt','a')
-    reporte.write('Forward Ordinario \n')
-    reporte.write('  Tiempo %.2f \n\n' %(fin-inicio_tiempo))
-    reporte.close()
+    fin = time.time()
+    plt.show()
 
-theta1_sample = monte_carlo[:,0]
-theta2_sample = monte_carlo[:,1]
-log_posterior = monte_carlo[:,2]
+    #Reporte
+    print('Tiempo Forward Ordinario:')
+    print('Tiempo total: ', fin-inicio_tiempo)
+    if hacer_reporte == True:
 
-if GuardarCadena == True:
+        reporte = open(path + 'reporte.txt','a')
+        reporte.write('Forward Ordinario \n')
+        reporte.write('  Tiempo %.2f \n\n' %(fin-inicio_tiempo))
+        reporte.close()
 
-    theta1_sample_col = theta1_sample.reshape(-1,1)
-    theta2_sample_col = theta2_sample.reshape(-1,1)
-    log_posterior_col = log_posterior.reshape(-1,1)
+    theta1_sample = monte_carlo[:,0]
+    theta2_sample = monte_carlo[:,1]
+    log_posterior = monte_carlo[:,2]
 
-    # Concatenate arrays horizontally
-    combined_array = np.hstack((theta1_sample_col, theta2_sample_col, log_posterior_col))
-    print(len(combined_array))
+    if GuardarCadena == True:
 
-    # Save the combined array to a CSV file
-    np.savetxt(path + 'Cadena.csv', combined_array, delimiter=",")#, fmt='%d')
+        theta1_sample_col = theta1_sample.reshape(-1,1)
+        theta2_sample_col = theta2_sample.reshape(-1,1)
+        log_posterior_col = log_posterior.reshape(-1,1)
 
-# %%
+        # Concatenate arrays horizontally
+        combined_array = np.hstack((theta1_sample_col, theta2_sample_col, log_posterior_col))
+        print(len(combined_array))
+
+        # Save the combined array to a CSV file
+        np.savetxt(path + 'Cadena.csv', combined_array, delimiter=",")#, fmt='%d')
+
+## %%
 
 def visualizacion(monte_carlo,t, burn_in, title = True):
     
@@ -413,7 +418,7 @@ def visualizacion(monte_carlo,t, burn_in, title = True):
     # Posterior Conjunta
     if title == True:
         plt.title(r'Posterior conjunta')
-    plt.hist2d(theta1_sample[burn_in:], theta2_sample[burn_in:], bins = 40, cmap='Blues')
+    plt.hist2d(theta1_sample_plot[burn_in:], theta2_sample_plot[burn_in:], bins = 40, cmap='Blues')
     plt.scatter(theta_1,theta_2, color = 'black',marker = 'x')
     plt.xlabel(par_names[0])
     plt.ylabel(par_names[1])
@@ -458,7 +463,7 @@ def visualizacion(monte_carlo,t, burn_in, title = True):
     # Posteriores TODAS
     fig, ((ax0, ax1), (ax2, ax3)) = plt.subplots(nrows=2, ncols=2)
     ax0.set_title('Posterior conjunta')
-    ax0.hist2d(theta1_sample[burn_in:], theta2_sample[burn_in:], bins = 40, cmap='Blues')
+    ax0.hist2d(theta1_sample_plot[burn_in:], theta2_sample_plot[burn_in:], bins = 40, cmap='Blues')
     ax0.scatter(theta_1,theta_2, color = 'black',marker = 'x')
     # ax0.legend(prop={'size': 6})
     ax0.set_xlabel(par_names[0])
@@ -586,76 +591,90 @@ def visualizacion(monte_carlo,t, burn_in, title = True):
         plt.savefig(path + 'Figuras/Generales/TiempoFijo_'+ modelo + path_sigma + '.png', dpi=600)
     plt.show()
 
-visualizacion(monte_carlo,t,burn_in = burn_in, title = True)
+# visualizacion(monte_carlo,t,burn_in = burn_in, title = True) #Linea bajada 
 
 ## %%
-if exper_aprox == True:
-        
-    contador = 1
-    for k in range(len(num_vecinos_varios)):
+if Ejecutacion_Previa == False:
 
-        for j in range(len(num_puntos_malla)):
+    if exper_aprox == True:
             
-        
-            # Monte Carlo con Forward map aproximado
-            inicio_tiempo = time.time()
+        contador = 1
+        for k in range(len(num_vecinos_varios)):
 
-            num_vecinos = num_vecinos_varios[k]
-
-            theta1_dom = np.linspace(theta1_cota_min, theta1_cota_max, num= num_puntos_malla[j])
-            theta2_dom = np.linspace(theta2_cota_min, theta2_cota_max, num= num_puntos_malla[j])
-
-            # Crear la malla utilizando meshgrid
-            theta1_mesh, theta2_mesh = np.meshgrid(theta1_dom, theta2_dom)
-            # Obtener los puntos de la malla y combinarlos en una matriz
-            ''' Hacer las mallas fuera del for '''
-            puntos_malla = np.column_stack((theta1_mesh.ravel(), theta2_mesh.ravel()))
-
-            ''' Hacer el preproceso fuera de for '''
-            buscador_de_vecinos = preproceso(puntos_malla, theta1_cota_min, theta1_cota_max, theta2_cota_min, theta2_cota_max) 
-            preproceso_tiempo = time.time()
+            for j in range(len(num_puntos_malla)):
+                
             
-            monte_carlo_aprox = Metropolis(F= Forward_aprox, t=t, y_data=y_data, theta1_priori = theta1_priori, alpha= alpha, theta2_priori = theta2_priori, beta = beta, size = size, Estimar_sigma = Estimar_sigma,plot = False)
-            Monte_carlo_aprox_compilador_theta1[:,contador-1] = monte_carlo_aprox[:,0]
-            Monte_carlo_aprox_compilador_theta2[:,contador-1] = monte_carlo_aprox[:,1]
+                # Monte Carlo con Forward map aproximado
+                inicio_tiempo = time.time()
 
-            fin = time.time()
-            plt.show()
+                num_vecinos = num_vecinos_varios[k]
 
-            if GuardarCadena == True:
+                theta1_dom = np.linspace(theta1_cota_min, theta1_cota_max, num= num_puntos_malla[j])
+                theta2_dom = np.linspace(theta2_cota_min, theta2_cota_max, num= num_puntos_malla[j])
 
-                theta1_sample_col = monte_carlo_aprox[:,0].reshape(-1,1)
-                theta2_sample_col = monte_carlo_aprox[:,1].reshape(-1,1)
-                log_posterior_col = monte_carlo_aprox[:,2].reshape(-1,1)
+                # Crear la malla utilizando meshgrid
+                theta1_mesh, theta2_mesh = np.meshgrid(theta1_dom, theta2_dom)
+                # Obtener los puntos de la malla y combinarlos en una matriz
+                ''' Hacer las mallas fuera del for '''
+                puntos_malla = np.column_stack((theta1_mesh.ravel(), theta2_mesh.ravel()))
 
-                # Concatenate arrays horizontally
-                combined_array = np.hstack((theta1_sample_col, theta2_sample_col, log_posterior_col))
-                print(len(combined_array))
+                ''' Hacer el preproceso fuera de for '''
+                buscador_de_vecinos = preproceso(puntos_malla, theta1_cota_min, theta1_cota_max, theta2_cota_min, theta2_cota_max) 
+                preproceso_tiempo = time.time()
+                
+                monte_carlo_aprox = Metropolis(F= Forward_aprox, t=t, y_data=y_data, theta1_priori = theta1_priori, alpha= alpha, theta2_priori = theta2_priori, beta = beta, size = size, Estimar_sigma = Estimar_sigma,plot = False)
+                Monte_carlo_aprox_compilador_theta1[:,contador-1] = monte_carlo_aprox[:,0]
+                Monte_carlo_aprox_compilador_theta2[:,contador-1] = monte_carlo_aprox[:,1]
 
-                # Save the combined array to a CSV file
-                np.savetxt(path + 'Cadena_%r.csv'%contador, combined_array, delimiter=",")#, fmt='%d')
+                fin = time.time()
+                plt.show()
+
+                if GuardarCadena == True:
+
+                    theta1_sample_col = monte_carlo_aprox[:,0].reshape(-1,1)
+                    theta2_sample_col = monte_carlo_aprox[:,1].reshape(-1,1)
+                    log_posterior_col = monte_carlo_aprox[:,2].reshape(-1,1)
+
+                    # Concatenate arrays horizontally
+                    combined_array = np.hstack((theta1_sample_col, theta2_sample_col, log_posterior_col))
+                    print(len(combined_array))
+
+                    # Save the combined array to a CSV file
+                    np.savetxt(path + 'Cadena_%r.csv'%contador, combined_array, delimiter=",")#, fmt='%d')
 
 
-            # Reporte
-            # Tiempo_compilador[contador] = fin-inicio_tiempo
-            print('Tiempo Aproximado (vecinos %r):' %num_vecinos_varios[k])
-            print('Tiempo preproceso: ', preproceso_tiempo - inicio_tiempo)
-            print('Tiempo total: ', fin-inicio_tiempo, '\n')
+                # Reporte
+                # Tiempo_compilador[contador] = fin-inicio_tiempo
+                print('Tiempo Aproximado (vecinos %r):' %num_vecinos_varios[k])
+                print('Tiempo preproceso: ', preproceso_tiempo - inicio_tiempo)
+                print('Tiempo total: ', fin-inicio_tiempo, '\n')
 
-            if hacer_reporte == True:   
-                reporte = open(path + 'reporte.txt','a')
-                reporte.write('Experimento %r \n'%contador)
-                reporte.write('  Forward Aproximado (%r vecinos, %r malla) \n'%(num_vecinos_varios[k],num_puntos_malla[j]))
-                reporte.write('  Tiempo: %.2f \n' %(fin-inicio_tiempo))
-                reporte.close()
+                if hacer_reporte == True:   
+                    reporte = open(path + 'reporte.txt','a')
+                    reporte.write('Experimento %r \n'%contador)
+                    reporte.write('  Forward Aproximado (%r vecinos, %r malla) \n'%(num_vecinos_varios[k],num_puntos_malla[j]))
+                    reporte.write('  Tiempo: %.2f \n' %(fin-inicio_tiempo))
+                    reporte.close()
 
-            contador += 1
+                contador += 1
 
-# %%
+## %%
+# Llamar ejecución previa (si existe) para solo graficar (Ejecutacion_Previa = True)
+###############
+###############
+###############
+###############
+
+if modelo == 'logistico':
+    par_names = ['theta_1', 'theta_2']
+if modelo == 'SIR':
+    par_names = ['beta', 'gamma']
+
 CadenaCSV = pd.read_csv(path_directorio + path + 'Cadena.csv')
 monte_carlo = CadenaCSV.to_numpy()
 
-## %%
+visualizacion(monte_carlo,t,burn_in = burn_in, title = True)
+# %%
 
 def visualizacion_aprox(monte_carlo, t, burn_in, title = True):
 
@@ -676,6 +695,8 @@ def visualizacion_aprox(monte_carlo, t, burn_in, title = True):
     max2_density = np.max(counts2)
     min2_histograma = np.min(theta2_sample[burn_in:])
     max2_histograma = np.max(theta2_sample[burn_in:])
+    t_1 = np.linspace(0.9*min(theta1_sample[burn_in:]),1.1*max(theta1_sample[burn_in:]),500)
+    t_2 = np.linspace(0.9*min(theta2_sample[burn_in:]),1.1*max(theta2_sample[burn_in:]),500)
 
     contador = 1
     for u in range(len(num_vecinos_varios)*len(num_puntos_malla)):
@@ -702,10 +723,9 @@ def visualizacion_aprox(monte_carlo, t, burn_in, title = True):
 
             ## Posterior theta_1 (ord y aprox)
             if title == True:
-                plt.title('A priori y posterior para %s (%r vecinos y %r malla) '%(par_names[0],num_vecinos_varios[k],num_puntos_malla[j]))
+                plt.title(r'A priori y posterior para %s (%r vecinos y %r malla) '%(par_names[0],num_vecinos_varios[k],num_puntos_malla[j]))
             plt.hist(theta1_sample[burn_in:], density= True, bins = 40,label = 'Ordinario',alpha = 0.5)
             plt.hist(theta1_sample_aprox[burn_in:], density=True, bins = 40,label='Aproximado',alpha = 0.8,histtype='step', linewidth = 1.2, color = 'maroon')
-            t_1 = np.linspace(min(theta1_sample[burn_in:]),max(theta1_sample[burn_in:]),500)
             plt.plot(t_1, gamma.pdf(t_1, a = alpha , scale = theta1_priori/alpha),color = 'seagreen', label = 'A priori')
             plt.ylabel(r'$f(%s)$'%par_names[0])
             plt.xlabel(r'$%s$'%par_names[0])
@@ -731,10 +751,9 @@ def visualizacion_aprox(monte_carlo, t, burn_in, title = True):
 
             # Posterior theta_2 (ord y aprox)
             if title == True:
-                plt.title('A priori y posterior para %s (%r vecinos y %r malla) '%(par_names[1],num_vecinos_varios[k],num_puntos_malla[j]))
+                plt.title(r'A priori y posterior para %s (%r vecinos y %r malla) '%(par_names[1],num_vecinos_varios[k],num_puntos_malla[j]))
             plt.hist(theta2_sample[burn_in:], density= True, bins = 40,label = 'Ordinario',alpha = 0.5)
             plt.hist(theta2_sample_aprox[burn_in:], density=True, bins = 40, label = 'Aproximado',alpha = 0.8,histtype='step', linewidth = 1.2, color = 'maroon')
-            t_2 = np.linspace(min(theta2_sample[burn_in:]),max(theta2_sample[burn_in:]),500)
             plt.plot(t_2, gamma.pdf(t_2, a = beta, scale = theta2_priori/beta),color = 'seagreen',label = 'A priori')
             plt.ylabel(r'$f(%s)$'%par_names[1])
             plt.xlabel(r'$%s$'%par_names[1])

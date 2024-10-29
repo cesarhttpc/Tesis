@@ -485,7 +485,7 @@ Concisamente, las unidades del modelo gravitatorio para $g$ usualmente se dan en
 De igual forma, la aproximación del forward map en el caso del modelo gravitacional esta condicionada a las unidades de medida, veamos el caso concreto de usar unidades estándar (Sistema Internacional) y el caso de unidades anglosajonas. En la Fig. \ref{Vecinos} se muestra un enmallado para el modelo gravitatorio en unidades estándar \ref{Fig. 3.3_Vecinos1}, mientras que en \ref{Fig. 3.3_vecinos2} se toma la reparametrización en libras y pulgadas. Nótese que los vecinos cercanos (rojo oscuro) al parámetro $\theta$ (rojo) se ven ampliamente alterados. En consecuencia, es necesario regular las unidades de forma que el uso de cualquier sistema de unidades sea irrelevante para la aproximación del forward map.
 
 
-\subsubsection{Construcción de la regularización de unidades}
+\subsection{Construcción de la regularización de unidades}
 
 Como hemos visto, la amplia diferencia en ordenes de magnitud entre parámetros conduce a una construcción patógena del forward map. Por esto mismo, la regularización de las unidades se establece como una técnica para normalizar cada parámetro al intervalo $[0,1]$. 
 
@@ -532,9 +532,9 @@ Las aproximaciones de la distribución posterior considera aproximaciones del fo
 
 \subsubsection{Forward map aproximado para el modelo gravitatorio}
 
-En el análisis bayesiano sobre el modelo gravitatorio se obtuvo la distribución posterior con el forward map ordinario para cada una de las aproximaciones propuestas. Dichas distribuciones las cotejaremos con una aproximación a la misma de forma que sea visible o no la convergencia al análogo ordinario.
+En el análisis bayesiano del problema inverso del modelo gravitatorio se obtuvo la distribución posterior con el forward map ordinario. Esta vez, el análisis bayesiano se hará con el forward map aproximados para cada par $k$ y $M$ de las aproximaciones propuestas. Posteriormente, las distribuciones aproximadas $\tilde{\pi}^{k}_M(g,b)$ las cotejaremos con su análogo ordinario, $\pi(g,b)$ de forma que sea visible o no la convergencia al análogo ordinario.
 
-Para empezar, tomemos la aproximación del forward map con 3 vecinos cercanos $(k= 3)$. Luego, estimamos la distribución posterior conjunta para cada rejilla $(M = 10, 15, 30, 50)$ haciendo MCMC con el t-walk \citep{christen2010general}. Luego se toman las distribuciones marginales para cada parámetro $g,b$. Al ser un estudio heurístico, el grado de aproximación se hace tras simple comparación de la distribución marginal aproximada  para cada parámetro, $\tilde{\pi}^{k}_M(g)$ con $\pi(g)$, y comparación de $\tilde{\pi}^{k}_M(b)$ con $\pi(b)$.
+Para empezar, tomemos la aproximación del forward map con 3 vecinos cercanos $(k= 3)$. Luego, estimamos la distribución posterior conjunta para cada rejilla $(M = 10, 15, 30, 50)$ haciendo MCMC con el t-walk \citep{christen2010general}. Posteriormente se toman las distribuciones marginales para cada parámetro $g,b$. Al ser un estudio heurístico, el grado de aproximación se hace tras simple comparación de la distribución marginal aproximada  para cada parámetro, $\tilde{\pi}^{k}_M(g)$ con $\pi(g)$, y comparación de $\tilde{\pi}^{k}_M(b)$ con $\pi(b)$.
 
 En la Fig. \ref{Fig. Aprox grav 3v} se muestran las distribuciones marginales para la aproximación del forward map con $k = 3$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.
 
@@ -580,9 +580,9 @@ En la Fig. \ref{Fig. Aprox grav 8v} se muestran las distribuciones marginales pa
     \label{Fig. Aprox grav 8v}
 \end{figure} 
 
-Notemos del análisis previo que de manera general las distribuciones posteriores aproximadas $\tilde{\pi}^{k}_M(g,b)$ mejora a medida que la malla se hace más fina. Luego, la mejor aproximación se obtiene con la malla más fina que discretiza el espacio parametral en 50x50 puntos. Queda definir que cantidad de vecinos hace la aproximación mejor. Nótese que para 8 vecinos (k = 8) no ajusta para el parámetro $g$ lo que descarta esta elección. Finalmente, para 3 y 5 vecinos tenemos distribuciones bastante similares por lo que la elección es indiferente. Así, seleccionamos el forward map aproximado con 3 vecinos en una malla 50x50.
+Notemos del análisis previo que de manera general las distribuciones posteriores aproximadas $\tilde{\pi}^{k}_M(g,b)$ mejoran a medida que la malla se hace más fina. Luego, la mejor aproximación se obtiene con la malla más fina que discretiza el espacio parametral en 50x50 puntos. Queda por definir que cantidad de vecinos hace la mejor aproximación. Nótese que para 8 vecinos (k = 8) no ajusta para el parámetro $g$ lo que descarta esta elección. Finalmente, para 3 y 5 vecinos tenemos distribuciones bastante similares por lo que la elección es indiferente. Así, seleccionamos el forward map aproximado con 3 vecinos en una malla 50x50.
 
-Para saber la factibilidad del método se considera al tiempo de ejecución, que es una variable tangible y de fácil acceso. El tiempo de ejecución del método ordinario para el problema inverso en el modelo gravitacional es de \textbf{5 min 57 s}
+Para saber la factibilidad del método se considera al tiempo de ejecución, que es una variable tangible y de fácil acceso. En la tabla \ref{tabla_01} se muestran los tiempos de ejecución mencionados para cada aproximación del forward map considerada. Por otro lado, el tiempo de ejecución del método ordinario para el problema inverso en el modelo gravitacional es de \textbf{5 min 57 s}. Esto es considerando un MCMC de $T = 600,000$ iteraciones y un burn in de $20,000$, al igual que cualquier MCMC considerado en esta tesis.
 
 \begin{table}[H]
     \centering
@@ -595,8 +595,8 @@ Para saber la factibilidad del método se considera al tiempo de ejecución, que
       8 vecinos & 5m 00s & 5m 09s & 5m 02s & 5m 02s\\
       \bottomrule
     \end{tabular}
-    % \caption{A table caption.}
-    % \label{tabla_03}
+    \caption{Tabla de tiempos de ejecución para el MCMC del modelo gravitatorio con forward map aproximado con $k$ vecinos (filas) en una malla de $M\times M$ (columnas).}
+    \label{tabla_01}
 \end{table}
 
 Vemos que la aproximación elegida tiene una ganancia de 57 segundos de ejecución, lo que representa una ganancia de una sexta parte del tiempo.
@@ -740,7 +740,7 @@ Vemos que la aproximación elegida tiene una ganancia de 57 segundos de ejecuci�
 
 \subsubsection{Forward map aproximado para el modelo logístico}
 
-Es de interés analizar la metodología aproximada propuesta para otros modelos. La experimentación con el modelo logístico nos permite dilucidar en el comportamiento de la metodología en cuestión. Al igual que el modelo gravitacional, aquí realizamos los mismos experimentos con $k = 3,5,8$ y una resolución de malla de $M = 10, 15, 30, 50$.
+Es de interés analizar la metodología aproximada propuesta para otros modelos. La experimentación con el modelo logístico nos permite dilucidar el comportamiento de la metodología en cuestión. Al igual que el modelo gravitacional, aquí realizamos los mismos experimentos con $k = 3,5,8$ y una resolución de malla de $M = 10, 15, 30, 50$. En todos los casos usamos el t-walk con $T = 600,000$ iteraciones y un burn in de $20,000$.
 
 % El modelo logístico es de particular interés ya que al tener parámetros cuyas unidades difieren en varios grados de magnitud. Esto nos permite poner a prueba el modelo con la regularización de las unidades que sin ella el forward map aproximado tomará en cuenta solo para valores donde la distancia euclidiana es menor, que en este caso es para el parámetros $\theta_1$. 
 
@@ -789,7 +789,7 @@ Finalmente, para ocho vecinos cercanos, en la Fig. \ref{Fig. Aprox log 8v} se mu
     \label{Fig. Aprox log 8v}
 \end{figure} 
 
-El tiempo de ejecución del método ordinario para el problema inverso en el modelo logístico es de \textbf{20 min 58 s}
+El tiempo de ejecución del método ordinario para el problema inverso en el modelo logístico es de \textbf{20 min 58 s}. Mientras que en la tabla \ref{tabla_02} tenemos los tiempos de ejecución del modelo logístico con forward map aproximado para cada caso considerado.
 
 \begin{table}[H]
     \centering
@@ -802,8 +802,8 @@ El tiempo de ejecución del método ordinario para el problema inverso en el mod
       8 vecinos & 10m 08s & 10m 24s & 10m 21s & 10m 21s\\
       \bottomrule
     \end{tabular}
-    % \caption{A table caption.}
-    % \label{tabla_03}
+    \caption{Tabla de tiempos de ejecución para el MCMC del modelo logístico con forward map aproximado con $k$ vecinos (filas) en una malla de $M\times M$ (columnas).}
+    \label{tabla_02}
 \end{table}
 
 Observemos que el grado de aproximación es plausible para cada experimento. Notemos que el parámetro $\theta_1$ aproxima mejor que el parámetro $\theta_2$. Dichos experimentos muestran comportamientos no esperados, pese a esto, el tiempo de ejecución es significativamente menor que su análogo ordinario puesto que reduce el tiempo de cálculo en un $70\%$ aproximadamente.
@@ -945,10 +945,10 @@ Observemos que el grado de aproximación es plausible para cada experimento. Not
 
 \subsubsection{Convergencia en el modelo epidemiólogico}
 
-En el modelo epidemiológico SIR, el cual sabemos que su problema directo no tiene solución analítica, haciéndolo el modelo más sensato para fenómenos naturales. Además, la relevancia del modelo se encuentra en las diferencias de los ordenes de magnitud para sus parámetros $\alpha,\beta$, que es un experimento de merito para la metodología aproximada propuesta.
+En el modelo epidemiológico SIR, el cual sabemos que su problema directo no tiene solución analítica, tiene relevancia en las diferencias de los ordenes de magnitud para sus parámetros $\alpha,\beta$, que es un experimento de merito para la metodología aproximada propuesta, de regularizar las unidades.
 
 
-De igual forma que las aproximaciones en modelos precedentes, en este caso se hacen repetidas distribuciones posteriores aproximadas con distintos forward map aproximados. Esto es tomar forward maps que consideren 3, 5, 8 vecinos cercanos con resolución de malla M = 10, 15, 30, 50.
+De igual forma que las aproximaciones en modelos precedentes, en este caso se hacen repetidas distribuciones posteriores aproximadas con distintos forward map aproximados. Esto es tomar forward maps que consideren 3, 5, 8 vecinos cercanos con resolución de malla M = 10, 15, 30, 50. De igual forma que los casos anteriores, se usa el t-walk con $T = 600,000$ iteraciones y un burn in de $20,000$ iteraciones.
 
 Empezando por tres vecinos cercanos, se muestran 
 en la Fig. \ref{Fig. Aprox SIR 3v} las distribuciones marginales para la aproximación del forward map con $k = 5$ y de izquierda a derecha una malla de 10x10, 15x15, 30x30, 50x50.

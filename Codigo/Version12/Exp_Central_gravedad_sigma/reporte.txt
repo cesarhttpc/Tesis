@@ -6,8 +6,8 @@ MODELO: gravedad
 
 Estima sigma: True
 Observaciones (muestra): 
-g = 9.81 
-b = 1.15 
+$g$ = 9.81 
+$b$ = 1.15 
 n = 16 
 tiempo [0,1.5] 
 
@@ -25,41 +25,5 @@ Para los vecinos array([3, 5, 8])
 Con las mallas cuadradas array([10, 15, 30, 50]) 
 
 Forward Ordinario 
-  Tiempo 357.15 
+  Tiempo 488.70 
 
-Experimento 1 
-  Forward Aproximado (3 vecinos, 10 malla) 
-  Tiempo: 292.25 
-Experimento 2 
-  Forward Aproximado (3 vecinos, 15 malla) 
-  Tiempo: 295.43 
-Experimento 3 
-  Forward Aproximado (3 vecinos, 30 malla) 
-  Tiempo: 292.91 
-Experimento 4 
-  Forward Aproximado (3 vecinos, 50 malla) 
-  Tiempo: 300.25 
-Experimento 5 
-  Forward Aproximado (5 vecinos, 10 malla) 
-  Tiempo: 303.50 
-Experimento 6 
-  Forward Aproximado (5 vecinos, 15 malla) 
-  Tiempo: 302.03 
-Experimento 7 
-  Forward Aproximado (5 vecinos, 30 malla) 
-  Tiempo: 293.56 
-Experimento 8 
-  Forward Aproximado (5 vecinos, 50 malla) 
-  Tiempo: 302.08 
-Experimento 9 
-  Forward Aproximado (8 vecinos, 10 malla) 
-  Tiempo: 300.34 
-Experimento 10 
-  Forward Aproximado (8 vecinos, 15 malla) 
-  Tiempo: 309.36 
-Experimento 11 
-  Forward Aproximado (8 vecinos, 30 malla) 
-  Tiempo: 302.72 
-Experimento 12 
-  Forward Aproximado (8 vecinos, 50 malla) 
-  Tiempo: 302.22 
