@@ -1,6 +1,8 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{Agradecimientos}{\es@scroman {iii}}{chapter*.2}%
-\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {vii}}{chapter*.4}%
+\contentsline {chapter}{Resumen}{\es@scroman {iii}}{chapter*.2}%
+\contentsline {paragraph}{Palabras clave:}{\es@scroman {iii}}{section*.3}%
+\contentsline {chapter}{Agradecimientos}{\es@scroman {v}}{chapter*.4}%
+\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {ix}}{chapter*.6}%
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Proceso de modelación}{1}{section.1.1}%
 \contentsline {chapter}{\numberline {2}Antecedentes}{3}{chapter.2}%
@@ -20,15 +22,15 @@
 \contentsline {section}{\numberline {3.2}Enfoque bayesiano al problema inverso}{23}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Distribución posterior}{24}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Simulación con forward map ordinario}{26}{subsection.3.2.2}%
-\contentsline {subsubsection}{Simulación del modelo gravitatorio}{27}{section*.9}%
-\contentsline {subsubsection}{Simulación del modelo logístico}{32}{section*.16}%
-\contentsline {subsubsection}{Simulación del modelo SIR}{35}{section*.22}%
+\contentsline {subsubsection}{Simulación del modelo gravitatorio}{27}{section*.11}%
+\contentsline {subsubsection}{Simulación del modelo logístico}{32}{section*.18}%
+\contentsline {subsubsection}{Simulación del modelo SIR}{35}{section*.24}%
 \contentsline {section}{\numberline {3.3}Simulación con forward map aproximado}{38}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Regularización de las unidades}{38}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Construcción de la regularización de unidades}{40}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Experimentación con distribuciones posteriores aproximadas}{40}{subsection.3.3.3}%
-\contentsline {subsubsection}{Forward map aproximado para el modelo gravitatorio}{41}{section*.29}%
-\contentsline {subsubsection}{Forward map aproximado para el modelo logístico}{44}{section*.37}%
-\contentsline {subsubsection}{Convergencia en el modelo epidemiólogico}{47}{section*.45}%
+\contentsline {subsubsection}{Forward map aproximado para el modelo gravitatorio}{41}{section*.31}%
+\contentsline {subsubsection}{Forward map aproximado para el modelo logístico}{44}{section*.39}%
+\contentsline {subsubsection}{Convergencia en el modelo epidemiólogico}{47}{section*.47}%
 \contentsline {chapter}{\numberline {4}Conclusiones y trabajo futuro}{51}{chapter.4}%
-\contentsline {chapter}{Referencias}{55}{chapter*.57}%
+\contentsline {chapter}{Referencias}{55}{chapter*.59}%

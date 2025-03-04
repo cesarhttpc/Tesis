@@ -68,13 +68,18 @@
 \end{flushright}
 
 % Abstract
-% \chapter*{Resumen}
-% \addcontentsline{toc}{chapter}{Resumen}
+\chapter*{Resumen}
+\addcontentsline{toc}{chapter}{Resumen}
 
-% Estudio del problema inverso para modelos descritos por ODEs con forward map aproximado.
-% \\
-% % Keywords
-% \paragraph{Palabras clave:} Cuantificación de la incertidumbre, problemas inversos, inferencia bayesiana, ecuaciones diferenciales, MCMC
+En este trabajo se aborda el problema inverso para modelos descritos por ecuaciones diferenciales ordinarias con el paradigma Bayesiano. Dicho enfoque, contempla la implementación del algoritmo Metropolis-Hastings para la simulación de la distribución posterior de los parámetros de interés, así como la implementación en la resolución de múltiples familias de ecuaciones diferenciales ordinarias. 
+
+Los tiempos de ejecución del paradigma bayesiano se ven mayoritariamente consumidos por las implementaciones mencionadas. Por ello en esta tesis se propone un marco aproximado del \textit{forward map}, con la idea de evitar que el algoritmo Metropolis-Hastings solucione ecuaciones diferenciales en cada iteración. Proponiendo así, la construcción de un \textit{forward map} aproximado usando técnicas de aproximación espacial.
+
+Finalmente, se valida la técnica propuesta para tres modelos distintos observando y contrastando los resultados de la técnica clásica con la aproximada para distintos ajustes de las aproximaciones, contemplando una convergencia en la distribución posterior aproximada con la distribución posterior clásica.
+
+
+% Keywords
+\paragraph{Palabras clave:} Cuantificación de la incertidumbre, problemas inversos, inferencia bayesiana, ecuaciones diferenciales, MCMC
 
 % Acknowledgements
 \chapter*{Agradecimientos}
