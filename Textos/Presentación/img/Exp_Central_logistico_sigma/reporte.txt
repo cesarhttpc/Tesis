@@ -1,0 +1,65 @@
+REPORTE DE PROCEDIMIENTO 
+
+Enfoque bayesiano al problema inverso 
+
+MODELO: logistico 
+
+Estima sigma: True
+Observaciones (muestra): 
+$\theta_1$ = 0.001 
+$\theta_2$ = 1000 
+n = 16 
+tiempo [0,10] 
+
+Parametros de a priori: 
+$theta_1 $= 0.001 
+alpha = 1000 
+$theta_2 $= 1000 
+beta = 1000 
+
+Parametros de MCMC: 
+T = 600000 
+burn in = 20000 
+
+Para los vecinos array([3, 5, 8]) 
+Con las mallas cuadradas array([10, 15, 30, 50]) 
+
+Forward Ordinario 
+  Tiempo 1429.34 
+
+Experimento 1 
+  Forward Aproximado (3 vecinos, 10 malla) 
+  Tiempo: 571.09 
+Experimento 2 
+  Forward Aproximado (3 vecinos, 15 malla) 
+  Tiempo: 573.27 
+Experimento 3 
+  Forward Aproximado (3 vecinos, 30 malla) 
+  Tiempo: 581.94 
+Experimento 4 
+  Forward Aproximado (3 vecinos, 50 malla) 
+  Tiempo: 581.39 
+Experimento 5 
+  Forward Aproximado (5 vecinos, 10 malla) 
+  Tiempo: 576.93 
+Experimento 6 
+  Forward Aproximado (5 vecinos, 15 malla) 
+  Tiempo: 579.32 
+Experimento 7 
+  Forward Aproximado (5 vecinos, 30 malla) 
+  Tiempo: 579.26 
+Experimento 8 
+  Forward Aproximado (5 vecinos, 50 malla) 
+  Tiempo: 578.01 
+Experimento 9 
+  Forward Aproximado (8 vecinos, 10 malla) 
+  Tiempo: 582.32 
+Experimento 10 
+  Forward Aproximado (8 vecinos, 15 malla) 
+  Tiempo: 594.72 
+Experimento 11 
+  Forward Aproximado (8 vecinos, 30 malla) 
+  Tiempo: 586.27 
+Experimento 12 
+  Forward Aproximado (8 vecinos, 50 malla) 
+  Tiempo: 591.31 

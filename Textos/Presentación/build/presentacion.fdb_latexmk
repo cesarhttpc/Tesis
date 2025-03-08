@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex build/presentacion"] 1741068137.31419 "build/presentacion.aux" "build/presentacion.bbl" "build/presentacion" 1741069035.91863 0
-  "./demo.bib" 1708490644 421 2d1e0444500007f9facf530b32b17dce ""
+["bibtex build/presentacion"] 1741333491.86715 "build/presentacion.aux" "build/presentacion.bbl" "build/presentacion" 1741397091.17391 0
+  "./demo.bib" 1741311380 427 dadd239529fb78282c4e4e8876cc81ea ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/abbrv.bst" 1291864736 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "build/presentacion.aux" 1741069034 5051 e6590041223570518e91dbcb7d7efc01 "pdflatex"
+  "build/presentacion.aux" 1741397089 8158 1d5963454ec9956fe620f65fe53ed041 "pdflatex"
   (generated)
   "build/presentacion.bbl"
   "build/presentacion.blg"
   (rewritten before read)
-["pdflatex"] 1741069029.03145 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Presentación/presentacion.tex" "build/presentacion.pdf" "presentacion" 1741069035.91934 0
-  "C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1738358843 156971 6ebb55617c569712b0127c4e548473b3 ""
+["pdflatex"] 1741397079.06983 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Presentación/presentacion.tex" "build/presentacion.pdf" "presentacion" 1741397091.17486 0
+  "C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1741327854 156971 6ebb55617c569712b0127c4e548473b3 ""
   "C:/Users/ce_ra/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1717610154 24225045 0cae276a1e4cf9b7eccff9e8c7045ae4 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lato/a_rt66h3.enc" 1561405567 3345 f5bff336afd6959239b79815a9c623d1 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lato/a_vc7epu.enc" 1561405449 2837 71470f4f1f9e810bb7f97954be46f052 ""
@@ -53,6 +53,8 @@
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb" 1247596666 25150 e0d09798d232ab9d00c5c0a8df6cc22d ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb" 1247596667 25168 c89d909bac101e478326bb9e00519ca3 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
+  "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 870c211f62cb72718a00e353f14f254d ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Bold.pfb" 1561405441 440414 ec6de3b6221a394c74d6d39cdc088a6d ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-BoldItalic.pfb" 1561405438 472710 95c1b66bb6ebf85e90ce2cff19f0dd5f ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Italic.pfb" 1561405438 472156 b6b99a2d66beabd6363e56c51aacfbf1 ""
@@ -309,13 +311,14 @@
   "Figures/Modelos.png" 1708497412 83076 c45c33ede6dd432b3377cb443ec1e973 ""
   "Figures/bayes1.png" 1708492563 80027 59939a0455b720e014fec548ba566569 ""
   "Figures/cronograma.png" 1708497232 27125 9f843944621fb7513e24be8031fd126c ""
-  "build/presentacion.aux" 1741069034 5051 e6590041223570518e91dbcb7d7efc01 "pdflatex"
-  "build/presentacion.bbl" 1741068137 371 b74787531da0412feeaa2623be7b9ff7 "bibtex build/presentacion"
-  "build/presentacion.nav" 1741069034 3091 49af8c56e886994d46ae3278cb7ae63a "pdflatex"
-  "build/presentacion.out" 1741069034 499 cc0d94a5ca65064cb5b48d130dc5afae "pdflatex"
-  "build/presentacion.vrb" 1741069033 856 1a7c0d0cd071cc12f21062181452cb7f "pdflatex"
-  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Presentación/presentacion.tex" 1741069028 9136 60045cc00e03835e3f406e045aead414 ""
-  "presentacion.tex" 1741069028 9136 60045cc00e03835e3f406e045aead414 ""
+  "build/presentacion.aux" 1741397089 8158 1d5963454ec9956fe620f65fe53ed041 "pdflatex"
+  "build/presentacion.bbl" 1741333492 371 b74787531da0412feeaa2623be7b9ff7 "bibtex build/presentacion"
+  "build/presentacion.nav" 1741397089 5041 ad7802c9f6ce4592d5f79610b62a9541 "pdflatex"
+  "build/presentacion.out" 1741397089 499 cc0d94a5ca65064cb5b48d130dc5afae "pdflatex"
+  "build/presentacion.vrb" 1741397088 856 1a7c0d0cd071cc12f21062181452cb7f "pdflatex"
+  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Presentación/presentacion.tex" 1741397076 17352 946e733b5063251e0e2bd14df0b9ddce ""
+  "img/MCMC.png" 1718600375 48223 e78e88347c100b54dca79c6604edd41c ""
+  "presentacion.tex" 1741397076 17352 946e733b5063251e0e2bd14df0b9ddce ""
   (generated)
   "build/presentacion.aux"
   "build/presentacion.log"

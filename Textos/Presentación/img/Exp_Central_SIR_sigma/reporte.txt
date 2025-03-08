@@ -1,0 +1,65 @@
+REPORTE DE PROCEDIMIENTO 
+
+Enfoque bayesiano al problema inverso 
+
+MODELO: SIR 
+
+Estima sigma: True
+Observaciones (muestra): 
+beta = 0.009 
+gamma = 0.5 
+n = 10 
+tiempo [0,10] 
+
+Parametros de a priori: 
+$theta_1 $= 0.01 
+alpha = 1 
+$theta_2 $= 0.5 
+beta = 1 
+
+Parametros de MCMC: 
+T = 600000 
+burn in = 20000 
+
+Para los vecinos array([3, 5, 8]) 
+Con las mallas cuadradas array([10, 15, 30, 50]) 
+
+Forward Ordinario 
+  Tiempo 845.22 
+
+Experimento 1 
+  Forward Aproximado (3 vecinos, 10 malla) 
+  Tiempo: 338.70 
+Experimento 2 
+  Forward Aproximado (3 vecinos, 15 malla) 
+  Tiempo: 1467.41 
+Experimento 3 
+  Forward Aproximado (3 vecinos, 30 malla) 
+  Tiempo: 494.67 
+Experimento 4 
+  Forward Aproximado (3 vecinos, 50 malla) 
+  Tiempo: 350.03 
+Experimento 5 
+  Forward Aproximado (5 vecinos, 10 malla) 
+  Tiempo: 359.77 
+Experimento 6 
+  Forward Aproximado (5 vecinos, 15 malla) 
+  Tiempo: 350.57 
+Experimento 7 
+  Forward Aproximado (5 vecinos, 30 malla) 
+  Tiempo: 356.80 
+Experimento 8 
+  Forward Aproximado (5 vecinos, 50 malla) 
+  Tiempo: 357.73 
+Experimento 9 
+  Forward Aproximado (8 vecinos, 10 malla) 
+  Tiempo: 398.86 
+Experimento 10 
+  Forward Aproximado (8 vecinos, 15 malla) 
+  Tiempo: 446.04 
+Experimento 11 
+  Forward Aproximado (8 vecinos, 30 malla) 
+  Tiempo: 422.91 
+Experimento 12 
+  Forward Aproximado (8 vecinos, 50 malla) 
+  Tiempo: 369.22 
