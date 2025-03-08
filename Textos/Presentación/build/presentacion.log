@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.5)  7 MAR 2025 19:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.5)  7 MAR 2025 20:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1028,134 +1028,144 @@ LaTeX Font Info:    Font shape `TS1/lato-TLF/m/n' will be
 
 ] [27
 
+] [28
+
+] [29
+
+] [30
+
+] [31
+
+] [32
+
 ]
 \openout4 = `presentacion.vrb'.
 
- (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.vrb) [28
+ (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.vrb) [33
 
 ]
-Overfull \vbox (13.80844pt too high) detected at line 387
+Overfull \vbox (13.80844pt too high) detected at line 437
  []
 
-[29
+[34
 
 ]
 \openout4 = `presentacion.vrb'.
 
  (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.vrb
-<Figures/bayes1.png, id=211, 491.8375pt x 510.90875pt>
+<Figures/bayes1.png, id=238, 491.8375pt x 510.90875pt>
 File: Figures/bayes1.png Graphic file (type png)
 <use Figures/bayes1.png>
 Package pdftex.def Info: Figures/bayes1.png  used on input line 11.
 (pdftex.def)             Requested size: 156.49014pt x 162.55864pt.
 )
-Overfull \vbox (20.60545pt too high) detected at line 407
- []
-
-[30
-
- <./Figures/bayes1.png>]
-\openout4 = `presentacion.vrb'.
-
- (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.vrb) [31
-
-]
-\openout4 = `presentacion.vrb'.
-
- (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.vrb) [32
-
-] [33
-
-]
-<Figures/0.png, id=238, 417.7206pt x 328.8285pt>
-File: Figures/0.png Graphic file (type png)
-<use Figures/0.png>
-Package pdftex.def Info: Figures/0.png  used on input line 464.
-(pdftex.def)             Requested size: 284.52756pt x 223.97673pt.
-
-Overfull \vbox (35.34142pt too high) detected at line 464
- []
-
-[34
-
- <./Figures/0.png>]
-<Figures/1.png, id=245, 400.3758pt x 328.8285pt>
-File: Figures/1.png Graphic file (type png)
-<use Figures/1.png>
-Package pdftex.def Info: Figures/1.png  used on input line 473.
-(pdftex.def)             Requested size: 284.52756pt x 233.69565pt.
-
-Overfull \vbox (13.96484pt too high) detected at line 473
+Overfull \vbox (20.6632pt too high) detected at line 457
  []
 
 [35
 
- <./Figures/1.png>]
-<Figures/2.png, id=252, 411.2163pt x 329.5512pt>
-File: Figures/2.png Graphic file (type png)
-<use Figures/2.png>
-Package pdftex.def Info: Figures/2.png  used on input line 482.
-(pdftex.def)             Requested size: 284.52756pt x 228.03421pt.
+ <./Figures/bayes1.png>]
+\openout4 = `presentacion.vrb'.
 
-Overfull \vbox (8.3034pt too high) detected at line 482
- []
-
-[36
-
- <./Figures/2.png>]
-<Figures/3.png, id=259, 411.2163pt x 329.5512pt>
-File: Figures/3.png Graphic file (type png)
-<use Figures/3.png>
-Package pdftex.def Info: Figures/3.png  used on input line 491.
-(pdftex.def)             Requested size: 284.52756pt x 228.03421pt.
-
-Overfull \vbox (8.3034pt too high) detected at line 491
- []
-
-[37
-
- <./Figures/3.png>]
-<Figures/4.png, id=267, 417.7206pt x 328.8285pt>
-File: Figures/4.png Graphic file (type png)
-<use Figures/4.png>
-Package pdftex.def Info: Figures/4.png  used on input line 501.
-(pdftex.def)             Requested size: 284.52756pt x 223.97673pt.
-
-Overfull \vbox (4.24593pt too high) detected at line 501
- []
-
-[38
-
- <./Figures/4.png>] [39
-
-] [40
+ (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.vrb) [36
 
 ]
-<Figures/5.png, id=285, 401.0985pt x 312.9291pt>
-File: Figures/5.png Graphic file (type png)
-<use Figures/5.png>
-Package pdftex.def Info: Figures/5.png  used on input line 524.
-(pdftex.def)             Requested size: 284.52756pt x 221.98065pt.
+\openout4 = `presentacion.vrb'.
 
-Overfull \vbox (2.24985pt too high) detected at line 524
+ (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.vrb) [37
+
+] [38
+
+]
+<Figures/0.png, id=265, 417.7206pt x 328.8285pt>
+File: Figures/0.png Graphic file (type png)
+<use Figures/0.png>
+Package pdftex.def Info: Figures/0.png  used on input line 514.
+(pdftex.def)             Requested size: 284.52756pt x 223.97673pt.
+
+Overfull \vbox (35.34142pt too high) detected at line 514
+ []
+
+[39
+
+ <./Figures/0.png>]
+<Figures/1.png, id=272, 400.3758pt x 328.8285pt>
+File: Figures/1.png Graphic file (type png)
+<use Figures/1.png>
+Package pdftex.def Info: Figures/1.png  used on input line 523.
+(pdftex.def)             Requested size: 284.52756pt x 233.69565pt.
+
+Overfull \vbox (13.96484pt too high) detected at line 523
+ []
+
+[40
+
+ <./Figures/1.png>]
+<Figures/2.png, id=279, 411.2163pt x 329.5512pt>
+File: Figures/2.png Graphic file (type png)
+<use Figures/2.png>
+Package pdftex.def Info: Figures/2.png  used on input line 532.
+(pdftex.def)             Requested size: 284.52756pt x 228.03421pt.
+
+Overfull \vbox (8.3034pt too high) detected at line 532
  []
 
 [41
 
- <./Figures/5.png>] [42
+ <./Figures/2.png>]
+<Figures/3.png, id=286, 411.2163pt x 329.5512pt>
+File: Figures/3.png Graphic file (type png)
+<use Figures/3.png>
+Package pdftex.def Info: Figures/3.png  used on input line 541.
+(pdftex.def)             Requested size: 284.52756pt x 228.03421pt.
+
+Overfull \vbox (8.3034pt too high) detected at line 541
+ []
+
+[42
+
+ <./Figures/3.png>]
+<Figures/4.png, id=293, 417.7206pt x 328.8285pt>
+File: Figures/4.png Graphic file (type png)
+<use Figures/4.png>
+Package pdftex.def Info: Figures/4.png  used on input line 551.
+(pdftex.def)             Requested size: 284.52756pt x 223.97673pt.
+
+Overfull \vbox (4.24593pt too high) detected at line 551
+ []
+
+[43
+
+ <./Figures/4.png>] [44
+
+] [45
 
 ]
-<Figures/cronograma.png, id=298, 986.9372pt x 298.86656pt>
+<Figures/5.png, id=312, 401.0985pt x 312.9291pt>
+File: Figures/5.png Graphic file (type png)
+<use Figures/5.png>
+Package pdftex.def Info: Figures/5.png  used on input line 574.
+(pdftex.def)             Requested size: 284.52756pt x 221.98065pt.
+
+Overfull \vbox (2.19211pt too high) detected at line 574
+ []
+
+[46
+
+ <./Figures/5.png>] [47
+
+]
+<Figures/cronograma.png, id=325, 986.9372pt x 298.86656pt>
 File: Figures/cronograma.png Graphic file (type png)
 <use Figures/cronograma.png>
-Package pdftex.def Info: Figures/cronograma.png  used on input line 546.
+Package pdftex.def Info: Figures/cronograma.png  used on input line 596.
 (pdftex.def)             Requested size: 398.33858pt x 120.62529pt.
- [43
+ [48
 
  <./Figures/cronograma.png>] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.bbl
 LaTeX Font Info:    Font shape `OT1/lato-TLF/b/it' will be
 (Font)              scaled to size 10.0pt on input line 5.
-) [44
+) [49
 
  <C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write6
@@ -1176,17 +1186,17 @@ Package rerunfilecheck Info: File `presentacion.out' has not changed.
 (rerunfilecheck)             Checksum: CC0D94A5CA65064CB5B48D130DC5AFAE;499.
  ) 
 Here is how much of TeX's memory you used:
- 36388 strings out of 474486
- 881801 string characters out of 5743756
+ 36410 strings out of 474486
+ 882000 string characters out of 5743756
  1941542 words of memory out of 5000000
- 57839 multiletter control sequences out of 15000+600000
+ 57850 multiletter control sequences out of 15000+600000
  616772 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,18n,123p,1978b,914s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Bold.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-BoldItalic.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Italic.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Regular.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.pdf (44 pages, 599886 bytes).
+Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.pdf (49 pages, 610841 bytes).
 PDF statistics:
- 415 PDF objects out of 1000 (max. 8388607)
- 101 named destinations out of 1000 (max. 500000)
+ 445 PDF objects out of 1000 (max. 8388607)
+ 112 named destinations out of 1000 (max. 500000)
  133 words of extra memory for PDF output out of 10000 (max. 10000000)
 

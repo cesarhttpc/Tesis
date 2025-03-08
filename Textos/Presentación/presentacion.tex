@@ -264,7 +264,7 @@ Asesor: Dr. José Andrés Christen Gracia}
   
   \vspace{0.5 cm}
 
-  La aproximación al forward map con $k$ vecinos en una malla con $M$ particiones es
+  El \textbf{forward map aproximado} con $k$ vecinos en una malla con $M$ particiones es
   \begin{align}
     \tilde{F}^{k}_M(\theta) = \sum_{j = 1}^{k} \omega_j(\theta) F \left(\vartheta^{(j)}\right)
     \label{2.4.01}
@@ -273,10 +273,53 @@ Asesor: Dr. José Andrés Christen Gracia}
 \end{frame}
 
 \begin{frame}{Consistencia y Utilidad del Forward Map Aproximado}
+
+  El potencial del uso del forward map aproximado para el estudio del problema inverso reside parcialmente en un menor tiempo de ejecución de la implementación en contraste con su análogo ordinario. 
+
+  \vspace{0.5 cm}
+
+  Existen modelos de ecuaciones diferenciales cuya implementación del problema inverso bajo enfoque bayesiano toma días en ejecutarse (Galaviz,2023).
+
   
 \end{frame}
 
 
+\begin{frame}{Consistencia y Utilidad del Forward Map Aproximado}
+  Es de interés matemático el estudio de la \textbf{consistencia} del método propuesto.
+  
+  \vspace{0.5 cm}
+
+  La distribución posterior aproximada para los parámetros del modelo es
+  \begin{align}
+    \tilde{\pi}^{k}_M(\theta|\mathbf{y}) \propto \left(\frac{1}{2\pi \sigma^2}\right) ^{n/2}\exp \left \{  -\frac{1}{2\sigma^2}\sum_{i = 1}^{n} \left(y_i - F^k_M(\theta)\right)^2 \right \}\pi(\theta),
+    \label{2.4.02}
+  \end{align}
+\end{frame}
+
+\begin{frame}{Consistencia y Utilidad del Forward Map Aproximado}
+
+  Para formalizar la consistencia del forward map  aproximado se hace uso de la \textit{distancia de Kullback-Leibler}.
+
+  La distancia de Kullback-Leibler entre $f$ y $g$ se define como
+  \begin{align*}
+      D(f,g) = \int f(x)\log \left(\frac{f(x)}{g(x)}\right) dx.
+  \end{align*}
+
+  Se puede mostrar que $D(f,g) \geq 0$ y $D(f,f) = 0$ (Wasserman,2006).
+
+\end{frame}
+
+\begin{frame}{Consistencia y Utilidad del Forward Map Aproximado}
+  Definamos la distancia entre las distribuciones posteriores como
+  \begin{align*}
+      c^k_M = D \left( \pi(\theta|\mathbf{y}),\tilde{\pi}^{k}_M(\theta|\mathbf{y})\right)
+  \end{align*}
+
+  Diremos que el forward map aproximado es \textbf{consistente} si para una cantidad de vecinos $k$ fijo y conocido, las distancias 
+  \begin{align*}
+      c^k_M \rightarrow 0 \:\:\:\:\:\: \text{a medida que}\:\:\:\:\:\: M \rightarrow \infty
+  \end{align*}
+\end{frame}
 
 
 
@@ -308,6 +351,13 @@ Asesor: Dr. José Andrés Christen Gracia}
   
 \end{frame}
 
+\begin{frame}
+  
+\end{frame}
+
+\begin{frame}
+  
+\end{frame}
 
 
 

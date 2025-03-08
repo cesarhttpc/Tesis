@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex build/presentacion"] 1741333491.86715 "build/presentacion.aux" "build/presentacion.bbl" "build/presentacion" 1741397536.08809 0
+["bibtex build/presentacion"] 1741399328.516 "build/presentacion.aux" "build/presentacion.bbl" "build/presentacion" 1741401067.96022 0
   "./demo.bib" 1741311380 427 dadd239529fb78282c4e4e8876cc81ea ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/abbrv.bst" 1291864736 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "build/presentacion.aux" 1741397534 8158 1d5963454ec9956fe620f65fe53ed041 "pdflatex"
+  "build/presentacion.aux" 1741401066 8902 ab5ba97e25bc4b36171ddf7ab3ada9ce "pdflatex"
   (generated)
   "build/presentacion.bbl"
   "build/presentacion.blg"
   (rewritten before read)
-["pdflatex"] 1741397528.61983 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Presentación/presentacion.tex" "build/presentacion.pdf" "presentacion" 1741397536.08928 0
+["pdflatex"] 1741401060.47481 "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Presentación/presentacion.tex" "build/presentacion.pdf" "presentacion" 1741401067.96097 0
   "C:/Users/ce_ra/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1741327854 156971 6ebb55617c569712b0127c4e548473b3 ""
   "C:/Users/ce_ra/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1717610154 24225045 0cae276a1e4cf9b7eccff9e8c7045ae4 ""
   "C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lato/a_rt66h3.enc" 1561405567 3345 f5bff336afd6959239b79815a9c623d1 ""
@@ -311,14 +311,14 @@
   "Figures/Modelos.png" 1708497412 83076 c45c33ede6dd432b3377cb443ec1e973 ""
   "Figures/bayes1.png" 1708492563 80027 59939a0455b720e014fec548ba566569 ""
   "Figures/cronograma.png" 1708497232 27125 9f843944621fb7513e24be8031fd126c ""
-  "build/presentacion.aux" 1741397534 8158 1d5963454ec9956fe620f65fe53ed041 "pdflatex"
-  "build/presentacion.bbl" 1741333492 371 b74787531da0412feeaa2623be7b9ff7 "bibtex build/presentacion"
-  "build/presentacion.nav" 1741397534 5041 ad7802c9f6ce4592d5f79610b62a9541 "pdflatex"
-  "build/presentacion.out" 1741397534 499 cc0d94a5ca65064cb5b48d130dc5afae "pdflatex"
-  "build/presentacion.vrb" 1741397533 856 1a7c0d0cd071cc12f21062181452cb7f "pdflatex"
-  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Presentación/presentacion.tex" 1741397527 17433 e8d585de529bfd0b4d22b8d6f7646d75 ""
+  "build/presentacion.aux" 1741401066 8902 ab5ba97e25bc4b36171ddf7ab3ada9ce "pdflatex"
+  "build/presentacion.bbl" 1741399328 371 b74787531da0412feeaa2623be7b9ff7 "bibtex build/presentacion"
+  "build/presentacion.nav" 1741401066 5506 d84e4b0996532026d70136f1c6e50d68 "pdflatex"
+  "build/presentacion.out" 1741401066 499 cc0d94a5ca65064cb5b48d130dc5afae "pdflatex"
+  "build/presentacion.vrb" 1741401065 856 1a7c0d0cd071cc12f21062181452cb7f "pdflatex"
+  "c:/Users/ce_ra/Documents/CIMAT/Semestres/Cuarto/Tesis/Textos/Presentación/presentacion.tex" 1741401059 19401 4b210179e599adb38bb60fd959e639b4 ""
   "img/MCMC.png" 1718600375 48223 e78e88347c100b54dca79c6604edd41c ""
-  "presentacion.tex" 1741397527 17433 e8d585de529bfd0b4d22b8d6f7646d75 ""
+  "presentacion.tex" 1741401059 19401 4b210179e599adb38bb60fd959e639b4 ""
   (generated)
   "build/presentacion.aux"
   "build/presentacion.log"
