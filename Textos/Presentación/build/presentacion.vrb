@@ -1,20 +1,16 @@
-\frametitle{Inferencia}
+\frametitle{Sectores de la Modelación}
 
-  Distribución posterior
-  \begin{align*}
-      \pi(\theta|x^n) &\propto \mathcal{L}(\theta|x^n) \pi_{\Theta}(\theta)\\
-      & \left[\propto \prod_{i=1}^n \frac{1}{\sqrt{2\pi \sigma^2}} exp \left({-\frac{1}{2\sigma^2}\left(x_i - F_{\theta}(t_i)\right)^2 }\right)\right] \pi_{\Theta}(\theta) \\
-      & \propto \left(\frac{1}{2\pi\sigma^2}\right)^{n/2} exp {\left(\frac{1}{2\sigma^2} \sum_{i =1}^{n}\left(x_i - F_{\theta}(t_i)\right) ^2\right) } \pi_{\Theta}(\theta)
-  \end{align*}
-  donde $\theta = (\theta_1, ..., \theta_m)$.
+  % \textbf{Estudio de un sistema físico:}
+  \begin{figure}[H]
+      \centering
+      \includegraphics[width = 12 cm]{Figures/Modelos.png}
+      % \caption{}
+      % \label{Fig. }
+  \end{figure}
+  % \begin{enumerate}
+  %     \item Parametrización del sistema: descubrimiento del conjunto mínimo de parámetros del modelo cuyos valores caracterizan completamente el sistema.
+  %     \item Modelación directa (forward modeling): Descubrimiento de las leyes físicas que nos permiten hacer predicciones, dado valores de parámetros del modelo, de mediciones en observables físicas.
+  %     \item Modelación inversa: Usar las mediciones de las observables físicas para inferir los valores de los parámetros del modelo.
+  % \end{enumerate}
 
-  \vspace{1 cm}
-
-  \textbf{Simular por métodos Monte Carlo}
-  \begin{itemize}
-    \item
-    Se simula por MCMC Metropolis-Hastings \cite{robert1999monte}.
-  \end{itemize}
-
-
-  % Es posible simular variables aleatorias con dicha distribución y así obtener estimaciones de los parámetros del modelo.
+  % Los experimentos sugieren teorías físicas, y las teorías físicas predicen los resultados de los experimentos. La comparación entre la predicción y las observaciones son evidencia de la factibilidad de la teoría.

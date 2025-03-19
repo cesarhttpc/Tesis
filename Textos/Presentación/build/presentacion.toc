@@ -1,5 +1,5 @@
 \beamer@sectionintoc {1}{Introducción}{2}{0}{1}
 \beamer@sectionintoc {2}{Antecedentes}{6}{0}{2}
-\beamer@sectionintoc {3}{Ejemplo}{38}{0}{3}
-\beamer@sectionintoc {4}{Objetivos}{44}{0}{4}
-\beamer@sectionintoc {5}{Plan de trabajo}{47}{0}{5}
+\beamer@sectionintoc {3}{Implementación}{24}{0}{3}
+\beamer@sectionintoc {4}{Conclusiones y Trabajo Futuro}{65}{0}{4}
+\beamer@sectionintoc {5}{Material Extra}{72}{0}{5}

@@ -1,9 +1,10 @@
 \begin{thebibliography}{1}
 
-\bibitem{robert1999monte}
-C.~P. Robert, G.~Casella, and G.~Casella.
-\newblock {\em Monte Carlo statistical methods}, volume~2.
-\newblock Springer, 1999.
+\bibitem{christen2010general}
+J.~A. Christen and C.~Fox.
+\newblock A general purpose sampling algorithm for continuous distributions
+  (the t-walk).
+\newblock 2010.
 
 \bibitem{tarantola2005inverse}
 A.~Tarantola.

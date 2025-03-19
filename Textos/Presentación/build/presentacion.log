@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.5)  7 MAR 2025 20:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.5)  13 MAR 2025 12:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -750,7 +750,11 @@ LaTeX Font Info:    Font shape `OT1/lato-TLF/m/n' will be
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count371
 \l__pdf_internal_box=\box82
-) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.aux)
+) (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.aux
+
+LaTeX Warning: Label `3.1.03' multiply defined.
+
+)
 \openout1 = `presentacion.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -934,37 +938,36 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 
  (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.vrb)
 LaTeX Font Info:    Font shape `OT1/lato-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 44.
+(Font)              scaled to size 12.0pt on input line 46.
 LaTeX Font Info:    Font shape `OT1/lato-TLF/m/n' will be
-(Font)              scaled to size 4.0pt on input line 44.
+(Font)              scaled to size 4.0pt on input line 46.
  [3
 
 ]
 \openout4 = `presentacion.vrb'.
 
  (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.vrb
-LaTeX Font Info:    Font shape `OT1/lato-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 3.
-LaTeX Font Info:    Font shape `OT1/lato-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 3.
-) [4
-
-{C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lato/a_vc7epu.enc}]
-\openout4 = `presentacion.vrb'.
-
- (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.vrb
-<Figures/Modelos.png, id=57, 508.90125pt x 285.065pt>
+<Figures/Modelos.png, id=53, 581.17125pt x 326.21875pt>
 File: Figures/Modelos.png Graphic file (type png)
 <use Figures/Modelos.png>
 Package pdftex.def Info: Figures/Modelos.png  used on input line 6.
-(pdftex.def)             Requested size: 284.52756pt x 159.38737pt.
-) [5
+(pdftex.def)             Requested size: 341.43306pt x 191.65105pt.
+)
+Overfull \vbox (2.958pt too high) detected at line 79
+ []
 
- <./Figures/Modelos.png>] [6
+[4
+
+ <./Figures/Modelos.png>] [5
+
+] [6
 
 ] [7
 
-] [8
+]
+LaTeX Font Info:    Font shape `OT1/lato-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 111.
+ [8
 
 ] [9
 
@@ -972,11 +975,11 @@ Package pdftex.def Info: Figures/Modelos.png  used on input line 6.
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 121.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 145.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <7> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 121.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 145.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 121.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 145.
  [11
 
 ] [12
@@ -985,38 +988,31 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
 
 ] [14
 
-] [15
-
-] [16
-
-] [17
-
 ]
-<img/MCMC.png, id=140, 604.2575pt x 373.395pt>
-File: img/MCMC.png Graphic file (type png)
-<use img/MCMC.png>
-Package pdftex.def Info: img/MCMC.png  used on input line 216.
-(pdftex.def)             Requested size: 341.43306pt x 210.98566pt.
-
-Overfull \vbox (22.35034pt too high) detected at line 216
- []
-
-[18
-
- <./img/MCMC.png>] [19
-
-]
-LaTeX Font Info:    Trying to load font information for TS1+lato-TLF on input line 238.
+LaTeX Font Info:    Trying to load font information for TS1+lato-TLF on input line 266.
  (C:\Users\ce_ra\AppData\Local\Programs\MiKTeX\tex/latex/lato\ts1lato-tlf.fd
 File: TS1lato-TLF.fd 2019/06/24 Font definitions for TS1/lato-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/lato-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 238.
- [20
+(Font)              scaled to size 10.0pt on input line 266.
+ [15
 
-{C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lato/a_rt66h3.enc}] [21
+{C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lato/a_rt66h3.enc}] [16
 
-] [22
+] [17
+
+] [18
+
+] [19
+
+] [20
+
+]
+LaTeX Font Info:    Font shape `OT1/lato-TLF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 338.
+ [21
+
+{C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lato/a_vc7epu.enc}] [22
 
 ] [23
 
@@ -1024,148 +1020,469 @@ LaTeX Font Info:    Font shape `TS1/lato-TLF/m/n' will be
 
 ] [25
 
-] [26
+]
+pdfTeX warning (ext4): destination with the same identifier (name{3.1.03}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.392 \end{frame}
+                  [26
 
-] [27
+]
+<img/Trayectoria.png, id=197, 401.8212pt x 328.8285pt>
+File: img/Trayectoria.png Graphic file (type png)
+<use img/Trayectoria.png>
+Package pdftex.def Info: img/Trayectoria.png  used on input line 402.
+(pdftex.def)             Requested size: 256.0748pt x 209.56142pt.
 
-] [28
+Overfull \vbox (20.9261pt too high) detected at line 402
+ []
 
-] [29
+[27
 
-] [30
+ <./img/Trayectoria.png>] [28
+
+]
+<img/trayectoria_log.png, id=212, 420.6114pt x 328.8285pt>
+File: img/trayectoria_log.png Graphic file (type png)
+<use img/trayectoria_log.png>
+Package pdftex.def Info: img/trayectoria_log.png  used on input line 427.
+(pdftex.def)             Requested size: 256.0748pt x 200.20375pt.
+
+Overfull \vbox (11.56844pt too high) detected at line 427
+ []
+
+[29
+
+ <./img/trayectoria_log.png>] [30
 
 ] [31
 
 ] [32
 
 ]
-\openout4 = `presentacion.vrb'.
+<img/trayectoria_SIR.png, id=239, 412.6617pt x 328.8285pt>
+File: img/trayectoria_SIR.png Graphic file (type png)
+<use img/trayectoria_SIR.png>
+Package pdftex.def Info: img/trayectoria_SIR.png  used on input line 475.
+(pdftex.def)             Requested size: 256.0748pt x 204.05219pt.
 
- (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.vrb) [33
-
-]
-Overfull \vbox (13.80844pt too high) detected at line 437
+Overfull \vbox (15.35913pt too high) detected at line 475
  []
 
-[34
+[33
 
-]
-\openout4 = `presentacion.vrb'.
+ <./img/trayectoria_SIR.png>] [34
 
- (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.vrb
-<Figures/bayes1.png, id=238, 491.8375pt x 510.90875pt>
-File: Figures/bayes1.png Graphic file (type png)
-<use Figures/bayes1.png>
-Package pdftex.def Info: Figures/bayes1.png  used on input line 11.
-(pdftex.def)             Requested size: 156.49014pt x 162.55864pt.
-)
-Overfull \vbox (20.6632pt too high) detected at line 457
- []
+] [35
 
-[35
+] [36
 
- <./Figures/bayes1.png>]
-\openout4 = `presentacion.vrb'.
-
- (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.vrb) [36
-
-]
-\openout4 = `presentacion.vrb'.
-
- (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.vrb) [37
+] [37
 
 ] [38
 
-]
-<Figures/0.png, id=265, 417.7206pt x 328.8285pt>
-File: Figures/0.png Graphic file (type png)
-<use Figures/0.png>
-Package pdftex.def Info: Figures/0.png  used on input line 514.
-(pdftex.def)             Requested size: 284.52756pt x 223.97673pt.
+] [39
 
-Overfull \vbox (35.34142pt too high) detected at line 514
+]
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png, id=287, 722.7pt x 289.08pt>
+File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png  used on input line 579.
+(pdftex.def)             Requested size: 426.79134pt x 170.71892pt.
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 579--579
+ [] 
  []
 
-[39
 
- <./Figures/0.png>]
-<Figures/1.png, id=272, 400.3758pt x 328.8285pt>
-File: Figures/1.png Graphic file (type png)
-<use Figures/1.png>
-Package pdftex.def Info: Figures/1.png  used on input line 523.
-(pdftex.def)             Requested size: 284.52756pt x 233.69565pt.
-
-Overfull \vbox (13.96484pt too high) detected at line 523
+Overfull \vbox (9.68346pt too high) detected at line 579
  []
 
 [40
 
- <./Figures/1.png>]
-<Figures/2.png, id=279, 411.2163pt x 329.5512pt>
-File: Figures/2.png Graphic file (type png)
-<use Figures/2.png>
-Package pdftex.def Info: Figures/2.png  used on input line 532.
-(pdftex.def)             Requested size: 284.52756pt x 228.03421pt.
+ <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Apriori_gravedad_sigma.png>]
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png, id=295, 462.528pt x 346.896pt>
+File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png  used on input line 589.
+(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
 
-Overfull \vbox (8.3034pt too high) detected at line 532
+Overfull \vbox (3.42844pt too high) detected at line 589
  []
 
 [41
 
- <./Figures/2.png>]
-<Figures/3.png, id=286, 411.2163pt x 329.5512pt>
-File: Figures/3.png Graphic file (type png)
-<use Figures/3.png>
-Package pdftex.def Info: Figures/3.png  used on input line 541.
-(pdftex.def)             Requested size: 284.52756pt x 228.03421pt.
+ <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Muestra_gravedad_sigma.png>] [42
 
-Overfull \vbox (8.3034pt too high) detected at line 541
- []
+]
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png, id=310, 462.528pt x 346.896pt>
+File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png  used on input line 602.
+(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
 
-[42
-
- <./Figures/3.png>]
-<Figures/4.png, id=293, 417.7206pt x 328.8285pt>
-File: Figures/4.png Graphic file (type png)
-<use Figures/4.png>
-Package pdftex.def Info: Figures/4.png  used on input line 551.
-(pdftex.def)             Requested size: 284.52756pt x 223.97673pt.
-
-Overfull \vbox (4.24593pt too high) detected at line 551
+Overfull \vbox (3.42844pt too high) detected at line 602
  []
 
 [43
 
- <./Figures/4.png>] [44
+ <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Conjunta_gravedad_sigma.png>]
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png, id=319, 395.7987pt x 340.1508pt>
+File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png  used on input line 623.
+(pdftex.def)             Requested size: 179.25114pt x 154.0474pt.
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png, id=320, 395.7987pt x 335.69415pt>
+File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png  used on input line 623.
+(pdftex.def)             Requested size: 179.25114pt x 152.02907pt.
+ [44
 
-] [45
+ <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta1_gravedad_sigma.png> <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Post_theta2_gravedad_sigma.png>]
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png, id=328, 462.528pt x 346.896pt>
+File: img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png  used on input line 632.
+(pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
 
-]
-<Figures/5.png, id=312, 401.0985pt x 312.9291pt>
-File: Figures/5.png Graphic file (type png)
-<use Figures/5.png>
-Package pdftex.def Info: Figures/5.png  used on input line 574.
-(pdftex.def)             Requested size: 284.52756pt x 221.98065pt.
-
-Overfull \vbox (2.19211pt too high) detected at line 574
+Overfull \vbox (24.71288pt too high) detected at line 632
  []
 
-[46
+[45
 
- <./Figures/5.png>] [47
+ <./img/Exp_Central_gravedad_sigma/Figuras/Generales/Predictiva_gravedad_sigma.png>]
+<img/Exp_Central_gravedad_sigma/Figuras/Generales/TiempoFijo_gravedad_sigma.png, id=336, 722.7pt x 289.08pt>
+File: img/Exp_Central_gravedad_sigma/Figuras/Generales/TiempoFijo_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_sigma/Figuras/Generales/TiempoFijo_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_sigma/Figuras/Generales/TiempoFijo_gravedad_sigma.png  used on input line 641.
+(pdftex.def)             Requested size: 369.88582pt x 147.95375pt.
+ [46
+
+ <./img/Exp_Central_gravedad_sigma/Figuras/Generales/TiempoFijo_gravedad_sigma.png>] [47
+
+] [48
 
 ]
-<Figures/cronograma.png, id=325, 986.9372pt x 298.86656pt>
-File: Figures/cronograma.png Graphic file (type png)
-<use Figures/cronograma.png>
-Package pdftex.def Info: Figures/cronograma.png  used on input line 596.
-(pdftex.def)             Requested size: 398.33858pt x 120.62529pt.
- [48
+<img/Vecinos_1.png, id=355, 403.2666pt x 317.988pt>
+File: img/Vecinos_1.png Graphic file (type png)
+<use img/Vecinos_1.png>
+Package pdftex.def Info: img/Vecinos_1.png  used on input line 810.
+(pdftex.def)             Requested size: 179.25114pt x 141.34651pt.
+<img/Vecinos_2.png, id=356, 414.1071pt x 317.988pt>
+File: img/Vecinos_2.png Graphic file (type png)
+<use img/Vecinos_2.png>
+Package pdftex.def Info: img/Vecinos_2.png  used on input line 810.
+(pdftex.def)             Requested size: 179.25114pt x 137.64436pt.
+ [49
 
- <./Figures/cronograma.png>] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.bbl
+ <./img/Vecinos_1.png> <./img/Vecinos_2.png>] [50
+
+] [51
+
+] [52
+
+]
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png, id=381, 1111.2717pt x 281.97345pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png  used on input line 860.
+(pdftex.def)             Requested size: 341.43306pt x 86.6364pt.
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png, id=382, 1116.5715pt x 283.0575pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png  used on input line 860.
+(pdftex.def)             Requested size: 341.43306pt x 86.55484pt.
+ [53
+
+ <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_1_gravedad_sigma.png> <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_1_gravedad_sigma.png>]
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png, id=391, 1111.2717pt x 281.97345pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png  used on input line 876.
+(pdftex.def)             Requested size: 341.43306pt x 86.6364pt.
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png, id=392, 1116.5715pt x 283.0575pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png  used on input line 876.
+(pdftex.def)             Requested size: 341.43306pt x 86.55484pt.
+ [54
+
+ <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_2_gravedad_sigma.png> <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_2_gravedad_sigma.png>]
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png, id=401, 1111.2717pt x 281.97345pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png  used on input line 891.
+(pdftex.def)             Requested size: 341.43306pt x 86.6364pt.
+<img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png, id=402, 1116.5715pt x 283.0575pt>
+File: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png Graphic file (type png)
+<use img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png>
+Package pdftex.def Info: img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png  used on input line 891.
+(pdftex.def)             Requested size: 341.43306pt x 86.55484pt.
+ [55
+
+ <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta1_3_gravedad_sigma.png> <./img/Exp_Central_gravedad_Sigma/Figuras/Generales/Convergencia_theta2_3_gravedad_sigma.png>] [56
+
+]
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png, id=418, 1116.0897pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png  used on input line 929.
+(pdftex.def)             Requested size: 341.43306pt x 86.26207pt.
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png, id=419, 1116.5715pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png  used on input line 929.
+(pdftex.def)             Requested size: 341.43306pt x 86.22334pt.
+ [57
+
+ <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_1_logistico_sigma.png> <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_1_logistico_sigma.png>]
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png, id=428, 1116.0897pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png  used on input line 945.
+(pdftex.def)             Requested size: 341.43306pt x 86.26207pt.
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png, id=429, 1116.5715pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png  used on input line 945.
+(pdftex.def)             Requested size: 341.43306pt x 86.22334pt.
+ [58
+
+ <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_2_logistico_sigma.png> <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_2_logistico_sigma.png>]
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png, id=438, 1116.0897pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png  used on input line 961.
+(pdftex.def)             Requested size: 341.43306pt x 86.26207pt.
+<img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png, id=439, 1116.5715pt x 281.97345pt>
+File: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png  used on input line 961.
+(pdftex.def)             Requested size: 341.43306pt x 86.22334pt.
+ [59
+
+ <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta1_3_logistico_sigma.png> <./img/Exp_Central_logistico_Sigma/Figuras/Generales/Convergencia_theta2_3_logistico_sigma.png>] [60
+
+]
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png, id=454, 1116.5715pt x 281.853pt>
+File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png  used on input line 1000.
+(pdftex.def)             Requested size: 341.43306pt x 86.18652pt.
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png, id=455, 1116.5715pt x 281.97345pt>
+File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png  used on input line 1000.
+(pdftex.def)             Requested size: 341.43306pt x 86.22334pt.
+ [61
+
+ <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_1_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_1_SIR_sigma.png>]
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png, id=465, 1116.5715pt x 281.853pt>
+File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png  used on input line 1015.
+(pdftex.def)             Requested size: 341.43306pt x 86.18652pt.
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png, id=466, 1116.5715pt x 281.97345pt>
+File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png  used on input line 1015.
+(pdftex.def)             Requested size: 341.43306pt x 86.22334pt.
+ [62
+
+ <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_2_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_2_SIR_sigma.png>]
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png, id=475, 1116.5715pt x 281.853pt>
+File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png  used on input line 1030.
+(pdftex.def)             Requested size: 341.43306pt x 86.18652pt.
+<img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png, id=476, 1116.5715pt x 281.97345pt>
+File: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png  used on input line 1030.
+(pdftex.def)             Requested size: 341.43306pt x 86.22334pt.
+ [63
+
+ <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta1_3_SIR_sigma.png> <./img/Exp_Central_SIR_Sigma/Figuras/Generales/Convergencia_theta2_3_SIR_sigma.png>]
+LaTeX Font Info:    Font shape `OT1/lato-TLF/b/n' will be
+(Font)              scaled to size 9.0pt on input line 1052.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <9> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 1052.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 1052.
+ [64
+
+] [65
+
+] [66
+
+] [67
+
+]
+<img/Unidades_1.png, id=510, 1116.45105pt x 281.853pt>
+File: img/Unidades_1.png Graphic file (type png)
+<use img/Unidades_1.png>
+Package pdftex.def Info: img/Unidades_1.png  used on input line 1092.
+(pdftex.def)             Requested size: 341.43306pt x 86.19513pt.
+<img/Unidades_2.png, id=511, 1133.31406pt x 281.853pt>
+File: img/Unidades_2.png Graphic file (type png)
+<use img/Unidades_2.png>
+Package pdftex.def Info: img/Unidades_2.png  used on input line 1092.
+(pdftex.def)             Requested size: 341.43306pt x 84.91351pt.
+ [68
+
+ <./img/Unidades_1.png> <./img/Unidades_2.png>]
+<img/Unidades_3.png, id=520, 1116.45105pt x 281.853pt>
+File: img/Unidades_3.png Graphic file (type png)
+<use img/Unidades_3.png>
+Package pdftex.def Info: img/Unidades_3.png  used on input line 1107.
+(pdftex.def)             Requested size: 341.43306pt x 86.19513pt.
+<img/Unidades_4.png, id=521, 1133.31406pt x 281.853pt>
+File: img/Unidades_4.png Graphic file (type png)
+<use img/Unidades_4.png>
+Package pdftex.def Info: img/Unidades_4.png  used on input line 1107.
+(pdftex.def)             Requested size: 341.43306pt x 84.91351pt.
+ [69
+
+ <./img/Unidades_3.png> <./img/Unidades_4.png>] [70
+
+]
+<Figures/Referencias.png, id=535, 527.72156pt x 177.66376pt>
+File: Figures/Referencias.png Graphic file (type png)
+<use Figures/Referencias.png>
+Package pdftex.def Info: Figures/Referencias.png  used on input line 1132.
+(pdftex.def)             Requested size: 398.33858pt x 134.10413pt.
+ [71
+
+ <./Figures/Referencias.png>] [72
+
+]
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png, id=548, 462.528pt x 346.896pt>
+File: img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png  used on input line 1144.
+(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
+
+Overfull \vbox (3.42844pt too high) detected at line 1144
+ []
+
+[73
+
+ <./img/Exp_Central_logistico_sigma/Figuras/Generales/Muestra_logistico_sigma.png>]
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png, id=557, 722.7pt x 289.08pt>
+File: img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png  used on input line 1154.
+(pdftex.def)             Requested size: 426.79134pt x 170.71892pt.
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 1154--1154
+ [] 
+ []
+
+
+Overfull \vbox (9.68346pt too high) detected at line 1154
+ []
+
+[74
+
+ <./img/Exp_Central_logistico_sigma/Figuras/Generales/Apriori_logistico_sigma.png>]
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png, id=565, 462.528pt x 346.896pt>
+File: img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png  used on input line 1164.
+(pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
+
+Overfull \vbox (54.21303pt too high) detected at line 1164
+ []
+
+[75
+
+ <./img/Exp_Central_logistico_sigma/Figuras/Generales/Conjunta_logistico_sigma.png>]
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png, id=573, 411.81854pt x 358.82056pt>
+File: img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png  used on input line 1186.
+(pdftex.def)             Requested size: 179.25114pt x 156.18422pt.
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png, id=574, 402.18256pt x 343.0416pt>
+File: img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png  used on input line 1186.
+(pdftex.def)             Requested size: 179.25114pt x 152.89119pt.
+ [76
+
+ <./img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta1_logistico_sigma.png> <./img/Exp_Central_logistico_sigma/Figuras/Generales/Post_theta2_logistico_sigma.png>]
+<img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png, id=582, 462.528pt x 346.896pt>
+File: img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png Graphic file (type png)
+<use img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png>
+Package pdftex.def Info: img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png  used on input line 1196.
+(pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
+
+Overfull \vbox (24.71288pt too high) detected at line 1196
+ []
+
+[77
+
+ <./img/Exp_Central_logistico_sigma/Figuras/Generales/Predictiva_logistico_sigma.png>]
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png, id=590, 462.528pt x 346.896pt>
+File: img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png  used on input line 1206.
+(pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
+
+Overfull \vbox (24.71288pt too high) detected at line 1206
+ []
+
+[78
+
+ <./img/Exp_Central_SIR_sigma/Figuras/Generales/Muestra_SIR_sigma.png>]
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png, id=598, 722.7pt x 289.08pt>
+File: img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png  used on input line 1215.
+(pdftex.def)             Requested size: 341.43306pt x 136.57336pt.
+ [79
+
+ <./img/Exp_Central_SIR_sigma/Figuras/Generales/Apriori_SIR_sigma.png>]
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png, id=607, 462.528pt x 346.896pt>
+File: img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png  used on input line 1226.
+(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
+
+Overfull \vbox (3.3707pt too high) detected at line 1226
+ []
+
+[80
+
+ <./img/Exp_Central_SIR_sigma/Figuras/Generales/Conjunta_SIR_sigma.png>]
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png, id=615, 399.05086pt x 340.1508pt>
+File: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png  used on input line 1247.
+(pdftex.def)             Requested size: 179.25114pt x 152.79135pt.
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png, id=616, 392.667pt x 344.7279pt>
+File: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png  used on input line 1247.
+(pdftex.def)             Requested size: 179.25114pt x 157.36693pt.
+ [81
+
+ <./img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta1_SIR_sigma.png> <./img/Exp_Central_SIR_sigma/Figuras/Generales/Post_theta2_SIR_sigma.png>]
+<img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png, id=624, 462.528pt x 346.896pt>
+File: img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png Graphic file (type png)
+<use img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png>
+Package pdftex.def Info: img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png  used on input line 1257.
+(pdftex.def)             Requested size: 284.52756pt x 213.40593pt.
+
+Overfull \vbox (24.77061pt too high) detected at line 1257
+ []
+
+[82
+
+ <./img/Exp_Central_SIR_sigma/Figuras/Generales/Predictiva_SIR_sigma.png>] (c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.bbl
 LaTeX Font Info:    Font shape `OT1/lato-TLF/b/it' will be
-(Font)              scaled to size 10.0pt on input line 5.
-) [49
+(Font)              scaled to size 10.0pt on input line 11.
+) [83
 
  <C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write6
@@ -1182,21 +1499,25 @@ LaTeX Font Info:    Font shape `OT1/lato-TLF/b/it' will be
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `presentacion.out' has not changed.
-(rerunfilecheck)             Checksum: CC0D94A5CA65064CB5B48D130DC5AFAE;499.
+(rerunfilecheck)             Checksum: 1B6E31A430EB331ED99E7E10E8080133;638.
  ) 
 Here is how much of TeX's memory you used:
- 36410 strings out of 474486
- 882000 string characters out of 5743756
- 1941542 words of memory out of 5000000
- 57850 multiletter control sequences out of 15000+600000
- 616772 words of font info for 85 fonts, out of 8000000 for 9000
+ 36890 strings out of 474486
+ 906330 string characters out of 5743756
+ 1935542 words of memory out of 5000000
+ 58229 multiletter control sequences out of 15000+600000
+ 621425 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,18n,123p,1978b,914s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Bold.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-BoldItalic.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Italic.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Regular.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.pdf (49 pages, 610841 bytes).
+ 128i,13n,123p,1978b,787s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Bold.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-BoldItalic.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Italic.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/typoland/lato/Lato-Regular.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/ce_ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on c:\Users\ce_ra\Documents\CIMAT\Semestres\Cuarto\Tesis\Textos\Presentación\build\presentacion.pdf (83 pages, 10997872 bytes).
 PDF statistics:
- 445 PDF objects out of 1000 (max. 8388607)
- 112 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 773 PDF objects out of 1000 (max. 8388607)
+ 223 named destinations out of 1000 (max. 500000)
+ 323 words of extra memory for PDF output out of 10000 (max. 10000000)
 
